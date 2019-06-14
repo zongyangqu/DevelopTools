@@ -30,6 +30,10 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.TextSampleActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.GuideLayerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.QuickPositionActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

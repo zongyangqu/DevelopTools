@@ -15,6 +15,8 @@ import com.coding.qzy.baselibrary.utils.permission.annotation.PermissionDenied;
 import com.coding.qzy.baselibrary.utils.permission.annotation.PermissionGranted;
 import com.quzy.coding.base.BaseActivity;
 import com.quzy.coding.ui.activity.BackGroundActivity;
+import com.quzy.coding.ui.activity.GuideLayerActivity;
+import com.quzy.coding.ui.activity.QuickPositionActivity;
 import com.quzy.coding.ui.activity.SplashActivity;
 import com.quzy.coding.ui.activity.TextSampleActivity;
 
@@ -46,7 +48,12 @@ public class MainActivity extends BaseActivity {
                         break;
                     case 1:
                         startActivity(new Intent(getActivity(), TextSampleActivity.class));
-                        //startActivity(new Intent(getActivity(), CallOnWebViewActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(getActivity(), GuideLayerActivity.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(getActivity(), QuickPositionActivity.class));
                         break;
                 }
             }
@@ -87,6 +94,8 @@ public class MainActivity extends BaseActivity {
 //        data.add("webView中调用相机");
         data.add("背景布局、TextView、Button等");
         data.add("text文本");
+        data.add("半透明引导层");
+        data.add("快速查询索引");
         mainAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,data);
         swipe_target.setAdapter(mainAdapter);
     }
