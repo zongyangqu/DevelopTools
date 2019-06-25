@@ -18,7 +18,7 @@ import butterknife.Bind;
  * author : quzongyang
  * e-mail : quzongyang@xiaohe.com
  * time   : 2019/06/14
- * desc   : 快速查询索引
+ * desc   : 快速查询索引  https://github.com/gjiazhe/WaveSideBar
  * version: 1.0
  */
 

@@ -22,6 +22,13 @@ import java.util.Arrays;
  * time   : 2019/06/14
  * desc   : 索引列表
  * version: 1.0
+ * 属性	格式	                                         默认	                                    描述
+ sidebar_text_color	颜色	            Color.GRAY	                    侧栏的文字颜色。
+ sidebar_text_size	尺寸器                     14sp	                            侧栏的文字大小。
+ sidebar_max_offset	尺寸	                80dp	                            所选项目的偏移量。
+ sidebar_position	枚举                  {right，left}		                放在视图中的左侧或右侧。
+ sidebar_text_alignment	    enum {center，left，right}中央	        对齐项目。
+ sidebar_lazy_respond	布尔	                假	                            如果为true，则直到手指向上才会调用侦听器。如果为false，则在手指向下，向上和向上时将调用侦听器。
  */
 
 public class WaveSideBar extends View {

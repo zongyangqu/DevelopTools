@@ -94,7 +94,7 @@ public class GuideLayerActivity extends BaseActivity{
             @Override
             public void onClick(View v) {
 
-                NewbieGuide.with(GuideLayerActivity.this)
+                Controller controller = NewbieGuide.with(GuideLayerActivity.this)
                         .setLabel("guide2")
                         //.setShowCounts(3)//控制次数
                         .setOnGuideChangedListener(new OnGuideChangedListener() {
@@ -141,8 +141,9 @@ public class GuideLayerActivity extends BaseActivity{
                                         })
                                        // .setEnterAnimation(enterAnimation)//进入动画
                                         .setExitAnimation(exitAnimation)//退出动画
-                        )
-                        .show();
+                        ).build();
+                controller.show();
+                //controller.remove();
             }
         });
 
