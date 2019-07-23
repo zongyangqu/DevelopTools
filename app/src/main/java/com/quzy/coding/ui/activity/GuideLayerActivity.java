@@ -96,7 +96,7 @@ public class GuideLayerActivity extends BaseActivity{
 
                 Controller controller = NewbieGuide.with(GuideLayerActivity.this)
                         .setLabel("guide2")
-                        //.setShowCounts(3)//控制次数
+                        .setShowCounts(1)//控制次数
                         .setOnGuideChangedListener(new OnGuideChangedListener() {
                             @Override
                             public void onShowed(Controller controller) {
@@ -126,10 +126,12 @@ public class GuideLayerActivity extends BaseActivity{
                                 .setLayoutRes(R.layout.view_guide_simple,R.id.ivNext))
                         .addGuidePage(GuidePage.newInstance()
                                 .addHighLight(btnDialog)
+                                .setEverywhereCancelable(false)//是否点击任意地方跳转下一页或者消失引导层，默认true
                                 .setLayoutRes(R.layout.view_guide_simple1))
                         .addGuidePage(//添加一页引导页
                                 GuidePage.newInstance()//创建一个实例
                                         .addHighLight(btnMulti)//添加高亮的view
+                                        .setEverywhereCancelable(false)//是否点击任意地方跳转下一页或者消失引导层，默认true
                                         .setLayoutRes(R.layout.view_guide_simple2)//设置引导页布局
                                         .setOnLayoutInflatedListener(new OnLayoutInflatedListener() {
                                             @Override

@@ -17,6 +17,7 @@ import com.quzy.coding.base.BaseActivity;
 import com.quzy.coding.ui.activity.BackGroundActivity;
 import com.quzy.coding.ui.activity.GuideLayerActivity;
 import com.quzy.coding.ui.activity.QuickPositionActivity;
+import com.quzy.coding.ui.activity.RecyclerViewSampleActivity;
 import com.quzy.coding.ui.activity.SplashActivity;
 import com.quzy.coding.ui.activity.TextSampleActivity;
 
@@ -54,6 +55,9 @@ public class MainActivity extends BaseActivity {
                         break;
                     case 3:
                         startActivity(new Intent(getActivity(), QuickPositionActivity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(getActivity(), RecyclerViewSampleActivity.class));
                         break;
                 }
             }
@@ -96,6 +100,7 @@ public class MainActivity extends BaseActivity {
         data.add("text文本");
         data.add("半透明引导层");
         data.add("快速查询索引");
+        data.add("RecyclerView");
         mainAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,data);
         swipe_target.setAdapter(mainAdapter);
     }
