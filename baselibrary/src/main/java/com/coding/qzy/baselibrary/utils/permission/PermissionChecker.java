@@ -36,6 +36,17 @@ public class PermissionChecker {
                 Manifest.permission.READ_EXTERNAL_STORAGE
         };
 
+        public static final String[] MAIN_PERMISSIONS_MEDIA = {
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.CAMERA,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.RECORD_AUDIO,
+                Manifest.permission.SYSTEM_ALERT_WINDOW,
+                Manifest.permission.READ_PHONE_STATE
+        };
+
         public static final String[] LOCATION = {
                 Manifest.permission.ACCESS_FINE_LOCATION,
                 Manifest.permission.ACCESS_COARSE_LOCATION
@@ -61,6 +72,7 @@ public class PermissionChecker {
         public static final int CAMERA_STORAGE_WRITE_READ = 0x04;
         public static final int RECORD_STORAGE_WRITE_READ = 0x05;
         public static final int MAIN_PERMISSIONS = 0x06;
+        public static final int MAIN_PERMISSIONS_MEDIA = 0x07;
     }
 
     final static Map<String, String> permissions = new HashMap<>();
