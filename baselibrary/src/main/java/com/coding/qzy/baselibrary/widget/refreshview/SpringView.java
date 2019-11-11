@@ -90,19 +90,19 @@ public class SpringView extends ViewGroup {
 
         //获取自定义属性
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.SpringView);
-        if (ta.hasValue(R.styleable.SpringView_type)){
-            int type_int = ta.getInt(R.styleable.SpringView_type, 0);
+        if (ta.hasValue(R.styleable.SpringView_sv_type)){
+            int type_int = ta.getInt(R.styleable.SpringView_sv_type, 0);
             type = Type.values()[type_int];
         }
-        if (ta.hasValue(R.styleable.SpringView_give)){
-            int give_int = ta.getInt(R.styleable.SpringView_give, 0);
+        if (ta.hasValue(R.styleable.SpringView_sv_give)){
+            int give_int = ta.getInt(R.styleable.SpringView_sv_give, 0);
             give = Give.values()[give_int];
         }
-        if (ta.hasValue(R.styleable.SpringView_header)){
-            headerResoureId = ta.getResourceId(R.styleable.SpringView_header, 0);
+        if (ta.hasValue(R.styleable.SpringView_sv_header)){
+            headerResoureId = ta.getResourceId(R.styleable.SpringView_sv_header, 0);
         }
-        if (ta.hasValue(R.styleable.SpringView_footer)){
-            footerResoureId = ta.getResourceId(R.styleable.SpringView_footer, 0);
+        if (ta.hasValue(R.styleable.SpringView_sv_footer)){
+            footerResoureId = ta.getResourceId(R.styleable.SpringView_sv_footer, 0);
         }
         ta.recycle();
     }
