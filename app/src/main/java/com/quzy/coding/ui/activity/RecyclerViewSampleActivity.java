@@ -48,6 +48,9 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
                     case 3:
                         startActivity(new Intent(getActivity(), StandardMultiActivity.class));
                         break;
+                    case 4:
+                        startActivity(new Intent(getActivity(), SectionedRecyclerViewActivity.class));
+                        break;
                 }
             }
         });
@@ -64,6 +67,7 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
         data.add("封装普通的RecyclerView");
         data.add("RecyclerView瀑布流");
         data.add("RecyclerView电商复杂界面");
+        data.add("分组列表的recyclerView");
         return data;
     }
 }
