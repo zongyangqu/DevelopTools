@@ -8,6 +8,21 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--闪屏页-->
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@mipmap/splash</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+ <!--   <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+        <item>
+            <bitmap
+                android:gravity="fill"
+                android:src="@mipmap/splash" />
+        </item>
+    </layer-list>-->
+
     <style name="test">
         <item name="bl_corners_radius">20dp</item>
         <item name="bl_gradient_angle">270</item>

@@ -5,9 +5,7 @@
       <module fileurl="file://D:\work\workspace\DevelopTools\BaseLibrary-master.iml" filepath="D:\work\workspace\DevelopTools\BaseLibrary-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/DevelopTools.iml" filepath="$PROJECT_DIR$/DevelopTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\work\workspace\DevelopTools\app\app.iml" filepath="D:\work\workspace\DevelopTools\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" />
-      <module fileurl="file://D:\work\workspace\DevelopTools\baselibrary\baselibrary.iml" filepath="D:\work\workspace\DevelopTools\baselibrary\baselibrary.iml" />
     </modules>
   </component>
 </project>
