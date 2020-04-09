@@ -49,7 +49,8 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
                         startActivity(new Intent(getActivity(), StandardMultiActivity.class));
                         break;
                     case 4:
-                        startActivity(new Intent(getActivity(), SectionedRecyclerViewActivity.class));
+//                        startActivity(new Intent(getActivity(), SectionedRecyclerViewActivity.class));
+                        startActivity(new Intent(getActivity(), SectionedRecyclerTestViewActivity.class));
                         break;
                 }
             }

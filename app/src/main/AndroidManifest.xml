@@ -48,6 +48,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.SectionedRecyclerViewActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.SectionedRecyclerTestViewActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

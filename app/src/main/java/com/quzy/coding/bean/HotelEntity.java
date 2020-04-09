@@ -13,6 +13,7 @@ public class HotelEntity {
 
         public class TagInfo {
             public String tagName;
+            public boolean ischeck;
         }
     }
 
