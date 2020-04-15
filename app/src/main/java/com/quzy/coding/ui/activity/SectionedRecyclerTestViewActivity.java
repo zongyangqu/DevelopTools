@@ -1,6 +1,7 @@
 package com.quzy.coding.ui.activity;
 
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.coding.qzy.baselibrary.utils.AbToastUtil;
@@ -39,9 +40,11 @@ public class SectionedRecyclerTestViewActivity extends BaseActivity {
     private void initView() {
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mAdapter = new HotelEntityTestAdapter(this);
-        GridLayoutManager manager = new GridLayoutManager(this,4);
+        //GridLayoutManager manager = new GridLayoutManager(this,4);
         //设置header
-        manager.setSpanSizeLookup(new SectionedSpanSizeLookup(mAdapter,manager));
+        //manager.setSpanSizeLookup(new SectionedSpanSizeLookup(mAdapter,manager));
+        LinearLayoutManager manager = new LinearLayoutManager(this);
+
         mRecyclerView.setLayoutManager(manager);
         mRecyclerView.setAdapter(mAdapter);
         HotelEntity entity = JsonUtils.analysisJsonFile(this,"json");

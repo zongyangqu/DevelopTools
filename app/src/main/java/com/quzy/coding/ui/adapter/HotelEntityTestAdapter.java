@@ -55,8 +55,8 @@ public class HotelEntityTestAdapter extends SectionedRecyclerViewAdapter<HeaderH
     @Override
     protected int getItemCountForSection(int section) {
         int count = allTagList.get(section).tagInfoList.size();
-        if (count >= 8 && !mBooleanMap.get(section)) {
-            count = 8;
+        if (count >= 1 && !mBooleanMap.get(section)) {
+            count = 0;
         }
 
         return CollectionUtils.isEmpty(allTagList.get(section).tagInfoList) ? 0 : count;
