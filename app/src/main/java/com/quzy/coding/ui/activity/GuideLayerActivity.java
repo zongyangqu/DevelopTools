@@ -34,7 +34,7 @@ import com.quzy.coding.R;
 import com.quzy.coding.base.BaseActivity;
 import com.quzy.coding.ui.fragment.BlankFragment;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * author : quzongyang
@@ -49,13 +49,13 @@ public class GuideLayerActivity extends BaseActivity{
 
     private final String TAG = this.getClass().getSimpleName();
 
-    @Bind(R.id.btn_simple)
+    @BindView(R.id.btn_simple)
     Button btnSimple;
-    @Bind(R.id.btn_anchor)
+    @BindView(R.id.btn_anchor)
     Button btnAnchor;
-    @Bind(R.id.btn_dialog)
+    @BindView(R.id.btn_dialog)
     Button btnDialog;
-    @Bind(R.id.btn_multi)
+    @BindView(R.id.btn_multi)
     Button btnMulti;
     private Animation enterAnimation;
     private Animation exitAnimation;

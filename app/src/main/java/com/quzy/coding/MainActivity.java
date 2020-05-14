@@ -25,11 +25,12 @@ import com.quzy.coding.ui.activity.TextSampleActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
+
 
 public class MainActivity extends BaseActivity {
 
-    @Bind(R.id.swipe_target)
+    @BindView(R.id.swipe_target)
     ListView swipe_target;
     ArrayAdapter mainAdapter;
 

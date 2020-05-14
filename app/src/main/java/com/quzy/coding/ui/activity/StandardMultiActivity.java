@@ -17,7 +17,8 @@ import com.quzy.coding.ui.adapter.StandardMultiAdapter;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
+
 /**
  * author : quzongyang
  * e-mail : quzongyang@xiaohe.com
@@ -29,7 +30,7 @@ import butterknife.Bind;
 
 public class StandardMultiActivity extends BaseActivity {
 
-    @Bind(R.id.recycler_view)
+    @BindView(R.id.recycler_view)
     RecyclerView recycler_view;
 
     private StandardMultiAdapter adapter;

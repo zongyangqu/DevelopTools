@@ -12,7 +12,7 @@ import com.quzy.coding.ui.adapter.ContactsAdapter;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * author : quzongyang
@@ -25,9 +25,9 @@ import butterknife.Bind;
 
 public class QuickPositionActivity extends BaseActivity{
 
-    @Bind(R.id.rv_contacts)
+    @BindView(R.id.rv_contacts)
     RecyclerView rvContacts;
-    @Bind(R.id.side_bar)
+    @BindView(R.id.side_bar)
     WaveSideBar sideBar;
 
     private ArrayList<Contact> contacts = new ArrayList<>();

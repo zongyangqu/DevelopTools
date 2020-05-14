@@ -11,7 +11,7 @@ import com.quzy.coding.bean.HotelEntity;
 import com.quzy.coding.ui.adapter.HotelEntityAdapter;
 import com.quzy.coding.util.JsonUtils;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * author : quzongyang
@@ -24,7 +24,7 @@ import butterknife.Bind;
 
 public class SectionedRecyclerViewActivity extends BaseActivity {
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
     private HotelEntityAdapter mAdapter;
 

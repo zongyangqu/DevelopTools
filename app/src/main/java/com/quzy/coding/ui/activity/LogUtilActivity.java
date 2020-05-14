@@ -14,7 +14,7 @@ import com.quzy.coding.base.BaseActivity;
 import java.util.HashMap;
 import java.util.Map;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -32,9 +32,9 @@ public class LogUtilActivity extends BaseActivity {
     public final String Tag1 = "LogTools";
     public final String Tag2 = "LogUtils";
 
-    @Bind(R.id.logJson)
+    @BindView(R.id.logJson)
     Button logJson;
-    @Bind(R.id.logMap)
+    @BindView(R.id.logMap)
     TextView logMap;
 
     private String JSON_CONTENT = "{\"weatherinfo\":{\"city\":\"北京\",\"cityid\":\"101010100\"," +
@@ -50,7 +50,7 @@ public class LogUtilActivity extends BaseActivity {
         map.put("key", "value");
         map.put("key1", "value2");
 
-        logJson.setOnClickListener(new View.OnClickListener() {
+        /*logJson.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 LogTools.tag(Tag1).json(Log.DEBUG , JSON_CONTENT);
@@ -64,7 +64,7 @@ public class LogUtilActivity extends BaseActivity {
                 LogTools.tag(Tag1).d(map);
                 LogUtils.tag(Tag2).d(map);
             }
-        });
+        });*/
     }
 
     @OnClick({R.id.logJson,R.id.logMap})

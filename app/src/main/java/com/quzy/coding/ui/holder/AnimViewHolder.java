@@ -9,7 +9,7 @@ import com.coding.qzy.baselibrary.widget.adapter.holder.SimpleRViewHolder;
 import com.quzy.coding.R;
 import com.quzy.coding.bean.Anim;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -22,9 +22,9 @@ import butterknife.ButterKnife;
 
 public class AnimViewHolder extends SimpleRViewHolder<Anim> {
 
-    @Bind(R.id.animRes)
+    @BindView(R.id.animRes)
     ImageView animRes;
-    @Bind(R.id.animName)
+    @BindView(R.id.animName)
     TextView animName;
 
     public AnimViewHolder(View itemView) {

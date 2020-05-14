@@ -12,7 +12,7 @@ import com.quzy.coding.ui.adapter.MainAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * author : quzongyang
@@ -24,7 +24,7 @@ import butterknife.Bind;
 
 public class RecyclerViewSampleActivity  extends BaseActivity {
 
-    @Bind(R.id.swipe_target)
+    @BindView(R.id.swipe_target)
     ListView swipe_target;
     MainAdapter mainAdapter;
 

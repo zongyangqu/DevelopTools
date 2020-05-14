@@ -15,7 +15,7 @@ import com.quzy.coding.ui.adapter.StaggeredAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * author : quzongyang
@@ -28,10 +28,10 @@ import butterknife.Bind;
 
 public class StaggeredGridActivity extends BaseActivity {
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
 
-    @Bind(R.id.springview)
+    @BindView(R.id.springview)
     SpringView springView;
 
     int total_page = 3;

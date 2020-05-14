@@ -4,16 +4,13 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.coding.qzy.baselibrary.utils.AbToastUtil;
-import com.coding.qzy.baselibrary.widget.sectioned_adapter.SectionedSpanSizeLookup;
 import com.quzy.coding.R;
 import com.quzy.coding.base.BaseActivity;
 import com.quzy.coding.bean.HotelEntity;
-import com.quzy.coding.ui.adapter.HotelEntityAdapter;
 import com.quzy.coding.ui.adapter.HotelEntityTestAdapter;
 import com.quzy.coding.util.JsonUtils;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * author : quzongyang
@@ -26,7 +23,7 @@ import butterknife.Bind;
 
 public class SectionedRecyclerTestViewActivity extends BaseActivity {
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     RecyclerView mRecyclerView;
     private HotelEntityTestAdapter mAdapter;
 

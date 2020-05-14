@@ -6,7 +6,7 @@ import android.widget.TextView;
 import com.coding.qzy.baselibrary.utils.listViewAdapter.SimpleViewHolder;
 import com.quzy.coding.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -19,9 +19,9 @@ import butterknife.ButterKnife;
 
 public class MainViewHolder extends SimpleViewHolder<String> {
 
-    @Bind(R.id.position)
+    @BindView(R.id.position)
     TextView tvPosition;
-    @Bind(R.id.instruction)
+    @BindView(R.id.instruction)
     TextView instruction;
 
     public MainViewHolder(View itemView) {

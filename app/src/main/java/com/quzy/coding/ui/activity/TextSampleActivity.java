@@ -6,7 +6,7 @@ import com.coding.qzy.baselibrary.utils.text.ColorPhraseUtils;
 import com.quzy.coding.R;
 import com.quzy.coding.base.BaseActivity;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * author : quzongyang
@@ -19,7 +19,7 @@ import butterknife.Bind;
 
 public class TextSampleActivity extends BaseActivity {
 
-    @Bind(R.id.textColor)
+    @BindView(R.id.textColor)
     TextView textColor;
 
     @Override

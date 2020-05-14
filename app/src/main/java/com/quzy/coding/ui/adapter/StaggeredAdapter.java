@@ -12,8 +12,7 @@ import com.quzy.coding.R;
 import com.quzy.coding.bean.Anim;
 
 import java.util.List;
-
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -69,9 +68,9 @@ public class StaggeredAdapter extends RecyclerView.Adapter<StaggeredAdapter.Stag
     }
 
     static class StaggeredViewHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.image_item)
+        @BindView(R.id.image_item)
         ImageView beautyImage;
-        @Bind(R.id.name_item)
+        @BindView(R.id.name_item)
         TextView nameTv;
 
         public StaggeredViewHolder(View itemView) {

@@ -15,7 +15,7 @@ import com.quzy.coding.R;
 import com.quzy.coding.base.BaseApplication;
 import com.quzy.coding.bean.Anim;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -44,9 +44,9 @@ public class AnimAdapter extends BaseRecyclerAdapter<Anim> {
 
     class ViewHolder extends Holder {
 
-        @Bind(R.id.animRes)
+        @BindView(R.id.animRes)
         ImageView animRes;
-        @Bind(R.id.animName)
+        @BindView(R.id.animName)
         TextView animName;
 
         public ViewHolder(View itemView) {

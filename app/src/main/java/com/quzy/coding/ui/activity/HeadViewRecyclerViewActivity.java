@@ -15,7 +15,7 @@ import com.quzy.coding.ui.adapter.AnimAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * 作者：quzongyang
@@ -27,7 +27,7 @@ import butterknife.Bind;
 
 public class HeadViewRecyclerViewActivity extends BaseActivity {
 
-    @Bind(R.id.recyclerView)
+    @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
 
     AnimAdapter animAdapter;
