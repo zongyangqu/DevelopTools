@@ -17,6 +17,8 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.io.StringReader;
 import java.io.StringWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -226,7 +228,13 @@ public class LogPrinterImpl implements LogPrinter {
             }
         }
         String msgUrl = "URL:" + url;
-        String msgParas = "requestParams:" + toString(params);
+        String msgParas = null;
+        try {
+            msgParas = "requestParams:"+URLDecoder.decode(toString(params),"UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            msgParas = "requestParams:" + toString(params);
+        }
         String msgJson = formatJson(json);
 
         StringBuilder builder = new StringBuilder();
