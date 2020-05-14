@@ -16,6 +16,7 @@ import com.coding.qzy.baselibrary.utils.permission.annotation.PermissionGranted;
 import com.quzy.coding.base.BaseActivity;
 import com.quzy.coding.ui.activity.BackGroundActivity;
 import com.quzy.coding.ui.activity.GuideLayerActivity;
+import com.quzy.coding.ui.activity.LogUtilActivity;
 import com.quzy.coding.ui.activity.QuickPositionActivity;
 import com.quzy.coding.ui.activity.RecyclerViewSampleActivity;
 import com.quzy.coding.ui.activity.SplashActivity;
@@ -59,6 +60,9 @@ public class MainActivity extends BaseActivity {
                     case 4:
                         startActivity(new Intent(getActivity(), RecyclerViewSampleActivity.class));
                         break;
+                    case 5:
+                        startActivity(new Intent(getActivity(), LogUtilActivity.class));
+                        break;
                 }
             }
         });
@@ -101,6 +105,7 @@ public class MainActivity extends BaseActivity {
         data.add("半透明引导层");
         data.add("快速查询索引");
         data.add("RecyclerView");
+        data.add("Log日志");
         mainAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,data);
         swipe_target.setAdapter(mainAdapter);
     }
