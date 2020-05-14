@@ -50,6 +50,12 @@ public class LogPrinterImpl implements LogPrinter {
     private static final String DOUBLE_DIVIDER = "────────────────────────────────────────────────────────";
     private static final String SINGLE_DIVIDER = "┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄";
     private static String LOG_FLODER_NAME = "AppLog";
+    private static String LOG_TAG = "LogUtils";
+
+
+    public static void setTLogTag(String logTag) {
+        LOG_TAG = logTag;
+    }
 
     private LogPrinterImpl() {
     }
@@ -234,7 +240,7 @@ public class LogPrinterImpl implements LogPrinter {
                 .append(result + "\n")
                 .append(SINGLE_DIVIDER + SINGLE_DIVIDER + "\n")
                 .append(msgJson);
-        LogUtils.tag("LogUtils").d(builder.toString());
+        LogUtils.tag(LOG_TAG).d(builder.toString());
         //printMsg(Log.ERROR, tag, builder.toString());
     }
 
