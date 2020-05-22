@@ -21,6 +21,7 @@ import com.quzy.coding.ui.activity.QuickPositionActivity;
 import com.quzy.coding.ui.activity.RecyclerViewSampleActivity;
 import com.quzy.coding.ui.activity.SplashActivity;
 import com.quzy.coding.ui.activity.TextSampleActivity;
+import com.quzy.coding.util.op.Actions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +45,8 @@ public class MainActivity extends BaseActivity {
         swipe_target.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i){
+                Actions.doAction(getActivity(),i);
+                /*switch (i){
                     case 0:
                         startActivity(new Intent(getActivity(), BackGroundActivity.class));
                         //startActivity(new Intent(getActivity(), CallOnWebViewActivity.class));
@@ -64,7 +66,7 @@ public class MainActivity extends BaseActivity {
                     case 5:
                         startActivity(new Intent(getActivity(), LogUtilActivity.class));
                         break;
-                }
+                }*/
             }
         });
     }
