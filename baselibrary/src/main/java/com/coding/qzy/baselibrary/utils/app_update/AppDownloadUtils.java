@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -96,10 +97,17 @@ public class AppDownloadUtils {
 
 
     private static void send(Context context,int progress,String serverVersionName) {
+//        Intent intent = new Intent("xiaohe.update");
+//        intent.putExtra("progress",progress);
+//        intent.putExtra("title",serverVersionName);
+//        context.sendBroadcast(intent);
+
+        LocalBroadcastManager localBroadcastManager = LocalBroadcastManager.getInstance(context);
         Intent intent = new Intent("xiaohe.update");
         intent.putExtra("progress",progress);
         intent.putExtra("title",serverVersionName);
-        context.sendBroadcast(intent);
+        localBroadcastManager.sendBroadcast(intent);
+
     }
 }
 
