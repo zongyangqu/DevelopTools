@@ -17,5 +17,6 @@ public class Constants {
     public final static int  QuickPosition = 3;
     public final static int  RecyclerViewSample = 4;
     public final static int  LogUtilActivity = 5;
+    public final static int  AppUpdate = 6;
 
 }

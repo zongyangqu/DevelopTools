@@ -46,27 +46,6 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Actions.doAction(getActivity(),i);
-                /*switch (i){
-                    case 0:
-                        startActivity(new Intent(getActivity(), BackGroundActivity.class));
-                        //startActivity(new Intent(getActivity(), CallOnWebViewActivity.class));
-                        break;
-                    case 1:
-                        startActivity(new Intent(getActivity(), TextSampleActivity.class));
-                        break;
-                    case 2:
-                        startActivity(new Intent(getActivity(), GuideLayerActivity.class));
-                        break;
-                    case 3:
-                        startActivity(new Intent(getActivity(), QuickPositionActivity.class));
-                        break;
-                    case 4:
-                        startActivity(new Intent(getActivity(), RecyclerViewSampleActivity.class));
-                        break;
-                    case 5:
-                        startActivity(new Intent(getActivity(), LogUtilActivity.class));
-                        break;
-                }*/
             }
         });
     }
@@ -109,6 +88,7 @@ public class MainActivity extends BaseActivity {
         data.add("快速查询索引");
         data.add("RecyclerView");
         data.add("Log日志");
+        data.add("应用升级");
         mainAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,data);
         swipe_target.setAdapter(mainAdapter);
     }

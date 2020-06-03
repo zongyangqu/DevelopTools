@@ -26,6 +26,7 @@ dependencies {
     implementation rootProject.ext.dependencies["recyclerview-v7"]
     api rootProject.ext.dependencies["log2file"]
     api rootProject.ext.dependencies["logutils"]
+    api rootProject.ext.dependencies["filedownloader"]
 //    testImplementation 'junit:junit:4.12'
 //    androidTestImplementation 'com.android.support.test:runner:1.0.2'
 //    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

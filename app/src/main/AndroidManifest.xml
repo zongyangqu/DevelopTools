@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 
     <application
@@ -25,6 +26,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
 
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait"/>
@@ -52,6 +55,20 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.LogUtilActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.AppUpdateActivity"
+            android:screenOrientation="portrait"/>
+
+        <service android:name="com.coding.qzy.baselibrary.utils.app_update.UpdateAppService"/>
+
+        <provider
+            android:name=".util.AppUpdateFileProvider"
+            android:authorities="${applicationId}.appfileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/app_paths"/>
+        </provider>
     </application>
 
 </manifest>

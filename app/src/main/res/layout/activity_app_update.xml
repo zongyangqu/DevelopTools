@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <com.coding.qzy.baselibrary.utils.background.view.BLButton
+        android:id="@+id/btn_update"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="0dp"
+        android:text="app测试升级"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:bl_corners_radius="20dp"
+        app:bl_gradient_angle="0"
+        app:bl_gradient_centerColor="#CD4F39"
+        app:bl_gradient_endColor="#CD2626"
+        app:bl_gradient_startColor="#CD5B45"
+        app:bl_shape="rectangle" />
+
+</LinearLayout>

@@ -3,6 +3,7 @@ package com.quzy.coding.util.op;
 import android.app.Activity;
 import android.content.Intent;
 
+import com.quzy.coding.ui.activity.AppUpdateActivity;
 import com.quzy.coding.ui.activity.BackGroundActivity;
 import com.quzy.coding.ui.activity.GuideLayerActivity;
 import com.quzy.coding.ui.activity.LogUtilActivity;
@@ -50,6 +51,12 @@ public enum RoleEnum implements RoleOperation {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, RecyclerViewSampleActivity.class));
+        }
+    },
+    AppUpdateSampleAction {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, AppUpdateActivity.class));
         }
     },
     LogUtilActivityAction {

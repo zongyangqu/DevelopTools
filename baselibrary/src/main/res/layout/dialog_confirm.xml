@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="310dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_update_dialog"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/iv_update_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@mipmap/ic_update_logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:text="版本更新啦!"/>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:overScrollMode="never">
+
+        <TextView
+            android:id="@+id/dialog_confirm_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:gravity="start"
+            android:lineSpacingExtra="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            tools:text="1、快来升级最新版本\n2、这次更漂亮了\n3、快点来吧\n2、这次更漂亮了\n3、快点来吧\n2、这次更漂亮了\n3、快点来吧"/>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/dialog_confirm_sure"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_update_btn"
+        android:gravity="center"
+        android:text="@string/update_now"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/dialog_confirm_cancle"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="@string/update_cancel"
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+</LinearLayout>
