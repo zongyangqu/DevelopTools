@@ -31,6 +31,7 @@ public class Actions {
         mActionMap.put(Constants.RecyclerViewSample,RoleEnum.RecyclerViewSampleAction.name());
         mActionMap.put(Constants.LogUtilActivity,RoleEnum.LogUtilActivityAction.name());
         mActionMap.put(Constants.AppUpdate,RoleEnum.AppUpdateSampleAction.name());
+        mActionMap.put(Constants.AppPopWindow,RoleEnum.PopWindowAction.name());
     }
 
 

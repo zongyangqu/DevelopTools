@@ -89,6 +89,7 @@ public class MainActivity extends BaseActivity {
         data.add("RecyclerView");
         data.add("Log日志");
         data.add("应用升级");
+        data.add("弹窗");
         mainAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,data);
         swipe_target.setAdapter(mainAdapter);
     }

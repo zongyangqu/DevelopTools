@@ -58,6 +58,9 @@
         <activity android:name=".ui.activity.AppUpdateActivity"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".ui.activity.PopWindowActivity"
+            android:screenOrientation="portrait"/>
+
         <service android:name="com.coding.qzy.baselibrary.utils.app_update.UpdateAppService"/>
 
         <provider
