@@ -51,6 +51,15 @@ public class BackGroundActivity extends BaseActivity{
             btnTest2.setBackgroundDrawable(drawable2);
         }
 
+        Button btnTest1 = findViewById(R.id.btnTest1);
+        Drawable drawableTest = new DrawableCreator.Builder().setCornersRadius(dip2px(20),0,dip2px(20),0)
+                .setSolidColor(Color.parseColor("#63B8FF")).build();
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN){
+            btnTest1.setBackground(drawableTest);
+        }else {
+            btnTest1.setBackgroundDrawable(drawableTest);
+        }
+
 
         Button btnTest3 = findViewById(R.id.btnTest3);
         Drawable drawable3 = new DrawableCreator.Builder().setCornersRadius(dip2px(20))

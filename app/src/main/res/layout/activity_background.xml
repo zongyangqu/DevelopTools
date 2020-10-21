@@ -325,6 +325,17 @@
             android:textSize="20sp" />
 
         <Button
+            android:id="@+id/btnTest1"
+            android:layout_width="130dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text="测试背景"
+            android:textColor="#4F94CD"
+            android:textSize="20sp" />
+
+        <Button
             android:id="@+id/btnTest2"
             android:layout_width="130dp"
             android:layout_height="36dp"
