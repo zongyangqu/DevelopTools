@@ -19,5 +19,6 @@ public class Constants {
     public final static int  LogUtilActivity = 5;
     public final static int  AppUpdate = 6;
     public final static int  AppPopWindow = 7;
+    public final static int  Progress = 8;
 
 }
