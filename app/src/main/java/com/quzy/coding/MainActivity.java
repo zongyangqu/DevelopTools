@@ -52,17 +52,17 @@ public class MainActivity extends BaseActivity {
 
     private void requestPermissions(){
         PermissionRequester.build().attach(this)
-                .permissions(PermissionChecker.Permissions.MAIN_PERMISSIONS)
-                .requestCode(PermissionChecker.PermissionRequestCode.MAIN_PERMISSIONS)
+                .permissions(PermissionChecker.Permissions.MAIN_PERMISSIONS_MEDIA)
+                .requestCode(PermissionChecker.PermissionRequestCode.MAIN_PERMISSIONS_MEDIA)
                 .request();
     }
 
-    @PermissionGranted(requestCode = PermissionChecker.PermissionRequestCode.MAIN_PERMISSIONS)
+    @PermissionGranted(requestCode = PermissionChecker.PermissionRequestCode.MAIN_PERMISSIONS_MEDIA)
     public void onWritePermissionGranted() {
     }
 
 
-    @PermissionDenied(requestCode = PermissionChecker.PermissionRequestCode.MAIN_PERMISSIONS)
+    @PermissionDenied(requestCode = PermissionChecker.PermissionRequestCode.MAIN_PERMISSIONS_MEDIA)
     public void onWritePermissionDenied(String info) {
     }
 
@@ -91,6 +91,7 @@ public class MainActivity extends BaseActivity {
         data.add("应用升级");
         data.add("弹窗");
         data.add("进度条");
+        data.add("录制语音");
         mainAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,data);
         swipe_target.setAdapter(mainAdapter);
     }

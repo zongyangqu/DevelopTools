@@ -33,6 +33,7 @@ public class Actions {
         mActionMap.put(Constants.AppUpdate,RoleEnum.AppUpdateSampleAction.name());
         mActionMap.put(Constants.AppPopWindow,RoleEnum.PopWindowAction.name());
         mActionMap.put(Constants.Progress,RoleEnum.ProgressAction.name());
+        mActionMap.put(Constants.Audio,RoleEnum.AudioAction.name());
     }
 
 
