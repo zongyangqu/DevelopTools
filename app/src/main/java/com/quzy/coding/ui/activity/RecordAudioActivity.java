@@ -1,5 +1,6 @@
 package com.quzy.coding.ui.activity;
 
+import android.app.Application;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.AudioFormat;
@@ -14,8 +15,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.coding.qzy.baselibrary.widget.CustomProgressBar;
+import com.coding.qzy.baselibrary.widget.recorderlib.RecordManager;
+import com.coding.qzy.baselibrary.widget.recorderlib.recorder.RecordConfig;
+import com.coding.qzy.baselibrary.widget.recorderlib.recorder.RecordHelper;
+import com.coding.qzy.baselibrary.widget.recorderlib.recorder.listener.RecordFftDataListener;
+import com.coding.qzy.baselibrary.widget.recorderlib.recorder.listener.RecordResultListener;
+import com.coding.qzy.baselibrary.widget.recorderlib.recorder.listener.RecordSoundSizeListener;
+import com.coding.qzy.baselibrary.widget.recorderlib.recorder.listener.RecordStateListener;
+import com.coding.qzy.baselibrary.widget.recorderlib.utils.Logger;
+import com.quzy.coding.BuildConfig;
 import com.quzy.coding.R;
 import com.quzy.coding.base.BaseActivity;
+import com.quzy.coding.base.BaseApplication;
 import com.quzy.coding.util.view.AudioView;
 
 import java.io.File;
@@ -35,6 +46,7 @@ import butterknife.OnClick;
 
 public class RecordAudioActivity extends BaseActivity implements AdapterView.OnItemSelectedListener{
 
+    private static final String TAG = RecordAudioActivity.class.getSimpleName();
     @BindView(R.id.btRecord)
     Button btRecord;
     @BindView(R.id.btStop)
@@ -151,7 +163,7 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
     }
 
     private void initRecord() {
-        recordManager.init(MyApp.getInstance(), BuildConfig.DEBUG);
+        recordManager.init((Application) BaseApplication.getContext(), BuildConfig.DEBUG);
         recordManager.changeFormat(RecordConfig.RecordFormat.WAV);
         String recordDir = String.format(Locale.getDefault(), "%s/Record/com.zlw.main/",
                 Environment.getExternalStorageDirectory().getAbsolutePath());
@@ -201,7 +213,7 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
         recordManager.setRecordResultListener(new RecordResultListener() {
             @Override
             public void onResult(File result) {
-                Toast.makeText(MainActivity.this, "录音文件： " + result.getAbsolutePath(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(RecordAudioActivity.this, "录音文件： " + result.getAbsolutePath(), Toast.LENGTH_SHORT).show();
             }
         });
         recordManager.setRecordFftDataListener(new RecordFftDataListener() {
@@ -222,7 +234,7 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
                 doStop();
                 break;
             case R.id.jumpTestActivity:
-                startActivity(new Intent(this, TestHzActivity.class));
+                //startActivity(new Intent(this, TestHzActivity.class));
             default:
                 break;
         }
