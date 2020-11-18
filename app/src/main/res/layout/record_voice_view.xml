@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="54dp">
+
+    <LinearLayout
+        android:id="@+id/startRecord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@drawable/record_start_background"
+        android:visibility="visible"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:drawablePadding="5dp"
+            android:textColor="#999999"
+            android:text="点击开始录制语音信息"
+            android:drawableLeft="@mipmap/record"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/recording"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/recording_background"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:id="@+id/recordHintTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:text="00:00" />
+
+        <ImageView
+            android:id="@+id/stopRecord"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/stop_record"/>
+
+        <ImageView
+            android:id="@+id/pauseRecord"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/stopRecord"
+            android:src="@mipmap/pause_record"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/recordStopView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        tools:visibility="visible"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/playLayout"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:background="@drawable/recording_background"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/playRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/voice_receive" />
+
+            <TextView
+                android:id="@+id/recordLength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="1m15s"
+                android:textSize="15sp"
+                android:textColor="#999999"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/deleteRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/delete_record"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,5 +1,6 @@
 package com.quzy.coding.ui.activity;
 
+import android.app.Application;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.AudioFormat;
@@ -14,9 +15,18 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.coding.qzy.baselibrary.widget.CustomProgressBar;
+import com.quzy.coding.BuildConfig;
 import com.quzy.coding.R;
 import com.quzy.coding.base.BaseActivity;
+import com.quzy.coding.base.BaseApplication;
 import com.quzy.coding.util.view.AudioView;
+import com.zlw.main.recorderlib.RecordManager;
+import com.zlw.main.recorderlib.recorder.RecordConfig;
+import com.zlw.main.recorderlib.recorder.RecordHelper;
+import com.zlw.main.recorderlib.recorder.listener.RecordFftDataListener;
+import com.zlw.main.recorderlib.recorder.listener.RecordResultListener;
+import com.zlw.main.recorderlib.recorder.listener.RecordSoundSizeListener;
+import com.zlw.main.recorderlib.recorder.listener.RecordStateListener;
 
 import java.io.File;
 import java.util.Locale;
@@ -61,8 +71,8 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
     private static final String[] STYLE_DATA = new String[]{"STYLE_ALL", "STYLE_NOTHING", "STYLE_WAVE", "STYLE_HOLLOW_LUMP"};
     @Override
     protected void onViewCreated() {
-        initAudioView();
-        initEvent();
+       // initAudioView();
+        //initEvent();
         initRecord();
     }
 
@@ -85,7 +95,7 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
     }
 
     private void initAudioView() {
-        tvState.setVisibility(View.GONE);
+        tvState.setVisibility(View.VISIBLE);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, STYLE_DATA);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spUpStyle.setAdapter(adapter);
@@ -151,8 +161,8 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
     }
 
     private void initRecord() {
-        recordManager.init(MyApp.getInstance(), BuildConfig.DEBUG);
-        recordManager.changeFormat(RecordConfig.RecordFormat.WAV);
+        recordManager.init((Application) BaseApplication.getContext(), BuildConfig.DEBUG);
+        recordManager.changeFormat(RecordConfig.RecordFormat.MP3);
         String recordDir = String.format(Locale.getDefault(), "%s/Record/com.zlw.main/",
                 Environment.getExternalStorageDirectory().getAbsolutePath());
         recordManager.changeRecordDir(recordDir);
@@ -163,7 +173,7 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
         recordManager.setRecordStateListener(new RecordStateListener() {
             @Override
             public void onStateChange(RecordHelper.RecordState state) {
-                Logger.i(TAG, "onStateChange %s", state.name());
+               // Logger.i(TAG, "onStateChange %s", state.name());
 
                 switch (state) {
                     case PAUSE:
@@ -189,7 +199,7 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
 
             @Override
             public void onError(String error) {
-                Logger.i(TAG, "onError %s", error);
+             //   Logger.i(TAG, "onError %s", error);
             }
         });
         recordManager.setRecordSoundSizeListener(new RecordSoundSizeListener() {
@@ -201,7 +211,7 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
         recordManager.setRecordResultListener(new RecordResultListener() {
             @Override
             public void onResult(File result) {
-                Toast.makeText(MainActivity.this, "录音文件： " + result.getAbsolutePath(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(RecordAudioActivity.this, "录音文件： " + result.getAbsolutePath(), Toast.LENGTH_SHORT).show();
             }
         });
         recordManager.setRecordFftDataListener(new RecordFftDataListener() {
@@ -222,7 +232,7 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
                 doStop();
                 break;
             case R.id.jumpTestActivity:
-                startActivity(new Intent(this, TestHzActivity.class));
+                //startActivity(new Intent(this, TestHzActivity.class));
             default:
                 break;
         }
