@@ -34,6 +34,7 @@ public class Actions {
         mActionMap.put(Constants.AppPopWindow,RoleEnum.PopWindowAction.name());
         mActionMap.put(Constants.Progress,RoleEnum.ProgressAction.name());
         mActionMap.put(Constants.Audio,RoleEnum.AudioAction.name());
+        mActionMap.put(Constants.QRCode,RoleEnum.QRAction.name());
     }
 
 

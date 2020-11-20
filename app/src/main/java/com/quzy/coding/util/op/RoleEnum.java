@@ -9,6 +9,7 @@ import com.quzy.coding.ui.activity.GuideLayerActivity;
 import com.quzy.coding.ui.activity.LogUtilActivity;
 import com.quzy.coding.ui.activity.PopWindowActivity;
 import com.quzy.coding.ui.activity.ProgressActivity;
+import com.quzy.coding.ui.activity.QRCodeActivity;
 import com.quzy.coding.ui.activity.QuickPositionActivity;
 import com.quzy.coding.ui.activity.RecordAudioActivity;
 import com.quzy.coding.ui.activity.RecordMp3Activity;
@@ -79,13 +80,16 @@ public enum RoleEnum implements RoleOperation {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, ProgressActivity.class));
-//                        activity.startActivity(new Intent(activity, RecordAudioActivity.class));
         };
     },AudioAction {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, RecordAudioActivity.class));
-//            activity.startActivity(new Intent(activity, RecordMp3Activity.class));
+        };
+    },QRAction {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, QRCodeActivity.class));
         };
     };
 

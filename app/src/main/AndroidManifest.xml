@@ -69,6 +69,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.RecordMp3Activity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.QRCodeActivity"
+            android:screenOrientation="portrait"/>
 
         <service android:name="com.zlw.main.recorderlib.recorder.RecordService" />
 
