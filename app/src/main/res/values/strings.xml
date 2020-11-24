@@ -25,5 +25,10 @@
     <string name="home_family">到家</string>
     <string name="home_category">分类</string>
     <string name="text_protocol">感谢您对我们的支持和信赖！我们时刻重点关注您的个人信息保护，为了更好的保障您的个人权益，在您使用我们的产品前，请务必审慎阅读《用户注册条款》和《隐私保护政策》内的所有条款，同意并接受全部的条款后即可开始使用我们的产品和服务。</string>
-
+    <string name="libActivityFrom">来自：</string>
+    <string name="libActivityOutStack"> 出栈</string>
+    <string name="libActivityInStack"> 入栈</string>
+    <string name="libFragmentShow"> 展示</string>
+    <string name="libFragmentClose"> 关闭</string>
+    <string name="libQuit">app 退出</string>
 </resources>

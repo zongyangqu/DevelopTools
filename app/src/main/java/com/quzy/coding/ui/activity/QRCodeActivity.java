@@ -19,6 +19,8 @@ import com.quzy.coding.BuildConfig;
 import com.quzy.coding.R;
 import com.quzy.coding.base.BaseActivity;
 import com.quzy.coding.base.BaseApplication;
+import com.quzy.coding.util.Singleton;
+import com.quzy.coding.util.TestManager;
 import com.quzy.coding.util.UZXing;
 import com.quzy.coding.util.view.AudioView;
 import com.zlw.main.recorderlib.RecordManager;
@@ -55,6 +57,7 @@ public class QRCodeActivity extends BaseActivity {
     protected void onViewCreated() {
         Bitmap qrCode = UZXing.createQRImage("https://www.baidu.com/",200,200, Color.parseColor("#ffffffff"),Color.parseColor("#333333"));
         ivQrcode.setImageBitmap(qrCode);
+        TestManager manager = TestManager.getInstance(this);
     }
 
     @Override
