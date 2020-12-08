@@ -1,16 +1,10 @@
 package com.quzy.coding.ui.activity;
 
-import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.coding.qzy.baselibrary.widget.IosToggleButton;
+import com.coding.qzy.baselibrary.widget.SwitchButton;
 import com.quzy.coding.R;
 import com.quzy.coding.base.BaseActivity;
-import com.quzy.coding.util.TestManager;
-import com.quzy.coding.util.UZXing;
 
 import java.lang.ref.ReferenceQueue;
 
@@ -28,20 +22,38 @@ import butterknife.BindView;
 public class CustomControlActivity extends BaseActivity {
 
 
-    @BindView(R.id.ios7Btn)
-    IosToggleButton ios7Btn;
+    @BindView(R.id.switch_button)
+    SwitchButton switchButton;
+    @BindView(R.id.switch_button1)
+    SwitchButton switchButton1;
 
     private static ReferenceQueue<Object> rq = new ReferenceQueue<Object>();
     @Override
     protected void onViewCreated() {
-        ios7Btn.setOnClickListener(new View.OnClickListener() {
+
+        switchButton.setChecked(true);
+        switchButton1.setChecked(false);
+        switchButton.isChecked();
+        switchButton.toggle();     //switch state
+        switchButton.toggle(false);//switch without animation
+        switchButton.setShadowEffect(true);//disable shadow effect
+        switchButton.setEnabled(false);//disable button
+        switchButton.setEnableEffect(false);//disable the switch animation
+        switchButton.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
             @Override
-            public void onClick(View view) {
-                boolean isOpen = ios7Btn.ToggleIsOpen();
-                ios7Btn.setOpen(!isOpen);
-                Toast.makeText(CustomControlActivity.this,"开关---"+!isOpen,Toast.LENGTH_SHORT).show();
+            public void onCheckedChanged(SwitchButton view, boolean isChecked) {
+                //TODO do your job
+                Toast.makeText(CustomControlActivity.this,isChecked+"",Toast.LENGTH_SHORT).show();
             }
         });
+        switchButton1.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(SwitchButton view, boolean isChecked) {
+                //TODO do your job
+                Toast.makeText(CustomControlActivity.this,isChecked+"",Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
