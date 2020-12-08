@@ -32,6 +32,9 @@ import com.zlw.main.recorderlib.recorder.listener.RecordSoundSizeListener;
 import com.zlw.main.recorderlib.recorder.listener.RecordStateListener;
 
 import java.io.File;
+import java.lang.ref.ReferenceQueue;
+import java.lang.ref.SoftReference;
+import java.lang.ref.WeakReference;
 import java.util.Locale;
 
 import butterknife.BindView;
@@ -52,7 +55,7 @@ public class QRCodeActivity extends BaseActivity {
     @BindView(R.id.ivQrcode)
     ImageView ivQrcode;
 
-
+    private static ReferenceQueue<Object> rq = new ReferenceQueue<Object>();
     @Override
     protected void onViewCreated() {
         Bitmap qrCode = UZXing.createQRImage("https://www.baidu.com/",200,200, Color.parseColor("#ffffffff"),Color.parseColor("#333333"));

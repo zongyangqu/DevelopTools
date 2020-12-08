@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.activity.CustomControlActivity"
+    android:padding="20dp">
+
+
+
+    <com.coding.qzy.baselibrary.widget.IosToggleButton
+        android:id="@+id/ios7Btn"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="@android:color/transparent"
+        android:checked="false"
+        android:layout_gravity="center_vertical"
+        app:open_bg_color="@color/colorAccent"
+        android:textOn=""
+        android:textOff=""
+        android:text=""/>
+
+
+
+
+
+
+
+
+</LinearLayout>

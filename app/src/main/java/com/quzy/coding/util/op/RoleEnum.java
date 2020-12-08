@@ -5,6 +5,7 @@ import android.content.Intent;
 
 import com.quzy.coding.ui.activity.AppUpdateActivity;
 import com.quzy.coding.ui.activity.BackGroundActivity;
+import com.quzy.coding.ui.activity.CustomControlActivity;
 import com.quzy.coding.ui.activity.GuideLayerActivity;
 import com.quzy.coding.ui.activity.LogUtilActivity;
 import com.quzy.coding.ui.activity.PopWindowActivity;
@@ -90,6 +91,11 @@ public enum RoleEnum implements RoleOperation {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, QRCodeActivity.class));
+        };
+    },Customontrol {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, CustomControlActivity.class));
         };
     };
 

@@ -93,6 +93,7 @@ public class MainActivity extends BaseActivity {
         data.add("进度条");
         data.add("录制语音");
         data.add("生成二维码");
+        data.add("自定义控件");
         mainAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,data);
         swipe_target.setAdapter(mainAdapter);
     }

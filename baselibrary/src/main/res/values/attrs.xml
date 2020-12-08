@@ -255,4 +255,17 @@
         <attr name="isShowDesc" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="IosToggleButton" >
+        <!--关闭时背景颜色-->
+        <attr name="close_bg_color" format="dimension|color"/>
+        <!--打开时背景颜色-->
+        <attr name="open_bg_color" format="dimension|color" />
+        <!--实心圆的颜色-->
+        <attr name="circle_dot_color" format="dimension|color" />
+        <!--圆环的宽度-->
+        <attr name="circle_ring_width" format="dimension" />
+        <!--动画执行的时间-->
+        <attr name="animation_time" format="integer" />
+    </declare-styleable>
+
 </resources>
