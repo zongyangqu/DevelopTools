@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 'good_director'
+            keyPassword 'haoyuanzhang'
+            storeFile file('keystore/good_director.jks')
+            storePassword 'haoyuanzhang'
+        }
+    }
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     defaultConfig {
         applicationId rootProject.ext.android.applicationId
@@ -9,6 +17,7 @@ android {
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
         multiDexEnabled true
 
         javaCompileOptions {
@@ -17,11 +26,46 @@ android {
             }
         }
     }
+    productFlavors {
+        yingyongbao {
+            manifestPlaceholders = [BAIDU_CHANNEL_VALUE: "yingyongbao"]
+        }
+        xiaomi {
+            manifestPlaceholders = [BAIDU_CHANNEL_VALUE: "xiaomi"]
+        }
+        huawei {
+            manifestPlaceholders = [BAIDU_CHANNEL_VALUE: "huawei"]
+        }
+        meizu {
+            manifestPlaceholders = [BAIDU_CHANNEL_VALUE: "meizu"]
+        }
+        qh360 {
+            manifestPlaceholders = [BAIDU_CHANNEL_VALUE: "qh360"]
+        }
+        baidu {
+            manifestPlaceholders = [BAIDU_CHANNEL_VALUE: "baidu"]
+        }
+        wandoujia {
+            manifestPlaceholders = [BAIDU_CHANNEL_VALUE: "wandoujia"]
+        }
+        fuwuqi {
+            manifestPlaceholders = [BAIDU_CHANNEL_VALUE: "fuwuqi"]
+        }
+    }
     buildTypes {
+
         release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+        /*release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+        }*/
     }
 }
 
