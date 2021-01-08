@@ -31,4 +31,20 @@
     <string name="libFragmentShow"> 展示</string>
     <string name="libFragmentClose"> 关闭</string>
     <string name="libQuit">app 退出</string>
+
+
+    <string-array name="item_category_names">
+        <item>背景布局、TextView、Button等</item>
+        <item>text文本</item>
+        <item>半透明引导层</item>
+        <item>快速查询索引</item>
+        <item>RecyclerView</item>
+        <item>Log日志</item>
+        <item>应用升级</item>
+        <item>弹窗</item>
+        <item>进度条</item>
+        <item>录制语音</item>
+        <item>生成二维码</item>
+        <item>自定义控件</item>
+    </string-array>
 </resources>
