@@ -24,6 +24,7 @@ import com.quzy.coding.ui.activity.TextSampleActivity;
 import com.quzy.coding.util.op.Actions;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
@@ -80,19 +81,9 @@ public class MainActivity extends BaseActivity {
 
 
     public void initData(){
-        List<String> data = new ArrayList<String>();
-//        data.add("webView中调用相机");
-        data.add("背景布局、TextView、Button等");
-        data.add("text文本");
-        data.add("半透明引导层");
-        data.add("快速查询索引");
-        data.add("RecyclerView");
-        data.add("Log日志");
-        data.add("应用升级");
-        data.add("弹窗");
-        data.add("进度条");
-        data.add("录制语音");
-        mainAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,data);
+//        List<String> data = new ArrayList<String>();
+//        data = Arrays.asList(getResources().getStringArray(R.array.item_category_names));
+        mainAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,Arrays.asList(getResources().getStringArray(R.array.item_category_names)));
         swipe_target.setAdapter(mainAdapter);
     }
 }

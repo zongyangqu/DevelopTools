@@ -5,14 +5,18 @@ import android.content.Intent;
 
 import com.quzy.coding.ui.activity.AppUpdateActivity;
 import com.quzy.coding.ui.activity.BackGroundActivity;
+import com.quzy.coding.ui.activity.CustomControlActivity;
 import com.quzy.coding.ui.activity.GuideLayerActivity;
 import com.quzy.coding.ui.activity.LogUtilActivity;
 import com.quzy.coding.ui.activity.PopWindowActivity;
 import com.quzy.coding.ui.activity.ProgressActivity;
+import com.quzy.coding.ui.activity.QRCodeActivity;
 import com.quzy.coding.ui.activity.QuickPositionActivity;
 import com.quzy.coding.ui.activity.RecordAudioActivity;
+import com.quzy.coding.ui.activity.RecordMp3Activity;
 import com.quzy.coding.ui.activity.RecyclerViewSampleActivity;
 import com.quzy.coding.ui.activity.TextSampleActivity;
+import com.quzy.coding.util.RecordVoiceMp3View;
 
 /**
  * author : quzongyang
@@ -82,6 +86,16 @@ public enum RoleEnum implements RoleOperation {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, RecordAudioActivity.class));
+        };
+    },QRAction {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, QRCodeActivity.class));
+        };
+    },Customontrol {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, CustomControlActivity.class));
         };
     };
 

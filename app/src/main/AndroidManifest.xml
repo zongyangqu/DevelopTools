@@ -68,6 +68,12 @@
 
         <activity android:name=".ui.activity.RecordAudioActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.RecordMp3Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.QRCodeActivity"
+            android:screenOrientation="portrait"/>
+
+        <service android:name="com.zlw.main.recorderlib.recorder.RecordService" />
 
         <service android:name="com.coding.qzy.baselibrary.utils.app_update.UpdateAppService"/>
 
@@ -77,6 +83,9 @@
             android:name="com.coding.qzy.baselibrary.widget.recorderlib.recorder.RecordService"
             android:enabled="true"
             android:exported="false" />-->
+
+        <activity android:name=".ui.activity.CustomControlActivity"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name=".util.AppUpdateFileProvider"

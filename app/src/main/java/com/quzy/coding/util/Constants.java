@@ -21,5 +21,7 @@ public class Constants {
     public final static int  AppPopWindow = 7;
     public final static int  Progress = 8;
     public final static int  Audio = 9;
+    public final static int  QRCode = 10;
+    public final static int  CustomControl = 11;
 
 }

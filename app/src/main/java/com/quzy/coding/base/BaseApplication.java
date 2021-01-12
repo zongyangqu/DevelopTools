@@ -3,11 +3,10 @@ package com.quzy.coding.base;
 import android.app.Application;
 import android.content.Context;
 import android.support.multidex.MultiDexApplication;
-import android.util.Config;
-import android.util.Log;
 
 import com.coding.qzy.baselibrary.utils.log.LogTools;
 import com.quzy.coding.R;
+import com.squareup.leakcanary.LeakCanary;
 
 
 /**
@@ -26,6 +25,13 @@ public class BaseApplication extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         appContext = this;
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            return;
+        }
+        LibActivityLifecycleCallbacks libActivityLifecycleCallbacks = new LibActivityLifecycleCallbacks();
+        libActivityLifecycleCallbacks.setiActivityLifecycleCallbacks(new RealActivityLifecycleCallbacks());
+        registerActivityLifecycleCallbacks(libActivityLifecycleCallbacks);
+        LeakCanary.install(this);
         LogTools.init(true, getString(R.string.app_name));
     }
 

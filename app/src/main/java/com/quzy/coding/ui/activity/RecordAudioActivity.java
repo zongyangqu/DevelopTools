@@ -73,8 +73,8 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
     private static final String[] STYLE_DATA = new String[]{"STYLE_ALL", "STYLE_NOTHING", "STYLE_WAVE", "STYLE_HOLLOW_LUMP"};
     @Override
     protected void onViewCreated() {
-        initAudioView();
-        initEvent();
+       // initAudioView();
+        //initEvent();
         initRecord();
     }
 
@@ -97,7 +97,7 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
     }
 
     private void initAudioView() {
-        tvState.setVisibility(View.GONE);
+        tvState.setVisibility(View.VISIBLE);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, STYLE_DATA);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spUpStyle.setAdapter(adapter);
@@ -164,7 +164,7 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
 
     private void initRecord() {
         recordManager.init((Application) BaseApplication.getContext(), BuildConfig.DEBUG);
-        recordManager.changeFormat(RecordConfig.RecordFormat.WAV);
+        recordManager.changeFormat(RecordConfig.RecordFormat.MP3);
         String recordDir = String.format(Locale.getDefault(), "%s/Record/com.zlw.main/",
                 Environment.getExternalStorageDirectory().getAbsolutePath());
         recordManager.changeRecordDir(recordDir);
@@ -175,7 +175,7 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
         recordManager.setRecordStateListener(new RecordStateListener() {
             @Override
             public void onStateChange(RecordHelper.RecordState state) {
-                Logger.i(TAG, "onStateChange %s", state.name());
+               // Logger.i(TAG, "onStateChange %s", state.name());
 
                 switch (state) {
                     case PAUSE:
@@ -201,7 +201,7 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
 
             @Override
             public void onError(String error) {
-                Logger.i(TAG, "onError %s", error);
+             //   Logger.i(TAG, "onError %s", error);
             }
         });
         recordManager.setRecordSoundSizeListener(new RecordSoundSizeListener() {
