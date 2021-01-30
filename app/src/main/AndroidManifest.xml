@@ -75,27 +75,9 @@
 
         <service android:name="com.zlw.main.recorderlib.recorder.RecordService" />
 
-        <service android:name="com.coding.qzy.baselibrary.utils.app_update.UpdateAppService"/>
-
-
-
-<!--        <service
-            android:name="com.coding.qzy.baselibrary.widget.recorderlib.recorder.RecordService"
-            android:enabled="true"
-            android:exported="false" />-->
-
         <activity android:name=".ui.activity.CustomControlActivity"
             android:screenOrientation="portrait"/>
 
-        <provider
-            android:name=".util.AppUpdateFileProvider"
-            android:authorities="${applicationId}.appfileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/app_paths"/>
-        </provider>
     </application>
 
 </manifest>

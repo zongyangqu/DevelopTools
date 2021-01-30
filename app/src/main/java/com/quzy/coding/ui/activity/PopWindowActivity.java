@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.coding.qzy.baselibrary.utils.app_update.AppUpdateUtils;
 import com.coding.qzy.baselibrary.widget.popwindow.PopItemAction;
 import com.coding.qzy.baselibrary.widget.popwindow.PopWindow;
 import com.quzy.coding.R;
