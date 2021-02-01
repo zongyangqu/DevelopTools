@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'bugly'
 
 android {
     signingConfigs {
@@ -20,12 +21,34 @@ android {
         flavorDimensions "versionCode"
         multiDexEnabled true
 
+        ndk {
+            abiFilters "armeabi-v7a", "x86", "x86_64", "arm64-v8a"
+        }
+
+        packagingOptions {
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/NOTICE.txt'
+            exclude "lib/arm64-v8a/libmp3lame.so"
+            exclude "lib/x86/libmp3lame.so"
+            exclude "lib/armeabi/libmp3lame.so"
+            exclude "lib/x86_64/libmp3lame.so"
+            exclude "lib/armeabi-v7a/libmp3lame.so"
+            exclude "lib/mips/libmp3lame.so"
+            exclude "lib/mips64/libmp3lame.so"
+        }
+
         javaCompileOptions {
             annotationProcessorOptions {
                 includeCompileClasspath = true
             }
         }
     }
+
+    lintOptions {
+        abortOnError false
+        disable 'MissingTranslation'
+    }
+
     productFlavors {
         yingyongbao {
             manifestPlaceholders = [BAIDU_CHANNEL_VALUE: "yingyongbao"]
@@ -55,7 +78,7 @@ android {
     buildTypes {
 
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
@@ -69,9 +92,16 @@ android {
     }
 }
 
-/*configurations.all {
-    resolutionStrategy.force 'com.android.support:support-annotations:27.1.1'
-}*/
+bugly {
+    appId = 'f402a023c2'
+    appKey = 'fb2990f4-fc74-425f-bb3f-71b737cf4274'
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -86,7 +116,6 @@ dependencies {
     implementation 'com.google.zxing:core:3.3.3'
 
 
-
     implementation rootProject.ext.dependencies["recyclerview-v7"]
     //releaseImplementation 'com.github.zongyangqu:DevelopTools:1.0.7-beta'
     releaseImplementation project(path: ':baselibrary')
@@ -94,7 +123,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-   // implementation files('libs/gson-2.3.1.jar')
+    // implementation files('libs/gson-2.3.1.jar')
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
 
@@ -103,4 +132,9 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
+    // bugly
+  //  implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
 }

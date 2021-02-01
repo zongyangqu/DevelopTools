@@ -114,3 +114,6 @@
 
 -dontwarn rx.**
 -keep class rx.**{*;}
+
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}

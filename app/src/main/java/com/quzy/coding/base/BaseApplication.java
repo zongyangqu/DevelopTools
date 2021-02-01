@@ -7,6 +7,8 @@ import android.support.multidex.MultiDexApplication;
 import com.coding.qzy.baselibrary.utils.log.LogTools;
 import com.quzy.coding.R;
 import com.squareup.leakcanary.LeakCanary;
+import com.tencent.bugly.Bugly;
+import com.tencent.bugly.crashreport.CrashReport;
 
 
 /**
@@ -25,6 +27,8 @@ public class BaseApplication extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         appContext = this;
+        Bugly.init(getApplicationContext(), "f402a023c2", true);
+        //CrashReport.initCrashReport(getApplicationContext(), "f402a023c2", false);
         if (LeakCanary.isInAnalyzerProcess(this)) {
             return;
         }
