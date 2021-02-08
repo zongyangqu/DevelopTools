@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.coding.qzy.baselibrary.utils.background.view.BLTextView
+        android:id="@+id/downLoadApk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:text="下载外部资源包 加载"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:bl_corners_radius="20dp"
+        app:bl_gradient_angle="0"
+        app:bl_gradient_centerColor="#CD4F39"
+        app:bl_gradient_endColor="#CD2626"
+        app:bl_gradient_startColor="#CD5B45" />
+
+    <com.coding.qzy.baselibrary.utils.background.view.BLTextView
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:text="下一个Activity"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:bl_corners_radius="20dp"
+        app:bl_gradient_angle="0"
+        app:bl_gradient_centerColor="#CD4F39"
+        app:bl_gradient_endColor="#CD2626"
+        app:bl_gradient_startColor="#CD5B45" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:resource_vlue = "background/drawable/bg1"
+        tools:background="@drawable/bg1"
+        tools:ignore="MissingPrefix" />
+
+
+
+
+
+</LinearLayout>

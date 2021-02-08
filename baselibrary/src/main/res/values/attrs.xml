@@ -283,4 +283,11 @@
     </declare-styleable>
 
 
+
+    <!-- 外部资源加载框架属性-->
+    <declare-styleable name="ResourceSkin" >
+        <attr name="resource_vlue" format="string"/>
+    </declare-styleable>
+
+
 </resources>

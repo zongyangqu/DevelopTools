@@ -36,6 +36,7 @@ public class Actions {
         mActionMap.put(Constants.Audio,RoleEnum.AudioAction.name());
         mActionMap.put(Constants.QRCode,RoleEnum.QRAction.name());
         mActionMap.put(Constants.CustomControl,RoleEnum.Customontrol.name());
+        mActionMap.put(Constants.ExternalResourceLoad,RoleEnum.ExternalResource.name());
     }
 
 

@@ -28,6 +28,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation rootProject.ext.dependencies["appcompat-v7"]
     implementation rootProject.ext.dependencies["recyclerview-v7"]
+    implementation rootProject.ext.dependencies["glide"]
     api rootProject.ext.dependencies["log2file"]
     api rootProject.ext.dependencies["logutils"]
     api rootProject.ext.dependencies["filedownloader"]

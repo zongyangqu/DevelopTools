@@ -46,5 +46,6 @@
         <item>录制语音</item>
         <item>生成二维码</item>
         <item>自定义控件</item>
+        <item>外部资源加载框架</item>
     </string-array>
 </resources>
