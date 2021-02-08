@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -26,6 +28,13 @@ public class ResourceFactory implements LayoutInflater.Factory2 {
 
     //收集当前Activity中用到资源的控件
     List<SkinView> viewList = new ArrayList<>();
+
+    private Context mContext;
+
+    public ResourceFactory(Context context){
+        super();
+        this.mContext = context;
+    }
 
     //系统原生控件包名
     private static final String[] prxfixList = {
@@ -132,11 +141,11 @@ public class ResourceFactory implements LayoutInflater.Factory2 {
         public void setResource() {
             for (SkinItem skinItem : skinItems) {
                 if (skinItem.getName().equals("src")) {
-                    if (skinItem.getTypeName().equals("drawable")) {
+                    if (skinItem.getTypeName().equals("drawable") || skinItem.getTypeName().equals("mipmap")) {
                         //将资源ID  传给ResourceManager 去进行资源匹配  如果匹配了就直接设置给控件
                         //如果没有匹配到  就把之前的资源ID用来设置控件
-                        Drawable drawable = SkinManager.getInstance().getDrawable(skinItem.getEntryName(), skinItem.getTypeName());
-                        ((ImageView) view).setImageDrawable(drawable);
+                        //Drawable drawable = SkinManager.getInstance().getDrawable(skinItem.getEntryName(), skinItem.getTypeName());
+                       Glide.with(mContext).load(SkinManager.getInstance().getDrawableResId(skinItem.getEntryName(), skinItem.getTypeName())).into((ImageView) view);
                     }
                 } else if (skinItem.getName().equals("background")) {
                     if (skinItem.getTypeName().equals("drawable") || skinItem.getTypeName().equals("mipmap")) {

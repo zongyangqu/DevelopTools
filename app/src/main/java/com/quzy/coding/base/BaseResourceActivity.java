@@ -29,7 +29,7 @@ public abstract class BaseResourceActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         if(BaseApplication.appContext.getResourceApk().exists()){
             if(SkinManager.getInstance().loadRespurceSucess()){
-                resourceFactory = new ResourceFactory();
+                resourceFactory = new ResourceFactory(this);
                 getLayoutInflater().setFactory2(resourceFactory);
             }
         }
