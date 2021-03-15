@@ -8,6 +8,7 @@ import com.quzy.coding.ui.activity.BackGroundActivity;
 import com.quzy.coding.ui.activity.CustomControlActivity;
 import com.quzy.coding.ui.activity.ExternalResourceActivity;
 import com.quzy.coding.ui.activity.GuideLayerActivity;
+import com.quzy.coding.ui.activity.HotFixDemoActivity;
 import com.quzy.coding.ui.activity.LogUtilActivity;
 import com.quzy.coding.ui.activity.PopWindowActivity;
 import com.quzy.coding.ui.activity.ProgressActivity;
@@ -102,6 +103,11 @@ public enum RoleEnum implements RoleOperation {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, ExternalResourceActivity.class));
+        };
+    },HotFix {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, HotFixDemoActivity.class));
         };
     };
 

@@ -37,6 +37,7 @@ public class Actions {
         mActionMap.put(Constants.QRCode,RoleEnum.QRAction.name());
         mActionMap.put(Constants.CustomControl,RoleEnum.Customontrol.name());
         mActionMap.put(Constants.ExternalResourceLoad,RoleEnum.ExternalResource.name());
+        mActionMap.put(Constants.HotFix,RoleEnum.HotFix.name());
     }
 
 

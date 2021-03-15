@@ -91,6 +91,12 @@
         <activity android:name=".ui.activity.ExternalResource2Activity"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".ui.activity.HotFixDemoActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.activity.HotFixDemo2Activity"
+            android:screenOrientation="portrait"/>
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.fileProvider"
