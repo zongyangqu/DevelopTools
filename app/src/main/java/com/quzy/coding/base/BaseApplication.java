@@ -5,6 +5,9 @@ import android.content.Context;
 import android.os.Build;
 import android.support.multidex.MultiDexApplication;
 
+import com.apkfuns.logutils.LogUtils;
+import com.coding.qzy.baselibrary.utils.AppVersionUtils;
+import com.coding.qzy.baselibrary.utils.PluginLoadUtil;
 import com.coding.qzy.baselibrary.utils.log.LogTools;
 import com.coding.qzy.baselibrary.widget.external_resource.SkinManager;
 import com.quzy.coding.R;
@@ -74,46 +77,13 @@ public class BaseApplication extends MultiDexApplication {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        File apk = new File(getCacheDir() + "/hotfix.dex");
-        if (apk.exists()) {
-            try {
-                ClassLoader classLoader = getClassLoader();
-                Class loaderClass = BaseDexClassLoader.class;
-                Field dexPathListField = loaderClass.getDeclaredField("pathList");
-                dexPathListField.setAccessible(true);
-                Object pathListObject = dexPathListField.get(classLoader);
-                Class pathListClass = pathListObject.getClass();
-                Field dexElementsField = pathListClass.getDeclaredField("dexElements");
-                dexElementsField.setAccessible(true);
-                Object dexElementsObject = dexElementsField.get(pathListObject);
-
-                // classLoader.pathList.dexElements = ???;
-                PathClassLoader newClassLoader;
-                if(Build.VERSION.SDK_INT<Build.VERSION_CODES.N){
-                    newClassLoader = new PathClassLoader(apk.getPath(), classLoader);
-                }else{
-                    newClassLoader = new PathClassLoader(apk.getPath(), null);
-                }
-                Object newPathListObject = dexPathListField.get(newClassLoader);
-                Object newDexElementsObject = dexElementsField.get(newPathListObject);
-
-                int oldLength = Array.getLength(dexElementsObject);
-                int newLength = Array.getLength(newDexElementsObject);
-                Object concatDexElementsObject = Array.newInstance(dexElementsObject.getClass().getComponentType(), oldLength + newLength);
-                for (int i = 0; i < newLength; i++) {
-                    Array.set(concatDexElementsObject, i, Array.get(newDexElementsObject, i));
-                }
-                for (int i = 0; i < oldLength; i++) {
-                    Array.set(concatDexElementsObject, newLength + i, Array.get(dexElementsObject, i));
-                }
-
-                dexElementsField.set(pathListObject, concatDexElementsObject);
-            } catch (NoSuchFieldException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            }
-        }
+        int code = AppVersionUtils.currentApkVersionCode(base);
+        String name = AppVersionUtils.currentApkVersionName(base);
+        LogUtils.tag("code").d(code+"");
+        LogUtils.tag("name").d(name+"");
+        PluginLoadUtil.getInstance().loadHotFix("/hotfix.dex",this);
     }
+
+
 
 }
