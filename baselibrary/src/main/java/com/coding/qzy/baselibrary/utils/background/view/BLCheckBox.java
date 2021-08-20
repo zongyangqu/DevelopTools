@@ -1,7 +1,7 @@
 package com.coding.qzy.baselibrary.utils.background.view;
 
 import android.content.Context;
-import android.support.v7.widget.AppCompatCheckBox;
+import androidx.appcompat.widget.AppCompatCheckBox;
 import android.util.AttributeSet;
 
 import com.coding.qzy.baselibrary.utils.background.BackgroundFactory;

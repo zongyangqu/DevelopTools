@@ -2,13 +2,15 @@ package com.quzy.coding.base;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
+import com.apkfuns.logutils.LogUtils;
 import com.coding.qzy.baselibrary.utils.appreset.AppStatusConstant;
 import com.coding.qzy.baselibrary.utils.appreset.AppStatusManager;
 import com.quzy.coding.MainActivity;
+import com.quzy.coding.util.Constants;
 
 import butterknife.ButterKnife;
 
@@ -48,6 +50,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                 onViewCreated();
                 break;
         }
+        LogUtils.tag(Constants.LOG_TAG).d(getClass().getSimpleName()+"进栈");
     }
 
 

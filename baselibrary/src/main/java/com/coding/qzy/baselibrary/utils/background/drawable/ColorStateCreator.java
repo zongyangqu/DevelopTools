@@ -2,7 +2,7 @@ package com.coding.qzy.baselibrary.utils.background.drawable;
 
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
-import android.support.annotation.AttrRes;
+import androidx.annotation.AttrRes;
 
 import com.coding.qzy.baselibrary.R;
 

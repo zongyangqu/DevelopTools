@@ -2,7 +2,7 @@ package com.quzy.coding.base;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.apkfuns.logutils.LogUtils;
 import com.quzy.coding.R;

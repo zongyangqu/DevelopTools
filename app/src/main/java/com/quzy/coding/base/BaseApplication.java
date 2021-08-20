@@ -1,9 +1,8 @@
 package com.quzy.coding.base;
 
-import android.app.Application;
 import android.content.Context;
-import android.os.Build;
-import android.support.multidex.MultiDexApplication;
+
+import androidx.multidex.MultiDexApplication;
 
 import com.apkfuns.logutils.LogUtils;
 import com.coding.qzy.baselibrary.utils.AppVersionUtils;
@@ -13,14 +12,8 @@ import com.coding.qzy.baselibrary.widget.external_resource.SkinManager;
 import com.quzy.coding.R;
 import com.squareup.leakcanary.LeakCanary;
 import com.tencent.bugly.Bugly;
-import com.tencent.bugly.crashreport.CrashReport;
 
 import java.io.File;
-import java.lang.reflect.Array;
-import java.lang.reflect.Field;
-
-import dalvik.system.BaseDexClassLoader;
-import dalvik.system.PathClassLoader;
 
 
 /**

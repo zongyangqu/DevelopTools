@@ -3,7 +3,7 @@ package com.coding.qzy.baselibrary.utils.background.drawable;
 import android.content.res.TypedArray;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.StyleableRes;
+import androidx.annotation.StyleableRes;
 
 import com.coding.qzy.baselibrary.R;
 

@@ -1,6 +1,6 @@
 package com.coding.qzy.baselibrary.utils.listViewAdapter;
 
-import android.support.annotation.IdRes;
+import androidx.annotation.IdRes;
 import android.view.View;
 
 /**

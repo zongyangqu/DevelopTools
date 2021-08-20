@@ -1,6 +1,6 @@
 package com.coding.qzy.baselibrary.widget.adapter.holder;
 
-import android.support.annotation.IdRes;
+import androidx.annotation.IdRes;
 import android.view.View;
 
 /**

@@ -1,8 +1,8 @@
 package com.quzy.coding;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,13 +14,7 @@ import com.coding.qzy.baselibrary.utils.permission.PermissionRequester;
 import com.coding.qzy.baselibrary.utils.permission.annotation.PermissionDenied;
 import com.coding.qzy.baselibrary.utils.permission.annotation.PermissionGranted;
 import com.quzy.coding.base.BaseActivity;
-import com.quzy.coding.ui.activity.BackGroundActivity;
-import com.quzy.coding.ui.activity.GuideLayerActivity;
-import com.quzy.coding.ui.activity.LogUtilActivity;
-import com.quzy.coding.ui.activity.QuickPositionActivity;
-import com.quzy.coding.ui.activity.RecyclerViewSampleActivity;
 import com.quzy.coding.ui.activity.SplashActivity;
-import com.quzy.coding.ui.activity.TextSampleActivity;
 import com.quzy.coding.util.op.Actions;
 
 import java.util.ArrayList;

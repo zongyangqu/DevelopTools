@@ -1,7 +1,7 @@
 package com.quzy.coding.ui.activity;
 
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.coding.qzy.baselibrary.utils.AbToastUtil;
 import com.coding.qzy.baselibrary.widget.refreshview.SpringView;

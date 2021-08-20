@@ -1,25 +1,19 @@
 package com.quzy.coding.ui.activity;
 
-import android.content.res.ColorStateList;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.coding.qzy.baselibrary.utils.background.drawable.DrawableCreator;
 import com.coding.qzy.baselibrary.utils.guidelayer.NewbieGuide;
 import com.coding.qzy.baselibrary.utils.guidelayer.core.Controller;
 import com.coding.qzy.baselibrary.utils.guidelayer.listener.OnGuideChangedListener;
@@ -32,7 +26,6 @@ import com.coding.qzy.baselibrary.utils.guidelayer.model.HighlightOptions;
 import com.coding.qzy.baselibrary.utils.guidelayer.model.RelativeGuide;
 import com.quzy.coding.R;
 import com.quzy.coding.base.BaseActivity;
-import com.quzy.coding.ui.fragment.BlankFragment;
 
 import butterknife.BindView;
 

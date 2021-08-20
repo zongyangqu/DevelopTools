@@ -1,7 +1,7 @@
 package com.quzy.coding.ui.activity;
 
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.coding.qzy.baselibrary.utils.AbToastUtil;
 import com.coding.qzy.baselibrary.widget.sectioned_adapter.SectionedSpanSizeLookup;
