@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DevelopTools.iml" filepath="$PROJECT_DIR$/DevelopTools.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/baselibrary/baselibrary.iml" filepath="$PROJECT_DIR$/baselibrary/baselibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/externalresource/externalresource.iml" filepath="$PROJECT_DIR$/externalresource/externalresource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DevelopTools.iml" filepath="$PROJECT_DIR$/.idea/modules/DevelopTools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DevelopTools.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DevelopTools.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/baselibrary/DevelopTools.baselibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/baselibrary/DevelopTools.baselibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/externalresource/DevelopTools.externalresource.iml" filepath="$PROJECT_DIR$/.idea/modules/externalresource/DevelopTools.externalresource.iml" />
     </modules>
   </component>
 </project>
