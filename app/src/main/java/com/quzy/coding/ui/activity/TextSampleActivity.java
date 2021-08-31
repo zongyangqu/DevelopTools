@@ -1,5 +1,6 @@
 package com.quzy.coding.ui.activity;
 
+import android.view.View;
 import android.widget.TextView;
 
 import com.coding.qzy.baselibrary.utils.text.ColorPhraseUtils;
@@ -30,6 +31,11 @@ public class TextSampleActivity extends BaseActivity {
                 outerColor(0xFF666666).
                 format();
         textColor.setText(chars);
+    }
+
+    @Override
+    protected View getLayoutView() {
+        return null;
     }
 
     @Override

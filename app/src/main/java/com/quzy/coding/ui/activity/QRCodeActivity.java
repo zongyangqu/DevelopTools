@@ -164,6 +164,11 @@ public class QRCodeActivity extends BaseActivity implements View.OnClickListener
         }
     }
 
+    @Override
+    protected View getLayoutView() {
+        return null;
+    }
+
 
 }
 

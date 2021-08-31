@@ -257,5 +257,9 @@ public class GuideLayerActivity extends BaseActivity{
         return R.layout.activity_guide_layer;
     }
 
+    @Override
+    protected View getLayoutView() {
+        return null;
+    }
 
 }

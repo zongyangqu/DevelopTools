@@ -54,6 +54,10 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
                     case 5:
                         startActivity(new Intent(getActivity(), SectionedRecyclerTestViewActivity.class));
                         break;
+                    case 6:
+                        startActivity(new Intent(getActivity(), NormalRecyclerViewKotActivity.class));
+//                        startActivity(new Intent(getActivity(), NormalRecyclerViewJavaActivity.class));
+                        break;
                 }
             }
         });
@@ -64,6 +68,11 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
         return R.layout.activity_recycler_sample;
     }
 
+    @Override
+    protected View getLayoutView() {
+        return null;
+    }
+
     public List<String> initData(){
         List<String> data = new ArrayList<String>();
         data.add("封装有headView的RecyclerView");
@@ -72,6 +81,8 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
         data.add("RecyclerView电商复杂界面");
         data.add("分组列表的recyclerView");
         data.add("分组选择列表的recyclerView");
+
+        data.add("Kotlin-普通的RecyclerView");
         return data;
     }
 }

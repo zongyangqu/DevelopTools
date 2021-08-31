@@ -1,5 +1,7 @@
 package com.quzy.coding.ui.activity;
 
+import android.view.View;
+
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
@@ -131,6 +133,11 @@ public class StaggeredGridActivity extends BaseActivity {
         data.add(new Anim("狗" , R.mipmap.gougou1));
         data.add(new Anim("猫" , R.mipmap.mao));
         return data;
+    }
+
+    @Override
+    protected View getLayoutView() {
+        return null;
     }
 
 

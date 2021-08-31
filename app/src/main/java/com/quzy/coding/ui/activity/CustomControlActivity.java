@@ -1,5 +1,6 @@
 package com.quzy.coding.ui.activity;
 
+import android.view.View;
 import android.widget.Toast;
 
 import com.coding.qzy.baselibrary.widget.SwitchButton;
@@ -54,6 +55,11 @@ public class CustomControlActivity extends BaseActivity {
             }
         });
 
+    }
+
+    @Override
+    protected View getLayoutView() {
+        return null;
     }
 
     @Override

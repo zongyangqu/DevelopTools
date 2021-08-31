@@ -264,6 +264,11 @@ public class RecordAudioActivity extends BaseActivity implements AdapterView.OnI
         }
     }
 
+    @Override
+    protected View getLayoutView() {
+        return null;
+    }
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

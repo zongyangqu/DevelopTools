@@ -1,5 +1,7 @@
 package com.quzy.coding.ui.activity;
 
+import android.view.View;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -79,5 +81,10 @@ public class NormalRecyclerViewActivity extends BaseActivity {
         animList.add(sheep);
         animList.add(squirrel);
         return animList;
+    }
+
+    @Override
+    protected View getLayoutView() {
+        return null;
     }
 }

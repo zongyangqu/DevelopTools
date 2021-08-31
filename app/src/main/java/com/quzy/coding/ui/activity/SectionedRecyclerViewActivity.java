@@ -1,5 +1,7 @@
 package com.quzy.coding.ui.activity;
 
+import android.view.View;
+
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -51,6 +53,11 @@ public class SectionedRecyclerViewActivity extends BaseActivity {
                 AbToastUtil.showToast(getActivity(),name);
             }
         });
+    }
+
+    @Override
+    protected View getLayoutView() {
+        return null;
     }
 
     @Override

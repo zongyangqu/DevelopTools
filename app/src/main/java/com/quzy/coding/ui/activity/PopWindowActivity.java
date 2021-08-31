@@ -241,6 +241,11 @@ public class PopWindowActivity extends BaseActivity {
         return (int) (dpValue * scale + 0.5f);
     }
 
+    @Override
+    protected View getLayoutView() {
+        return null;
+    }
+
 
 }
 

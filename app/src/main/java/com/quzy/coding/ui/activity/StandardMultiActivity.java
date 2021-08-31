@@ -1,5 +1,7 @@
 package com.quzy.coding.ui.activity;
 
+import android.view.View;
+
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -59,6 +61,11 @@ public class StandardMultiActivity extends BaseActivity {
 
         //refresh data
         adapter.setData(zhaoList, qianList, sunList, liList, zhouList, wuList, zhengList);
+    }
+
+    @Override
+    protected View getLayoutView() {
+        return null;
     }
 
     @Override

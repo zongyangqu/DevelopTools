@@ -2,6 +2,8 @@ package com.quzy.coding.ui.activity;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.View;
 import android.widget.Toast;
 
 import com.coding.qzy.baselibrary.widget.WaveSideBar;
@@ -63,6 +65,11 @@ public class QuickPositionActivity extends BaseActivity{
                 }
             }
         });
+    }
+
+    @Override
+    protected View getLayoutView() {
+        return null;
     }
 
     private void initData() {

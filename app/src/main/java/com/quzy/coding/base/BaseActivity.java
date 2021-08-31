@@ -2,6 +2,8 @@ package com.quzy.coding.base;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+
 import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -45,8 +47,13 @@ public abstract class BaseActivity extends AppCompatActivity {
 //                startActivity(intent);
                 break;
             case AppStatusConstant.STATUS_NORMAL:
-                setContentView(getLayoutId());
-                ButterKnife.bind(this);
+                if(getLayoutId() == 0){
+                    setContentView(getLayoutView());
+
+                }else {
+                    setContentView(getLayoutId());
+                    ButterKnife.bind(this);
+                }
                 onViewCreated();
                 break;
         }
@@ -64,6 +71,8 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @LayoutRes
     protected abstract int getLayoutId();
+
+    protected abstract View getLayoutView();
 
     public AppCompatActivity getActivity(){
         return this;

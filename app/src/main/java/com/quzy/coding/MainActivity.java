@@ -73,6 +73,10 @@ public class MainActivity extends BaseActivity {
         return R.layout.activity_main;
     }
 
+    @Override
+    protected View getLayoutView() {
+        return null;
+    }
 
     public void initData(){
 //        List<String> data = new ArrayList<String>();

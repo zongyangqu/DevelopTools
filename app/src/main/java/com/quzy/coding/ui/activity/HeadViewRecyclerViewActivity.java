@@ -97,4 +97,9 @@ public class HeadViewRecyclerViewActivity extends BaseActivity {
         animList.add(squirrel);
         return animList;
     }
+
+    @Override
+    protected View getLayoutView() {
+        return null;
+    }
 }

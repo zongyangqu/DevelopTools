@@ -277,6 +277,12 @@ public class RecordMp3Activity extends BaseActivity implements View.OnClickListe
         //recordHintTv.setText("00:00");
     }
 
+
+    @Override
+    protected View getLayoutView() {
+        return null;
+    }
+
     /**
      * 获取音频文件的总时长大小
      *

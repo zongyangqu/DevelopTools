@@ -119,6 +119,11 @@ public class BackGroundActivity extends BaseActivity{
         return R.layout.activity_background;
     }
 
+    @Override
+    protected View getLayoutView() {
+        return null;
+    }
+
     public int dip2px(float dipValue) {
         float scale = getResources().getDisplayMetrics().density;
         return (int)(dipValue * scale + 0.5F);

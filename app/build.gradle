@@ -1,5 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'bugly'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     signingConfigs {
@@ -35,6 +38,11 @@ android {
             exclude "lib/armeabi-v7a/libmp3lame.so"
             exclude "lib/mips/libmp3lame.so"
             exclude "lib/mips64/libmp3lame.so"
+        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
         }
 
         javaCompileOptions {
@@ -90,6 +98,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }*/
     }
+
+    viewBinding {
+        enabled = true
+    }
 }
 
 bugly {
@@ -105,9 +117,10 @@ repositories {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation rootProject.ext.dependencies["appcompat-v7"]
     implementation rootProject.ext.dependencies["butterknife"]
-    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    kapt  rootProject.ext.dependencies["butterknife-compiler"]
     implementation rootProject.ext.dependencies["glide"]
     implementation 'androidx.multidex:multidex:2.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
