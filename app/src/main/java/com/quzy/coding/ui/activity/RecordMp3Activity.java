@@ -65,7 +65,7 @@ public class RecordMp3Activity extends BaseActivity implements View.OnClickListe
      TextView recordLength;
     @BindView(R.id.recordHintTv)
      TextView recordHintTv;
-    final RecordManager recordManager = RecordManager.getInstance();
+    //final RecordManager recordManager = RecordManager.getInstance();
     private VoiceManager voiceManager;
 
 
@@ -81,66 +81,66 @@ public class RecordMp3Activity extends BaseActivity implements View.OnClickListe
     }
 
     private void initRecord() {
-        recordManager.init((Application) BaseApplication.getContext(), BuildConfig.DEBUG);
-        recordManager.changeFormat(RecordConfig.RecordFormat.MP3);
-        String recordDir = String.format(Locale.getDefault(), "%s/Record/com.zlw.main/",
-                Environment.getExternalStorageDirectory().getAbsolutePath());
-        recordManager.changeRecordDir(recordDir);
-        initRecordEvent();
+        //recordManager.init((Application) BaseApplication.getContext(), BuildConfig.DEBUG);
+        //recordManager.changeFormat(RecordConfig.RecordFormat.MP3);
+       // String recordDir = String.format(Locale.getDefault(), "%s/Record/com.zlw.main/",
+               // Environment.getExternalStorageDirectory().getAbsolutePath());
+       // recordManager.changeRecordDir(recordDir);
+       // initRecordEvent();
     }
 
     private void initRecordEvent() {
-        recordManager.setRecordStateListener(new RecordStateListener() {
-            @Override
-            public void onStateChange(RecordHelper.RecordState state) {
-                // Logger.i(TAG, "onStateChange %s", state.name());
-                switch (state) {
-                    case PAUSE:
-                        recordHintTv.setText("暂停中");
-                        break;
-                    case IDLE:
-                        recordHintTv.setText("空闲中");
-                        break;
-                    case RECORDING:
-                        recordHintTv.setText("录音中");
-                        break;
-                    case STOP:
-                        recordHintTv.setText("停止");
-                        break;
-                    case FINISH:
-                        recordHintTv.setText("录音结束");
-                        //tvSoundSize.setText("---");
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-            @Override
-            public void onError(String error) {
-                //   Logger.i(TAG, "onError %s", error);
-            }
-        });
-        recordManager.setRecordSoundSizeListener(new RecordSoundSizeListener() {
-            @Override
-            public void onSoundSize(int soundSize) {
-            }
-        });
-        recordManager.setRecordResultListener(new RecordResultListener() {
-            @Override
-            public void onResult(File result) {
-                recordPath = result.getAbsolutePath();
-                Log.d("PathDrution",getAudioFileVoiceTime(recordPath)+"");
-                recordLength.setText(getAudioFileVoiceTime(recordPath)+"");
-                Toast.makeText(RecordMp3Activity.this, "录音文件： " + result.getAbsolutePath(), Toast.LENGTH_SHORT).show();
-            }
-        });
-        recordManager.setRecordFftDataListener(new RecordFftDataListener() {
-            @Override
-            public void onFftData(byte[] data) {
-                //audioView.setWaveData(data);
-            }
-        });
+//        recordManager.setRecordStateListener(new RecordStateListener() {
+//            @Override
+//            public void onStateChange(RecordHelper.RecordState state) {
+//                // Logger.i(TAG, "onStateChange %s", state.name());
+//                switch (state) {
+//                    case PAUSE:
+//                        recordHintTv.setText("暂停中");
+//                        break;
+//                    case IDLE:
+//                        recordHintTv.setText("空闲中");
+//                        break;
+//                    case RECORDING:
+//                        recordHintTv.setText("录音中");
+//                        break;
+//                    case STOP:
+//                        recordHintTv.setText("停止");
+//                        break;
+//                    case FINISH:
+//                        recordHintTv.setText("录音结束");
+//                        //tvSoundSize.setText("---");
+//                        break;
+//                    default:
+//                        break;
+//                }
+//            }
+//
+//            @Override
+//            public void onError(String error) {
+//                //   Logger.i(TAG, "onError %s", error);
+//            }
+//        });
+//        recordManager.setRecordSoundSizeListener(new RecordSoundSizeListener() {
+//            @Override
+//            public void onSoundSize(int soundSize) {
+//            }
+//        });
+//        recordManager.setRecordResultListener(new RecordResultListener() {
+//            @Override
+//            public void onResult(File result) {
+//                recordPath = result.getAbsolutePath();
+//                Log.d("PathDrution",getAudioFileVoiceTime(recordPath)+"");
+//                recordLength.setText(getAudioFileVoiceTime(recordPath)+"");
+//                Toast.makeText(RecordMp3Activity.this, "录音文件： " + result.getAbsolutePath(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//        recordManager.setRecordFftDataListener(new RecordFftDataListener() {
+//            @Override
+//            public void onFftData(byte[] data) {
+//                //audioView.setWaveData(data);
+//            }
+//        });
     }
 
     /**
@@ -244,7 +244,7 @@ public class RecordMp3Activity extends BaseActivity implements View.OnClickListe
     private boolean isStart = false;
     private boolean isPause = false;
     private void doStop() {
-        recordManager.stop();
+       // recordManager.stop();
      //   btRecord.setText("开始");
         isPause = false;
         isStart = false;
@@ -253,16 +253,16 @@ public class RecordMp3Activity extends BaseActivity implements View.OnClickListe
     private void doPlay() {
         if (isStart) {
             pauseRecord.setImageResource(R.mipmap.replay_record);
-            recordManager.pause();
+           // recordManager.pause();
             //btRecord.setText("开始");
             isPause = true;
             isStart = false;
         } else {
             pauseRecord.setImageResource(R.mipmap.pause_record);
             if (isPause) {
-                recordManager.resume();
+               // recordManager.resume();
             } else {
-                recordManager.start();
+               // recordManager.start();
             }
            // btRecord.setText("暂停");
             isStart = true;

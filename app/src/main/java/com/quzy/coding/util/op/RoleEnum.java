@@ -87,7 +87,8 @@ public enum RoleEnum implements RoleOperation {
     },AudioAction {
         @Override
         public void starAction(Activity activity) {
-            activity.startActivity(new Intent(activity, RecordAudioActivity.class));
+            activity.startActivity(new Intent(activity, RecordMp3Activity.class));
+//            activity.startActivity(new Intent(activity, RecordAudioActivity.class));
         };
     },QRAction {
         @Override
@@ -105,6 +106,11 @@ public enum RoleEnum implements RoleOperation {
             activity.startActivity(new Intent(activity, ExternalResourceActivity.class));
         };
     },HotFix {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, HotFixDemoActivity.class));
+        };
+    },RecordView {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, HotFixDemoActivity.class));
