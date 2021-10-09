@@ -12,4 +12,28 @@
     <color name="font_second_color">#666666</color>
     <color name="font_red_color">#FF686C</color>
     <color name="font_orange_color">#FF8E00</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white1">#EEEEEE</color>
+    <color name="white2">#DFDFDF</color>
+    <color name="blue">#1c9aff</color>
+    <color name="pink">#FFBDCF</color>
+    <color name="gray1">#cccccc</color>
+    <color name="gray2">#b6b6b6</color>
+    <color name="gray3">#8e8e8e</color>
+    <color name="gray4">#989696</color>
+    <color name="gray5">#999898</color>
+    <color name="gray6">#7a7a7a</color>
+    <color name="gray7">#535353</color>
+    <color name="gray8">#636363</color>
+    <color name="gray9">#F2F0F1</color>
+    <color name="gray10">#DEDEE0</color>
+    <color name="transparent">#cc000000</color>
+    <color name="transparent2">#80000000</color>
+    <color name="transparent3">#cc000000</color>
+    <color name="transparent4">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="black2">#434343</color>
+    <color name="orange">#FF5500</color>
+    <color name="red">#DC4A4B</color>
 </resources>

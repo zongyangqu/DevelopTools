@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/image_type"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/mybudget"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="枫溪美郡13号楼"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/black2"
+                />
+            <TextView
+                android:id="@+id/text_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018.08.22"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/text_size_12"
+                android:textColor="@color/gray6"
+                />
+            <TextView
+                android:id="@+id/text_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未支付"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/text_size_12"
+                android:textColor="@color/gray6"
+                />
+            <TextView
+                android:id="@+id/text_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付"
+                android:gravity="center"
+                android:background="@drawable/view_bg_shape"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/text_size_10"
+                android:textColor="@color/blue"
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_delete"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="删除"
+            android:background="@color/red"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white1"
+        />
+</LinearLayout>
+

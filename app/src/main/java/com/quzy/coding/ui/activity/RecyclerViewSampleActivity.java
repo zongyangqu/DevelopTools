@@ -56,7 +56,9 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
                         break;
                     case 6:
                         startActivity(new Intent(getActivity(), NormalRecyclerViewKotActivity.class));
-//                        startActivity(new Intent(getActivity(), NormalRecyclerViewJavaActivity.class));
+                        break;
+                    case 7:
+                        startActivity(new Intent(getActivity(), MoreItemRecyclerViewKotActivity.class));
                         break;
                 }
             }
@@ -83,6 +85,7 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
         data.add("分组选择列表的recyclerView");
 
         data.add("Kotlin-普通的RecyclerView");
+        data.add("Kotlin-多条目的RecyclerView");
         return data;
     }
 }

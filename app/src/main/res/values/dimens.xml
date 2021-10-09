@@ -1,0 +1,80 @@
+<resources>
+
+    <dimen name="text_size_10">10dp</dimen>
+    <dimen name="text_size_12">12dp</dimen>
+    <dimen name="text_size_14">14dp</dimen>
+    <dimen name="text_size_16">16dp</dimen>
+    <dimen name="text_size_18">18dp</dimen>
+
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_13">13dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_45">45dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="margin_65">65dp</dimen>
+    <dimen name="margin_80">80dp</dimen>
+
+    <array name="release_type">
+        <item>我要出租自己</item>
+        <item>我要发起约会</item>
+    </array>
+    <array name="release_skill_type">
+        <item>线上</item>
+        <item>线下</item>
+    </array><array name="release_sex_array">
+        <item>男</item>
+        <item>女</item>
+    </array>
+    <array name="array_day">
+        <item>今天</item>
+        <item>明天</item>
+        <item>后天</item>
+    </array>
+    <array name="array_hour">
+        <item>"00"</item>
+        <item>"01"</item>
+        <item>"02"</item>
+        <item>"03"</item>
+        <item>"04"</item>
+        <item>"05"</item>
+        <item>"06"</item>
+        <item>"07"</item>
+        <item>"08"</item>
+        <item>"09"</item>
+        <item>"10"</item>
+        <item>"11"</item>
+        <item>"12"</item>
+        <item>"13"</item>
+        <item>"14"</item>
+        <item>"15"</item>
+        <item>"16"</item>
+        <item>"17"</item>
+        <item>"18"</item>
+        <item>"19"</item>
+        <item>"20"</item>
+        <item>"21"</item>
+        <item>"22"</item>
+        <item>"23"</item>
+    </array>
+
+    <array name="array_whenLong">
+        <item>"1小时"</item>
+        <item>"2小时"</item>
+        <item>"3小时"</item>
+        <item>"4小时"</item>
+        <item>"5小时"</item>
+        <item>"6小时"</item>
+        <item>"7小时"</item>
+        <item>"8小时"</item>
+        <item>"9小时"</item>
+        <item>"10小时"</item>
+        <item>"11小时"</item>
+        <item>"12小时"</item>
+    </array>
+</resources>

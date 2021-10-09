@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.quzy.coding.R
 import com.quzy.coding.base.BaseActivity
 import com.quzy.coding.bean.Fruit

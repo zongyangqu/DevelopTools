@@ -105,6 +105,8 @@
 
         <activity android:name=".ui.activity.NormalRecyclerViewJavaActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.MoreItemRecyclerViewKotActivity"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -62,6 +62,12 @@ public enum RoleEnum implements RoleOperation {
             activity.startActivity(new Intent(activity, RecyclerViewSampleActivity.class));
         }
     },
+    RecyclerViewKotlinAction {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, RecyclerViewSampleActivity.class));
+        }
+    },
     AppUpdateSampleAction {
         @Override
         public void starAction(Activity activity) {
