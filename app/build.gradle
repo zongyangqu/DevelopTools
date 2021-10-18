@@ -120,6 +120,7 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation rootProject.ext.dependencies["appcompat-v7"]
     implementation rootProject.ext.dependencies["butterknife"]
+    implementation 'com.google.android.material:material:1.1.0'
     kapt  rootProject.ext.dependencies["butterknife-compiler"]
     implementation rootProject.ext.dependencies["glide"]
     implementation 'androidx.multidex:multidex:2.0.0'
