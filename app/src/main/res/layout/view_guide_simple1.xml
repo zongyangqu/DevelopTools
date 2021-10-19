@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/iv_next"
         android:layout_marginRight="80dp"
         android:layout_marginTop="50dp"
         android:src="@drawable/right"

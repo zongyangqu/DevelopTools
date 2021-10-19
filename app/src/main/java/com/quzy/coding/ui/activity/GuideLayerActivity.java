@@ -112,16 +112,16 @@ public class GuideLayerActivity extends BaseActivity{
                         })
                         .alwaysShow(true)//总是显示，调试时可以打开
                         .addGuidePage(GuidePage.newInstance()
-                                .addHighLight(btnSimple)
-                                .addHighLight(new RectF(0, 800, 200, 1200))
+                                //.addHighLight(btnSimple)
+                                //.addHighLight(new RectF(0, 800, 200, 1200))
                                 .setEverywhereCancelable(false)//是否点击任意地方跳转下一页或者消失引导层，默认true
                                 //.setBackgroundColor(getResources().getColor(R.color.background))//设置背景色，建议使用有透明度的颜色
                                 .setLayoutRes(R.layout.view_guide_simple,R.id.ivNext))
                         .addGuidePage(GuidePage.newInstance()
                                 .addHighLight(btnDialog)
-                                .setEverywhereCancelable(false)//是否点击任意地方跳转下一页或者消失引导层，默认true
-                                .setLayoutRes(R.layout.view_guide_simple1))
-                        .addGuidePage(//添加一页引导页
+                                .setEverywhereCancelable(true)//是否点击任意地方跳转下一页或者消失引导层，默认true
+                                .setLayoutRes(R.layout.view_guide_simple,R.id.ivNext))
+                        /*.addGuidePage(//添加一页引导页
                                 GuidePage.newInstance()//创建一个实例
                                         .addHighLight(btnMulti)//添加高亮的view
                                         .setEverywhereCancelable(false)//是否点击任意地方跳转下一页或者消失引导层，默认true
@@ -136,9 +136,9 @@ public class GuideLayerActivity extends BaseActivity{
                                         })
                                        // .setEnterAnimation(enterAnimation)//进入动画
                                         .setExitAnimation(exitAnimation)//退出动画
-                        ).build();
+                        )*/.build();
                 controller.show();
-                //controller.remove();
+                controller.remove();
             }
         });
 
