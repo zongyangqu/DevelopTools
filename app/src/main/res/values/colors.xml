@@ -36,4 +36,12 @@
     <color name="black2">#434343</color>
     <color name="orange">#FF5500</color>
     <color name="red">#DC4A4B</color>
+    <color name="subGrayGoldColor">#2F2B32</color>
+    <color name="redGrayGradientTo">#F6F6F6</color>
+    <color name="subGoldColor">#FFEFC2</color>
+    <color name="svip_action_textcolor">#2F2B32</color>
+    <color name="color_FFEEC2">#FFEEC2</color>
+    <color name="member_svip_actiontext_cloro">#53371A</color>
+    <color name="color_black_to">#17161C</color>
+    <color name="color_black_from">#403A41</color>
 </resources>

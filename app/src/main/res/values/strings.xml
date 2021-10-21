@@ -49,4 +49,32 @@
         <item>外部资源加载框架</item>
         <item>热修复</item>
     </string-array>
+
+    <string name="member_bury_page_mine">>我的页</string>
+
+    <string name="member_bury_nor_member_tag">~普通会员标签</string>
+    <string name="member_bury_sss_member_tag">~卓越会员标签</string>
+    <string name="member_bury_super_member_tag">~超级会员标签</string>
+    <string name="member_bury_coupon_tips">~我的优惠券提醒</string>
+    <string name="member_bury_qrcode">~我的顶部会员码</string>
+    <string name="member_bury_custom_service">~我的顶部客服</string>
+    <string name="member_bury_complete_info">~完善会员信息</string>
+
+    <string name="member_bury_customer_properties">>customerProperties</string>
+    <string name="member_bury_order_topay">>待支付</string>
+    <string name="member_bury_order_topick">>待收货</string>
+    <string name="member_bury_order_tocomment">>待评价</string>
+    <string name="member_bury_order_refund">>退款售后</string>
+    <string name="member_bury_order_all">>全部订单</string>
+
+    <string name="member_bury_service">>服务帮助</string>
+    <string name="member_bury_yhjr">>永辉钱包</string>
+    <string name="member_bury_login">>立即登录</string>
+    <string name="member_bury_my_store">>我的门店</string>
+
+    <string name="member_bury_svip_card">>超级会员入口</string>
+    <string name="member_please_login">登录/注册</string>
+    <string name="member_center">我的</string>
+    <string name="vip_type_normal">会员</string>
+    <string name="vip_type_super">超级会员</string>
 </resources>
