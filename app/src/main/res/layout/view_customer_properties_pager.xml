@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_layout_pager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="12dp"
+    android:background="@drawable/shape_white_corner_12"
+    android:clipChildren="false">
+
+    <TextView
+        android:id="@+id/tv_member_balance_default"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        android:text="— —\n余额·充值(元)"/>
+
+    <TextView
+        android:id="@+id/tv_member_yhcard_default"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        android:text="— —\n永辉卡(张)"/>
+
+    <TextView
+        android:id="@+id/tv_member_package_default"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        android:text="— —\n红包礼券"/>
+
+    <TextView
+        android:id="@+id/tv_member_mark_default"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        android:layout_weight="1"
+        android:text="— —\n积分商城"/>
+
+
+</LinearLayout>

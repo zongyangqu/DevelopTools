@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.apkfuns.logutils.LogUtils
 import com.quzy.coding.base.BaseActivity
 import com.quzy.coding.bean.AssetInfo
 import com.quzy.coding.bean.ItemActivityCardBean
@@ -12,7 +11,6 @@ import com.quzy.coding.bean.model.MemberType
 import com.quzy.coding.bean.model.MemberTypeWithData
 import com.quzy.coding.databinding.ActivityRecyclerviewBinding
 import com.quzy.coding.ui.adapter.WaterfallComplexKotAdapter
-import com.quzy.coding.util.Constants
 import com.quzy.coding.util.JsonUtils
 
 /**
@@ -34,14 +32,16 @@ class RecyclerViewWaterfallComplexKotActivity : BaseActivity() {
         assetInfo = JsonUtils.analysisAssetInfoJsonFile(this, "aeestinfo")
         newMemberLayoutManager = StaggeredGridLayoutManager(2, RecyclerView.VERTICAL)
         newMemberAdapter = WaterfallComplexKotAdapter()
+        newMemberAdapter?.fragment = this
         activityRecyclerviewBinding?.recyclerView?.layoutManager = newMemberLayoutManager
         activityRecyclerviewBinding?.recyclerView?.adapter = newMemberAdapter
 
 
         memberDatas = ArrayList()
-        memberDatas?.add(MemberTypeWithData(MemberType.USERHEADER))
-        memberDatas?.add(MemberTypeWithData(MemberType.DEFAULT_CUSTOMER_PROPERTIES))
-        memberDatas?.add(MemberTypeWithData(MemberType.ORDERFORM))
+        //模拟兜底数据展示
+//        memberDatas?.add(MemberTypeWithData(MemberType.USERHEADER))
+//        memberDatas?.add(MemberTypeWithData(MemberType.DEFAULT_CUSTOMER_PROPERTIES))
+//        memberDatas?.add(MemberTypeWithData(MemberType.ORDERFORM))
         newMemberAdapter?.datas = memberDatas
         assetInfo?.let {
             newMemberAdapter?.notifyDataSetChanged()

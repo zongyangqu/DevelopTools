@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:contentDescription="@string/member_bury_my_store"
+    android:id="@+id/shop_info_layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="84dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="9dp"
+    android:layout_marginRight="12dp"
+    android:background="@drawable/shape_white_corner"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/ll_memebr_left_logo"
+        android:layout_marginStart="12dp"
+        android:layout_width="54dp"
+        android:layout_centerVertical="true"
+        android:layout_height="54dp"
+        android:background="@drawable/view_content_store_msg_img_bg"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/shop_info_image"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            android:src="@mipmap/icon_member_common_circle_placeholder" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/shop_info_right_root"
+        android:layout_width="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/ll_memebr_left_logo"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/shop_info_shop_name"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="90dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="3dp"
+            android:textColor="#292929"
+            android:textSize="14sp"
+            tools:text="永辉超市-虹桥天街店" />
+
+        <com.quzy.coding.util.widget.IconFont
+            android:id="@+id/if_location_member"
+            android:layout_width="13dp"
+            android:layout_height="14dp"
+            android:layout_below="@id/shop_info_shop_name"
+            android:layout_marginTop="4dp"
+            android:text="@string/icon_location"
+            android:textColor="@color/subLightBlackColor"
+            android:textSize="@dimen/textsize_14" />
+
+        <TextView
+            android:id="@+id/shop_info_shop_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shop_info_shop_name"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/if_location_member"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp"
+            tools:text="2.3km" />
+
+        <com.quzy.coding.util.view.FadeOutView
+            android:id="@+id/shop_info_tags_layout"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:layout_below="@id/shop_info_shop_name"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="12dp"
+            android:layout_toRightOf="@id/shop_info_shop_distance" />
+
+
+        <TextView
+            android:id="@+id/shop_info_arrive_discount"
+            android:layout_width="66dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/persion_center_get_coupon_bt_bg"
+            android:includeFontPadding="false"
+            android:text="@string/member_center_discount_hint"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

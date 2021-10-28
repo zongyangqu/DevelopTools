@@ -402,8 +402,8 @@ class MemberUserHeaderViewholder(itemView: View) : RecyclerView.ViewHolder(itemV
         itemView.apply {
             mIsLogin = login
             if (login) {
-                member_login.visibility = View.VISIBLE
-                member_notlogin.visibility = View.GONE
+                member_login?.visibility = View.VISIBLE
+                member_notlogin?.visibility = View.GONE
             } else {
                 ic_avatar_bg.setBackgroundResource(R.drawable.bg_avatar_normal)
                 sivp_hint_layout.visibility = View.GONE

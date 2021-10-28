@@ -35,6 +35,7 @@
     <dimen name="margin_60">60dp</dimen>
     <dimen name="margin_65">65dp</dimen>
     <dimen name="margin_80">80dp</dimen>
+    <dimen name="yhjr_member_item_height">90dp</dimen>
 
     <array name="release_type">
         <item>我要出租自己</item>
