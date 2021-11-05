@@ -15,6 +15,7 @@
 
     <color name="white">#ffffff</color>
     <color name="white1">#EEEEEE</color>
+    <color name="color_eeeeee">#EEEEEE</color>
     <color name="white2">#DFDFDF</color>
     <color name="blue">#1c9aff</color>
     <color name="pink">#FFBDCF</color>
@@ -68,4 +69,11 @@
     <color name="subMediumGreyColor">#DDDDDD</color>
     <color name="alipay_coupon_tag_from">#168BFF</color>
     <color name="alipay_coupon_tag_to">#1664FF</color>
+    <color name="subMediumBlackColor">#333333</color>
+    <color name="subRegularBlackColor">#666666</color>
+    <color name="white_a80">#cdffffff</color>
+    <color name="color_FF3819">#FF3819</color>
+    <color name="color_0D000000">#0D000000</color>
+    <color name="color_F2FBFF">#F2FBFF</color>
+    <color name="color_19BAFF">#19BAFF</color>
 </resources>

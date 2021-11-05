@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.quzy.coding.R
 import com.quzy.coding.bean.AssetInfo
+import com.quzy.coding.bean.ItemActivityCardBean
 import com.quzy.coding.bean.model.MemberType
 import com.quzy.coding.bean.model.MemberTypeWithData
 import com.quzy.coding.ui.activity.RecyclerViewWaterfallComplexKotActivity
@@ -55,9 +56,33 @@ class WaterfallComplexKotAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>
                 view = LayoutInflater.from(parent.context).inflate(R.layout.view_content_store_msg, parent, false)
                 return MemberStoreMsgViewholder(view)
             }
+            MemberType.SERVICEHELP.ordinal -> {
+                view = LayoutInflater.from(parent.context).inflate(R.layout.view_content_service_help, parent, false)
+                return MemberServiceHelpViewholder(view)
+            }
             MemberType.DOUBLE_ELEVEN_PROMOTION.ordinal ->{
                 view = LayoutInflater.from(parent.context).inflate(R.layout.view_double_eleven_promotions, parent, false)
                 return MemberDoubleElevenTypeHolder(view)
+            }
+            MemberType.ACTIVITY_CARD_TITLE.ordinal -> {
+                view = LayoutInflater.from(parent.context).inflate(R.layout.view_content_guess_you_like_title, parent, false)
+                return MemberGuessYouLikeTitleViewholder(fragment, view)
+            }
+            MemberType.ACTIVITY_CARD_TYPE_ONE.ordinal -> {
+                view = LayoutInflater.from(parent.context).inflate(R.layout.view_content_member_activity_card_type_one, parent, false)
+                return MemberActivityCardTypeOneHolder(view)
+            }
+            MemberType.ACTIVITY_CARD_TYPE_TWO.ordinal -> {
+                view = LayoutInflater.from(parent.context).inflate(R.layout.view_content_member_activity_card_type_two, parent, false)
+                return MemberActivityCardTypeTwoHolder(view)
+            }
+            MemberType.ACTIVITY_CARD_TYPE_LIVE.ordinal ->{
+                view = LayoutInflater.from(parent.context).inflate(R.layout.view_content_member_activity_card_type_live, parent, false)
+                return MemberActivityCardTypeLiveHolder(fragment?.lifecycle,view)
+            }
+            MemberType.ACTIVITY_CARD_TYPE_LIVE.ordinal ->{
+                view = LayoutInflater.from(parent.context).inflate(R.layout.view_content_member_activity_card_type_live, parent, false)
+                return MemberActivityCardTypeLiveHolder(fragment?.lifecycle,view)
             }
         }
         return MemberDefaultViewholder(view)
@@ -86,10 +111,27 @@ class WaterfallComplexKotAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>
                 // 门店信息
                 holder.bindData(assetInfo, fragment)
             }
+            is MemberServiceHelpViewholder -> {
+                // 服务帮助
+                holder.bindData(assetInfo, fragment)
+            }
             is MemberDoubleElevenTypeHolder -> {
                 holder.bindData(assetInfo,fragment)
             }
-
+            is MemberGuessYouLikeTitleViewholder -> {
+                holder.bindData(datas?.get(position)?.data as String)
+            }
+            is MemberActivityCardTypeOneHolder -> {
+                // 类型为一的天天逛 享优惠活动卡片
+                holder.bindData(datas?.get(position)?.data as ItemActivityCardBean,fragment)
+            }
+            is MemberActivityCardTypeTwoHolder -> {
+                // 类型为二的天天逛 享优惠活动卡片
+                holder.bindData(datas?.get(position)?.data as ItemActivityCardBean,fragment)
+            }
+            is MemberActivityCardTypeLiveHolder -> {
+                holder.bindData(datas?.get(position)?.data as ItemActivityCardBean,fragment)
+            }
         }
     }
 

@@ -55,12 +55,15 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
                         startActivity(new Intent(getActivity(), SectionedRecyclerTestViewActivity.class));
                         break;
                     case 6:
-                        startActivity(new Intent(getActivity(), NormalRecyclerViewKotActivity.class));
+                        startActivity(new Intent(getActivity(), BaseQuickRecyclerViewKotActivity.class));
                         break;
                     case 7:
-                        startActivity(new Intent(getActivity(), MoreItemRecyclerViewKotActivity.class));
+                        startActivity(new Intent(getActivity(), NormalRecyclerViewKotActivity.class));
                         break;
                     case 8:
+                        startActivity(new Intent(getActivity(), MoreItemRecyclerViewKotActivity.class));
+                        break;
+                    case 9:
                         startActivity(new Intent(getActivity(), RecyclerViewWaterfallComplexKotActivity.class));
                         break;
                 }
@@ -86,6 +89,7 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
         data.add("RecyclerView电商复杂界面");
         data.add("分组列表的recyclerView");
         data.add("分组选择列表的recyclerView");
+        data.add("Kotlin-BaseQuickAdapter");
         data.add("Kotlin-普通的RecyclerView");
         data.add("Kotlin-多条目的RecyclerView");
         data.add("Kotlin-多条目瀑布流的RecyclerView");

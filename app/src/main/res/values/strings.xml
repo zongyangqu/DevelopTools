@@ -83,4 +83,7 @@
     <string name="default_pic_content_description">图片</string>
     <string name="member_center_discount_hint">领取优惠</string>
     <string name="icon_location">"\ue909"</string>
+    <string name="icon_arrow_right">"\ue92a"</string>
+    <string name="membercenter_service_center">客服中心</string>
+    <string name="CustomerServicePhone">4008005050</string>
 </resources>

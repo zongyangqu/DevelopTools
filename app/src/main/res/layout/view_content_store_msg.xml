@@ -23,11 +23,12 @@
         android:gravity="center"
         android:visibility="visible">
 
-        <ImageView
+        <com.shehuan.niv.NiceImageView
             android:id="@+id/shop_info_image"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:layout_centerInParent="true"
+            app:corner_radius="9dp"
             android:visibility="visible"
             android:src="@mipmap/icon_member_common_circle_placeholder" />
 
@@ -79,14 +80,6 @@
             android:textSize="14sp"
             tools:text="2.3km" />
 
-        <com.quzy.coding.util.view.FadeOutView
-            android:id="@+id/shop_info_tags_layout"
-            android:layout_width="match_parent"
-            android:layout_height="18dp"
-            android:layout_below="@id/shop_info_shop_name"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="12dp"
-            android:layout_toRightOf="@id/shop_info_shop_distance" />
 
 
         <TextView

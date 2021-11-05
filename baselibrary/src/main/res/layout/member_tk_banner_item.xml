@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.yonghui.hyd.member.wigets.memberloop.CommonLoopViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    >
+
+    <RelativeLayout
+        android:id="@+id/banner_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <ImageView
+            android:id="@+id/banner_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/banner_item_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            />
+
+    </RelativeLayout>
+</cn.yonghui.hyd.member.wigets.memberloop.CommonLoopViewPager>
+

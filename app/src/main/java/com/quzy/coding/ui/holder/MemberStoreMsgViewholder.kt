@@ -6,6 +6,7 @@ import android.text.TextUtils
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.bumptech.glide.Glide
 import com.coding.qzy.baselibrary.utils.extend.dpOfInt
 import com.quzy.coding.bean.AssetInfo
 import com.quzy.coding.bean.OffineStoreInfo
@@ -20,6 +21,7 @@ import kotlinx.android.synthetic.main.view_content_store_msg.view.*
  */
 class MemberStoreMsgViewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     var loginStateValue: String? = null
+    var fragment: RecyclerViewWaterfallComplexKotActivity? = null
 
     init {
         (itemView.layoutParams as? StaggeredGridLayoutManager.LayoutParams)?.isFullSpan = true
@@ -32,6 +34,7 @@ class MemberStoreMsgViewholder(itemView: View) : RecyclerView.ViewHolder(itemVie
         assetInfo?.apply {
             updateOffineShopInfo(this, shopDiscountsVo)
         }
+        this.fragment = fragment
 
     }
 
@@ -39,7 +42,7 @@ class MemberStoreMsgViewholder(itemView: View) : RecyclerView.ViewHolder(itemVie
         itemView.apply {
             shop_info_layout_container?.visibility = View.GONE
             shopDiscountsVo?.let {
-                //shop_info_image.getImageForOriginalSize(it.logoUrl)
+                fragment?.let { it1 -> Glide.with(it1).load(shopDiscountsVo.logoUrl).into(shop_info_image) }
                 if (!TextUtils.isEmpty(it.distance)) {
                     if_location_member?.visibility = View.VISIBLE
                     shop_info_shop_distance?.visibility = View.VISIBLE
@@ -49,14 +52,6 @@ class MemberStoreMsgViewholder(itemView: View) : RecyclerView.ViewHolder(itemVie
                     shop_info_shop_distance?.visibility = View.GONE
                 }
                 shop_info_shop_name.text = it.shopName
-                //4.5.0标签统一
-                shop_info_tags_layout.removeAllViews()
-                if (shopDiscountsVo?.tags?.isNotEmpty() == true) {
-                    shop_info_tags_layout.visibility = View.VISIBLE
-                    shop_info_tags_layout.addChildWithTagBean(shopDiscountsVo?.tags!!, true, null)
-                } else {
-                    shop_info_tags_layout.visibility = View.GONE
-                }
                 shop_info_layout_container?.visibility = View.VISIBLE
             }
 

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/round_radius_second_level"
+    android:background="@color/white"
+    app:round_corner="@dimen/round_radius_third_level"
+    tools:background="@color/white"
+    tools:layout_width="171dp"
+    tools:layout_height="241dp">
+
+    <com.shehuan.niv.NiceImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.shehuan.niv.NiceImageView
+        android:id="@+id/iv_head_icon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="@dimen/round_radius_third_level"
+        android:layout_marginTop="9dp"
+        android:src="@mipmap/icon_common_placeholder"
+        app:corner_radius="9dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_head_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/round_radius_first_level"
+        android:layout_marginRight="@dimen/round_radius_second_level"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/subMediumBlackColor"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_head_icon"
+        app:layout_constraintLeft_toRightOf="@+id/iv_head_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_head_icon"
+        tools:text="天天签到" />
+
+    <com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout
+        android:id="@+id/rcl_content_type_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/round_radius_second_level"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="@dimen/round_radius_second_level"
+        android:layout_marginBottom="9dp"
+        android:background="@color/color_F2FBFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:round_corner="@dimen/round_radius_second_level">
+
+
+        <com.shehuan.niv.NiceImageView
+            android:id="@+id/iv_content_bg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:corner_radius="@dimen/round_radius_third_level"
+            android:src="@mipmap/icon_common_placeholder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_content_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/round_radius_second_level"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_19BAFF"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="当前388积分" />
+
+        <TextView
+            android:id="@+id/tv_content_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/subMediumBlackColor"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/iv_content_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="115元红包" />
+
+        <com.shehuan.niv.NiceImageView
+            android:id="@+id/iv_content_icon"
+            android:layout_width="93dp"
+            android:layout_height="84dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="12dp"
+            android:src="@mipmap/icon_common_placeholder"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/iv_content_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:corner_radius="@dimen/round_radius_third_level" />
+
+        <ImageView
+            android:id="@+id/iv_content_button"
+            android:layout_width="54dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout>
+
+
+    <!-- 整个卡片的点击事件是同一个，为了使recyclerView也能响应该点击事件，直接在最上层加了个响应点击的view-->
+    <View
+        android:id="@+id/view_click"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout>

@@ -60,7 +60,9 @@ class RecyclerViewWaterfallComplexKotActivity : BaseActivity() {
             if (!it.cmsPagePit.isNullOrEmpty()) {
                 memberDatas?.add(MemberTypeWithData(MemberType.GALLERYAD))
             }
-            memberDatas?.add(MemberTypeWithData(MemberType.SERVICEHELP))
+            if (it.promotionsAndFunctions?.size?:0 > 0){
+                memberDatas?.add(MemberTypeWithData(MemberType.SERVICEHELP))
+            }
             // 添加 天天逛 享优惠 活动卡片信息
             addActivityCardDatas(it)
             newMemberAdapter?.topSize = memberDatas?.size ?: 0
@@ -72,7 +74,7 @@ class RecyclerViewWaterfallComplexKotActivity : BaseActivity() {
 
     private fun addActivityCardDatas(it: AssetInfo) {
         activityCardDatas = it.activityArea?.activities
-        if (it.activityArea?.activities != null && it.activityArea?.activities!!.size > 0) {
+        if (it.activityArea?.activities != null && it.activityArea?.activities?.size?:0 > 0) {
             memberDatas?.add(
                     MemberTypeWithData(
                             MemberType.ACTIVITY_CARD_TITLE,
@@ -85,7 +87,7 @@ class RecyclerViewWaterfallComplexKotActivity : BaseActivity() {
                 }
                 var itemActivityCard = it.activityArea?.activities!![i]
                 when (itemActivityCard.type) {
-                    1,5 -> memberDatas?.add(
+                    1 -> memberDatas?.add(
                             MemberTypeWithData(
                                     MemberType.ACTIVITY_CARD_TYPE_ONE,
                                     itemActivityCard

@@ -26,7 +26,6 @@ class AdaptionSizeTextView @JvmOverloads constructor(context: Context?, attrs: A
     override fun onGlobalLayout() {
         val lineCount = lineCount
         var textSize = textSize
-        Log.d("zongyang", textSize.toString() + "")
         if (lineCount > 1 && textSize > defaultSize / 2) {
             textSize--
             //重新设置大小,该方法会立即触发onGlobalLayout()

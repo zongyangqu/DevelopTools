@@ -720,5 +720,17 @@
   "walleturl": "myyh://yhlife.com/show/native?name=membercard",
   "wechatLogo": "",
   "wechatNickname": "",
+  "shopDiscountsVo": {
+    "cityId": 2,
+    "distance": "3.29km",
+    "logoUrl": "https://image.yonghuivip.com/red@3x.png",
+    "sellerId": 7,
+    "shopId": "9245",
+    "shopName": "文慧园店",
+    "tags": [{
+      "text": "领到店优惠券",
+      "type": "discount"
+    }]
+  },
   "yhCardBalance": 0
 }
