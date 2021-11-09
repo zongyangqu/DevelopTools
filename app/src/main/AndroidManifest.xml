@@ -111,6 +111,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.BaseQuickRecyclerViewKotActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.LottieActivity"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

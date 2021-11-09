@@ -25,6 +25,7 @@ public class Constants {
     public final static int  CustomControl = 11;
     public final static int  ExternalResourceLoad = 12;
     public final static int  HotFix = 13;
+    public final static int  Lottie = 14;
 
 
     // request参数
