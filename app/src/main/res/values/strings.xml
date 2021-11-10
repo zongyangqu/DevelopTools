@@ -87,4 +87,8 @@
     <string name="icon_arrow_right">"\ue92a"</string>
     <string name="membercenter_service_center">客服中心</string>
     <string name="CustomerServicePhone">4008005050</string>
+    <string name="list_mode_list">点我切换模式-列表模式</string>
+    <string name="list_mode_stagger">点我切换模式-图片模式</string>
+    <string name="list_menu">菜单栏todo</string>
+    <string name="loading">加载中...</string>
 </resources>

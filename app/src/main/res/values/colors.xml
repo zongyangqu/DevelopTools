@@ -76,4 +76,5 @@
     <color name="color_0D000000">#0D000000</color>
     <color name="color_F2FBFF">#F2FBFF</color>
     <color name="color_19BAFF">#19BAFF</color>
+    <color name="global_bg">#eeeff3</color>
 </resources>

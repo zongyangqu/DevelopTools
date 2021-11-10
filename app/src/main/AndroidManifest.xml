@@ -113,6 +113,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.LottieActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ChangeRecyclerViewModeActivity"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"
