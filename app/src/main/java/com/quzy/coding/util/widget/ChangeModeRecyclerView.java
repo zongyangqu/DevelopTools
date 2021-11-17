@@ -83,11 +83,11 @@ public class ChangeModeRecyclerView extends RecyclerView {
                 super.onScrolled(recyclerView, dx, dy);
                 if (null != mListener && mIsFooterEnable && !mIsLoadingMore && dy > 0) {
                     int lastVisiblePosition = getLastVisiblePosition();
-                    if (lastVisiblePosition + 1 == mAutoLoadAdapter.getItemCount()) {
-                        setLoadingMore(true);
-                        mLoadMorePosition = lastVisiblePosition;
-                        mListener.onLoadMore();
-                    }
+//                    if (lastVisiblePosition + 1 == mAutoLoadAdapter.getItemCount()) {
+//                        setLoadingMore(true);
+//                        mLoadMorePosition = lastVisiblePosition;
+//                        mListener.onLoadMore();
+//                    }
                 }
             }
         });
@@ -131,12 +131,8 @@ public class ChangeModeRecyclerView extends RecyclerView {
          */
         private Adapter mInternalAdapter;
 
-        private boolean mIsHeaderEnable;
-        private int mHeaderResId;
-
         public AutoLoadAdapter(Adapter adapter) {
             mInternalAdapter = adapter;
-            mIsHeaderEnable = false;
         }
 
         @Override
@@ -176,13 +172,6 @@ public class ChangeModeRecyclerView extends RecyclerView {
             return count;
         }
 
-        public void setHeaderEnable(boolean enable) {
-            mIsHeaderEnable = enable;
-        }
-
-        public void addHeaderView(int resId) {
-            mHeaderResId = resId;
-        }
     }
 
     @Override

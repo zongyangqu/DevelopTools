@@ -115,6 +115,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.ChangeRecyclerViewModeActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.GaoSDemoActivity"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

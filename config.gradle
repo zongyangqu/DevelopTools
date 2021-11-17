@@ -13,7 +13,7 @@ ext {
     def dependVersion = [
             support     : "27.0.2",
             butterknifeVersion      : "10.2.1",
-            glideVersion    :"4.5.0"
+            glideVersion    :"4.7.1"
     ]
 
     dependencies = [

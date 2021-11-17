@@ -1,12 +1,17 @@
 package com.quzy.coding.ui.adapter;
 
+import android.content.Context;
+import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.quzy.coding.R;
 import com.quzy.coding.bean.dummy.DummyContent;
@@ -41,6 +46,25 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+//        if (((RecyclerView)parent).getLayoutManager() instanceof StaggeredGridLayoutManager ) {
+//            View view = LayoutInflater.from(parent.getContext())
+//                    .inflate(R.layout.fragment_item_staggel, parent, false);
+//            return new StaggerViewHolder(view);
+//        } else {
+//            View view = LayoutInflater.from(parent.getContext())
+//                    .inflate(R.layout.fragment_item, parent, false);
+//            return new ViewHolder(view);
+//        }
+
+        /*if (mIsStagger) {
+            View view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.fragment_item_staggel, parent, false);
+            return new StaggerViewHolder(view);
+        } else {
+            View view = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.fragment_item, parent, false);
+            return new ViewHolder(view);
+        }*/
         if (viewType == ChangeModeRecyclerView.TYPE_STAGGER) {
             View view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.fragment_item_staggel, parent, false);
@@ -65,6 +89,20 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView
             mHolder.mIdView.setText(mValues.get(position).id);
         }
     }
+
+    /*@Override
+    public int getItemViewType(int position) {
+        *//**
+         * 这么做保证layoutManager切换之后能及时的刷新上对的布局
+         *//*
+        if (getLayoutManager() instanceof LinearLayoutManager) {
+            return ChangeModeRecyclerView.TYPE_LIST;
+        } else if (getLayoutManager() instanceof StaggeredGridLayoutManager) {
+            return ChangeModeRecyclerView.TYPE_STAGGER;
+        } else {
+            return ChangeModeRecyclerView.TYPE_LIST;
+        }
+    }*/
 
     @Override
     public int getItemCount() {
