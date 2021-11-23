@@ -6,51 +6,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
+
     <RelativeLayout
-        android:id="@+id/glideGSImg"
+        android:id="@+id/glideGSBg"
         android:layout_width="match_parent"
         android:layout_height="200dp">
+
         <ImageView
             android:id="@+id/glideImg"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:scaleType="fitXY"
-            android:layout_centerInParent="true"/>
+            android:layout_centerInParent="true" />
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/cutBitImg"
-        android:layout_width="wrap_content"
-        android:orientation="vertical"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"/>
 
-    <LinearLayout
-        android:id="@+id/cutBitmap"
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="52dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
+        android:id="@+id/normalGSBg"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="50dp">
+
         <ImageView
-            android:id="@+id/customGSImg"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <ImageView
-            android:id="@+id/customImg"
+            android:id="@+id/normalImg"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:scaleType="fitXY"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/cutBg"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"/>
 
 
 </LinearLayout>
