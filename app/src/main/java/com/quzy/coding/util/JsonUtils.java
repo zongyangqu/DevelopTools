@@ -5,6 +5,7 @@ import android.content.Context;
 import com.google.gson.Gson;
 import com.quzy.coding.bean.AssetInfo;
 import com.quzy.coding.bean.HotelEntity;
+import com.quzy.coding.bean.WareEntity;
 
 /**
  * author : quzongyang
@@ -29,4 +30,13 @@ public class JsonUtils {
         AssetInfo entity = gson.fromJson(content, AssetInfo.class);
         return  entity;
     }
+
+    public static WareEntity analysisWareJsonFile(Context context, String fileName){
+        String content = FileUtils.readJsonFile(context,fileName);
+        Gson gson = new Gson();
+        WareEntity entity = gson.fromJson(content, WareEntity.class);
+        return  entity;
+    }
+
+
 }

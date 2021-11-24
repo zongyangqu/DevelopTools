@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="5dp"
+    android:paddingLeft="5dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/hotGoodsImg"
+            android:paddingRight="3dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/buyButton"
+            android:layout_alignParentRight="true"
+            android:text="点击购买"
+            android:layout_alignBottom="@+id/hotGoodsImg"
+            android:textColor="@color/white"
+            android:background="@color/red"
+            android:layout_alignEnd="@+id/hotGoodsDescription"
+            android:layout_alignRight="@+id/hotGoodsDescription" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/hotGoodsDescription"
+            android:layout_toEndOf="@+id/hotGoodsImg"
+            android:layout_toRightOf="@+id/hotGoodsImg"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hotGoodsPrice"
+            android:layout_toEndOf="@+id/hotGoodsImg"
+            android:layout_toRightOf="@+id/hotGoodsImg"
+            android:layout_below="@+id/hotGoodsDescription"
+            android:textColor="@color/red"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

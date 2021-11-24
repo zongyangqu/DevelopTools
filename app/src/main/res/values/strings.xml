@@ -92,4 +92,7 @@
     <string name="list_mode_stagger">点我切换模式-图片模式</string>
     <string name="list_menu">菜单栏todo</string>
     <string name="loading">加载中...</string>
+    <string name="but_ited">编辑</string>
+    <string name="tex_search">请输入搜索的商品</string>
+    <string name="tex_login">点击登录</string>
 </resources>
