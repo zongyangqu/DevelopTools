@@ -137,11 +137,22 @@ public class ChangeRecyclerViewModeKotActivity extends BaseActivity {
             if(classifyWaresAdapter == null){
                 recyclerViewLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
                // recyclerViewLayoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_NONE);
+                // 设置item的间距处理方式
+                recyclerViewLayoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_NONE);
                 classifyWaresAdapter = new AssortShowAdapter();
                 recyclerView.setAdapter(classifyWaresAdapter);
                 recyclerView.setLayoutManager(recyclerViewLayoutManager);
                 recyclerView.addItemDecoration(new MyDivider());
                 classifyWaresAdapter.refresh(data);
+
+                recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+                    @Override
+                    public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                        super.onScrollStateChanged(recyclerView, newState);
+                        recyclerViewLayoutManager.invalidateSpanAssignments(); //防止第一行到顶部有空白区域
+                    }
+                });
+
             }else{
                 recyclerView.setAdapter(classifyWaresAdapter);
                 recyclerView.setLayoutManager(recyclerViewLayoutManager);
