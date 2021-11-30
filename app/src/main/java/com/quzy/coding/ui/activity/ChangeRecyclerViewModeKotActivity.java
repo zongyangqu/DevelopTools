@@ -37,16 +37,16 @@ import java.util.List;
  */
 public class ChangeRecyclerViewModeKotActivity extends BaseActivity {
 
-    RecyclerView recyclerView ;
+    RecyclerView recyclerView;
 
-    CnToolbar cnToolbar ;
-    TextView showWaresNum ;
-    public static final int SHOW_TYPE_LINER = 0 ;
-    public static final int SHOW_TYPE_GRID = 1 ;
-    private HotAdapter hotAdapter ;
-    private AssortShowAdapter classifyWaresAdapter ;
-   // private AssortShowAdapter classifyWaresAdapter ;
-    public int showType = SHOW_TYPE_LINER ;
+    CnToolbar cnToolbar;
+    TextView showWaresNum;
+    public static final int SHOW_TYPE_LINER = 0;
+    public static final int SHOW_TYPE_GRID = 1;
+    private HotAdapter hotAdapter;
+    private AssortShowAdapter classifyWaresAdapter;
+    // private AssortShowAdapter classifyWaresAdapter ;
+    public int showType = SHOW_TYPE_LINER;
     private StaggeredGridLayoutManager recyclerViewLayoutManager;
 
     @Override
@@ -55,7 +55,7 @@ public class ChangeRecyclerViewModeKotActivity extends BaseActivity {
         cnToolbar = (CnToolbar) findViewById(R.id.toolBar);
         addShowStyleChengeListener();
         try {
-            InitShowOrder() ;
+            InitShowOrder();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -71,24 +71,25 @@ public class ChangeRecyclerViewModeKotActivity extends BaseActivity {
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
                 firstVisiblePosition = getFirstVisiblePosition();
-                Log.d("position---->", firstVisiblePosition +"");
+                Log.d("position---->", firstVisiblePosition + "");
             }
         });
     }
 
     private int firstVisiblePosition;
     private List<Ware> data;
+
     private void InitShowOrder() throws Exception {
-        WareEntity wareEntity = JsonUtils.analysisWareJsonFile(this,"ware");
+        WareEntity wareEntity = JsonUtils.analysisWareJsonFile(this, "ware");
         data = wareEntity.wareList;
         //initMaterialRefrshLayoutListener() ;
         initGridMaterialRefrshLayoutListener();
     }
 
 
-    public void initMaterialRefrshLayoutListener () throws Exception {
-        if(data != null && data.size()>0){
-            if(hotAdapter == null) {
+    public void initMaterialRefrshLayoutListener() throws Exception {
+        if (data != null && data.size() > 0) {
+            if (hotAdapter == null) {
                 hotAdapter = new HotAdapter();
                 hotAdapter.refresh(data);
             }
@@ -111,13 +112,13 @@ public class ChangeRecyclerViewModeKotActivity extends BaseActivity {
     /**
      * 展示格式切换
      */
-    private void addShowStyleChengeListener(){
+    private void addShowStyleChengeListener() {
         cnToolbar.setRightImgeButtonIcOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
-                String style = showType == SHOW_TYPE_LINER ?"列表模式" : "瀑布流模式";
-                Toast.makeText(ChangeRecyclerViewModeKotActivity.this , "切换格式："+style , Toast.LENGTH_SHORT).show();
+                String style = showType == SHOW_TYPE_LINER ? "列表模式" : "瀑布流模式";
+                Toast.makeText(ChangeRecyclerViewModeKotActivity.this, "切换格式：" + style, Toast.LENGTH_SHORT).show();
                 try {
                     changeShowType();
                 } catch (Exception e) {
@@ -130,13 +131,14 @@ public class ChangeRecyclerViewModeKotActivity extends BaseActivity {
 
     /**
      * Grid布局展示商品
+     *
      * @throws Exception
      */
-    public void initGridMaterialRefrshLayoutListener () throws Exception {
-        if(data != null && data.size()>0){
-            if(classifyWaresAdapter == null){
+    public void initGridMaterialRefrshLayoutListener() throws Exception {
+        if (data != null && data.size() > 0) {
+            if (classifyWaresAdapter == null) {
                 recyclerViewLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-               // recyclerViewLayoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_NONE);
+                // recyclerViewLayoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_NONE);
                 // 设置item的间距处理方式
                 recyclerViewLayoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_NONE);
                 classifyWaresAdapter = new AssortShowAdapter();
@@ -153,30 +155,30 @@ public class ChangeRecyclerViewModeKotActivity extends BaseActivity {
                     }
                 });
 
-            }else{
+            } else {
                 recyclerView.setAdapter(classifyWaresAdapter);
                 recyclerView.setLayoutManager(recyclerViewLayoutManager);
 //                classifyWaresAdapter.refresh(data);
 
             }
             recyclerView.getLayoutManager().scrollToPosition(firstVisiblePosition);
-        }else {
-            Toast.makeText(ChangeRecyclerViewModeKotActivity.this , "该类别暂无商品" , Toast.LENGTH_SHORT) .show();
+        } else {
+            Toast.makeText(ChangeRecyclerViewModeKotActivity.this, "该类别暂无商品", Toast.LENGTH_SHORT).show();
         }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void changeShowType() throws Exception {
-        switch (showType){
-            case SHOW_TYPE_LINER :
-                initMaterialRefrshLayoutListener() ;
+        switch (showType) {
+            case SHOW_TYPE_LINER:
+                initMaterialRefrshLayoutListener();
                 cnToolbar.setRightButtonIcon(R.drawable.icon_grid_32);
-                showType = SHOW_TYPE_GRID ;
+                showType = SHOW_TYPE_GRID;
                 break;
-            case SHOW_TYPE_GRID :
-                initGridMaterialRefrshLayoutListener() ;
+            case SHOW_TYPE_GRID:
+                initGridMaterialRefrshLayoutListener();
                 cnToolbar.setRightButtonIcon(R.drawable.icon_list_32);
-                showType = SHOW_TYPE_LINER ;
+                showType = SHOW_TYPE_LINER;
                 break;
         }
     }

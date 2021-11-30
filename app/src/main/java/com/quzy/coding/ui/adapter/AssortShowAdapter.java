@@ -68,6 +68,7 @@ public class AssortShowAdapter extends RecyclerView.Adapter<AssortShowAdapter.As
         TextView hotGoodsDescription;
         @BindView(R.id.hotGoodsImg)
         ImageView hotGoodsImg;
+
         public AssortShowViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);

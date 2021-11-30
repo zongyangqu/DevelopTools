@@ -77,18 +77,18 @@ public class GaoSDemoActivity extends BaseActivity {
                 .into(new SimpleTarget<Bitmap>(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL) {
                     @Override
                     public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
-                        StringBuilder sb  = new StringBuilder();
+                        StringBuilder sb = new StringBuilder();
                         normalImg.setImageDrawable(new BitmapDrawable(resource));
-                        Bitmap newBitMap1 = BlurUtil.blurBitmap(GaoSDemoActivity.this,resource,20f,0.3f,sb);
+                        Bitmap newBitMap1 = BlurUtil.blurBitmap(GaoSDemoActivity.this, resource, 20f, 0.3f, sb);
                         normalGSBg.setBackground(new BitmapDrawable(newBitMap1));
                         cutBg.setBackground(new BitmapDrawable(cutBitmap(newBitMap1)));
 //                        cutBitLayout.setBackground(new BitmapDrawable(resource));
                     }
                 });
 
-       // glideGSImg.setBackground();
+        // glideGSImg.setBackground();
         Glide.with(this).load(url).into(glideImg);
-        Glide.with(this).load(url).apply(RequestOptions.bitmapTransform(new BlurTransformation(this,25,3))).into(new SimpleTarget<Drawable>() {
+        Glide.with(this).load(url).apply(RequestOptions.bitmapTransform(new BlurTransformation(this, 25, 3))).into(new SimpleTarget<Drawable>() {
             @Override
             public void onResourceReady(@NonNull Drawable resource, @Nullable Transition<? super Drawable> transition) {
                 glideGSBg.setBackground(resource);
@@ -102,9 +102,6 @@ public class GaoSDemoActivity extends BaseActivity {
     }
 
 
-
-
-
     /**
      * 裁剪图片
      */
@@ -112,7 +109,7 @@ public class GaoSDemoActivity extends BaseActivity {
         Bitmap bitmap = null;
         if (bm != null) {
             //从bitmap的0，0位置开始  对bitmap裁剪一个宽度是原bitmap、高度是原bitmap一半的新图
-            bitmap = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight()/3);
+            bitmap = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight() / 3);
         }
         return bitmap;
     }
@@ -129,7 +126,7 @@ public class GaoSDemoActivity extends BaseActivity {
 
 
     public static final Bitmap drawableToBitmap(Drawable drawable) {
-        Bitmap bitmap = Bitmap.createBitmap( drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(),
+        Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(),
                 drawable.getOpacity() != PixelFormat.OPAQUE ? Bitmap.Config.ARGB_8888 : Bitmap.Config.RGB_565);
         Canvas canvas = new Canvas(bitmap);
         drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
