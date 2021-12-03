@@ -27,6 +27,7 @@ public class Constants {
     public final static int  HotFix = 13;
     public final static int  Lottie = 14;
     public final static int  GaoSi = 15;
+    public final static int  ThreeDimensional = 16;
 
 
     // request参数

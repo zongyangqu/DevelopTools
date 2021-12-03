@@ -40,6 +40,8 @@ public class Actions {
         mActionMap.put(Constants.HotFix,RoleEnum.HotFix.name());
         mActionMap.put(Constants.Lottie,RoleEnum.Lottie.name());
         mActionMap.put(Constants.GaoSi,RoleEnum.GaoSi.name());
+        mActionMap.put(Constants.ThreeDimensional,RoleEnum.ThreeDimensional.name());
+
     }
 
 

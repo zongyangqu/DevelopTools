@@ -119,6 +119,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.ChangeRecyclerViewModeKotActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ThreeDimensionalActivity"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"
