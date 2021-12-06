@@ -24,7 +24,7 @@ class RecyclerViewWaterfallComplexKotActivity : BaseActivity() {
     var newMemberLayoutManager: StaggeredGridLayoutManager? = null
     var activityRecyclerviewBinding: ActivityRecyclerviewBinding? = null
     var newMemberAdapter: WaterfallComplexKotAdapter? = null
-    var assetInfo :AssetInfo ?= null
+    var assetInfo: AssetInfo? = null
     var memberDatas: ArrayList<MemberTypeWithData>? = null
     private var activityCardDatas: ArrayList<ItemActivityCardBean>? = null // 天天逛 享优惠 活动卡片datas
 
@@ -50,7 +50,7 @@ class RecyclerViewWaterfallComplexKotActivity : BaseActivity() {
             if (it.payConfigInfos?.size ?: 0 > 0) {
                 memberDatas?.add(MemberTypeWithData(MemberType.YHJR))
             }
-            if(it.doubleElevenPromotions?.size?:0 > 0){
+            if (it.doubleElevenPromotions?.size ?: 0 > 0) {
                 memberDatas?.add(MemberTypeWithData(MemberType.DOUBLE_ELEVEN_PROMOTION))
             }
             newMemberAdapter?.assetInfo = it
@@ -60,7 +60,7 @@ class RecyclerViewWaterfallComplexKotActivity : BaseActivity() {
             if (!it.cmsPagePit.isNullOrEmpty()) {
                 memberDatas?.add(MemberTypeWithData(MemberType.GALLERYAD))
             }
-            if (it.promotionsAndFunctions?.size?:0 > 0){
+            if (it.promotionsAndFunctions?.size ?: 0 > 0) {
                 memberDatas?.add(MemberTypeWithData(MemberType.SERVICEHELP))
             }
             // 添加 天天逛 享优惠 活动卡片信息
@@ -74,13 +74,18 @@ class RecyclerViewWaterfallComplexKotActivity : BaseActivity() {
 
     private fun addActivityCardDatas(it: AssetInfo) {
         activityCardDatas = it.activityArea?.activities
-        if (it.activityArea?.activities != null && it.activityArea?.activities?.size?:0 > 0) {
+        if (it.activityArea?.activities != null && it.activityArea?.activities?.size ?: 0 > 0) {
             memberDatas?.add(
                     MemberTypeWithData(
                             MemberType.ACTIVITY_CARD_TITLE,
                             it.activityArea.title
                     )
             )
+            it.activityArea.welfareRemind?.apply {
+                memberDatas?.add(MemberTypeWithData(
+                        MemberType.ACTIVITY_CARD_INNER_TITLE,
+                        it.activityArea.welfareRemind))
+            }
             for (i in 0 until it.activityArea?.activities!!.size) {
                 if (it.activityArea?.activities!![i] == null) {
                     continue

@@ -245,6 +245,37 @@
       "moduleName": "逛一逛榜单卡片",
       "type": 3
     }],
+    "welfareRemind":{
+      "icon":"https://image.yonghuivip.com/welfareremind3x.png",
+      "title":{
+        "activitytext":"您有2份福利待领取",
+        "signs":[
+          {
+            "end":2,
+            "size":0,
+            "start":2,
+            "weight":"bold"
+          }
+        ]
+      },
+      "welfare":[
+        {
+          "activitytext":"领券中心有2张券待领取",
+          "signs":[
+            {
+              "end":5,
+              "size":0,
+              "start":5,
+              "weight":"bold"
+            }
+          ]
+        },
+        {
+          "activitytext":"去辉鲜农场浇水可领奖励哦"
+        }
+      ],
+      "welfareCount":2
+    },
     "title": "天天逛 享优惠"
   },
   "afterSaleProcessingQuantity": 0,

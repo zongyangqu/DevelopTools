@@ -25,5 +25,11 @@ class PromotionAndFunction(
 
 class ActivityAreaBean(
         val title: String?,
-        val activities: ArrayList<ItemActivityCardBean>?
+        val activities: ArrayList<ItemActivityCardBean>?,
+        var welfareRemind:WelfareRemind?
 )
+
+class  WelfareRemind(var icon:String?,
+                     var title:MemberTitle?,var welfare:List<MemberTitle>?)
+class MemberTitle(var activitytext:String?,var signs:List<SignItem>?)
+class SignItem(var end:String?,var size:String?,var start:String?,var weight:String?)

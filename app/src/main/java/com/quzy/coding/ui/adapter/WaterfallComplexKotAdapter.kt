@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.quzy.coding.R
 import com.quzy.coding.bean.AssetInfo
 import com.quzy.coding.bean.ItemActivityCardBean
+import com.quzy.coding.bean.WelfareRemind
 import com.quzy.coding.bean.model.MemberType
 import com.quzy.coding.bean.model.MemberTypeWithData
 import com.quzy.coding.ui.activity.RecyclerViewWaterfallComplexKotActivity
@@ -84,6 +85,10 @@ class WaterfallComplexKotAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>
                 view = LayoutInflater.from(parent.context).inflate(R.layout.view_content_member_activity_card_type_live, parent, false)
                 return MemberActivityCardTypeLiveHolder(fragment?.lifecycle,view)
             }
+            MemberType.ACTIVITY_CARD_INNER_TITLE.ordinal -> {
+                view = LayoutInflater.from(parent.context).inflate(R.layout.view_content_inner_title, parent, false)
+                return MemberInnerTitleViewholder(fragment, view)
+            }
         }
         return MemberDefaultViewholder(view)
         //return MemberDefaultViewholder(view)
@@ -131,6 +136,10 @@ class WaterfallComplexKotAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>
             }
             is MemberActivityCardTypeLiveHolder -> {
                 holder.bindData(datas?.get(position)?.data as ItemActivityCardBean,fragment)
+            }
+            is MemberInnerTitleViewholder -> {
+                //holder.bindData(assetInfo?.activityArea?.welfareRemind)
+                holder.bindData(datas?.get(position)?.data as WelfareRemind?,fragment)
             }
         }
     }
