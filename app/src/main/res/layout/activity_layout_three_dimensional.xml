@@ -8,17 +8,17 @@
     android:background="#FDE7F1"
     tools:context=".ui.activity.ThreeDimensionalActivity">
 
-    <androidx.viewpager.widget.ViewPager
+    <!--<androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="300dp"
         android:clickable="false"
-        android:clipChildren="false"/>
-    <!--<com.quzy.coding.util.widget.NoSwipeViewPager
+        android:clipChildren="false"/>-->
+    <com.quzy.coding.util.widget.NoSwipeViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="500dp"
-        android:clipChildren="false"/>-->
+        android:clipChildren="false"/>
 
 
 

@@ -2,6 +2,7 @@ package com.quzy.coding.ui.activity
 
 import android.content.Context
 import android.text.TextUtils
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,8 +29,8 @@ import kotlin.collections.ArrayList
  */
 class ThreeDimensionalActivity :BaseActivity() {
 
-    var mViewPager : ViewPager ?= null
-//    var mViewPager : NoSwipeViewPager ?= null
+//    var mViewPager : ViewPager ?= null
+    var mViewPager : NoSwipeViewPager ?= null
     var mHistoryList: List<QuestionInfo> ?= null
     var mViewPagerAdapter: ViewPagerAdapter? = null
 
@@ -45,7 +46,7 @@ class ThreeDimensionalActivity :BaseActivity() {
 
     private fun setAdapter() {
         Collections.reverse(mHistoryList)
-        //mViewPager?.setCanSwipe(false)
+        mViewPager?.setCanSwipe(false)
         mViewPagerAdapter = mHistoryList?.let { ViewPagerAdapter(this, it) }
         mViewPager?.adapter = mViewPagerAdapter
         mViewPager?.setCurrentItem((mHistoryList?.size ?: 1) - 1, false)
@@ -104,7 +105,11 @@ class ThreeDimensionalActivity :BaseActivity() {
         }
 
         override fun instantiateItem(container: ViewGroup, position: Int): Any {
+            Log.d("zongyang-p:",position.toString())
             val view: View = LayoutInflater.from(container.context).inflate(R.layout.test_item_layout, container, false)
+            if(position != 4){
+                view.background.alpha = 50
+            }
             initView(view)
             bindData(list[position])
             container.addView(view)
