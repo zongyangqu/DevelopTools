@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar_view"
-    android:background="@color/red">
+    android:background="@color/colorPrimary">
 
     <!--定义一个TextView居中作为标题-->
     <TextView

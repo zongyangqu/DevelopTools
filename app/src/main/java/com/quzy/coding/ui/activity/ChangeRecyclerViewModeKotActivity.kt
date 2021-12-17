@@ -40,6 +40,7 @@ class ChangeRecyclerViewModeKotActivity :BaseActivity(),ISearchResult{
     }
 
     override fun onViewCreated() {
+        supportActionBar?.hide()
         recyclerView = findViewById<View>(R.id.recycleListView) as RecyclerView?
         cnToolbar = findViewById<View>(R.id.toolBar) as CnToolbar
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

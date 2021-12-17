@@ -95,7 +95,7 @@ class ProductShowAdapter (val mISearchResult: ISearchResult) : BaseRecyclerItemT
     }
 
     override fun getItemViewType(position:Int):Int{
-        return data?.get(position)?.type
+        return data?.get(position)?.type?:1
     }
 
     fun refresh(datas:List<Ware>?){

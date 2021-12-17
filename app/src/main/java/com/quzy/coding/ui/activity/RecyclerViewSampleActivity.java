@@ -73,7 +73,7 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
                         startActivity(new Intent(getActivity(), ChangeRecyclerViewModeJavaActivity.class));
                         break;
                     case 12:
-                        startActivity(new Intent(getActivity(), ChangeRecyclerViewModeJavaActivity.class));
+                        startActivity(new Intent(getActivity(), ChangeRecyclerViewModeKotActivity.class));
                         break;
                 }
             }
