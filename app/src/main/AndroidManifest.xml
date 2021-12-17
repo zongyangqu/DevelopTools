@@ -117,11 +117,9 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.GaoSDemoActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".ui.activity.ChangeRecyclerViewModeJavaActivity"
+        <activity android:name=".ui.activity.ChangeRecyclerViewModeKotActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.ThreeDimensionalActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.activity.ChangeRecyclerViewModeKotActivity"
             android:screenOrientation="portrait"/>
 
         <provider

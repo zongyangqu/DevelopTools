@@ -70,9 +70,6 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
                         startActivity(new Intent(getActivity(), RecyclerViewWaterfallComplexKotActivity.class));
                         break;
                     case 11:
-                        startActivity(new Intent(getActivity(), ChangeRecyclerViewModeJavaActivity.class));
-                        break;
-                    case 12:
                         startActivity(new Intent(getActivity(), ChangeRecyclerViewModeKotActivity.class));
                         break;
                 }
@@ -103,7 +100,6 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
         data.add("Kotlin-普通的RecyclerView");
         data.add("Kotlin-多条目的RecyclerView");
         data.add("Kotlin-多条目瀑布流的RecyclerView");
-        data.add("Java-RecyclerView展示模式切换");
         data.add("Kotlin-RecyclerView展示模式切换");
         return data;
     }

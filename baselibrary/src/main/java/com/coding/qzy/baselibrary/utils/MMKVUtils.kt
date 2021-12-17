@@ -61,7 +61,7 @@ object MMKVUtils {
      * 得到保存数据的方法，我们根据默认值得到保存的数据的具体类型，然后调用相对于的方法获取值
      */
     fun decodeInt(key: String?): Int? {
-        return mv?.decodeInt(key, 0)
+        return mv?.decodeInt(key, 1)
     }
 
     fun decodeDouble(key: String?): Double {

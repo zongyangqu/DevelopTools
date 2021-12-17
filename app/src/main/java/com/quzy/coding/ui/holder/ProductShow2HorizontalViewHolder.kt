@@ -6,8 +6,6 @@ import com.coding.qzy.baselibrary.base.recyclerview.holder.RecyclerViewHolder
 import com.quzy.coding.base.BaseApplication
 import com.quzy.coding.bean.Ware
 import com.quzy.coding.databinding.ProductShowAdapter2HorizontalBinding
-import com.quzy.coding.databinding.ProductShowAdapterBinding
-import com.quzy.coding.ui.adapter.NewRecyclerViewHolder
 import com.quzy.coding.util.ISearchResult
 
 /**

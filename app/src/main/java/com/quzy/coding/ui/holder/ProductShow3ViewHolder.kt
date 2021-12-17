@@ -1,13 +1,13 @@
 package com.quzy.coding.ui.holder
 
 import android.view.View
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bumptech.glide.Glide
 import com.coding.qzy.baselibrary.base.recyclerview.holder.RecyclerViewHolder
 import com.quzy.coding.base.BaseApplication
 import com.quzy.coding.bean.Ware
-import com.quzy.coding.databinding.ProductShowAdapter2Binding
 import com.quzy.coding.databinding.ProductShowAdapter3Binding
-import com.quzy.coding.ui.adapter.NewRecyclerViewHolder
+import com.quzy.coding.ui.activity.ChangeRecyclerViewModeKotActivity
 import com.quzy.coding.util.ISearchResult
 
 /**
@@ -18,9 +18,12 @@ import com.quzy.coding.util.ISearchResult
  */
 class ProductShow3ViewHolder (itemView: View, mISearchResult : ISearchResult) : RecyclerViewHolder(itemView) {
 
-//    init {
-//        initType()
-//    }
+    init {
+        if(mISearchResult.getCurrentViewType() == ChangeRecyclerViewModeKotActivity.SHOW_TYPE_GRID){
+            val params = itemView.layoutParams as StaggeredGridLayoutManager.LayoutParams
+            params.isFullSpan = true
+        }
+    }
 
     val viewBinding by lazy {
         ProductShowAdapter3Binding.bind(itemView)

@@ -3,16 +3,8 @@ package com.quzy.coding.ui.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
-import butterknife.BindView
-import butterknife.ButterKnife
-import com.bumptech.glide.Glide
 import com.coding.qzy.baselibrary.base.recyclerview.adapter.BaseRecyclerItemTypeAdapter
 import com.coding.qzy.baselibrary.base.recyclerview.holder.RecyclerViewHolder
-import com.coding.qzy.baselibrary.widget.adapter.BaseRecyclerAdapter
 import com.quzy.coding.R
 import com.quzy.coding.base.BaseApplication
 import com.quzy.coding.bean.Ware
