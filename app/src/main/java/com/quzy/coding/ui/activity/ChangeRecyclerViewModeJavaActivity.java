@@ -1,6 +1,5 @@
 package com.quzy.coding.ui.activity;
 
-import android.content.Intent;
 import android.os.Build;
 import android.util.Log;
 import android.view.View;
@@ -17,12 +16,9 @@ import com.quzy.coding.R;
 import com.quzy.coding.base.BaseActivity;
 import com.quzy.coding.bean.Ware;
 import com.quzy.coding.bean.WareEntity;
-import com.quzy.coding.bean.dummy.DummyContent;
 import com.quzy.coding.ui.adapter.AssortShowAdapter;
 import com.quzy.coding.ui.adapter.HotAdapter;
-import com.quzy.coding.ui.adapter.MyItemRecyclerViewAdapter;
 import com.quzy.coding.util.JsonUtils;
-import com.quzy.coding.util.widget.ChangeModeRecyclerView;
 import com.quzy.coding.util.widget.CnToolbar;
 import com.quzy.coding.util.widget.MyDivider;
 
@@ -33,9 +29,9 @@ import java.util.List;
  *
  * @author: zongyang qu
  * @Package： com.quzy.coding.ui.activity
- * @Description:
+ * @Description:  使用两个adapter来完成 瀑布流和列表的样式切换
  */
-public class ChangeRecyclerViewModeKotActivity extends BaseActivity {
+public class ChangeRecyclerViewModeJavaActivity extends BaseActivity {
 
     RecyclerView recyclerView;
 
@@ -94,7 +90,7 @@ public class ChangeRecyclerViewModeKotActivity extends BaseActivity {
                 hotAdapter.refresh(data);
             }
             recyclerView.setAdapter(hotAdapter);
-            recyclerView.setLayoutManager(new LinearLayoutManager(ChangeRecyclerViewModeKotActivity.this));
+            recyclerView.setLayoutManager(new LinearLayoutManager(ChangeRecyclerViewModeJavaActivity.this));
             recyclerView.getLayoutManager().scrollToPosition(firstVisiblePosition);
         }
     }
@@ -118,7 +114,7 @@ public class ChangeRecyclerViewModeKotActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 String style = showType == SHOW_TYPE_LINER ? "列表模式" : "瀑布流模式";
-                Toast.makeText(ChangeRecyclerViewModeKotActivity.this, "切换格式：" + style, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ChangeRecyclerViewModeJavaActivity.this, "切换格式：" + style, Toast.LENGTH_SHORT).show();
                 try {
                     changeShowType();
                 } catch (Exception e) {
@@ -163,7 +159,7 @@ public class ChangeRecyclerViewModeKotActivity extends BaseActivity {
             }
             recyclerView.getLayoutManager().scrollToPosition(firstVisiblePosition);
         } else {
-            Toast.makeText(ChangeRecyclerViewModeKotActivity.this, "该类别暂无商品", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ChangeRecyclerViewModeJavaActivity.this, "该类别暂无商品", Toast.LENGTH_SHORT).show();
         }
     }
 

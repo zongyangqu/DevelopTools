@@ -15,6 +15,15 @@ public class Ware implements Serializable {
     protected String imgUrl ;
     protected String price ;
     protected int sale ;
+    protected int type ;
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
 
     public int getSale() {
         return sale;
