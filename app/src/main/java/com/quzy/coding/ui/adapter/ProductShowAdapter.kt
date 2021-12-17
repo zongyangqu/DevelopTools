@@ -29,7 +29,7 @@ class ProductShowAdapter (val mISearchResult: ISearchResult) : BaseRecyclerItemT
 
     override fun onBindViewHolder(holder: RecyclerViewHolder, position:Int){
         val ware=data!![position]
-        if(ChangeRecyclerViewModeKotActivity.currentType==1){
+        if(mISearchResult.getCurrentViewType()==1){
             when(holder){
                 is ProductShow1ViewHolder ->{
                     holder.bindData(ware)
@@ -58,7 +58,7 @@ class ProductShowAdapter (val mISearchResult: ISearchResult) : BaseRecyclerItemT
     }
 
     override fun getViewHolder(itemView: View, viewType:Int):RecyclerViewHolder?{
-        if(ChangeRecyclerViewModeKotActivity.currentType==1){
+        if(mISearchResult.getCurrentViewType()==1){
             when(viewType){
                 SITEM_RESULT->{
                     return ProductShow1ViewHolder(itemView,mISearchResult)
@@ -81,11 +81,20 @@ class ProductShowAdapter (val mISearchResult: ISearchResult) : BaseRecyclerItemT
     }
 
     override fun getItemView(viewType:Int,parent: ViewGroup?): View?{
-        when(viewType){
-            SITEM_RESULT->return inflater.inflate(R.layout.product_show_adapter,parent,false)
-            SITEM_NONE->return inflater.inflate(R.layout.product_show_adapter2,parent,false)
-            SITEM_TITLE->return inflater.inflate(R.layout.product_show_adapter3,parent,false)
+        if(mISearchResult.getCurrentViewType()==1){
+            when(viewType){
+                SITEM_RESULT->return inflater.inflate(R.layout.product_show_adapter,parent,false)
+                SITEM_NONE->return inflater.inflate(R.layout.product_show_adapter2,parent,false)
+                SITEM_TITLE->return inflater.inflate(R.layout.product_show_adapter3,parent,false)
+            }
+        }else{
+            when(viewType){
+                SITEM_RESULT->return inflater.inflate(R.layout.product_show_adapter_horizontal,parent,false)
+                SITEM_NONE->return inflater.inflate(R.layout.product_show_adapter2_horizontal,parent,false)
+                SITEM_TITLE->return inflater.inflate(R.layout.product_show_adapter3_horizontal,parent,false)
+            }
         }
+
         return null
     }
 

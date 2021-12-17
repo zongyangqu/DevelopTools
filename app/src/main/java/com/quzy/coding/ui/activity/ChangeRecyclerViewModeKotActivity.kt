@@ -33,11 +33,12 @@ class ChangeRecyclerViewModeKotActivity :BaseActivity(),ISearchResult{
     private var data: List<Ware>? = null
     var showType = SHOW_TYPE_LINER
     private var recyclerViewLayoutManager: StaggeredGridLayoutManager? = null
+
     companion object {
         const val SHOW_TYPE_LINER :Int= 0
         const val SHOW_TYPE_GRID :Int= 1
-        var currentType:Int = SHOW_TYPE_LINER
     }
+    var currentType:Int = SHOW_TYPE_GRID
 
     override fun onViewCreated() {
         supportActionBar?.hide()
@@ -66,7 +67,7 @@ class ChangeRecyclerViewModeKotActivity :BaseActivity(),ISearchResult{
                 recyclerView?.adapter = classifyWaresAdapter
                 recyclerView?.layoutManager = recyclerViewLayoutManager
                 recyclerView?.addItemDecoration(MyDivider())
-                classifyWaresAdapter!!.refresh(data)
+                classifyWaresAdapter?.refresh(data)
                 recyclerView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
                     override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                         super.onScrollStateChanged(recyclerView, newState)
@@ -77,7 +78,7 @@ class ChangeRecyclerViewModeKotActivity :BaseActivity(),ISearchResult{
                 recyclerView?.adapter = classifyWaresAdapter
                 recyclerView?.layoutManager = recyclerViewLayoutManager
             }
-            recyclerView?.layoutManager!!.scrollToPosition(firstVisiblePosition)
+            recyclerView?.layoutManager?.scrollToPosition(firstVisiblePosition)
         } else {
             Toast.makeText(this@ChangeRecyclerViewModeKotActivity, "该类别暂无商品", Toast.LENGTH_SHORT).show()
         }
@@ -96,12 +97,12 @@ class ChangeRecyclerViewModeKotActivity :BaseActivity(),ISearchResult{
     private fun changeShowType() {
         when (currentType) {
             SHOW_TYPE_LINER -> {
-                cnToolbar?.setRightButtonIcon(R.drawable.icon_list_32)
+                cnToolbar?.setRightButtonIcon(R.drawable.icon_grid_32)
                 currentType = SHOW_TYPE_GRID
                 classifyWaresAdapter?.notifyDataSetChanged()
             }
             SHOW_TYPE_GRID -> {
-                cnToolbar?.setRightButtonIcon(R.drawable.icon_grid_32)
+                cnToolbar?.setRightButtonIcon(R.drawable.icon_list_32)
                 currentType = SHOW_TYPE_LINER
                 classifyWaresAdapter?.notifyDataSetChanged()
             }

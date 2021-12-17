@@ -25,7 +25,7 @@
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
         android:layout_below="@+id/hotGoodsImg"
-        android:text="我是type2"
+        android:text="我是瀑布流2"
         android:background="@color/color_666666"/>
 
     <TextView

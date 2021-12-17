@@ -19,7 +19,7 @@ open class NewRecyclerViewHolder(protected var parentView: View, var mISearchRes
 
     open fun initType(){
         val params = itemView.layoutParams as StaggeredGridLayoutManager.LayoutParams
-        params.isFullSpan = mISearchResult.getCurrentViewType() == 1
+        params.isFullSpan = mISearchResult.getCurrentViewType() == 0
     }
 
 }
