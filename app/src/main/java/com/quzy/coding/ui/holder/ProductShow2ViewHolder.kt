@@ -2,6 +2,7 @@ package com.quzy.coding.ui.holder
 
 import android.view.View
 import com.bumptech.glide.Glide
+import com.coding.qzy.baselibrary.base.recyclerview.holder.RecyclerViewHolder
 import com.quzy.coding.base.BaseApplication
 import com.quzy.coding.bean.Ware
 import com.quzy.coding.databinding.ProductShowAdapter2Binding
@@ -15,7 +16,7 @@ import com.quzy.coding.util.ISearchResult
  * @Package： com.quzy.coding.ui.holder
  * @Description:
  */
-class ProductShow2ViewHolder (itemView: View, mISearchResult : ISearchResult) : NewRecyclerViewHolder(itemView,mISearchResult) {
+class ProductShow2ViewHolder (itemView: View, mISearchResult : ISearchResult) : RecyclerViewHolder(itemView) {
 
 //    init {
 //        initType()
@@ -27,7 +28,6 @@ class ProductShow2ViewHolder (itemView: View, mISearchResult : ISearchResult) : 
 
 
     fun bindData(ware: Ware) {
-        initType()
         viewBinding.hotGoodsDescription.text = ware.name
         viewBinding.hotGoodsPrice.text = ware.price
         Glide.with(BaseApplication.getContext()).load(ware.imgUrl).into(viewBinding.hotGoodsImg)

@@ -5,8 +5,9 @@ import com.bumptech.glide.Glide
 import com.coding.qzy.baselibrary.base.recyclerview.holder.RecyclerViewHolder
 import com.quzy.coding.base.BaseApplication
 import com.quzy.coding.bean.Ware
-import com.quzy.coding.databinding.ProductShowAdapter2Binding
-import com.quzy.coding.databinding.ProductShowAdapter3Binding
+import com.quzy.coding.databinding.ProductShowAdapter3HorizontalBinding
+import com.quzy.coding.databinding.ProductShowAdapterBinding
+import com.quzy.coding.databinding.ProductShowAdapterHorizontalBinding
 import com.quzy.coding.ui.adapter.NewRecyclerViewHolder
 import com.quzy.coding.util.ISearchResult
 
@@ -16,14 +17,14 @@ import com.quzy.coding.util.ISearchResult
  * @Package： com.quzy.coding.ui.holder
  * @Description:
  */
-class ProductShow3ViewHolder (itemView: View, mISearchResult : ISearchResult) : RecyclerViewHolder(itemView) {
+class ProductShow1HorizontalViewHolder (itemView: View, mISearchResult : ISearchResult) : RecyclerViewHolder(itemView) {
 
 //    init {
 //        initType()
 //    }
 
     val viewBinding by lazy {
-        ProductShowAdapter3Binding.bind(itemView)
+        ProductShowAdapterHorizontalBinding.bind(itemView)
     }
 
 

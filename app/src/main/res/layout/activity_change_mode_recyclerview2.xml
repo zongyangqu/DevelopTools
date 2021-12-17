@@ -16,7 +16,7 @@
         app:title="商品列表"
         android:titleTextColor="@color/white"
         app:isShowSearchView="false"
-        app:rightImageButtonIcon="@drawable/icon_grid_32"
+        app:rightImageButtonIcon="@drawable/icon_list_32"
 
         ></com.quzy.coding.util.widget.CnToolbar>
 

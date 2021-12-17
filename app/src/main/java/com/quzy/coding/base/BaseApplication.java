@@ -12,6 +12,7 @@ import com.coding.qzy.baselibrary.widget.external_resource.SkinManager;
 import com.quzy.coding.R;
 import com.squareup.leakcanary.LeakCanary;
 import com.tencent.bugly.Bugly;
+import com.tencent.mmkv.MMKV;
 
 import java.io.File;
 
@@ -34,6 +35,7 @@ public class BaseApplication extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        MMKV.initialize(this);
         appContext = this;
 
         //加载外部资源包  start
