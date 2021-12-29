@@ -18,12 +18,12 @@ import com.quzy.coding.util.ISearchResult
  */
 class ProductShow3ViewHolder (itemView: View, mISearchResult : ISearchResult) : RecyclerViewHolder(itemView) {
 
-    init {
+    /*init {
         if(mISearchResult.getCurrentViewType() == ChangeRecyclerViewModeKotActivity.SHOW_TYPE_GRID){
             val params = itemView.layoutParams as StaggeredGridLayoutManager.LayoutParams
             params.isFullSpan = true
         }
-    }
+    }*/
 
     val viewBinding by lazy {
         ProductShowAdapter3Binding.bind(itemView)

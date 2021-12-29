@@ -1,7 +1,7 @@
 package com.quzy.coding.ui.activity
 
+import android.graphics.Rect
 import android.os.Build
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
@@ -18,6 +18,7 @@ import com.quzy.coding.util.ISearchResult
 import com.quzy.coding.util.JsonUtils
 import com.quzy.coding.util.widget.CnToolbar
 import com.quzy.coding.util.widget.MyDivider
+import java.lang.reflect.Method
 
 /**
  * CreateDate:2021/11/10 10:14
@@ -39,6 +40,8 @@ class ChangeRecyclerViewModeKotActivity : BaseActivity(), ISearchResult {
     }
 
     var showType = SHOW_TYPE_GRID
+    private lateinit var mCheckForGapMethod: Method
+    private lateinit var mMarkItemDecorInsetsDirtyMethod : Method
     private var recyclerViewLayoutManager: StaggeredGridLayoutManager? = null
     override fun onViewCreated() {
         showType = MMKVUtils.decodeInt(VIEWSHOETYPE)!!
@@ -50,15 +53,55 @@ class ChangeRecyclerViewModeKotActivity : BaseActivity(), ISearchResult {
             e.printStackTrace()
         }
         addShowStyleChengeListener()
+
         recyclerView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
+                //recyclerViewLayoutManager?.invalidateSpanAssignments() //防止第一行到顶部有空白区域
             }
 
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
+                if (showType == SHOW_TYPE_GRID && recyclerViewLayoutManager is StaggeredGridLayoutManager) {
+                    try {
+                        //解决RecyclerView切换瀑布流时 部分item间隔线错误
+                        var result = mCheckForGapMethod.invoke(recyclerViewLayoutManager) as Boolean
+                        if (result) {
+                            mMarkItemDecorInsetsDirtyMethod.invoke(recyclerView)
+                        }
+                    } catch (e: java.lang.Exception) {
+                    }
+                }
                 firstVisiblePosition = getFirstVisiblePosition()
-                Log.d("position---->", firstVisiblePosition.toString() + "")
+            }
+        })
+
+        recyclerView?.addItemDecoration(object :
+                RecyclerView.ItemDecoration() {
+            override fun getItemOffsets(
+                    outRect: Rect,
+                    view: View,
+                    parent: RecyclerView,
+                    state: RecyclerView.State,
+            ) {
+                super.getItemOffsets(outRect, view, parent, state)
+                if(showType == SHOW_TYPE_GRID){
+                    if (view.layoutParams is StaggeredGridLayoutManager.LayoutParams) {
+                        val params = view.layoutParams as StaggeredGridLayoutManager.LayoutParams
+                        /**
+                         * 根据params.getSpanIndex()来判断左右边确定分割线
+                         * 第一列设置左边距为space，右边距为space/2  （第二列反之）
+                         */
+                        outRect.top = 30
+                        if (params.spanIndex % 2 == 0) {
+                            outRect.left = 30
+                            outRect.right = 30 / 2
+                        } else {
+                            outRect.left = 30 / 2
+                            outRect.right = 30
+                        }
+                    }
+                }
             }
         })
     }
@@ -70,8 +113,8 @@ class ChangeRecyclerViewModeKotActivity : BaseActivity(), ISearchResult {
         val wareEntity = JsonUtils.analysisWareJsonFile(this, "ware")
         data = wareEntity.wareList
         when(showType){
-            SHOW_TYPE_GRID->initGridMaterialRefrshLayoutListener()
-            SHOW_TYPE_LINER->initMaterialRefrshLayoutListener()
+            SHOW_TYPE_GRID -> initGridMaterialRefrshLayoutListener()
+            SHOW_TYPE_LINER -> initMaterialRefrshLayoutListener()
         }
         //initMaterialRefrshLayoutListener() ;
 
@@ -103,7 +146,7 @@ class ChangeRecyclerViewModeKotActivity : BaseActivity(), ISearchResult {
     private fun addShowStyleChengeListener() {
         cnToolbar?.setRightImgeButtonIcOnClickListener {
             showType = if (showType == SHOW_TYPE_LINER) SHOW_TYPE_GRID else SHOW_TYPE_LINER
-            MMKVUtils.encode(VIEWSHOETYPE,showType)
+            MMKVUtils.encode(VIEWSHOETYPE, showType)
             val style = if (showType == SHOW_TYPE_LINER) "列表模式" else "瀑布流模式"
             Toast.makeText(this@ChangeRecyclerViewModeKotActivity, "切换格式：$style", Toast.LENGTH_SHORT).show()
             try {
@@ -125,18 +168,11 @@ class ChangeRecyclerViewModeKotActivity : BaseActivity(), ISearchResult {
                 recyclerViewLayoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
                 // recyclerViewLayoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_NONE);
                 // 设置item的间距处理方式
-                recyclerViewLayoutManager?.gapStrategy = StaggeredGridLayoutManager.GAP_HANDLING_NONE
+              //  recyclerViewLayoutManager?.gapStrategy = StaggeredGridLayoutManager.GAP_HANDLING_NONE
                 classifyWaresAdapter = AssortShowAdapter(this)
                 recyclerView?.adapter = classifyWaresAdapter
                 recyclerView?.layoutManager = recyclerViewLayoutManager
-                recyclerView?.addItemDecoration(MyDivider())
                 classifyWaresAdapter?.refresh(data)
-                recyclerView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-                    override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                        super.onScrollStateChanged(recyclerView, newState)
-                        recyclerViewLayoutManager?.invalidateSpanAssignments() //防止第一行到顶部有空白区域
-                    }
-                })
             } else {
                 recyclerView?.adapter = classifyWaresAdapter
                 recyclerView?.layoutManager = recyclerViewLayoutManager
@@ -170,17 +206,21 @@ class ChangeRecyclerViewModeKotActivity : BaseActivity(), ISearchResult {
      * @return
      */
     private fun getFirstVisiblePosition(): Int {
-        val position: Int
-        position = if (recyclerView?.layoutManager is LinearLayoutManager) {
-            (recyclerView?.layoutManager as LinearLayoutManager?)!!.findFirstVisibleItemPosition()
-        } else if (recyclerView?.layoutManager is GridLayoutManager) {
-            (recyclerView?.layoutManager as GridLayoutManager?)!!.findFirstVisibleItemPosition()
-        } else if (recyclerView?.layoutManager is StaggeredGridLayoutManager) {
-            val layoutManager = recyclerView?.layoutManager as StaggeredGridLayoutManager?
-            val lastPositions = layoutManager!!.findFirstVisibleItemPositions(IntArray(layoutManager.spanCount))
-            getMinPositions(lastPositions)
-        } else {
-            0
+        val position: Int = when (recyclerView?.layoutManager) {
+            is LinearLayoutManager -> {
+                (recyclerView?.layoutManager as LinearLayoutManager?)!!.findFirstVisibleItemPosition()
+            }
+            is GridLayoutManager -> {
+                (recyclerView?.layoutManager as GridLayoutManager?)!!.findFirstVisibleItemPosition()
+            }
+            is StaggeredGridLayoutManager -> {
+                val layoutManager = recyclerView?.layoutManager as StaggeredGridLayoutManager?
+                val lastPositions = layoutManager!!.findFirstVisibleItemPositions(IntArray(layoutManager.spanCount))
+                getMinPositions(lastPositions)
+            }
+            else -> {
+                0
+            }
         }
         return position
     }
