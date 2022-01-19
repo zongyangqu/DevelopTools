@@ -41,6 +41,7 @@ public class Actions {
         mActionMap.put(Constants.Lottie,RoleEnum.Lottie.name());
         mActionMap.put(Constants.GaoSi,RoleEnum.GaoSi.name());
         mActionMap.put(Constants.ThreeDimensional,RoleEnum.ThreeDimensional.name());
+        mActionMap.put(Constants.WebViewhybridSample,RoleEnum.WebViewhybridSample.name());
         mActionMap.put(Constants.WebViewRecycler,RoleEnum.WebViewRecycler.name());
     }
 

@@ -149,7 +149,7 @@ class RobustWebView(context: Context, attributeSet: AttributeSet? = null) :
         webChromeClient = mWebChromeClient
         initWebViewSettings(this)
         initWebViewSettingsExtension(this)
-        addJavascriptInterface(JsInterface(), "android")
+        addJavascriptInterface(JsInterface(this.context), "android")
         setDownloadListener { url, userAgent, contentDisposition, mimetype, contentLength ->
             log(
                 "setDownloadListener: $url \n" +

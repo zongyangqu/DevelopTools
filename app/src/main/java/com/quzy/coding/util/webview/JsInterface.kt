@@ -1,5 +1,6 @@
 package github.leavesczy.robustwebview
 
+import android.content.Context
 import android.webkit.JavascriptInterface
 import android.widget.Toast
 import com.coding.qzy.baselibrary.utils.AbToastUtil
@@ -14,12 +15,15 @@ import extension.log
  * @Desc:
  * @Github：https://github.com/leavesCZY
  */
-class JsInterface {
+class JsInterface(var context: Context) {
 
     @JavascriptInterface
     fun showToastByAndroid(log: String) {
         log("showToastByAndroid:$log")
-        showToast(BaseApplication.getContext(),log)
+        showToast(context,log)
     }
+
+
+
 
 }
