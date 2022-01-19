@@ -51,6 +51,7 @@
         <item>Lottie动画</item>
         <item>高斯模糊背景</item>
         <item>3D卡片叠放</item>
+        <item>WebView优化</item>
     </string-array>
 
     <string name="member_bury_page_mine">>我的页</string>

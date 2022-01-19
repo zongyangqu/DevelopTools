@@ -21,6 +21,7 @@ import com.quzy.coding.ui.activity.RecordMp3Activity;
 import com.quzy.coding.ui.activity.RecyclerViewSampleActivity;
 import com.quzy.coding.ui.activity.TextSampleActivity;
 import com.quzy.coding.ui.activity.ThreeDimensionalActivity;
+import com.quzy.coding.ui.activity.WebViewRecyclerActivity;
 import com.quzy.coding.util.RecordVoiceMp3View;
 
 /**
@@ -133,6 +134,11 @@ public enum RoleEnum implements RoleOperation {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, ThreeDimensionalActivity.class));
+        };
+    },WebViewRecycler {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, WebViewRecyclerActivity.class));
         };
     };
 

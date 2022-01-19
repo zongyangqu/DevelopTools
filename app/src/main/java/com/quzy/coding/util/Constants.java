@@ -28,6 +28,7 @@ public class Constants {
     public final static int  Lottie = 14;
     public final static int  GaoSi = 15;
     public final static int  ThreeDimensional = 16;
+    public final static int  WebViewRecycler = 17;
 
 
     // request参数

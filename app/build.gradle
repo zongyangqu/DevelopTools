@@ -120,6 +120,8 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "org.jetbrains.anko:anko:0.10.8"
     implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.2.0"  //新增
+//    implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation rootProject.ext.dependencies["butterknife"]
     implementation 'com.google.android.material:material:1.1.0'
     kapt  rootProject.ext.dependencies["butterknife-compiler"]
@@ -154,6 +156,9 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
     implementation 'com.airbnb.android:lottie:4.2.0'
   //  implementation 'com.tencent.bugly:crashreport:latest.release'
+    implementation 'com.tencent.tbs:tbssdk:44136'
+    debugImplementation 'com.github.chuckerteam.chucker:library:3.5.2'
+    releaseImplementation 'com.github.chuckerteam.chucker:library-no-op:3.5.2'
     implementation 'com.tencent.bugly:nativecrashreport:latest.release'
     implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'//其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
 }
