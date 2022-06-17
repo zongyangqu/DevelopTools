@@ -49,7 +49,7 @@ class RecyclerHorizontalMoreActivity : BaseActivity() {
             Toast.makeText(this, "刷新或跳转页面", Toast.LENGTH_SHORT).show()
         }
         val dataList2 = ArrayList<String>()
-        for (c in 'A'..'E') {
+        for (c in 'A'..'B') {
             dataList2.add(c.toString())
         }
         setGridLayoutManager(dataList2)

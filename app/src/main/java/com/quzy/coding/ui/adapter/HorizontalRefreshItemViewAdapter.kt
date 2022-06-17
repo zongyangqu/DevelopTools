@@ -20,7 +20,6 @@ import kotlinx.android.synthetic.main.membercenter_servicehelp_item.view.*
  */
 class HorizontalRefreshItemViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     lateinit var ctx: Context
-    lateinit var mServicePhone: String
     var mData: MutableList<String> = arrayListOf()
 
     var totalItemWidth: Int = 0
@@ -52,7 +51,6 @@ class HorizontalRefreshItemViewAdapter : RecyclerView.Adapter<RecyclerView.ViewH
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val holder = holder as MyViewHolder
-        holder.setData(mData[position])
         initItemViewData(holder.itemView, holder.item_servicehelp_name, position)
     }
 
@@ -61,8 +59,6 @@ class HorizontalRefreshItemViewAdapter : RecyclerView.Adapter<RecyclerView.ViewH
     }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun setData(data: String?) {}
-        var item_servicehelp_name: TextView = itemView.findViewById(R.id.tv_title)
-        var item_member_service_view: RelativeLayout = itemView.findViewById(R.id.item_member_service_view)
+        var item_servicehelp_name: TextView = itemView.findViewById(R.id.tv_subtitle)
     }
 }
