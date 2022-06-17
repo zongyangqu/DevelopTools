@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/all_btn_bg.xml" value="0.1" />
-        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activty_recycler_horizontal_more.xml" value="0.1" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activty_recycler_horizontal_more.xml" value="0.22" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/item_pulltorefresh.xml" value="0.22" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/item_pulltorefresh_grid.xml" value="0.1" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/view_content_service_help.xml" value="0.1" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/baselibrary/src/main/res/layout/item_horizontal_refresh_load_more.xml" value="0.1125" />
       </map>
     </option>

@@ -77,4 +77,5 @@
     <color name="color_F2FBFF">#F2FBFF</color>
     <color name="color_19BAFF">#19BAFF</color>
     <color name="global_bg">#eeeff3</color>
+    <color name="subRegularGreyColor">#EEEEEE</color>
 </resources>
