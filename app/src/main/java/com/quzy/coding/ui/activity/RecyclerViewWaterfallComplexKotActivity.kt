@@ -36,9 +36,8 @@ class RecyclerViewWaterfallComplexKotActivity : BaseActivity() {
         activityRecyclerviewBinding?.recyclerView?.layoutManager = newMemberLayoutManager
         activityRecyclerviewBinding?.recyclerView?.adapter = newMemberAdapter
 
-
         memberDatas = ArrayList()
-        //模拟兜底数据展示
+        // 模拟兜底数据展示
 //        memberDatas?.add(MemberTypeWithData(MemberType.USERHEADER))
 //        memberDatas?.add(MemberTypeWithData(MemberType.DEFAULT_CUSTOMER_PROPERTIES))
 //        memberDatas?.add(MemberTypeWithData(MemberType.ORDERFORM))
@@ -69,22 +68,24 @@ class RecyclerViewWaterfallComplexKotActivity : BaseActivity() {
             // 这里把notifyItemRangeInserted 改成了notifyDataSetChanged，是解决 由活动卡片数量是4个的门店切到活动卡片是2个的门店时，2个卡片的瀑布流排成了2行的问题
             newMemberAdapter?.notifyDataSetChanged()
         }
-
     }
 
     private fun addActivityCardDatas(it: AssetInfo) {
         activityCardDatas = it.activityArea?.activities
         if (it.activityArea?.activities != null && it.activityArea?.activities?.size ?: 0 > 0) {
             memberDatas?.add(
-                    MemberTypeWithData(
-                            MemberType.ACTIVITY_CARD_TITLE,
-                            it.activityArea.title
-                    )
+                MemberTypeWithData(
+                    MemberType.ACTIVITY_CARD_TITLE,
+                    it.activityArea.title
+                )
             )
             it.activityArea.welfareRemind?.apply {
-                memberDatas?.add(MemberTypeWithData(
+                memberDatas?.add(
+                    MemberTypeWithData(
                         MemberType.ACTIVITY_CARD_INNER_TITLE,
-                        it.activityArea.welfareRemind))
+                        it.activityArea.welfareRemind
+                    )
+                )
             }
             for (i in 0 until it.activityArea?.activities!!.size) {
                 if (it.activityArea?.activities!![i] == null) {
@@ -93,30 +94,30 @@ class RecyclerViewWaterfallComplexKotActivity : BaseActivity() {
                 var itemActivityCard = it.activityArea?.activities!![i]
                 when (itemActivityCard.type) {
                     1 -> memberDatas?.add(
-                            MemberTypeWithData(
-                                    MemberType.ACTIVITY_CARD_TYPE_ONE,
-                                    itemActivityCard
-                            )
+                        MemberTypeWithData(
+                            MemberType.ACTIVITY_CARD_TYPE_ONE,
+                            itemActivityCard
+                        )
                     )
                     2 -> memberDatas?.add(
-                            MemberTypeWithData(
-                                    MemberType.ACTIVITY_CARD_TYPE_TWO,
-                                    itemActivityCard
-                            )
+                        MemberTypeWithData(
+                            MemberType.ACTIVITY_CARD_TYPE_TWO,
+                            itemActivityCard
+                        )
                     )
                     3 -> memberDatas?.add(
-                            MemberTypeWithData(
-                                    MemberType.ACTIVITY_CARD_TYPE_THREE,
-                                    itemActivityCard
-                            )
+                        MemberTypeWithData(
+                            MemberType.ACTIVITY_CARD_TYPE_THREE,
+                            itemActivityCard
+                        )
                     )
                     4 -> {
                         itemActivityCard?.isRefresh = true
                         memberDatas?.add(
-                                MemberTypeWithData(
-                                        MemberType.ACTIVITY_CARD_TYPE_LIVE,
-                                        itemActivityCard
-                                )
+                            MemberTypeWithData(
+                                MemberType.ACTIVITY_CARD_TYPE_LIVE,
+                                itemActivityCard
+                            )
                         )
                     }
                 }
@@ -125,7 +126,7 @@ class RecyclerViewWaterfallComplexKotActivity : BaseActivity() {
     }
 
     override fun getLayoutId(): Int {
-        return 0;
+        return 0
     }
 
     override fun getLayoutView(): View? {

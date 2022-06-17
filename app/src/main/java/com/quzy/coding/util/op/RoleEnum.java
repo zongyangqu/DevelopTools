@@ -18,6 +18,7 @@ import com.quzy.coding.ui.activity.QRCodeActivity;
 import com.quzy.coding.ui.activity.QuickPositionActivity;
 import com.quzy.coding.ui.activity.RecordAudioActivity;
 import com.quzy.coding.ui.activity.RecordMp3Activity;
+import com.quzy.coding.ui.activity.RecyclerHorizontalMoreActivity;
 import com.quzy.coding.ui.activity.RecyclerViewSampleActivity;
 import com.quzy.coding.ui.activity.TextSampleActivity;
 import com.quzy.coding.ui.activity.ThreeDimensionalActivity;
@@ -145,6 +146,11 @@ public enum RoleEnum implements RoleOperation {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, WebViewRecyclerActivity.class));
+        };
+    },RecyclerHorizontalMore {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, RecyclerHorizontalMoreActivity.class));
         };
     };
 

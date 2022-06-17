@@ -53,6 +53,7 @@
         <item>3D卡片叠放</item>
         <item>WebView和H5互调</item>
         <item>WebView优化</item>
+        <item>RecyclerView横向查看更多</item>
     </string-array>
 
     <string name="member_bury_page_mine">>我的页</string>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.coding.qzy.baselibrary.widget.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/mRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:footerBgColor="#e0f7fa"
+        app:footerBgRadius="5dp"
+        app:footerPullMaxTop="5dp"
+        app:footerVerticalMargin="0dp"
+        app:footerWidth="30dp"
+        app:moreViewMarginRight="12dp"
+        app:moreViewMoveMaxDimen="30dp"
+        app:moreViewTestSize="11sp"
+        app:moreViewTextColor="#666666"
+        app:moreViewVisibleWidth="10dp"
+        app:pullWidth="65dp"
+        app:releaseScanMoreText="松开查看"
+        app:scanMoreText="查看更多"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.coding.qzy.baselibrary.widget.pulltorefresh.PullToRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

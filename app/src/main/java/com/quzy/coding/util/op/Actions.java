@@ -43,6 +43,7 @@ public class Actions {
         mActionMap.put(Constants.ThreeDimensional,RoleEnum.ThreeDimensional.name());
         mActionMap.put(Constants.WebViewhybridSample,RoleEnum.WebViewhybridSample.name());
         mActionMap.put(Constants.WebViewRecycler,RoleEnum.WebViewRecycler.name());
+        mActionMap.put(Constants.RecyclerHorizontalMore,RoleEnum.RecyclerHorizontalMore.name());
     }
 
 

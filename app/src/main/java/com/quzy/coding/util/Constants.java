@@ -30,6 +30,7 @@ public class Constants {
     public final static int  ThreeDimensional = 16;
     public final static int  WebViewhybridSample = 17;
     public final static int  WebViewRecycler = 18;
+    public final static int  RecyclerHorizontalMore = 19;
 
 
     // request参数
