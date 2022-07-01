@@ -14,8 +14,14 @@ import com.coding.qzy.baselibrary.utils.permission.PermissionRequester;
 import com.coding.qzy.baselibrary.utils.permission.annotation.PermissionDenied;
 import com.coding.qzy.baselibrary.utils.permission.annotation.PermissionGranted;
 import com.quzy.coding.base.BaseActivity;
+import com.quzy.coding.bean.event.DialogEvent;
 import com.quzy.coding.ui.activity.SplashActivity;
+import com.quzy.coding.ui.manager.CouponNewCustomerDialogManager;
 import com.quzy.coding.util.op.Actions;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,7 +40,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onViewCreated() {
+        EventBus.getDefault().register(this);
         list.add("解决android应用被强杀或应用被回收导致的空指针问题");
+        //CouponNewCustomerDialogManager.Companion.setCurActivity(this);
         initData();
         requestPermissions();
         swipe_target.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -84,4 +92,15 @@ public class MainActivity extends BaseActivity {
         mainAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,Arrays.asList(getResources().getStringArray(R.array.item_category_names)));
         swipe_target.setAdapter(mainAdapter);
     }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void dialogEvent(DialogEvent dialogEvent){
+        CouponNewCustomerDialogManager.Companion.doRequestCoupon(this);
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
+
 }

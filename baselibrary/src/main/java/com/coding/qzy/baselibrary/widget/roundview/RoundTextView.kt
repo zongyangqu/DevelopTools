@@ -3,19 +3,16 @@ package com.coding.qzy.baselibrary.widget.roundview
 import android.content.Context
 import android.graphics.Canvas
 import android.util.AttributeSet
-import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.appcompat.widget.AppCompatTextView
 
 /**
- * CreateDate:2021/10/28 20:40
- * @author: zongyang qu
- * @Package： com.coding.qzy.baselibrary.widget.roundview
- * @Description:
+ * 圆角TextView
  */
-open class RoundConstraintLayout @JvmOverloads constructor(
+class RoundTextView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : ConstraintLayout(context, attrs, defStyleAttr), RoundMethodInterface {
+) : AppCompatTextView(context, attrs, defStyleAttr), RoundMethodInterface {
 
     private val mHelper = RoundHelper()
 

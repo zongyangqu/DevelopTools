@@ -14,6 +14,8 @@ import com.coding.qzy.baselibrary.utils.appreset.AppStatusManager;
 import com.quzy.coding.MainActivity;
 import com.quzy.coding.util.Constants;
 
+import org.greenrobot.eventbus.EventBus;
+
 import butterknife.ButterKnife;
 
 /**
@@ -29,7 +31,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         switch (AppStatusManager.getInstance().getAppStatus()) {
             /**
              * 应用被强杀
@@ -73,6 +74,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected abstract int getLayoutId();
 
     protected abstract View getLayoutView();
+
+
 
     public AppCompatActivity getActivity(){
         return this;

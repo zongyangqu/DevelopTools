@@ -131,6 +131,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.ARouterSample2Activity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.DrawWithRichTextActivity"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -3,19 +3,19 @@ package com.coding.qzy.baselibrary.widget.roundview
 import android.content.Context
 import android.graphics.Canvas
 import android.util.AttributeSet
-import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.RelativeLayout
 
 /**
- * CreateDate:2021/10/28 20:40
- * @author: zongyang qu
- * @Package： com.coding.qzy.baselibrary.widget.roundview
- * @Description:
+ * @Package:        cn.yonghui.cn.yonghui.hyd.lib.view.widget.roundlayout
+ * @ClassName:      RoundRelativeLayout
+ * @Description:    圆角相对布局
+ * @CreateDate:     2020/12/8 4:58 PM
  */
-open class RoundConstraintLayout @JvmOverloads constructor(
+open class RoundRelativeLayout @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : ConstraintLayout(context, attrs, defStyleAttr), RoundMethodInterface {
+) : RelativeLayout(context, attrs, defStyleAttr), RoundMethodInterface {
 
     private val mHelper = RoundHelper()
 

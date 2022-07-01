@@ -7,6 +7,7 @@ import com.quzy.coding.ui.activity.ARouterSampleActivity;
 import com.quzy.coding.ui.activity.AppUpdateActivity;
 import com.quzy.coding.ui.activity.BackGroundActivity;
 import com.quzy.coding.ui.activity.CustomControlActivity;
+import com.quzy.coding.ui.activity.DrawWithRichTextActivity;
 import com.quzy.coding.ui.activity.ExternalResourceActivity;
 import com.quzy.coding.ui.activity.GaoSDemoActivity;
 import com.quzy.coding.ui.activity.GuideLayerActivity;
@@ -157,6 +158,11 @@ public enum RoleEnum implements RoleOperation {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, ARouterSampleActivity.class));
+        };
+    },DrawWithRichText {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, DrawWithRichTextActivity.class));
         };
     };
 

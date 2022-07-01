@@ -55,6 +55,7 @@
         <item>WebView优化</item>
         <item>RecyclerView横向查看更多</item>
         <item>ARouter使用</item>
+        <item>全局弹窗优惠券的富文本展示</item>
     </string-array>
 
     <string name="member_bury_page_mine">>我的页</string>
@@ -100,4 +101,6 @@
     <string name="but_ited">编辑</string>
     <string name="tex_search">请输入搜索的商品</string>
     <string name="tex_login">点击登录</string>
+    <string name="home_new_customer_coupon_dialog_amount">总价值：%s元</string>
+    <string name="format_yuan_string">¥%s</string>
 </resources>

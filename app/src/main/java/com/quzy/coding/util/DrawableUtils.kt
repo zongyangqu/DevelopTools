@@ -31,23 +31,23 @@ object DrawableUtils {
      * @return
      */
     fun createCornerDrawable(
-            leftTop: Float,
-            rightTop: Float,
-            rightBottom: Float,
-            leftBottom: Float,
-            bgColor: Int
+        leftTop: Float,
+        rightTop: Float,
+        rightBottom: Float,
+        leftBottom: Float,
+        bgColor: Int
     ): Drawable {
         val drawable = GradientDrawable()
         drawable.setColor(ContextCompat.getColor(context, bgColor))
         val corners = floatArrayOf(
-                leftTop.dp,
-                leftTop.dp,
-                rightTop.dp,
-                rightTop.dp,
-                rightBottom.dp,
-                rightBottom.dp,
-                leftBottom.dp,
-                leftBottom.dp
+            leftTop.dp,
+            leftTop.dp,
+            rightTop.dp,
+            rightTop.dp,
+            rightBottom.dp,
+            rightBottom.dp,
+            leftBottom.dp,
+            leftBottom.dp
         )
         drawable.cornerRadii = corners
         return drawable
@@ -58,11 +58,11 @@ object DrawableUtils {
      *
      * */
     fun createDrawble(
-            color: Int,
-            leftTop: Float,
-            rightTop: Float,
-            rightBottom: Float,
-            leftBottom: Float
+        color: Int,
+        leftTop: Float,
+        rightTop: Float,
+        rightBottom: Float,
+        leftBottom: Float
     ): Drawable? {
         return createDrawble(intArrayOf(color, color), leftTop, rightTop, rightBottom, leftBottom)
     }
@@ -125,23 +125,23 @@ object DrawableUtils {
      * @param leftBottom 左下角圆角，单位px
      * */
     fun createDrawble(
-            colors: IntArray,
-            leftTop: Float,
-            rightTop: Float,
-            rightBottom: Float,
-            leftBottom: Float,
-            orientation: GradientDrawable.Orientation = GradientDrawable.Orientation.LEFT_RIGHT
+        colors: IntArray,
+        leftTop: Float,
+        rightTop: Float,
+        rightBottom: Float,
+        leftBottom: Float,
+        orientation: GradientDrawable.Orientation = GradientDrawable.Orientation.LEFT_RIGHT
     ): Drawable? {
         val drawable = GradientDrawable(orientation, colors)
         val corners = floatArrayOf(
-                leftTop,
-                leftTop,
-                rightTop,
-                rightTop,
-                rightBottom,
-                rightBottom,
-                leftBottom,
-                leftBottom
+            leftTop,
+            leftTop,
+            rightTop,
+            rightTop,
+            rightBottom,
+            rightBottom,
+            leftBottom,
+            leftBottom
         )
         drawable.cornerRadii = corners
         return drawable
@@ -158,13 +158,13 @@ object DrawableUtils {
      * @param leftBottom 左下角圆角，单位px
      * */
     fun createDrawable(
-            allinLeft: Boolean = false,
-            leftTopOrAll: Float = 0f,
-            rightTop: Float = 0f,
-            rightBottom: Float = 0f,
-            leftBottom: Float = 0f,
-            orientation: GradientDrawable.Orientation = GradientDrawable.Orientation.LEFT_RIGHT,
-            vararg colors: Int
+        allinLeft: Boolean = false,
+        leftTopOrAll: Float = 0f,
+        rightTop: Float = 0f,
+        rightBottom: Float = 0f,
+        leftBottom: Float = 0f,
+        orientation: GradientDrawable.Orientation = GradientDrawable.Orientation.LEFT_RIGHT,
+        vararg colors: Int
     ): Drawable {
         var rt = rightTop
         var rb = rightBottom
@@ -189,48 +189,48 @@ object DrawableUtils {
      * @return
      */
     fun createCornerLeftRightDrawable(
-            leftTop: Float,
-            rightTop: Float,
-            rightBottom: Float,
-            leftBottom: Float,
-            startColor: Int,
-            endColor: Int
+        leftTop: Float,
+        rightTop: Float,
+        rightBottom: Float,
+        leftBottom: Float,
+        startColor: Int,
+        endColor: Int
     ): Drawable {
         val colors = intArrayOf(startColor, endColor)
         val drawable = GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, colors)
         val corners = floatArrayOf(
-                leftTop.dp,
-                leftTop.dp,
-                rightTop.dp,
-                rightTop.dp,
-                rightBottom.dp,
-                rightBottom.dp,
-                leftBottom.dp,
-                leftBottom.dp
+            leftTop.dp,
+            leftTop.dp,
+            rightTop.dp,
+            rightTop.dp,
+            rightBottom.dp,
+            rightBottom.dp,
+            leftBottom.dp,
+            leftBottom.dp
         )
         drawable.cornerRadii = corners
         return drawable
     }
 
     fun createCornerTopLeftToBottomRightDrawable(
-            leftTop: Float,
-            rightTop: Float,
-            rightBottom: Float,
-            leftBottom: Float,
-            startColor: Int,
-            endColor: Int
+        leftTop: Float,
+        rightTop: Float,
+        rightBottom: Float,
+        leftBottom: Float,
+        startColor: Int,
+        endColor: Int
     ): Drawable {
         val colors = intArrayOf(startColor, endColor)
         val drawable = GradientDrawable(GradientDrawable.Orientation.TL_BR, colors)
         val corners = floatArrayOf(
-                leftTop.dp,
-                leftTop.dp,
-                rightTop.dp,
-                rightTop.dp,
-                rightBottom.dp,
-                rightBottom.dp,
-                leftBottom.dp,
-                leftBottom.dp
+            leftTop.dp,
+            leftTop.dp,
+            rightTop.dp,
+            rightTop.dp,
+            rightBottom.dp,
+            rightBottom.dp,
+            leftBottom.dp,
+            leftBottom.dp
         )
         drawable.cornerRadii = corners
         return drawable
@@ -245,24 +245,24 @@ object DrawableUtils {
      * @return
      */
     fun createCornerTopBottomDrawable(
-            leftTop: Float,
-            rightTop: Float,
-            rightBottom: Float,
-            leftBottom: Float,
-            startColor: Int,
-            endColor: Int
+        leftTop: Float,
+        rightTop: Float,
+        rightBottom: Float,
+        leftBottom: Float,
+        startColor: Int,
+        endColor: Int
     ): Drawable {
         val colors = intArrayOf(startColor, endColor)
         val drawable = GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, colors)
         val corners = floatArrayOf(
-                leftTop.dp,
-                leftTop.dp,
-                rightTop.dp,
-                rightTop.dp,
-                rightBottom.dp,
-                rightBottom.dp,
-                leftBottom.dp,
-                leftBottom.dp
+            leftTop.dp,
+            leftTop.dp,
+            rightTop.dp,
+            rightTop.dp,
+            rightBottom.dp,
+            rightBottom.dp,
+            leftBottom.dp,
+            leftBottom.dp
         )
         drawable.cornerRadii = corners
         return drawable
@@ -277,22 +277,22 @@ object DrawableUtils {
      * @return
      */
     fun createCornerTopBottomDrawable(
-            leftTop: Float,
-            rightTop: Float,
-            rightBottom: Float,
-            leftBottom: Float,
-            colors: IntArray
+        leftTop: Float,
+        rightTop: Float,
+        rightBottom: Float,
+        leftBottom: Float,
+        colors: IntArray
     ): Drawable {
         val drawable = GradientDrawable(GradientDrawable.Orientation.TOP_BOTTOM, colors)
         val corners = floatArrayOf(
-                leftTop.dp,
-                leftTop.dp,
-                rightTop.dp,
-                rightTop.dp,
-                rightBottom.dp,
-                rightBottom.dp,
-                leftBottom.dp,
-                leftBottom.dp
+            leftTop.dp,
+            leftTop.dp,
+            rightTop.dp,
+            rightTop.dp,
+            rightBottom.dp,
+            rightBottom.dp,
+            leftBottom.dp,
+            leftBottom.dp
         )
         drawable.cornerRadii = corners
         return drawable
