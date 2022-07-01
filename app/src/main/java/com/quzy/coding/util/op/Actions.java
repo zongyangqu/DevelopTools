@@ -44,6 +44,7 @@ public class Actions {
         mActionMap.put(Constants.WebViewhybridSample,RoleEnum.WebViewhybridSample.name());
         mActionMap.put(Constants.WebViewRecycler,RoleEnum.WebViewRecycler.name());
         mActionMap.put(Constants.RecyclerHorizontalMore,RoleEnum.RecyclerHorizontalMore.name());
+        mActionMap.put(Constants.ARouter,RoleEnum.ARouter.name());
     }
 
 

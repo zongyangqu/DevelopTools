@@ -18,6 +18,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.tencent.bugly:symtabfileuploader:latest.release'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+        classpath "com.alibaba:arouter-register:1.0.2"
     }
 }
 

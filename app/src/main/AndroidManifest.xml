@@ -127,6 +127,10 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.RecyclerHorizontalMoreActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ARouterSampleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ARouterSample2Activity"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

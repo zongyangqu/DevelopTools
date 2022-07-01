@@ -4,11 +4,13 @@ import android.content.Context;
 
 import androidx.multidex.MultiDexApplication;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.apkfuns.logutils.LogUtils;
 import com.coding.qzy.baselibrary.utils.AppVersionUtils;
 import com.coding.qzy.baselibrary.utils.PluginLoadUtil;
 import com.coding.qzy.baselibrary.utils.log.LogTools;
 import com.coding.qzy.baselibrary.widget.external_resource.SkinManager;
+import com.quzy.coding.BuildConfig;
 import com.quzy.coding.R;
 import com.squareup.leakcanary.LeakCanary;
 import com.tencent.bugly.Bugly;
@@ -37,6 +39,11 @@ public class BaseApplication extends MultiDexApplication {
         super.onCreate();
         MMKV.initialize(this);
         appContext = this;
+//        if (BuildConfig.DEBUG){
+//            ARouter.openLog();
+//            ARouter.openDebug();
+//        }
+        ARouter.init(this);
 
         //加载外部资源包  start
         apk = new File(getCacheDir() + "/resource.apk");
