@@ -15,14 +15,14 @@ import java.lang.ref.WeakReference
 class CouponNewCustomerDialogManager {
     companion object {
         var mActivityWeakReference: WeakReference<AppCompatActivity>? = null
-        // 如果是真实项目 这里可以进行网络请求  来获取是否展示 优惠券弹窗
-        // doNetRequest
 
         fun doRequestCoupon(activity: AppCompatActivity?) {
             // 不是最上层的activty就不请求接口也不弹窗
             if (mActivityWeakReference?.get() != null && activity != mActivityWeakReference?.get()) {
                 return
             }
+            // 如果是真实项目 这里可以进行网络请求  来获取是否展示 优惠券弹窗
+            // doNetRequest
             val metaData = JsonUtils.analysisNewCouponsJsonFile(BaseApplication.getContext(), "coupon")
             val dialog = CouponNewCustomerUnitaryDialog()
             dialog.setData(metaData)
