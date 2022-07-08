@@ -1,0 +1,767 @@
+{
+  "activityArea": {
+    "activities": [{
+      "bgImg": "https://image.yonghuivip.com/signinbgimg.png",
+      "bottomLeftInfo": {
+        "bgImg": "https://image.yonghuivip.com/signincreditbuy.png",
+        "elementName": "去加钱购",
+        "title": "积分加钱购",
+        "toast": "当前门店暂无该活动哦"
+      },
+      "bottomRightInfo": {
+        "bgImg": "https://image.yonghuivip.com/signincreditexchange.png",
+        "elementName": "去兑券",
+        "jumpUrl": "myyh://yhlife.com/show/web?url=https://m.yonghuivip.com/t1/yh-m-site/yh-point-exchange/index.html?needlocation=1&canShare=0&needlogin=1",
+        "title": "积分兑换"
+      },
+      "contentInfo": {
+        "bgImg": "https://image.yonghuivip.com/signincontentimg.png",
+        "button": {
+          "bgImg": "https://image.yonghuivip.com/signintaskbutton.png",
+          "elementName": "去做任务",
+          "jumpUrl": "myyh://yhlife.com/show/web?url=https://m.yonghuivip.com/t1/yh-m-site/yh-point-exchange/index.html?needlocation=1&canShare=0&needlogin=1"
+        },
+        "elementName": "去做任务",
+        "firstTitle": {
+          "activitytext": "当前21积分"
+        },
+        "jumpUrl": "myyh://yhlife.com/show/web?url=https://m.yonghuivip.com/t1/yh-m-site/yh-point-exchange/index.html?needlocation=1&canShare=0&needlogin=1",
+        "secondTitle": {
+          "activitytext": "做任务得更多积分"
+        }
+      },
+      "headInfo": {
+        "firstTitle": {
+          "activitytext": "天天签到",
+          "signs": [{
+            "color": "#FFFFFF",
+            "end": 3,
+            "size": 0,
+            "start": 0,
+            "weight": "bold"
+          }]
+        },
+        "iconImg": "https://image.yonghuivip.com/signinicon.png",
+        "redSpot": 0
+      },
+      "key": "signIn",
+      "moduleName": "天天签到卡片",
+      "type": 1
+    }, {
+      "bottomInfo": {
+        "bgImg": "https://image.yonghuivip.com/webuserrecommend2x.png",
+        "elementName": "买手推荐",
+        "jumpUrl": "myyh://yhlife.com/show/web?needlogin=0&needLogin=0&url=https%3A%2F%2Fbeta-cmsh5.yonghuivip.com%2Findex.html%3FcanShare%3D1%26needlocation%3D1%26showLoading%3D0%26aid%3D6150159ec17bf00661288b57",
+        "recommend": [{
+          "icon": "https://image.yonghuivip.com/webuserrecrankone3x.png",
+          "text": "推荐1"
+        }, {
+          "icon": "https://image.yonghuivip.com/webuserrecranktwo3x.png",
+          "text": "推荐2"
+        }, {
+          "icon": "https://image.yonghuivip.com/webuserrecrankthree3x.png",
+          "text": "推荐34"
+        }],
+        "title": "买手推荐"
+      },
+      "contentInfo": {
+        "bgImg": "https://image.yonghuivip.com/webuserlivebg2x.png",
+        "elementName": "看直播享优惠",
+        "firstTitle": {
+          "activitytext": "看直播享优惠"
+        },
+        "jumpUrl": "myyh://yhlife.com/show/web?needlogin=0&needLogin=0&url=https%3A%2F%2Fbeta-cmsh5.yonghuivip.com%2Findex.html%3FcanShare%3D1%26needlocation%3D1%26showLoading%3D0%26aid%3D6150159ec17bf00661288b57",
+        "liveRooms": [{
+          "coverImg": "https://res.wx.qq.com/a/fed_upload/1d18dce9-2bb9-4e18-b523-aadd558d0cbd/default_bg.png",
+          "desc": "进入直播间",
+          "elementName": "好物秀_直播_直播中",
+          "firstTitle": "看直播享优惠",
+          "jumpUrl": "myyh://yhlife.com/show/web?needlogin=0&needLogin=0&url=https%3A%2F%2Fbeta-cmsh5.yonghuivip.com%2Findex.html%3FcanShare%3D1%26needlocation%3D1%26showLoading%3D0%26aid%3D6150159ec17bf00661288b57",
+          "liveIcon": "https://image.yonghuivip.com/webuserliveon.gif",
+          "liveStatus": 101,
+          "liveStatusDesc": "直播中",
+          "pid": "61502ad9c17bf0066128953f",
+          "roomId": 108,
+          "secondTitle": "孙世豪的11213"
+        }, {
+          "coverImg": "http://mmbiz.qpic.cn/mmbiz_jpg/lGFicPpmmRySNnx6docNXKEM12TJpzVKU08meHBuueouNEtqjxqTO4iaBbabeqwsJOoeUcgyb9BxKcwtRicShtUdg/0",
+          "desc": "开播时间:1970.01.20 05:34",
+          "elementName": "好物秀_直播_预告",
+          "firstTitle": "看直播享优惠看直播享优惠",
+          "jumpUrl": "myyh://yhlife.com/show/web?needlogin=0&needLogin=0&url=https%3A%2F%2Fbeta-cmsh5.yonghuivip.com%2Findex.html%3FcanShare%3D1%26needlocation%3D1%26showLoading%3D0%26aid%3D6150159ec17bf00661288b57",
+          "liveIcon": "",
+          "liveStatus": 102,
+          "liveStatusDesc": "预告",
+          "pid": "61502ad9c17bf0066128953e",
+          "roomId": 109,
+          "secondTitle": "个人中心预播个人中心预播个人中心预播个人中心预播个人中心预播个人中心预播个人中心预播个人中心预播"
+        }, {
+          "coverImg": "http://mmbiz.qpic.cn/mmbiz_jpg/lGFicPpmmRyTP1Ylo0UQJLqcK4AZ3Ee9E8jN4TY0AKSHvMvACnTVqpeNccFickZFerT2GJv2g9xWPMEfMw0HQKQg/0",
+          "desc": "查看回放",
+          "elementName": "好物秀_直播_回放",
+          "firstTitle": "看直播享优惠",
+          "jumpUrl": "myyh://yhlife.com/show/web?needlogin=0&needLogin=0&url=https%3A%2F%2Fbeta-cmsh5.yonghuivip.com%2Findex.html%3FcanShare%3D1%26needlocation%3D1%26showLoading%3D0%26aid%3D6150159ec17bf00661288b57",
+          "liveIcon": "",
+          "liveStatus": 103,
+          "liveStatusDesc": "回放",
+          "pid": "61502ad9c17bf00661289541",
+          "roomId": 106,
+          "secondTitle": "h5活动页直播"
+        }],
+        "secondTitle": {}
+      },
+      "headInfo": {
+        "firstTitle": {
+          "activitytext": "好物秀"
+        },
+        "iconImg": "https://image.yonghuivip.com/livecard3x.png"
+      },
+      "key": "liveRoom",
+      "moduleName": "好物秀",
+      "type": 4
+    }, {
+      "bottomLeftInfo": {
+        "bgImg": "https://image.yonghuivip.com/reveivecouponreceive.png",
+        "elementName": "去领优惠券",
+        "jumpUrl": "myyh://yhlife.com/show/native?name=cpdistributor&EXTRA_ACTIVITY_TYPE=COUPONCENTER&TYPE_FORM=2&categorytype=coupons",
+        "title": "优惠券"
+      },
+      "bottomRightInfo": {
+        "bgImg": "https://image.yonghuivip.com/receivecouponredenvelope.png",
+        "bubbleTitle": "3张可领",
+        "elementName": "去领红包",
+        "jumpUrl": "myyh://yhlife.com/show/native?name=cpdistributor&EXTRA_ACTIVITY_TYPE=COUPONCENTER&TYPE_FORM=2&categorytype=redpacket",
+        "title": "红包"
+      },
+      "contentInfo": {
+        "bgImg": "https://image.yonghuivip.com/receivecouponcontentimg.png",
+        "button": {
+          "bgImg": "https://image.yonghuivip.com/receivecouponbutton.png",
+          "jumpUrl": "myyh://yhlife.com/show/native?name=cpdistributor&EXTRA_ACTIVITY_TYPE=COUPONCENTER&TYPE_FORM=2&categorytype=coupons"
+        },
+        "elementName": "去领券中心",
+        "firstTitle": {
+          "activitytext": "当前|{0}|张券"
+        },
+        "jumpUrl": "myyh://yhlife.com/show/native?name=cpdistributor&EXTRA_ACTIVITY_TYPE=COUPONCENTER&TYPE_FORM=2&categorytype=coupons",
+        "secondTitle": {
+          "activitytext": "用券立享优惠"
+        }
+      },
+      "headInfo": {
+        "firstTitle": {
+          "activitytext": "领券中心"
+        },
+        "iconImg": "https://image.yonghuivip.com/receivecouponicon.png"
+      },
+      "key": "receiveCoupon",
+      "moduleName": "每日领券卡片",
+      "type": 1
+    }, {
+      "contentInfo": {
+        "button": {
+          "bgImg": "https://image.yonghuivip.com/invitebutton.png",
+          "elementName": "去邀请有礼页面",
+          "jumpUrl": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-invite-getgifts%2Findex.html&needlogin=1"
+        },
+        "contentImg": "https://image.yonghuivip.com/invitecontentimg2x.png",
+        "elementName": "去邀请有礼页面",
+        "firstTitle": {
+          "activitytext": "邀请新用户下单"
+        },
+        "jumpUrl": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-invite-getgifts%2Findex.html&needlogin=1",
+        "secondTitle": {
+          "activitytext": "20元红包",
+          "signs": [{
+            "color": "#FF3819",
+            "end": 1,
+            "size": 26,
+            "start": 0,
+            "weight": "bold"
+          }]
+        }
+      },
+      "headInfo": {
+        "firstTitle": {
+          "activitytext": "邀请有礼"
+        },
+        "iconImg": "https://image.yonghuivip.com/inviteicon.png"
+      },
+      "key": "invite",
+      "moduleName": "邀请有礼卡片",
+      "type": 2
+    }, {
+      "contentInfo": {
+        "bgImg": "https://image.yonghuivip.com//search/rank/buy_back__bg3x.png",
+        "elementName": "去看回购榜单",
+        "firstTitle": {},
+        "jumpUrl": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-billboard%2Findex.html%3Fneedlogin%3D0%26nl%3D1%26rankType%3D12%26nfcolor%3DFFFFFF%26ngbcolor%3DFFAC1A",
+        "secondTitle": {},
+        "skus": [{
+          "action": "myyh://yhlife.com/show/native?name=prddetail&id=B-836810&merid=3",
+          "cover": {
+            "imageUrl": "http://image.yonghuivip.com/image/1500217708607dfaaeed694eae97c85b434d102c0fe199eb9c461"
+          },
+          "heatPrompt": "回购值1115",
+          "leftTopImageUrl": "https://image.yonghuivip.com/search/rank/v780/1@3x.png",
+          "price": {
+            "price": "5"
+          },
+          "title": "康师傅白胡椒肉骨面 110g"
+        }, {
+          "action": "myyh://yhlife.com/show/native?name=prddetail&id=B-658990&merid=3",
+          "cover": {
+            "imageUrl": "http://image.yonghuivip.com/product/658990/14889631989570669a7d41f84eb9df8efebe2316c1169e9b24494"
+          },
+          "heatPrompt": "回购值917",
+          "leftTopImageUrl": "https://image.yonghuivip.com/search/rank/v780/2@3x.png",
+          "price": {
+            "price": "5.8"
+          },
+          "title": "合味道海鲜面 84g"
+        }, {
+          "action": "myyh://yhlife.com/show/native?name=prddetail&id=B-CB3819576&merid=3",
+          "cover": {
+            "imageUrl": "http://image.yonghuivip.com/product/B-935933/1521269880451dbe73456585312a3733aeea8e2c18e314e09dc15"
+          },
+          "heatPrompt": "回购值674",
+          "leftTopImageUrl": "https://image.yonghuivip.com/search/rank/v780/3@3x.png",
+          "price": {
+            "price": "13.8"
+          },
+          "title": "花椒 50g/袋"
+        }]
+      },
+      "headInfo": {
+        "firstTitle": {
+          "activitytext": "逛一逛回购榜"
+        },
+        "iconImg": "https://image.yonghuivip.com/buybackrankingicon.png",
+        "secondTitle": {
+          "activitytext": "大众的选择 值得信赖"
+        }
+      },
+      "key": "buybackRanking",
+      "moduleName": "逛一逛榜单卡片",
+      "type": 3
+    }],
+    "welfareRemind":{
+      "icon":"https://image.yonghuivip.com/welfareremind3x.png",
+      "title":{
+        "activitytext":"您有2份福利待领取",
+        "signs":[
+          {
+            "end":2,
+            "size":0,
+            "start":2,
+            "weight":"bold"
+          }
+        ]
+      },
+      "welfare":[
+        {
+          "activitytext":"领券中心有2张券待领取",
+          "signs":[
+            {
+              "end":5,
+              "size":0,
+              "start":5,
+              "weight":"bold"
+            }
+          ]
+        },
+        {
+          "activitytext":"去辉鲜农场浇水可领奖励哦"
+        }
+      ],
+      "welfareCount":2
+    },
+    "title": "天天逛 享优惠"
+  },
+  "afterSaleProcessingQuantity": 0,
+  "avatarImageUrl": "",
+  "balance": 0,
+  "balanceiy": "0",
+  "boughtSvip": false,
+  "bravoCardFlag": 2,
+  "cityid": "2",
+  "cmsPagePit": "9245",
+  "coupon": 0,
+  "couponPendingCount": 3,
+  "credit": 21,
+  "creditDetailUrl": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-point-exchange%2Findex.html%3Fneedlocation%3D1%26canShare%3D0",
+  "creditDetailUrlName": "积分",
+  "customerProperties": [{
+    "action": "myyh://yhlife.com/show/native?name=topup&needlogin=1",
+    "propertyKey": "balanceValueCard",
+    "propertyName": "余额·充值(元)",
+    "propertyValue": "0"
+  }, {
+    "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-e-card%2Findex.html%23%2F&needlogin=1",
+    "icon": "https://image.yonghuivip.com/web/card/eye-close.png",
+    "propertyKey": "yonghuiCard",
+    "propertyName": "永辉卡(张)",
+    "propertyValue": "0"
+  }, {
+    "action": "myyh://yhlife.com/show/native?name=coupon&needlogin=1",
+    "cornerMarkText": "3张可领",
+    "propertyKey": "discountCoupon",
+    "propertyName": "红包礼券",
+    "propertyValue": "0"
+  }, {
+    "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-point-exchange%2Findex.html%3Fneedlocation%3D1%26canShare%3D0&needlogin=1",
+    "propertyKey": "integralMall",
+    "propertyName": "积分商城",
+    "propertyValue": "21"
+  }],
+  "doubleElevenPromotions": [{
+    "img": "https://image.yonghuivip.com/maindouble11.png",
+    "jumpUrl": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-point-exchange%2Findex.html%3Fneedlocation%3D1%26canShare%3D0&needlogin=1"
+  }, {
+    "img": "https://image.yonghuivip.com/onedouble11.png",
+    "jumpUrl": "myyh://yhlife.com/show/native?name=topup&needlogin=1"
+  }, {
+    "img": "https://image.yonghuivip.com/twodouble11.png",
+    "jumpUrl": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-maotai-member%2Findex.html?needlocation=1&canShare=1&needlogin=1#/"
+  }],
+  "duestip": "",
+  "expiringCouponCount": 0,
+  "favorskus": [],
+  "freeshipping": 0,
+  "freeshippingdesc": "0",
+  "giftCard": {
+    "available": 1,
+    "balance": 0
+  },
+  "grade": "会员",
+  "gradeDescUrl": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-maotai-member%2Findex.html?needlocation=1&canShare=1&needlogin=1#/",
+  "gradeid": 0,
+  "growth": 0,
+  "hasdigitpaypassword": 0,
+  "headCouponEntrance": {
+    "icons": ["https://image.yonghuivip.com/signeveryday.png", "https://image.yonghuivip.com/couponcenter.png", "https://image.yonghuivip.com/goodthingshow.png"],
+    "title": "去领优惠"
+  },
+  "id": 943980594601195977,
+  "isregioninviter": false,
+  "isshopinviter": false,
+  "memberNewCustomerCouponInfo": {
+    "2": false,
+    "13": false,
+    "14": false,
+    "3": false,
+    "15": false,
+    "6": true,
+    "7": false,
+    "21": true
+  },
+  "memcardstate": 0,
+  "mobile": "18811740896",
+  "needSetPassword": 1,
+  "nickname": "",
+  "oldSuperUser": false,
+  "onlineService": {
+    "action": 0,
+    "desc": "",
+    "image": "http://image.yonghuivip.com/image/160618709224559d063c4666686cf09aceb4af254a6520afb2d9e.png",
+    "link": "https://m.yonghuivip.com/t1/yh-activity/yh-life-call-center/index.html#/?sellerid=3&cityid=2&shopid=9245&showonlineservice=true&frompagename=homepage",
+    "title": "客服中心"
+  },
+  "orderListRep": [{
+    "detailaction": "myyh://yhlife.com/show/native?name=orderdetail&orderid=1204000000041090",
+    "expecttime": {
+      "date": 1631808000000,
+      "timeslots": [{
+        "from": "15:41",
+        "immediatedescription": "60分钟极速达",
+        "slottype": "immediate",
+        "to": "16:41"
+      }]
+    },
+    "id": "1204000000041090",
+    "pickself": 0,
+    "productImageUrl": "http://image.yonghuivip.com//yh-image-library/2C70BF73-968D-4AE9-88E4-8EA3EF305AD0.jpg?w=800&h=800?imageMogr2/thumbnail/100x100",
+    "status": 2,
+    "timeInfo": {
+      "generate": 1631864457000,
+      "payend": 1631865657000
+    },
+    "title": "味好美意大利面酱挤挤装等多款",
+    "type": 1
+  }, {
+    "detailaction": "myyh://yhlife.com/show/native?name=orderdetail&orderid=1204000000041080",
+    "expecttime": {
+      "date": 1631808000000,
+      "timeslots": [{
+        "from": "15:33",
+        "immediatedescription": "60分钟极速达",
+        "slottype": "immediate",
+        "to": "16:33"
+      }]
+    },
+    "id": "1204000000041080",
+    "pickself": 0,
+    "productImageUrl": "http://image.yonghuivip.com//product/B-967594/1515235113339ca550d1b27ffee81211be45431692cf446b753b0?imageMogr2/thumbnail/100x100",
+    "status": 2,
+    "timeInfo": {
+      "generate": 1631863837000,
+      "payend": 1631865037000
+    },
+    "title": "潘婷排浊赋能头皮洗发露等多款",
+    "type": 1
+  }, {
+    "detailaction": "myyh://yhlife.com/show/native?name=orderdetail&orderid=1204000400031090",
+    "expecttime": {
+      "date": 1631030400000,
+      "timeslots": [{
+        "from": "13:38",
+        "immediatedescription": "60分钟极速达",
+        "slottype": "immediate",
+        "to": "14:28"
+      }]
+    },
+    "id": "1204000400031090",
+    "pickself": 0,
+    "productImageUrl": "http://image.yonghuivip.com//product/X-CB248925/15051818403621bb67006c539d28380af58c267968c28e778131b?imageMogr2/thumbnail/100x100",
+    "status": 2,
+    "timeInfo": {
+      "generate": 1631079467000,
+      "payend": 1631080667000
+    },
+    "title": "小薏米等多款",
+    "type": 1
+  }, {
+    "detailaction": "myyh://yhlife.com/show/native?name=orderdetail&orderid=1204000200031040",
+    "expecttime": {
+      "date": 1628784000000,
+      "timeslots": [{
+        "from": "20:41",
+        "immediatedescription": "60分钟极速达",
+        "slottype": "immediate",
+        "to": "21:41"
+      }]
+    },
+    "id": "1204000200031040",
+    "pickself": 0,
+    "productImageUrl": "http://image.yonghuivip.com//product/B-CB4926167/1531293929047c141371e050b3bccbe83f9d5ebdff70acfb32d89?imageMogr2/thumbnail/100x100",
+    "status": 2,
+    "timeInfo": {
+      "generate": 1628858361000,
+      "payend": 1628859561000
+    },
+    "title": "蒙牛纯甄风味酸牛奶瓶装",
+    "type": 1
+  }],
+  "page": {
+    "asset": {
+      "list": [{
+        "action": 0,
+        "desc": "",
+        "image": "https://image.yonghuivip.com/20180122194130/b9f5894082188f22d619805a9ad81d9e.png",
+        "link": "",
+        "title": "账户充值"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "https://image.yonghuivip.com/20180122193918/b9f5894082188f22d619805a9ad81d9e.png",
+        "link": "",
+        "title": "付款码"
+      }]
+    },
+    "banner": {},
+    "function": {
+      "list": [{
+        "action": 0,
+        "desc": "",
+        "image": "https://image.yonghuivip.com/elevengame1023.png",
+        "link": "",
+        "title": "双11福利游戏"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/1606187314946b45d1017e4c0e8bcc05a6950cd6e7b4b54f08707.png",
+        "link": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-invite-getgifts%2Findex.html&needlogin=1",
+        "title": "邀请有礼"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/160618709224559d063c4666686cf09aceb4af254a6520afb2d9e.png",
+        "link": "https://m.yonghuivip.com/t1/yh-activity/yh-life-call-center/index.html#/?sellerid=3&cityid=2&shopid=9245&showonlineservice=true&frompagename=homepage",
+        "title": "客服中心"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/16061870709981081cff17219402e4e507f6ac4dbb1c368d1efb0.png",
+        "link": "https://m.yonghuivip.com/t1/yh-m-site/yh-add-invoice/index.html#/order_invoice/",
+        "title": "发票服务"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/160618704957263ad180393abfa2d6bf98a62ec82bc7394f97634.png",
+        "link": "myyh://yhlife.com/show/native?name=addrmgr",
+        "title": "地址管理"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/1606187130371b2546376576632732aba885eb0f8a9de04fed684.png",
+        "link": "myyh://yhlife.com/show/native?name=onlyshowstore",
+        "title": "永辉门店"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "https://image.yonghuivip.com/20200304/qiyezizhi.png",
+        "link": "https://activity.yonghuivip.com/h5/yh-activity/qiyezizhi/?needlogin=0",
+        "title": "企业资质"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/1608110217228024bf9e0e9c8db411a7b97046b0d3c87f24b4dc6.png",
+        "link": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-add-feedback%2Findex.html%3F&needlogin=1",
+        "title": "意见反馈"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/1606187114349a607792741b9f2c293331893d6ee74a0b28081e7.png",
+        "link": "myyh://yhlife.com/show/native?name=setting&certificate=https%3A%2F%2Factivity.yonghuivip.com%2Fh5%2Fyh-activity%2Fqiyezizhi%2F%3Fneedlogin%3D0",
+        "title": "设置",
+        "version": "5.2.0"
+      }]
+    },
+    "functionnew": {
+      "list": [{
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/160618709224559d063c4666686cf09aceb4af254a6520afb2d9e.png",
+        "link": "https://m.yonghuivip.com/t1/yh-activity/yh-life-call-center/index.html#/?sellerid=3&cityid=2&shopid=9245&showonlineservice=true&frompagename=homepage",
+        "title": "客服中心"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/16061870709981081cff17219402e4e507f6ac4dbb1c368d1efb0.png",
+        "link": "https://m.yonghuivip.com/t1/yh-m-site/yh-add-invoice/index.html#/order_invoice/",
+        "title": "发票服务"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/160618704957263ad180393abfa2d6bf98a62ec82bc7394f97634.png",
+        "link": "myyh://yhlife.com/show/native?name=addrmgr",
+        "title": "地址管理"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/1606187130371b2546376576632732aba885eb0f8a9de04fed684.png",
+        "link": "myyh://yhlife.com/show/native?name=onlyshowstore",
+        "title": "永辉门店"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/1608110217228024bf9e0e9c8db411a7b97046b0d3c87f24b4dc6.png",
+        "link": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-add-feedback%2Findex.html%3F&needlogin=1",
+        "title": "意见反馈"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/1606187114349a607792741b9f2c293331893d6ee74a0b28081e7.png",
+        "link": "myyh://yhlife.com/show/native?name=setting&certificate=https%3A%2F%2Factivity.yonghuivip.com%2Fh5%2Fyh-activity%2Fqiyezizhi%2F%3Fneedlogin%3D0",
+        "title": "设置",
+        "version": "5.2.0"
+      }]
+    },
+    "promotion": {
+      "list": [{
+        "image": "https://image.yonghuivip.com/maotaibriliantmember.png",
+        "key": "maotai_brilliant_member",
+        "link": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-maotai-member%2Findex.html?needlocation=1&canShare=1&needlogin=1#/",
+        "title": "茅台卓越会员"
+      }, {
+        "image": "https://image.yonghuivip.com/price.png",
+        "key": "bargain",
+        "link": "myyh://yhlife.com/show/web?url=https%3A%2F%2Ftest-activity.yonghuivip.com%2Ft1%2Fh5%2Fyh-m-site%2Fyh-community%2Findex.html%3FchannelCode%3Fneedlogin%3D1%26canShare%3D0%26needlocation%3D1%26showLoading%3D0",
+        "title": "砍价"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/16068177513169356a5ddbb17c76888d0d922b8fda0984bbbfb52.png",
+        "link": "myyh://yhlife.com/show/native?name=cpdistributor",
+        "title": "领券中心"
+      }, {
+        "action": 0,
+        "desc": "",
+        "image": "http://image.yonghuivip.com/image/1606817732310c307e3c9ef9531808c9c2c43dde0edd02e721ab4.png",
+        "link": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-point-exchange%2Findex.html%3Fneedlocation%3D1%26canShare%3D0",
+        "title": "积分兑券"
+      }]
+    }
+  },
+  "payConfigInfos": [{
+    "copywriting": "支付优惠",
+    "endTime": "2028-05-07",
+    "icon": "https://image.yonghuivip.com/discountPay.png",
+    "isMark": "",
+    "jumpLink": "btnCouple",
+    "picHeight": 0,
+    "picWidth": 0,
+    "startTime": "2021-02-03"
+  }, {
+    "copywriting": "小辉付",
+    "cornerMarkText": "免息",
+    "endTime": "2028-05-07",
+    "icon": "https://image.yonghuivip.com/xhPay.png",
+    "isMark": "https://image.yonghuivip.com/mianxi.png",
+    "jumpLink": "btnXiaoHuiPay",
+    "picHeight": 15,
+    "picWidth": 33,
+    "startTime": "2021-02-03"
+  }, {
+    "copywriting": "小辉宝",
+    "endTime": "2028-05-07",
+    "icon": "https://image.yonghuivip.com/xhBao.png",
+    "isMark": "",
+    "jumpLink": "btnXiaoHuibao",
+    "picHeight": 0,
+    "picWidth": 0,
+    "startTime": "2021-02-03"
+  }, {
+    "copywriting": "小辉贷",
+    "endTime": "2028-05-07",
+    "icon": "https://image.yonghuivip.com/xhLoan.png",
+    "isMark": "",
+    "jumpLink": "btnXiaoHuiLoan",
+    "picHeight": 0,
+    "picWidth": 0,
+    "startTime": "2021-02-03"
+  }, {
+    "copywriting": "永辉钱包",
+    "endTime": "2028-05-07",
+    "icon": "https://image.yonghuivip.com/xhWallet.png",
+    "isMark": "",
+    "jumpLink": "btnXiaoHuiMoney",
+    "picHeight": 0,
+    "picWidth": 0,
+    "startTime": "2021-02-03"
+  }],
+  "privilegeAction": "myyh://yhlife.com/show/web?url=https%3a%2f%2fm.yonghuivip.com%2fgroup-buy%2flist.html&needlogin=1",
+  "privilegeDesc": "",
+  "promotionsAndFunctions": [{
+    "action": 0,
+    "image": "https://image.yonghuivip.com/maotaibriliantmember.png",
+    "key": "mid_autumn_maotai",
+    "link": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-moutai-midautumn%2Findex.html?needlocation=1&canShare=1&needlogin=1#/",
+    "title": "中秋茅台"
+  }, {
+    "action": 0,
+    "image": "https://image.yonghuivip.com/testgit.gif",
+    "key": "invite",
+    "link": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-invite-getgifts%2Findex.html&needlogin=1",
+    "title": "邀请有礼"
+  }, {
+    "image": "https://image.yonghuivip.com/bargain.png",
+    "key": "bargain",
+    "link": "myyh://yhlife.com/show/web?url=https%3A%2F%2Ftest-activity.yonghuivip.com%2Ft1%2Fh5%2Fyh-m-site%2Fyh-community%2Findex.html%3FchannelCode%3Fneedlogin%3D1%26canShare%3D0%26needlocation%3D1%26showLoading%3D0&needlogin=1",
+    "title": "砍价"
+  }, {
+    "action": 0,
+    "image": "https://image.yonghuivip.com/maotaibriliantmember.png",
+    "key": "maotai_brilliant_member",
+    "link": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-maotai-member%2Findex.html?needlocation=1&canShare=1&needlogin=1#/",
+    "title": "茅台卓越会员"
+  }, {
+    "action": 0,
+    "image": "https://image.yonghuivip.com/testgit.gif",
+    "key": "invite",
+    "link": "myyh://yhlife.com/show/web?url=https://test-activity.yonghuivip.com/t1/h5/yh-m-site/yh-community/index.html?channelCode=default&type=friend&needlocation=1",
+    "title": "社群好友"
+  }, {
+    "action": 0,
+    "image": "https://image.yonghuivip.com/testgit.gif",
+    "key": "invite",
+    "link": "myyh://yhlife.com/show/web?url=https://test-activity.yonghuivip.com/t1/h5/yh-m-site/yh-community/index.html?channelCode=default&needlocation=1&needlogin=1#/",
+    "title": "社群加群"
+  }, {
+    "action": 0,
+    "image": "https://image.yonghuivip.com/scan@3x.png",
+    "link": "myyh://yhlife.com/show/native?name=scanpay",
+    "title": "扫一扫"
+  }, {
+    "action": 0,
+    "image": "https://image.yonghuivip.com/callCenter.png",
+    "link": "https://m.yonghuivip.com/t1/yh-activity/yh-life-call-center/index.html#/?sellerid=3&cityid=2&shopid=9245&showonlineservice=true&frompagename=homepage",
+    "title": "客服中心"
+  }, {
+    "action": 0,
+    "image": "https://image.yonghuivip.com/invoiceService.png",
+    "link": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-add-invoice%2Findex.html%3F%23%2Forder_invoice%2F&needlogin=1",
+    "title": "发票服务"
+  }, {
+    "action": 0,
+    "image": "https://image.yonghuivip.com/addressManagement.png",
+    "link": "myyh://yhlife.com/show/native?name=addrmgr",
+    "title": "地址管理"
+  }, {
+    "action": 0,
+    "image": "https://image.yonghuivip.com/yhShop.png",
+    "link": "myyh://yhlife.com/show/native?name=onlyshowstore",
+    "title": "永辉门店"
+  }, {
+    "action": 0,
+    "image": "https://image.yonghuivip.com/adviceFeedback.png",
+    "link": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-m-site%2Fyh-add-feedback%2Findex.html%3F&needlogin=1",
+    "title": "意见反馈"
+  }, {
+    "action": 0,
+    "image": "https://image.yonghuivip.com/certificationLicense.png",
+    "link": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Ft1%2Fyh-activity%2Fqualification%2F%3Fneedlogin%3D0",
+    "title": "资质证照"
+  }, {
+    "action": 0,
+    "image": "https://image.yonghuivip.com/setting.png",
+    "link": "myyh://yhlife.com/show/native?name=setting&certificate=https%3A%2F%2Fm.yonghuivip.com%2Fyh-activity%2Fqualification%2F%3Fneedlogin%3D0",
+    "title": "设置"
+  }],
+  "refunding": 0,
+  "renew": 0,
+  "renewlink": "http://hyd.yonghui.cn/app/activity/vip/yhxfhd/index.html",
+  "renewlinkdesc": "去续费，拿豪礼",
+  "sellerid": "3",
+  "shopId": "9245",
+  "svipGrayUser": false,
+  "svipUser": false,
+  "toComment": 0,
+  "toDelivery": 5,
+  "toPay": 0,
+  "toPickup": 0,
+  "toReceive": 5,
+  "userCenterBanner": {
+    "adSpaceCode": "focus_personal_center",
+    "adSpaceName": "我的中心页轮播图",
+    "adSpaceType": 2,
+    "bannerLists": [{
+      "action": "myyh://yhlife.com/show/native?name=svipaccredit",
+      "adUnitName": "省区1-超会老升新",
+      "height": 270,
+      "position": 0,
+      "url": "http://image.yonghuivip.com/image/shensuan/4-focus_personal_center-1065x270-163195668527178f7c3dfac5a59290d5f0cbcc5682fa2cce84aeb.png",
+      "width": 1065
+    }],
+    "orderName": "【测试勿动】北京-文慧-浦新2233"
+  },
+  "validity": 0,
+  "vipRightsList": [],
+  "walletdesc": "超级会员立享多重大礼",
+  "walleturl": "myyh://yhlife.com/show/native?name=membercard",
+  "wechatLogo": "",
+  "wechatNickname": "",
+  "shopDiscountsVo": {
+    "cityId": 2,
+    "distance": "3.29km",
+    "logoUrl": "https://image.yonghuivip.com/red@3x.png",
+    "sellerId": 7,
+    "shopId": "9245",
+    "shopName": "文慧园店",
+    "tags": [{
+      "text": "领到店优惠券",
+      "type": "discount"
+    }]
+  },
+  "yhCardBalance": 0
+}

@@ -1,6 +1,6 @@
 package com.quzy.coding.bean;
 
-import android.support.annotation.DrawableRes;
+import androidx.annotation.DrawableRes;
 
 /**
  * 作者：quzongyang

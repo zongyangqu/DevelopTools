@@ -1,7 +1,7 @@
 package com.coding.qzy.baselibrary.utils.log;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 /**
  * author : quzongyang

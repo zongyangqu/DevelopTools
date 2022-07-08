@@ -100,9 +100,44 @@
             android:screenOrientation="portrait"/>
         <activity android:name="com.coding.qzy.baselibrary.zxlib.CaptureActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.NormalRecyclerViewKotActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.activity.NormalRecyclerViewJavaActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.MoreItemRecyclerViewKotActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.RecyclerViewWaterfallComplexKotActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.BaseQuickRecyclerViewKotActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.LottieActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ChangeRecyclerViewModeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.GaoSDemoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ChangeRecyclerViewModeKotActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ThreeDimensionalActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.WebViewRecyclerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.WebViewhybridSampleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.RecyclerHorizontalMoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ARouterSampleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ARouterSample2Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.DrawWithRichTextActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.RecyclerViewAverageKotActivity"
+            android:screenOrientation="portrait"/>
 
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">

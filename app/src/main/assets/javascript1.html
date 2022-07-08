@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <script type="text/javascript">
+
+    function javaCallJs(arg){
+         document.getElementById("content").innerHTML =
+             ("username："+arg );
+    }
+
+    function showToastByAndroid() {
+        android.showToastByAndroid("JS 调用 Android 的 showToastByAndroid 方法");
+      }
+
+    function showFromAndroid(param) {
+        return "Android调用Js"+param;
+    }
+
+
+    </script>
+</head>
+
+<body>
+
+<p align="center">这是一个网页</p>
+<div id="content">content</div>
+<br/>
+<img width="200" height="100" align="center"
+     src="http://image.yonghuivip.com/image/16366872817568e03e10cc57e562c11385ec07dbbee71566b1f22.jpg"><br/><br/>
+<button class="myButton" onclick="showToastByAndroid()">showToastByAndroid</button>
+
+</body>
+</html>

@@ -31,6 +31,5 @@ public class ExternalResource2Activity extends BaseResourceActivity {
         return R.layout.activity_external_resource2;
     }
 
-
 }
 

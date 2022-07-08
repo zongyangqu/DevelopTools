@@ -1,25 +1,19 @@
 package com.quzy.coding.ui.activity;
 
-import android.content.res.ColorStateList;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
-import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.coding.qzy.baselibrary.utils.background.drawable.DrawableCreator;
 import com.coding.qzy.baselibrary.utils.guidelayer.NewbieGuide;
 import com.coding.qzy.baselibrary.utils.guidelayer.core.Controller;
 import com.coding.qzy.baselibrary.utils.guidelayer.listener.OnGuideChangedListener;
@@ -32,7 +26,6 @@ import com.coding.qzy.baselibrary.utils.guidelayer.model.HighlightOptions;
 import com.coding.qzy.baselibrary.utils.guidelayer.model.RelativeGuide;
 import com.quzy.coding.R;
 import com.quzy.coding.base.BaseActivity;
-import com.quzy.coding.ui.fragment.BlankFragment;
 
 import butterknife.BindView;
 
@@ -119,16 +112,16 @@ public class GuideLayerActivity extends BaseActivity{
                         })
                         .alwaysShow(true)//总是显示，调试时可以打开
                         .addGuidePage(GuidePage.newInstance()
-                                .addHighLight(btnSimple)
-                                .addHighLight(new RectF(0, 800, 200, 1200))
+                                //.addHighLight(btnSimple)
+                                //.addHighLight(new RectF(0, 800, 200, 1200))
                                 .setEverywhereCancelable(false)//是否点击任意地方跳转下一页或者消失引导层，默认true
                                 //.setBackgroundColor(getResources().getColor(R.color.background))//设置背景色，建议使用有透明度的颜色
                                 .setLayoutRes(R.layout.view_guide_simple,R.id.ivNext))
                         .addGuidePage(GuidePage.newInstance()
                                 .addHighLight(btnDialog)
-                                .setEverywhereCancelable(false)//是否点击任意地方跳转下一页或者消失引导层，默认true
-                                .setLayoutRes(R.layout.view_guide_simple1))
-                        .addGuidePage(//添加一页引导页
+                                .setEverywhereCancelable(true)//是否点击任意地方跳转下一页或者消失引导层，默认true
+                                .setLayoutRes(R.layout.view_guide_simple,R.id.ivNext))
+                        /*.addGuidePage(//添加一页引导页
                                 GuidePage.newInstance()//创建一个实例
                                         .addHighLight(btnMulti)//添加高亮的view
                                         .setEverywhereCancelable(false)//是否点击任意地方跳转下一页或者消失引导层，默认true
@@ -143,9 +136,9 @@ public class GuideLayerActivity extends BaseActivity{
                                         })
                                        // .setEnterAnimation(enterAnimation)//进入动画
                                         .setExitAnimation(exitAnimation)//退出动画
-                        ).build();
+                        )*/.build();
                 controller.show();
-                //controller.remove();
+                controller.remove();
             }
         });
 
@@ -264,5 +257,9 @@ public class GuideLayerActivity extends BaseActivity{
         return R.layout.activity_guide_layer;
     }
 
+    @Override
+    protected View getLayoutView() {
+        return null;
+    }
 
 }

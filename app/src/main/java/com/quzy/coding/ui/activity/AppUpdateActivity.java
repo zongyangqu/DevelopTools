@@ -86,6 +86,9 @@ public class AppUpdateActivity extends BaseActivity {
         return R.layout.activity_app_update;
     }
 
-
+    @Override
+    protected View getLayoutView() {
+        return null;
+    }
 }
 

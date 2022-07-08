@@ -1,6 +1,7 @@
 package com.quzy.coding.ui.activity;
 
 import android.graphics.Color;
+import android.view.View;
 import android.widget.Toast;
 
 import com.coding.qzy.baselibrary.widget.CustomProgressBar;
@@ -46,6 +47,11 @@ public class ProgressActivity extends BaseActivity {
         mProgressBar2.setMaxProgress(100);
         mProgressBar2.setProgressColor(Color.parseColor("#79aa6b"));
         mProgressBar2.setCurProgress(80,4000);
+    }
+
+    @Override
+    protected View getLayoutView() {
+        return null;
     }
 
     @Override

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnARouter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="路由跳转Activity"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEventBusSticky"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试EventBus粘性事件"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btnARouter"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEventBusPriority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试EventBus优先级事件"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btnEventBusSticky"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMyEventBus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试自定义EventBus事件"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btnEventBusPriority"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

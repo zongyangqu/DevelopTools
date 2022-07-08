@@ -1,7 +1,7 @@
 package com.quzy.coding.ui.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +11,6 @@ import com.coding.qzy.baselibrary.utils.CollectionUtils;
 import com.coding.qzy.baselibrary.widget.sectioned_adapter.SectionedRecyclerViewAdapter;
 import com.quzy.coding.R;
 import com.quzy.coding.bean.HotelEntity;
-import com.quzy.coding.ui.holder.DescHolder;
 import com.quzy.coding.ui.holder.DescTestHolder;
 import com.quzy.coding.ui.holder.HeaderHolder;
 

@@ -1,6 +1,7 @@
 package com.coding.qzy.baselibrary.utils.guidelayer.lifecycle;
 
-import android.support.v4.app.Fragment;
+
+import androidx.fragment.app.Fragment;
 
 /**
  * author : quzongyang

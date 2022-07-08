@@ -36,9 +36,6 @@ public class NewbieGuide {
         return new Builder(fragment);
     }
 
-    public static Builder with(android.support.v4.app.Fragment v4Fragment) {
-        return new Builder(v4Fragment);
-    }
 
     /**
      * 重置标签的显示次数

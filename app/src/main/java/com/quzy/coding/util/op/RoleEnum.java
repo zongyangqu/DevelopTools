@@ -3,21 +3,29 @@ package com.quzy.coding.util.op;
 import android.app.Activity;
 import android.content.Intent;
 
+import com.quzy.coding.ui.activity.ARouterSampleActivity;
 import com.quzy.coding.ui.activity.AppUpdateActivity;
 import com.quzy.coding.ui.activity.BackGroundActivity;
 import com.quzy.coding.ui.activity.CustomControlActivity;
+import com.quzy.coding.ui.activity.DrawWithRichTextActivity;
 import com.quzy.coding.ui.activity.ExternalResourceActivity;
+import com.quzy.coding.ui.activity.GaoSDemoActivity;
 import com.quzy.coding.ui.activity.GuideLayerActivity;
 import com.quzy.coding.ui.activity.HotFixDemoActivity;
 import com.quzy.coding.ui.activity.LogUtilActivity;
+import com.quzy.coding.ui.activity.LottieActivity;
 import com.quzy.coding.ui.activity.PopWindowActivity;
 import com.quzy.coding.ui.activity.ProgressActivity;
 import com.quzy.coding.ui.activity.QRCodeActivity;
 import com.quzy.coding.ui.activity.QuickPositionActivity;
 import com.quzy.coding.ui.activity.RecordAudioActivity;
 import com.quzy.coding.ui.activity.RecordMp3Activity;
+import com.quzy.coding.ui.activity.RecyclerHorizontalMoreActivity;
 import com.quzy.coding.ui.activity.RecyclerViewSampleActivity;
 import com.quzy.coding.ui.activity.TextSampleActivity;
+import com.quzy.coding.ui.activity.ThreeDimensionalActivity;
+import com.quzy.coding.ui.activity.WebViewRecyclerActivity;
+import com.quzy.coding.ui.activity.WebViewhybridSampleActivity;
 import com.quzy.coding.util.RecordVoiceMp3View;
 
 /**
@@ -62,6 +70,12 @@ public enum RoleEnum implements RoleOperation {
             activity.startActivity(new Intent(activity, RecyclerViewSampleActivity.class));
         }
     },
+    RecyclerViewKotlinAction {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, RecyclerViewSampleActivity.class));
+        }
+    },
     AppUpdateSampleAction {
         @Override
         public void starAction(Activity activity) {
@@ -87,7 +101,8 @@ public enum RoleEnum implements RoleOperation {
     },AudioAction {
         @Override
         public void starAction(Activity activity) {
-            activity.startActivity(new Intent(activity, RecordAudioActivity.class));
+            activity.startActivity(new Intent(activity, RecordMp3Activity.class));
+//            activity.startActivity(new Intent(activity, RecordAudioActivity.class));
         };
     },QRAction {
         @Override
@@ -108,6 +123,46 @@ public enum RoleEnum implements RoleOperation {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, HotFixDemoActivity.class));
+        };
+    },Lottie {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, LottieActivity.class));
+        };
+    },GaoSi {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, GaoSDemoActivity.class));
+        };
+    },ThreeDimensional {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, ThreeDimensionalActivity.class));
+        };
+    },WebViewhybridSample {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, WebViewhybridSampleActivity.class));
+        };
+    },WebViewRecycler {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, WebViewRecyclerActivity.class));
+        };
+    },RecyclerHorizontalMore {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, RecyclerHorizontalMoreActivity.class));
+        };
+    },ARouter {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, ARouterSampleActivity.class));
+        };
+    },DrawWithRichText {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, DrawWithRichTextActivity.class));
         };
     };
 

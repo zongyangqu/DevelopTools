@@ -48,5 +48,59 @@
         <item>自定义控件</item>
         <item>外部资源加载框架</item>
         <item>热修复</item>
+        <item>Lottie动画</item>
+        <item>高斯模糊背景</item>
+        <item>3D卡片叠放</item>
+        <item>WebView和H5互调</item>
+        <item>WebView优化</item>
+        <item>RecyclerView横向查看更多</item>
+        <item>ARouter使用</item>
+        <item>全局弹窗优惠券的富文本展示</item>
     </string-array>
+
+    <string name="member_bury_page_mine">>我的页</string>
+
+    <string name="member_bury_nor_member_tag">~普通会员标签</string>
+    <string name="member_bury_sss_member_tag">~卓越会员标签</string>
+    <string name="member_bury_super_member_tag">~超级会员标签</string>
+    <string name="member_bury_coupon_tips">~我的优惠券提醒</string>
+    <string name="member_bury_qrcode">~我的顶部会员码</string>
+    <string name="member_bury_custom_service">~我的顶部客服</string>
+    <string name="member_bury_complete_info">~完善会员信息</string>
+
+    <string name="member_bury_customer_properties">>customerProperties</string>
+    <string name="member_bury_order_topay">>待支付</string>
+    <string name="member_bury_order_topick">>待收货</string>
+    <string name="member_bury_order_tocomment">>待评价</string>
+    <string name="member_bury_order_refund">>退款售后</string>
+    <string name="member_bury_order_all">>全部订单</string>
+    <string name="order_detail_pay">待支付</string>
+    <string name="member_bury_service">>服务帮助</string>
+    <string name="member_bury_yhjr">>永辉钱包</string>
+    <string name="member_bury_login">>立即登录</string>
+    <string name="member_bury_my_store">>我的门店</string>
+    <string name="member_refund">退款/售后</string>
+    <string name="member_bury_svip_card">>超级会员入口</string>
+    <string name="member_please_login">登录/注册</string>
+    <string name="member_center">我的</string>
+    <string name="vip_type_normal">会员</string>
+    <string name="vip_type_super">超级会员</string>
+    <string name="order_list_all">全部订单</string>
+    <string name="member_need_comment">待评价</string>
+    <string name="member_need_receive">待收货</string>
+    <string name="default_pic_content_description">图片</string>
+    <string name="member_center_discount_hint">领取优惠</string>
+    <string name="icon_location">"\ue909"</string>
+    <string name="icon_arrow_right">"\ue92a"</string>
+    <string name="membercenter_service_center">客服中心</string>
+    <string name="CustomerServicePhone">4008005050</string>
+    <string name="list_mode_list">点我切换模式-列表模式</string>
+    <string name="list_mode_stagger">点我切换模式-图片模式</string>
+    <string name="list_menu">菜单栏todo</string>
+    <string name="loading">加载中...</string>
+    <string name="but_ited">编辑</string>
+    <string name="tex_search">请输入搜索的商品</string>
+    <string name="tex_login">点击登录</string>
+    <string name="home_new_customer_coupon_dialog_amount">总价值：%s元</string>
+    <string name="format_yuan_string">¥%s</string>
 </resources>

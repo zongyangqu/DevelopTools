@@ -1,5 +1,6 @@
 package com.quzy.coding.ui.activity;
 
+import android.view.View;
 import android.widget.TextView;
 
 import com.coding.qzy.baselibrary.utils.text.ColorPhraseUtils;
@@ -21,6 +22,10 @@ public class TextSampleActivity extends BaseActivity {
 
     @BindView(R.id.textColor)
     TextView textColor;
+    @BindView(R.id.textAutoSize1)
+    TextView textAutoSize1;
+    @BindView(R.id.text2)
+    TextView text2;
 
     @Override
     protected void onViewCreated() {
@@ -30,6 +35,14 @@ public class TextSampleActivity extends BaseActivity {
                 outerColor(0xFF666666).
                 format();
         textColor.setText(chars);
+
+        textAutoSize1.setText("我能在一行里显示");
+        text2.setText("我不能在一行里显示");
+    }
+
+    @Override
+    protected View getLayoutView() {
+        return null;
     }
 
     @Override

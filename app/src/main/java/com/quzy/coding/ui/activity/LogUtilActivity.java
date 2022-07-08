@@ -82,6 +82,10 @@ public class LogUtilActivity extends BaseActivity {
                 break;
         }
     }
+    @Override
+    protected View getLayoutView() {
+        return null;
+    }
 
     @Override
     protected int getLayoutId() {

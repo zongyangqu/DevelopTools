@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_layout_pager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="9dp"
+    android:layout_marginRight="12dp"
+    android:background="@drawable/shape_white_corner_12"
+    android:clipChildren="false">
+
+    <View
+        android:id="@+id/ll_to_deliver"
+        android:contentDescription="@string/member_bury_order_topay"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ll_to_pick"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/ll_to_pick"
+        android:contentDescription="@string/member_bury_order_topick"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@id/ll_to_deliver"
+        app:layout_constraintRight_toLeftOf="@id/ll_to_comment"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/ll_to_comment"
+        android:contentDescription="@string/member_bury_order_tocomment"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@id/ll_to_pick"
+        app:layout_constraintRight_toLeftOf="@id/ll_refund"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/ll_refund"
+        android:contentDescription="@string/member_bury_order_refund"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@id/ll_to_comment"
+        app:layout_constraintRight_toLeftOf="@id/ll_order_all"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/ll_order_all"
+        android:contentDescription="@string/member_bury_order_all"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@id/ll_refund"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_to_deliver"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:paddingTop="10dp"
+        android:src="@mipmap/member_order_pay"
+        app:layout_constraintLeft_toLeftOf="@id/ll_to_deliver"
+        app:layout_constraintRight_toRightOf="@id/ll_to_deliver"
+        app:layout_constraintTop_toTopOf="@id/ll_to_deliver" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/order_detail_pay"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        android:paddingBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="@id/ll_to_deliver"
+        app:layout_constraintLeft_toLeftOf="@id/ll_to_deliver"
+        app:layout_constraintRight_toRightOf="@id/ll_to_deliver" />
+
+    <ImageView
+        android:id="@+id/ic_to_pick"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:paddingTop="10dp"
+        android:src="@mipmap/member_order_receive"
+        app:layout_constraintLeft_toLeftOf="@id/ll_to_pick"
+        app:layout_constraintRight_toRightOf="@id/ll_to_pick"
+        app:layout_constraintTop_toTopOf="@id/ll_to_pick" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/member_need_receive"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        android:paddingBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="@id/ll_to_pick"
+        app:layout_constraintLeft_toLeftOf="@id/ll_to_pick"
+        app:layout_constraintRight_toRightOf="@id/ll_to_pick" />
+
+
+    <ImageView
+        android:id="@+id/ic_to_comment"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:paddingTop="10dp"
+        android:src="@mipmap/member_order_evaluate"
+        app:layout_constraintLeft_toLeftOf="@id/ll_to_comment"
+        app:layout_constraintRight_toRightOf="@id/ll_to_comment"
+        app:layout_constraintTop_toTopOf="@id/ll_to_comment" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/member_need_comment"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        android:paddingBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="@id/ll_to_comment"
+        app:layout_constraintLeft_toLeftOf="@id/ll_to_comment"
+        app:layout_constraintRight_toRightOf="@id/ll_to_comment" />
+
+    <ImageView
+        android:id="@+id/ic_refund"
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:paddingTop="10dp"
+        android:src="@mipmap/member_order_after"
+        app:layout_constraintLeft_toLeftOf="@id/ll_refund"
+        app:layout_constraintRight_toRightOf="@id/ll_refund"
+        app:layout_constraintTop_toTopOf="@id/ll_refund" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:text="@string/member_refund"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/ll_refund"
+        app:layout_constraintLeft_toLeftOf="@id/ll_refund"
+        app:layout_constraintRight_toRightOf="@id/ll_refund" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="36dp"
+        android:paddingTop="10dp"
+        android:src="@mipmap/member_order_all"
+        app:layout_constraintLeft_toLeftOf="@id/ll_order_all"
+        app:layout_constraintRight_toRightOf="@id/ll_order_all"
+        app:layout_constraintTop_toTopOf="@id/ll_order_all" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/order_list_all"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        android:paddingBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="@id/ll_order_all"
+        app:layout_constraintLeft_toLeftOf="@id/ll_order_all"
+        app:layout_constraintRight_toRightOf="@id/ll_order_all" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="85dp"
+        android:contentDescription="@string/default_pic_content_description"
+        android:src="@mipmap/ic_member_my_wallet_arrow"
+        app:layout_constraintLeft_toLeftOf="@id/ll_refund"
+        app:layout_constraintRight_toRightOf="@id/ll_order_all"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/orderbanner_delive"
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/alpha_26"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_order_all" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/my_list_viewpager"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:clipChildren="false"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderbanner_delive" />
+
+    <LinearLayout
+        android:id="@+id/pager_tab_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_list_viewpager" />
+</androidx.constraintlayout.widget.ConstraintLayout>

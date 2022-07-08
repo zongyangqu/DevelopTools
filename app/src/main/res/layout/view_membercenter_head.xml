@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/member_msg_rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:background="@mipmap/member_header_new_red"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:scaleType="fitXY"
+        android:layout_height="194dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/ic_setting"
+        android:layout_width="24dp"
+        android:visibility="invisible"
+        android:layout_height="24dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/member_setting_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_login_service"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:scaleType="fitXY"
+        android:layout_marginRight="15dp"
+        app:layout_goneMarginRight="17dp"
+        android:visibility="invisible"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/member_service_icon_new"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_login_qrcode"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="50dp"
+        android:visibility="invisible"
+        android:src="@mipmap/member_card_icon_new"
+        android:layout_marginRight="21dp"
+        app:layout_goneMarginRight="17dp"
+        app:layout_constraintRight_toLeftOf="@id/ic_login_service"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ic_member_scan"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="invisible"
+        android:scaleType="fitXY"
+        android:layout_marginRight="21dp"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/member_scan_white"
+        app:layout_constraintRight_toLeftOf="@id/ic_login_qrcode"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--会员信息和登录入口-->
+    <View
+        android:id="@+id/ll_member_header"
+        android:contentDescription="@string/member_bury_login"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_setting"/>
+
+    <ImageView
+        android:id="@+id/ic_crown"
+        app:layout_constraintLeft_toLeftOf="@+id/ll_member_header"
+        app:layout_constraintTop_toTopOf="@+id/ll_member_header"
+        android:src="@mipmap/member_crown_icon"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="27dp"
+        android:visibility="gone"
+        android:layout_width="20dp"
+        android:layout_height="21dp"
+        android:scaleType="fitXY"
+        tools:visibility="visible"
+        />
+
+    <View
+        android:id="@+id/ic_avatar_bg"
+        android:layout_marginTop="24dp"
+        app:layout_constraintLeft_toLeftOf="@id/ll_member_header"
+        app:layout_constraintTop_toTopOf="@id/ll_member_header"
+        android:background="@drawable/bg_avatar_normal"
+        android:layout_width="48dp"
+        android:layout_height="48dp"/>
+
+
+    <ImageView
+        android:id="@+id/ic_avatar"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        app:layout_constraintLeft_toLeftOf="@id/ic_avatar_bg"
+        app:layout_constraintRight_toRightOf="@id/ic_avatar_bg"
+        app:layout_constraintTop_toTopOf="@id/ic_avatar_bg"
+        app:layout_constraintBottom_toBottomOf="@id/ic_avatar_bg" />
+
+    <TextView
+        android:id="@+id/member_notlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="3dp"
+        android:text="@string/member_please_login"
+        android:textColor="@color/white"
+        android:background="@drawable/member_login_bg"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/ic_avatar"
+        app:layout_constraintLeft_toRightOf="@id/ic_avatar"
+        app:layout_constraintTop_toTopOf="@id/ic_avatar" />
+
+    <RelativeLayout
+        android:id="@+id/member_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:visibility="visible"
+        app:layout_constraintLeft_toRightOf="@id/ic_avatar"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="90dp"
+        app:layout_constraintTop_toTopOf="@id/ic_avatar">
+
+        <TextView
+            android:id="@+id/txt_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:includeFontPadding="true"
+            android:lines="1"
+            android:maxEms="7"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="152****6425"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/ll_svip_equity"
+            android:layout_width="175dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/txt_phone"
+            android:layout_marginTop="-3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_member_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/member_super_bg"
+                android:includeFontPadding="false"
+                android:paddingLeft="5dp"
+                android:paddingTop="1dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="1dp"
+                android:text="@string/vip_type_normal"
+                android:textColor="@color/subGrayGoldColor"
+                android:textSize="@dimen/textsize_10"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_nor_member_icon"
+                android:contentDescription="@string/member_bury_nor_member_tag"
+                android:layout_width="39dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/nor_member_icon_arrow"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_sss_member_icon"
+                android:contentDescription="@string/member_bury_sss_member_tag"
+                android:layout_width="61dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/sss_member_icon"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_super_member_icon"
+                android:contentDescription="@string/member_bury_super_member_tag"
+                android:layout_width="61dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/super_member_icon"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_fillMemInfoTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_svip_equity"
+            android:layout_marginTop="3dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_12"
+            android:visibility="gone"
+            tools:text="完善会员信息可获得388积分"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+    <include
+        layout="@layout/new_member_wallet"
+        android:layout_width="0dp"
+        android:id="@+id/my_new_wallet"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="164dp"/>
+
+    <!--超级会员提示卡片-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sivp_hint_layout"
+        android:contentDescription="@string/member_bury_svip_card"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_height="54dp"
+        app:layout_constraintTop_toBottomOf="@+id/my_new_wallet"
+        android:layout_marginHorizontal="12dp"
+        android:background="@mipmap/member_action_black"
+        android:paddingEnd="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_bg_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@mipmap/member_action_black_icon"
+            android:layout_marginStart="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/svip_hint_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textColor="@color/subGoldColor"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintBottom_toTopOf="@id/svip_hint_subtitle"
+           app:layout_constraintLeft_toRightOf="@+id/iv_bg_icon"
+            android:layout_marginStart="9dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="00000" />
+
+        <TextView
+            android:id="@+id/svip_hint_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iv_bg_icon"
+            android:layout_marginStart="9dp"
+            app:layout_constraintTop_toBottomOf="@id/svip_hint_title"
+            tools:text="7777777" />
+
+        <TextView
+            android:id="@+id/svip_hint_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/member_sviphint_action_bg"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:text=""
+            android:textColor="@color/svip_action_textcolor"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

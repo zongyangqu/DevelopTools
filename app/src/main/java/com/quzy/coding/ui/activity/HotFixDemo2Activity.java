@@ -1,5 +1,6 @@
 package com.quzy.coding.ui.activity;
 
+import android.view.View;
 import android.widget.TextView;
 
 import com.quzy.coding.R;
@@ -36,6 +37,10 @@ public class HotFixDemo2Activity extends BaseActivity {
 
 
 
+    @Override
+    protected View getLayoutView() {
+        return null;
+    }
 
 
 }

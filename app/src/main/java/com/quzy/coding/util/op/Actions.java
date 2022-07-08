@@ -38,6 +38,14 @@ public class Actions {
         mActionMap.put(Constants.CustomControl,RoleEnum.Customontrol.name());
         mActionMap.put(Constants.ExternalResourceLoad,RoleEnum.ExternalResource.name());
         mActionMap.put(Constants.HotFix,RoleEnum.HotFix.name());
+        mActionMap.put(Constants.Lottie,RoleEnum.Lottie.name());
+        mActionMap.put(Constants.GaoSi,RoleEnum.GaoSi.name());
+        mActionMap.put(Constants.ThreeDimensional,RoleEnum.ThreeDimensional.name());
+        mActionMap.put(Constants.WebViewhybridSample,RoleEnum.WebViewhybridSample.name());
+        mActionMap.put(Constants.WebViewRecycler,RoleEnum.WebViewRecycler.name());
+        mActionMap.put(Constants.RecyclerHorizontalMore,RoleEnum.RecyclerHorizontalMore.name());
+        mActionMap.put(Constants.ARouter,RoleEnum.ARouter.name());
+        mActionMap.put(Constants.DrawWithRichText,RoleEnum.DrawWithRichText.name());
     }
 
 

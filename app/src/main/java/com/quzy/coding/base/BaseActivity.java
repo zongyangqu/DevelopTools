@@ -2,13 +2,19 @@ package com.quzy.coding.base;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.apkfuns.logutils.LogUtils;
 import com.coding.qzy.baselibrary.utils.appreset.AppStatusConstant;
 import com.coding.qzy.baselibrary.utils.appreset.AppStatusManager;
 import com.quzy.coding.MainActivity;
+import com.quzy.coding.util.Constants;
+
+import org.greenrobot.eventbus.EventBus;
 
 import butterknife.ButterKnife;
 
@@ -25,7 +31,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         switch (AppStatusManager.getInstance().getAppStatus()) {
             /**
              * 应用被强杀
@@ -43,11 +48,17 @@ public abstract class BaseActivity extends AppCompatActivity {
 //                startActivity(intent);
                 break;
             case AppStatusConstant.STATUS_NORMAL:
-                setContentView(getLayoutId());
-                ButterKnife.bind(this);
+                if(getLayoutId() == 0){
+                    setContentView(getLayoutView());
+
+                }else {
+                    setContentView(getLayoutId());
+                    ButterKnife.bind(this);
+                }
                 onViewCreated();
                 break;
         }
+        LogUtils.tag(Constants.LOG_TAG).d(getClass().getSimpleName()+"进栈");
     }
 
 
@@ -61,6 +72,10 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @LayoutRes
     protected abstract int getLayoutId();
+
+    protected abstract View getLayoutView();
+
+
 
     public AppCompatActivity getActivity(){
         return this;

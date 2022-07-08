@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/itemView"
+    android:gravity="center"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/close_img"
+        android:layout_width="255dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="375dp"
+        android:clickable="false"
+        android:src="@drawable/ic_update_close_logo"/>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/new_customer_coupon_dialog_container"
+        android:layout_width="255dp"
+        android:layout_height="345dp"
+        android:visibility="gone"
+        android:clickable="true"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/bg"
+            android:layout_width="255dp"
+            android:layout_height="315dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/customer_package_topbg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingBottom="5dp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/backgroup"
+            android:layout_width="235dp"
+            android:layout_height="286dp"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/new_customer_coupon_dialog_success"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/themeColor"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:text="注册成功" />
+
+            <TextView
+                android:id="@+id/new_customer_coupon_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_customer_coupon_dialog_success"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/color_FFFAD9"
+                android:textSize="@dimen/textsize_12"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:text="已领取50元新人大礼包" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/new_customer_coupon_dialog_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/new_customer_coupon_dialog_title"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="false"
+                android:layout_marginBottom="40dp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="265dp"
+            android:layout_height="117dp"
+            android:background="@drawable/customer_package_bottom"
+            android:layout_marginBottom="-20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/new_customer_coupon_dialog_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_15"
+                android:visibility="visible"
+                tools:text="总价值：80元" />
+
+            <LinearLayout
+                android:id="@+id/new_customer_coupon_dialog_get_layout"
+                android:layout_width="200dp"
+                android:layout_height="34dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_FFFAD9"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/new_customer_coupon_dialog_get"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="查看特价商品"
+                    android:textColor="#DC3F36"
+                    android:textSize="@dimen/textsize_16"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/new_customer_coupon_dialog_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="可在我的-红包礼券中查看"
+                android:textColor="#FFFDD7"
+                android:textSize="@dimen/textsize_10"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <!--<ImageView
+            android:id="@+id/bg_up"
+            android:layout_width="265dp"
+            android:layout_height="117dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/customer_package_bottom"
+            app:layout_constraintBottom_toBottomOf="@+id/bg"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/package_unclosed"
+        android:layout_width="255dp"
+        android:layout_height="345dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:visibility="gone"
+        android:clickable="true"
+        android:background="@drawable/newcustomer_red_package_unclosed">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:gravity="center"
+            android:text="新人专享"
+            android:textSize="26sp"
+            android:textColor="#FFFDD7"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

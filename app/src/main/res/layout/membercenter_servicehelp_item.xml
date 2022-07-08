@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:contentDescription="@string/member_bury_service"
+    android:layout_width="match_parent"
+    android:layout_height="82dp"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/item_servicehelp_img"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:layout_marginTop="9dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_servicehelp_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:maxLines="1"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:layout_marginTop="6dp"
+        android:lineSpacingMultiplier="0.9"
+        android:textColor="@color/subRegularBlackColor"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_servicehelp_img"
+        tools:text="会员权益" />
+    <TextView
+        android:id="@+id/tv_servicehelp_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_FF3819"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_servicehelp_name"
+        tools:text="999999.9元"
+        tools:visibility="visible"
+        tools:ignore="SmallSp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:includeFontPadding="false"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:minWidth="34dp"
+        android:paddingBottom="2dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_10"
+        android:visibility="gone"
+        android:gravity="center"
+        android:maxLines="1"
+        android:background="@drawable/member_gift_item_bg"
+        app:layout_constraintLeft_toLeftOf="@+id/guide_line"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/member_gift_item_bg"
+        tools:text="帮砍红包"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
