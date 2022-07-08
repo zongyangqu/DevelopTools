@@ -28,6 +28,13 @@ class RecyclerHorizontalMoreActivity : BaseActivity() {
     private var adapter: HorizontalRefreshItemViewAdapter? = null
     override fun onViewCreated() {
         // 列表1
+        val dataList = ArrayList<String>()
+        for (c in 'A'..'E') {
+            dataList.add(c.toString())
+        }
+        val testAdapter = RvAdapter(this, dataList)
+        viewBinding?.mList?.adapter = testAdapter
+        viewBinding?.mRefresh?.setScrollEnable(dataList?.size?:0>4)
         viewBinding?.mRefresh?.reset()
         viewBinding?.mRefresh?.setOnRefreshListener {
             // TODO 左拉刷新回调
@@ -35,21 +42,17 @@ class RecyclerHorizontalMoreActivity : BaseActivity() {
         }
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         viewBinding?.mList?.layoutManager = layoutManager
-        val dataList = ArrayList<String>()
-        for (c in 'A'..'D') {
-            dataList.add(c.toString())
-        }
-        val testAdapter = RvAdapter(this, dataList)
-        viewBinding?.mList?.adapter = testAdapter
+
 
         // 列表2
         viewBinding?.mRefresh2?.reset()
+    //    viewBinding?.mRefresh2?.isRefresh = true
         viewBinding?.mRefresh2?.setOnRefreshListener {
             // TODO 左拉刷新回调
             Toast.makeText(this, "刷新或跳转页面", Toast.LENGTH_SHORT).show()
         }
         val dataList2 = ArrayList<String>()
-        for (c in 'A'..'A') {
+        for (c in 'A'..'B') {
             dataList2.add(c.toString())
         }
         if (dataList2.isNotEmpty() && dataList2.size > 4) {

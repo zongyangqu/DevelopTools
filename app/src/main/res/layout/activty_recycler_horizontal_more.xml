@@ -15,14 +15,14 @@
         app:footerPullMaxTop="5dp"
         app:footerVerticalMargin="0dp"
         app:footerWidth="30dp"
-        app:moreViewMarginRight="12dp"
-        app:moreViewMoveMaxDimen="30dp"
+        app:moreViewMarginRight="28dp"
+        app:moreViewMoveMaxDimen="42dp"
         app:moreViewTestSize="11sp"
         app:moreViewTextColor="#666666"
         app:moreViewVisibleWidth="10dp"
         app:pullWidth="65dp"
         app:releaseScanMoreText="松开查看"
-        app:scanMoreText="查看更多"
+        app:scanMoreText="左滑查看更多"
         tools:ignore="MissingConstraints"
         app:layout_constraintTop_toTopOf="parent">
         <androidx.recyclerview.widget.RecyclerView
@@ -48,7 +48,7 @@
         app:moreViewVisibleWidth="10dp"
         app:pullWidth="65dp"
         app:releaseScanMoreText="松开查看"
-        app:scanMoreText="查看更多"
+        app:scanMoreText="左滑查看更多"
         android:layout_marginTop="50dp"
         tools:ignore="InvalidId,MissingConstraints"
         app:layout_constraintTop_toBottomOf="@+id/mRefresh">

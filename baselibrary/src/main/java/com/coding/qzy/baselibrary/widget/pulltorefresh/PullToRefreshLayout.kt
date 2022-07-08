@@ -46,7 +46,7 @@ class PullToRefreshLayout(context: Context, attrs: AttributeSet? = null, defStyl
         private const val DEFAULT_FOOTER_VERTICAL_MARGIN = 10f
         private const val DEFAULT_VISIBLE_WIDTH = 40f
 
-        private const val DEFAULT_SCAN_MORE = "查看更多"
+        private const val DEFAULT_SCAN_MORE = "左滑查看更多"
         private const val DEFAULT_RELEASE_SCAN_MORE = "释放查看"
         private const val ROTATION_ANGLE = 180f
 
@@ -70,6 +70,10 @@ class PullToRefreshLayout(context: Context, attrs: AttributeSet? = null, defStyl
     private var touchStartX = 0f
     private var touchCurrX = 0f
     private var touchLastX = 0f
+    private var canScrollEnable = false
+    fun setScrollEnable(isRefresh: Boolean) {
+        this.canScrollEnable = isRefresh
+    }
 
     fun setDefaultOffsetX(setter: Float) {
         defaultOffsetX = setter
@@ -443,29 +447,32 @@ class PullToRefreshLayout(context: Context, attrs: AttributeSet? = null, defStyl
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
-        if (isRefresh) return true
+        if (canScrollEnable) {
+            if (isRefresh) return true
+            when (ev?.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    touchStartX = ev.x
+                    touchLastX = ev.x
+                    touchCurrX = touchStartX
+                    setScrollState(false)
+                }
+                MotionEvent.ACTION_MOVE -> {
+                    val currX = ev.x
+                    val dx = touchStartX - currX
+                    touchLastX = currX
 
-        when (ev?.action) {
-            MotionEvent.ACTION_DOWN -> {
-                touchStartX = ev.x
-                touchLastX = ev.x
-                touchCurrX = touchStartX
-                setScrollState(false)
-            }
-            MotionEvent.ACTION_MOVE -> {
-                val currX = ev.x
-                val dx = touchStartX - currX
-                touchLastX = currX
-
-                // 拦截条件
-                if (dx > 10 && !canScrollRight() && scrollX >= 0) {
-                    parent.requestDisallowInterceptTouchEvent(true)
-                    setScrollState(true)
-                    return true
+                    // 拦截条件
+                    if (dx > 10 && !canScrollRight() && scrollX >= 0) {
+                        parent.requestDisallowInterceptTouchEvent(true)
+                        setScrollState(true)
+                        return true
+                    }
                 }
             }
+            return super.onInterceptTouchEvent(ev)
+        }else {
+            return false
         }
-        return super.onInterceptTouchEvent(ev)
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
