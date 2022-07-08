@@ -33,8 +33,6 @@ object UIUtils {
         return context.resources.displayMetrics.heightPixels
     }
 
-
-
     fun dip2px(context: Context?, dpValue: Float): Int {
         val scale: Float = context?.resources?.displayMetrics?.density ?: 0f
         return (dpValue * scale + 0.5f).toInt()
@@ -48,8 +46,8 @@ object UIUtils {
     @Throws(IOException::class, IllegalArgumentException::class)
     @JvmStatic
     fun readFileFromAssets(
-            context: Context,
-            fileName: String?
+        context: Context,
+        fileName: String?
     ): String? {
         require(!(TextUtils.isEmpty(fileName))) { "bad arguments!" }
         val assetManager = context.assets

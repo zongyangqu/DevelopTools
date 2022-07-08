@@ -7,6 +7,7 @@
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/bg_no_stock.xml" value="0.196" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/coupon_horizental_line_stroke.xml" value="0.196" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/coupon_vertiacl_line_stroke.xml" value="0.196" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_average_recyclerview.xml" value="0.13333333333333333" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_draw_with_richtext.xml" value="0.27708333333333335" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_test_arouter.xml" value="0.1015625" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_test_arouter2.xml" value="0.1015625" />
@@ -14,6 +15,7 @@
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/common_coupon_product_item_layout.xml" value="0.246875" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/common_coupon_product_layout.xml" value="0.246875" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/dialog_new_customer_unitary_coupon.xml" value="0.246875" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/item_average.xml" value="0.16666666666666666" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/item_pulltorefresh.xml" value="0.22" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/item_pulltorefresh_grid.xml" value="0.3333333333333333" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/membercenter_servicehelp_item.xml" value="0.1" />

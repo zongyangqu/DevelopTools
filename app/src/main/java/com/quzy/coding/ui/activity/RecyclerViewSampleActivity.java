@@ -72,6 +72,9 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
                     case 11:
                         startActivity(new Intent(getActivity(), ChangeRecyclerViewModeKotActivity.class));
                         break;
+                    case 12:
+                        startActivity(new Intent(getActivity(), RecyclerViewAverageKotActivity.class));
+                        break;
                 }
             }
         });
@@ -101,6 +104,7 @@ public class RecyclerViewSampleActivity  extends BaseActivity {
         data.add("Kotlin-多条目的RecyclerView");
         data.add("Kotlin-多条目瀑布流的RecyclerView");
         data.add("Kotlin-RecyclerView展示模式切换");
+        data.add("Kotlin-RecyclerView横向均分、item间距、item曝光");
         return data;
     }
 }

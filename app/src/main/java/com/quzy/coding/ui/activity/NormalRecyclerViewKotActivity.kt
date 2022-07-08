@@ -10,18 +10,17 @@ import com.quzy.coding.bean.Fruit
 import com.quzy.coding.databinding.ActivityRecyclerviewBinding
 import com.quzy.coding.ui.adapter.RecycVerticalAdapter
 
-
 /**
  * CreateDate:2021/8/20 16:58
  * @author: zongyang qu
  * @Package： com.quzy.coding.ui.activity
  * @Description:
  */
-class NormalRecyclerViewKotActivity : BaseActivity(){
+class NormalRecyclerViewKotActivity : BaseActivity() {
 
     private var data = ArrayList<Fruit>()
-    lateinit var adapter : RecycVerticalAdapter
-    var activityRecyclerviewBinding:ActivityRecyclerviewBinding? = null
+    lateinit var adapter: RecycVerticalAdapter
+    var activityRecyclerviewBinding: ActivityRecyclerviewBinding? = null
 
     override fun onViewCreated() {
         supportActionBar?.title = "RecyclerView纵向"
@@ -33,7 +32,6 @@ class NormalRecyclerViewKotActivity : BaseActivity(){
         initData()
         adapter = RecycVerticalAdapter(this, data)
         activityRecyclerviewBinding?.recyclerView?.adapter = adapter
-
     }
 
     override fun getLayoutView(): View? {
@@ -45,11 +43,11 @@ class NormalRecyclerViewKotActivity : BaseActivity(){
     }
 
     override fun getLayoutId(): Int {
-        return 0;
+        return 0
     }
 
-    fun initData(){
-        repeat(4){
+    fun initData() {
+        repeat(4) {
             data.add(Fruit("apple", R.mipmap.apple_pic))
             data.add(Fruit("banana", R.mipmap.banana_pic))
             data.add(Fruit("orange", R.mipmap.orange_pic))
@@ -62,5 +60,4 @@ class NormalRecyclerViewKotActivity : BaseActivity(){
             data.add(Fruit("mango", R.mipmap.mango_pic))
         }
     }
-
 }
