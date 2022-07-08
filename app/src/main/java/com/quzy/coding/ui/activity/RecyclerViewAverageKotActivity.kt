@@ -17,7 +17,7 @@ import com.quzy.coding.util.RecyclerViewTrackShowUtils
  * CreateDate:2022/7/8 16:58
  * @author: zongyang qu
  * @Package： com.quzy.coding.ui.activity
- * @Description: RecyclerView横向均分  间距  item曝光
+ * @Description: RecyclerView添加横向均分 支持设置边距 item曝光
  */
 class RecyclerViewAverageKotActivity : BaseActivity() {
 
