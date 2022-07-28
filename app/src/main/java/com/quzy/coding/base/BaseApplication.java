@@ -17,6 +17,11 @@ import com.tencent.bugly.Bugly;
 import com.tencent.mmkv.MMKV;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Locale;
 
 
 /**
@@ -64,6 +69,22 @@ public class BaseApplication extends MultiDexApplication {
         registerActivityLifecycleCallbacks(libActivityLifecycleCallbacks);
         LeakCanary.install(this);
         LogTools.init(true, getString(R.string.app_name));
+
+        java.text.SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+//先取得今天的日历日时间
+        Calendar calendar = new GregorianCalendar();
+        calendar.setTime(new Date());
+
+//转换得到今天的日期
+        String today = sdf.format(calendar.getTime());
+
+//转换得倒明天的日期
+        calendar.add(calendar.DATE, +1);
+        String tomorrow = sdf.format(calendar.getTime());
+
+//转换得倒昨天的日期
+        calendar.add(calendar.DATE, -1);
+        String yesterday= sdf.format(calendar.getTime());
     }
 
     public static Context getContext() {

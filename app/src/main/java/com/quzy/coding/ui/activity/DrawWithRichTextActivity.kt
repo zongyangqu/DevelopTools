@@ -4,10 +4,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import com.quzy.coding.base.BaseActivity
+import com.quzy.coding.base.BaseApplication
 import com.quzy.coding.bean.NewPersonGiftProduct
 import com.quzy.coding.bean.ProPrice
 import com.quzy.coding.databinding.ActivityDrawWithRichtextBinding
 import com.quzy.coding.ui.manager.CouponNewCustomerDialogManager
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -20,6 +22,7 @@ import kotlin.collections.ArrayList
 class DrawWithRichTextActivity : BaseActivity() {
 
     var viewBinding: ActivityDrawWithRichtextBinding ? = null
+    var n1: Long? = 0
     override fun onViewCreated() {
         // EventBus.getDefault().post(DialogEvent())
         CouponNewCustomerDialogManager.setCurActivity(this)
@@ -48,6 +51,28 @@ class DrawWithRichTextActivity : BaseActivity() {
         dataList.add(n3)
         var new = Collections.min(dataList)
         Log.d("zongyang--->min----:", new.price.price)
+
+        var df = SimpleDateFormat("yyyy-MM-dd")
+        var date = df.parse("2022-07-19")
+        var cal = Calendar.getInstance()
+        cal.setTime(date)
+        var timestamp = cal.getTimeInMillis()
+        Log.d("zongyang-->", "11111111")
+        Log.d("zongyang-->", timestamp.toString())
+
+        var sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+// 先取得今天的日历日时间
+        var calendar: Calendar = GregorianCalendar()
+        calendar.setTime(Date())
+// 转换得到今天的日期
+        var today = sdf.format(calendar.getTime())
+// 转换得倒明天的日期
+        BaseApplication.appContext
+        calendar.add(Calendar.DATE, +1)
+        var tomorrow = sdf?.format(calendar.getTime())
+        Log.d("zongyang-->", tomorrow.toString())
+//        System.out.println(timestamp);
+//        System.out.println(timestamp/1000);
     }
 
     override fun getLayoutId(): Int {
