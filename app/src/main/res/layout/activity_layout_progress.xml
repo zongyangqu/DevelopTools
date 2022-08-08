@@ -33,4 +33,55 @@
         app:progressRadius="4dp"
         app:isShowDesc="false"/>
 
+    <com.coding.qzy.baselibrary.widget.CustomizedProgressBar
+        android:id="@+id/customizedProgressBar"
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        tools:text="完整度35%"
+        android:textSize="10sp"
+        />
+
+    <com.coding.qzy.baselibrary.widget.GradientProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:barHeight="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试边距"
+            android:textSize="18sp"/>
+
+        <com.coding.qzy.baselibrary.widget.GradientProgressBar
+            android:id="@+id/progressBar2"
+            android:layout_width="100dp"
+            android:layout_height="10dp"
+            app:barEndColor="@color/colorAccent"
+            app:barHeight="10dp"
+            app:barStartColor="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+
+    <com.coding.qzy.baselibrary.widget.TextProgressBar
+        android:id="@+id/progressBar3"
+        android:layout_width="100dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="30dp"
+        app:barEndColor1="@color/colorAccent"
+        app:barHeight1="8dp"
+        app:barStartColor1="@color/colorPrimary"
+        app:trackColor1="#c1c1c1" />
+
 </LinearLayout>

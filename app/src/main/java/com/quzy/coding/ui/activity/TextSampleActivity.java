@@ -4,6 +4,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.coding.qzy.baselibrary.utils.text.ColorPhraseUtils;
+import com.coding.qzy.baselibrary.widget.GradientColorTextView;
 import com.quzy.coding.R;
 import com.quzy.coding.base.BaseActivity;
 
@@ -26,6 +27,8 @@ public class TextSampleActivity extends BaseActivity {
     TextView textAutoSize1;
     @BindView(R.id.text2)
     TextView text2;
+    @BindView(R.id.gradientText)
+    GradientColorTextView gradientText;
 
     @Override
     protected void onViewCreated() {
@@ -49,4 +52,6 @@ public class TextSampleActivity extends BaseActivity {
     protected int getLayoutId() {
         return R.layout.activity_text_sample;
     }
+
+
 }

@@ -369,4 +369,21 @@
         <attr name="moreViewMoveMaxDimen" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="GradientProgressBar">
+        <attr name="barHeight" format="dimension" />
+        <attr name="trackColor" format="color" />
+        <attr name="barStartColor" format="color" />
+        <attr name="barEndColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="TextProgressBar">
+        <attr name="barHeight1" format="dimension" />
+        <attr name="trackColor1" format="color" />
+        <attr name="barTextColor1" format="color" />
+        <attr name="barTextSize1" format="dimension" />
+        <attr name="topTextMargin1" format="dimension" />
+        <attr name="bottomTextMargin1" format="dimension" />
+        <attr name="barStartColor1" format="color" />
+        <attr name="barEndColor1" format="color"/>
+    </declare-styleable>
 </resources>

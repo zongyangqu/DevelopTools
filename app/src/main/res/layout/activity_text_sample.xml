@@ -29,6 +29,15 @@
             android:layout_height="wrap_content"
             android:textSize="14sp"/>
 
+
+        <com.coding.qzy.baselibrary.widget.GradientColorTextView
+            android:id="@+id/gradientText"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:text="从左到右"
+            android:textSize="14sp"/>
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
