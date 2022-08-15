@@ -3,6 +3,7 @@ package com.quzy.coding.ui.activity
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import com.alibaba.android.arouter.utils.MapUtils.isNotEmpty
 import com.quzy.coding.base.BaseActivity
 import com.quzy.coding.base.BaseApplication
 import com.quzy.coding.bean.NewPersonGiftProduct
@@ -73,10 +74,28 @@ class DrawWithRichTextActivity : BaseActivity() {
         Log.d("zongyang-->", tomorrow.toString())
 //        System.out.println(timestamp);
 //        System.out.println(timestamp/1000);
+        var list1 = mutableListOf<Int>(1, 2)
+        var list2 = splitList(list1, 2)
+        var s = ""
     }
 
     override fun getLayoutId(): Int {
         return 0
+    }
+
+    fun splitList(messageList: List<Int>, groupSize: Int): List<List<Int>>? {
+        val length = messageList.size
+        // 计算可以分多少份
+        val num = (length + groupSize - 1) / groupSize
+        val newList: MutableList<List<Int>> = ArrayList(num)
+        for (i in 0 until num) {
+            // 开始位置
+            val fromIndex = i * groupSize
+            // 结束位置
+            val toIndex = if ((i + 1) * groupSize < length) (i + 1) * groupSize else length
+            newList.add(messageList.subList(fromIndex, toIndex))
+        }
+        return newList
     }
 
     override fun getLayoutView(): View? {
@@ -85,5 +104,33 @@ class DrawWithRichTextActivity : BaseActivity() {
             return it.root
         }
         return null
+    }
+
+    private fun averageAssignFixLength(source: List<Int>?, splitItemNum: Int): List<Int> {
+        val result = mutableListOf<Int>()
+
+        if (source != null && source.run { isNotEmpty() } && splitItemNum > 0) {
+            if (source.size <= splitItemNum) {
+                // 源List元素数量小于等于目标分组数量
+                result.addAll(source)
+            } else {
+                // 计算拆分后list数量
+                val splitNum = if (source.size % splitItemNum == 0) source.size / splitItemNum else source.size / splitItemNum + 1
+
+                var value: List<Int>? = null
+                for (i in 0 until splitNum) {
+                    if (i < splitNum - 1) {
+                        value = source.subList(i * splitItemNum, (i + 1) * splitItemNum)
+                    } else {
+                        // 最后一组
+                        value = source.subList(i * splitItemNum, source.size)
+                    }
+
+                    result.addAll(value)
+                }
+            }
+        }
+
+        return result
     }
 }
