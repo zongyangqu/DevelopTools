@@ -133,6 +133,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.DrawWithRichTextActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.RecyclerViewAverageKotActivity"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

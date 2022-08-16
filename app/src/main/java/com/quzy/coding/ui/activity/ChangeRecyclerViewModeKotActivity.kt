@@ -17,7 +17,6 @@ import com.quzy.coding.ui.adapter.HotAdapter
 import com.quzy.coding.util.ISearchResult
 import com.quzy.coding.util.JsonUtils
 import com.quzy.coding.util.widget.CnToolbar
-import com.quzy.coding.util.widget.MyDivider
 import java.lang.reflect.Method
 
 /**
@@ -41,7 +40,7 @@ class ChangeRecyclerViewModeKotActivity : BaseActivity(), ISearchResult {
 
     var showType = SHOW_TYPE_GRID
     private lateinit var mCheckForGapMethod: Method
-    private lateinit var mMarkItemDecorInsetsDirtyMethod : Method
+    private lateinit var mMarkItemDecorInsetsDirtyMethod: Method
     private var recyclerViewLayoutManager: StaggeredGridLayoutManager? = null
     override fun onViewCreated() {
         showType = MMKVUtils.decodeInt(VIEWSHOETYPE)!!
@@ -57,14 +56,14 @@ class ChangeRecyclerViewModeKotActivity : BaseActivity(), ISearchResult {
         recyclerView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
-                //recyclerViewLayoutManager?.invalidateSpanAssignments() //防止第一行到顶部有空白区域
+                // recyclerViewLayoutManager?.invalidateSpanAssignments() //防止第一行到顶部有空白区域
             }
 
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
                 if (showType == SHOW_TYPE_GRID && recyclerViewLayoutManager is StaggeredGridLayoutManager) {
                     try {
-                        //解决RecyclerView切换瀑布流时 部分item间隔线错误
+                        // 解决RecyclerView切换瀑布流时 部分item间隔线错误
                         var result = mCheckForGapMethod.invoke(recyclerViewLayoutManager) as Boolean
                         if (result) {
                             mMarkItemDecorInsetsDirtyMethod.invoke(recyclerView)
@@ -78,32 +77,32 @@ class ChangeRecyclerViewModeKotActivity : BaseActivity(), ISearchResult {
 
         recyclerView?.addItemDecoration(object :
                 RecyclerView.ItemDecoration() {
-            override fun getItemOffsets(
+                override fun getItemOffsets(
                     outRect: Rect,
                     view: View,
                     parent: RecyclerView,
                     state: RecyclerView.State,
-            ) {
-                super.getItemOffsets(outRect, view, parent, state)
-                if(showType == SHOW_TYPE_GRID){
-                    if (view.layoutParams is StaggeredGridLayoutManager.LayoutParams) {
-                        val params = view.layoutParams as StaggeredGridLayoutManager.LayoutParams
-                        /**
-                         * 根据params.getSpanIndex()来判断左右边确定分割线
-                         * 第一列设置左边距为space，右边距为space/2  （第二列反之）
-                         */
-                        outRect.top = 30
-                        if (params.spanIndex % 2 == 0) {
-                            outRect.left = 30
-                            outRect.right = 30 / 2
-                        } else {
-                            outRect.left = 30 / 2
-                            outRect.right = 30
+                ) {
+                    super.getItemOffsets(outRect, view, parent, state)
+                    if (showType == SHOW_TYPE_GRID) {
+                        if (view.layoutParams is StaggeredGridLayoutManager.LayoutParams) {
+                            val params = view.layoutParams as StaggeredGridLayoutManager.LayoutParams
+                            /**
+                             * 根据params.getSpanIndex()来判断左右边确定分割线
+                             * 第一列设置左边距为space，右边距为space/2  （第二列反之）
+                             */
+                            outRect.top = 30
+                            if (params.spanIndex % 2 == 0) {
+                                outRect.left = 30
+                                outRect.right = 30 / 2
+                            } else {
+                                outRect.left = 30 / 2
+                                outRect.right = 30
+                            }
                         }
                     }
                 }
-            }
-        })
+            })
     }
 
     private var firstVisiblePosition = 0
@@ -112,12 +111,11 @@ class ChangeRecyclerViewModeKotActivity : BaseActivity(), ISearchResult {
     private fun InitShowOrder() {
         val wareEntity = JsonUtils.analysisWareJsonFile(this, "ware")
         data = wareEntity.wareList
-        when(showType){
+        when (showType) {
             SHOW_TYPE_GRID -> initGridMaterialRefrshLayoutListener()
             SHOW_TYPE_LINER -> initMaterialRefrshLayoutListener()
         }
-        //initMaterialRefrshLayoutListener() ;
-
+        // initMaterialRefrshLayoutListener() ;
     }
 
     private fun initMaterialRefrshLayoutListener() {
@@ -168,7 +166,7 @@ class ChangeRecyclerViewModeKotActivity : BaseActivity(), ISearchResult {
                 recyclerViewLayoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
                 // recyclerViewLayoutManager.setGapStrategy(StaggeredGridLayoutManager.GAP_HANDLING_NONE);
                 // 设置item的间距处理方式
-              //  recyclerViewLayoutManager?.gapStrategy = StaggeredGridLayoutManager.GAP_HANDLING_NONE
+                //  recyclerViewLayoutManager?.gapStrategy = StaggeredGridLayoutManager.GAP_HANDLING_NONE
                 classifyWaresAdapter = AssortShowAdapter(this)
                 recyclerView?.adapter = classifyWaresAdapter
                 recyclerView?.layoutManager = recyclerViewLayoutManager
