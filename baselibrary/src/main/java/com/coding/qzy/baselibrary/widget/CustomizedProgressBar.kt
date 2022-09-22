@@ -28,6 +28,9 @@ class CustomizedProgressBar : View {
     private var mWidth = 0
     private var mHeight = 0
     private var mContext: Context? = null
+    private var mTrackColor = Color.parseColor("#FFFFFF")
+    private var mStartColor = Color.parseColor("#FFFFFF")
+    private var mEndColor = Color.parseColor("#FFFFFF")
 
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
         context,
@@ -54,7 +57,7 @@ class CustomizedProgressBar : View {
         val mPaint = Paint()
         mPaint.isAntiAlias = true
         val round = 12 // 半径
-        mPaint.color = resources.getColor(R.color.result_view) // 设置边框背景颜色
+        mPaint.color = mTrackColor // 设置边框背景颜色
         val rectBg = RectF(0f, 0f, mWidth.toFloat(), mHeight.toFloat())
         canvas.drawRoundRect(rectBg, round.toFloat(), round.toFloat(), mPaint) // 绘制 最外面的大 圆角矩形，背景为白色
         val section = currentCount / maxCount // 进度条的比例
@@ -72,21 +75,37 @@ class CustomizedProgressBar : View {
             mPaint.shader = linearGradient
             canvas.drawRect(rectProgressBg2, mPaint)
         }
+        Log.d("zongyang","onDraw")
+    }
+
+    fun initColor(startColor: String, endColor: String, bgColor: String) {
+        mTrackColor = Color.parseColor(bgColor)
+        mStartColor = Color.parseColor(startColor)
+        mEndColor = Color.parseColor(endColor)
+//        linearGradient = LinearGradient(
+//            0f, 0f, width.toFloat(), mHeight.toFloat(),
+//            intArrayOf(/*mStartColor, mEndColor*/
+//                mContext!!.resources.getColor(R.color.blue),
+//                mContext!!.resources.getColor(R.color.progress_color_2)
+//            ),
+//            null, Shader.TileMode.CLAMP
+//        )
     }
 
     // 根据R文件中的id获取到color
     private var linearGradient: LinearGradient? = null
         private get() {
-            if (field == null) {
-                field = LinearGradient(
-                    0f, 0f, width.toFloat(), mHeight.toFloat(),
-                    intArrayOf(
-                        mContext!!.resources.getColor(R.color.progress_color_1),
-                        mContext!!.resources.getColor(R.color.progress_color_2)
-                    ),
-                    null, Shader.TileMode.CLAMP
-                ) // 根据R文件中的id获取到color
-            }
+            field = LinearGradient(
+                0f, 0f, width.toFloat(), mHeight.toFloat(),
+                intArrayOf(
+                    mStartColor,
+                    mEndColor
+//                        mContext!!.resources.getColor(R.color.blue),
+//                        mContext!!.resources.getColor(R.color.progress_color_2)
+                ),
+                null, Shader.TileMode.CLAMP
+            )
+            Log.d("zongyang","LinearGradient")
             return field
         }
 
@@ -125,5 +144,6 @@ class CustomizedProgressBar : View {
                 heightSpecSize
             }
         setMeasuredDimension(mWidth, mHeight)
+        Log.d("zongyang","onMeasure")
     }
 }

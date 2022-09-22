@@ -130,6 +130,7 @@ dependencies {
 //    implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation rootProject.ext.dependencies["butterknife"]
     implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.android.gms:play-services-base:17.6.0'
     kapt  rootProject.ext.dependencies["butterknife-compiler"]
     implementation rootProject.ext.dependencies["glide"]
     implementation 'androidx.multidex:multidex:2.0.0'

@@ -1,7 +1,9 @@
 package com.quzy.coding.ui.activity
 
+import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import com.alibaba.android.arouter.utils.MapUtils.isNotEmpty
 import com.quzy.coding.base.BaseActivity
@@ -28,6 +30,31 @@ class DrawWithRichTextActivity : BaseActivity() {
         // EventBus.getDefault().post(DialogEvent())
         CouponNewCustomerDialogManager.setCurActivity(this)
         CouponNewCustomerDialogManager.doRequestCoupon(this)
+
+        viewBinding?.contentTv?.text = "但是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导"
+        viewBinding?.contentTv?.movementMethod = ScrollingMovementMethod.getInstance()
+        viewBinding?.contentTv?.setOnTouchListener(object :View.OnTouchListener{
+            override fun onTouch(view: View?, motionEvent: MotionEvent?): Boolean {
+                if(motionEvent?.getAction()==MotionEvent.ACTION_DOWN){
+                    //通知父控件不要干扰
+                    view?.getParent()?.requestDisallowInterceptTouchEvent(true);
+                }
+                if(motionEvent?.getAction()==MotionEvent.ACTION_MOVE){
+                    //通知父控件不要干扰
+                    view?.getParent()?.requestDisallowInterceptTouchEvent(true);
+                }
+                if(motionEvent?.getAction()==MotionEvent.ACTION_UP){
+                    view?.getParent()?.requestDisallowInterceptTouchEvent(false);
+                }
+                return false;
+            }
+
+        })
+
+
+
+
+
 
         val dataList = ArrayList<NewPersonGiftProduct>()
         var p = ProPrice()

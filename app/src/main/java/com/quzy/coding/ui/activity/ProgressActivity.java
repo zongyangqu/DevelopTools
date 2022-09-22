@@ -61,9 +61,6 @@ public class ProgressActivity extends BaseActivity {
         mProgressBar2.setProgressColor(Color.parseColor("#79aa6b"));
         mProgressBar2.setCurProgress(80,4000);
 
-        customizedProgressBar.setMaxCount(100);
-        int integrity = (30/100) *10; //根据自己情况来初始化完整度
-        customizedProgressBar.setCurrentCount(80);
 
 
         progressBar = findViewById(R.id.progressBar);
@@ -88,6 +85,24 @@ public class ProgressActivity extends BaseActivity {
         progressBar3.initColor("#FFBDCF","#FF8E00","#cccccc");
         progressBar3.setMaxProgress(80f);
         progressBar3.setCurrentProgress(60f);
+
+        findViewById(R.id.changeBar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                customizedProgressBar.initColor("#FA632D","#7D7DFF","#999999");
+                customizedProgressBar.setMaxCount(100);
+                customizedProgressBar.setCurrentCount(80);
+            }
+        });
+
+        findViewById(R.id.changeBar2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                customizedProgressBar.initColor("#FFFF00","#FF3B30","#F2F2F2");
+                customizedProgressBar.setMaxCount(5000);
+                customizedProgressBar.setCurrentCount(2600);
+            }
+        });
 
     }
 

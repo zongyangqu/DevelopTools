@@ -36,7 +36,7 @@
     <com.coding.qzy.baselibrary.widget.CustomizedProgressBar
         android:id="@+id/customizedProgressBar"
         android:layout_width="50dp"
-        android:layout_height="10dp"
+        android:layout_height="2dp"
         android:layout_marginTop="50dp"
         android:gravity="center"
         tools:text="完整度35%"
@@ -83,5 +83,19 @@
         app:barHeight1="8dp"
         app:barStartColor1="@color/colorPrimary"
         app:trackColor1="#c1c1c1" />
+
+    <Button
+        android:id="@+id/changeBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="changeBar"/>
+
+    <Button
+        android:id="@+id/changeBar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="changeBar2"/>
 
 </LinearLayout>

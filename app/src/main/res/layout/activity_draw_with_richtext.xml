@@ -13,4 +13,33 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbarSize="3dp"
+        android:scrollbars="vertical"
+        android:scrollbarTrackVertical="@drawable/textview_vertical_line"
+        android:scrollbarThumbVertical="@drawable/textview_vertical_line"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/content_tv"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_height="100dp"
+                android:scrollbars="vertical"
+                android:text="打算等我打完等我打完等我打完电话我还定位ID我的我的我好得很文化地位画荻和丸ID打算等我打完等我打完等我打完电话我还定位ID我的我的我好得很文化地位画荻和丸ID打算等我打完等我打完等我打完电话我还定位ID我的我的我好得很文化地位画荻和丸ID打算等我打完等我打完等我打完电话我还定位ID我的我的我好得很文化地位画荻和丸ID打算等我打完等我打完等我打完电话我还定位ID我的我的我好得很文化地位画荻和丸ID打算等我打完等我打完等我打完电话我还定位ID我的我的我好得很文化地位画荻和丸ID打算等我打完等我打完等我打完电话我还定位ID我的我的我好得很文化地位画荻和丸ID打算等我打完等我打完等我打完电话我还定位ID我的我的我好得很文化地位画荻和丸ID"
+                />
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

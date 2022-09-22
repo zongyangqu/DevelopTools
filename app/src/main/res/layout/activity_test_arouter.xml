@@ -36,4 +36,44 @@
         android:textAllCaps="false"
         app:layout_constraintTop_toBottomOf="@+id/btnEventBusPriority"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLocationInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取位置信息"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btnMyEventBus"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGetCycleLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置监听器，周期性获取定位信息"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btnLocationInfo"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOpenSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到系统设置处来打开权限"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btnGetCycleLocation"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGoogleSupport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="判断谷歌服务是否支持"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btnOpenSetting"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLocationInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoogleSupport"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
