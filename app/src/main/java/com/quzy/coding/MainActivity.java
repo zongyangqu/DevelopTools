@@ -9,25 +9,36 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.apkfuns.logutils.LogUtils;
 import com.coding.qzy.baselibrary.utils.permission.PermissionChecker;
 import com.coding.qzy.baselibrary.utils.permission.PermissionRequester;
 import com.coding.qzy.baselibrary.utils.permission.annotation.PermissionDenied;
 import com.coding.qzy.baselibrary.utils.permission.annotation.PermissionGranted;
 import com.quzy.coding.base.BaseActivity;
 import com.quzy.coding.bean.event.DialogEvent;
+import com.quzy.coding.ui.activity.HotFixDemoActivity;
 import com.quzy.coding.ui.activity.SplashActivity;
 import com.quzy.coding.ui.manager.CouponNewCustomerDialogManager;
+import com.quzy.coding.util.Constants;
 import com.quzy.coding.util.op.Actions;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 
 public class MainActivity extends BaseActivity {
@@ -35,6 +46,8 @@ public class MainActivity extends BaseActivity {
     @BindView(R.id.swipe_target)
     ListView swipe_target;
     ArrayAdapter mainAdapter;
+    File apk;
+    private final String typefaceUrl = "/fzgz.ttf";
 
     public static List<String> list = new ArrayList<String>();
 
@@ -51,6 +64,9 @@ public class MainActivity extends BaseActivity {
                 Actions.doAction(getActivity(),i);
             }
         });
+        apk = new File(getCacheDir() + typefaceUrl);
+        LogUtils.tag(Constants.LOG_TAG).d(apk.getAbsolutePath());
+        download(swipe_target);
     }
 
     private void requestPermissions(){
@@ -101,6 +117,48 @@ public class MainActivity extends BaseActivity {
     protected void onDestroy() {
         super.onDestroy();
         EventBus.getDefault().unregister(this);
+    }
+
+
+    /**
+     * 下载字体库
+     * @param v
+     */
+    private void download(final View v) {
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url("https://xiaohe-online.oss-cn-beijing.aliyuncs.com/Emulation/audios/homework"+typefaceUrl)
+                .get()
+                .build();
+        client.newCall(request)
+                .enqueue(new Callback() {
+                    @Override
+                    public void onFailure(Call call, IOException e) {
+                        v.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(MainActivity.this, "下载字体出错啦", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onResponse(Call call, Response response) throws IOException {
+                        try {
+                            FileOutputStream fos = new FileOutputStream(apk);
+                            fos.write(response.body().bytes());
+                            fos.close();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        v.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(MainActivity.this, "下载字体成功啦", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                });
     }
 
 }

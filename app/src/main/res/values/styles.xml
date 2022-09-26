@@ -32,4 +32,26 @@
         <item name="bl_ripple_color">@android:color/holo_blue_light</item>
     </style>
 
+    <style name="MyDialogStyleBottom" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowAnimationStyle">@style/BottomDialogAnimation</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否允许对话框的背景变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name="BottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_slid_up</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slid_down</item>
+    </style>
+
 </resources>

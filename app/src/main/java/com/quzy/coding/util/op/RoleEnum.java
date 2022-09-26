@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 
 import com.quzy.coding.ui.activity.ARouterSampleActivity;
+import com.quzy.coding.ui.activity.ActivityAnimaActivity;
 import com.quzy.coding.ui.activity.AppUpdateActivity;
 import com.quzy.coding.ui.activity.BackGroundActivity;
 import com.quzy.coding.ui.activity.CustomControlActivity;
@@ -24,6 +25,7 @@ import com.quzy.coding.ui.activity.RecyclerHorizontalMoreActivity;
 import com.quzy.coding.ui.activity.RecyclerViewSampleActivity;
 import com.quzy.coding.ui.activity.TextSampleActivity;
 import com.quzy.coding.ui.activity.ThreeDimensionalActivity;
+import com.quzy.coding.ui.activity.TypefaceActivity;
 import com.quzy.coding.ui.activity.WebViewRecyclerActivity;
 import com.quzy.coding.ui.activity.WebViewhybridSampleActivity;
 import com.quzy.coding.util.RecordVoiceMp3View;
@@ -163,6 +165,16 @@ public enum RoleEnum implements RoleOperation {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, DrawWithRichTextActivity.class));
+        };
+    },TypefacceLib {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, TypefaceActivity.class));
+        };
+    },ActivityAnima {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, ActivityAnimaActivity.class));
         };
     };
 

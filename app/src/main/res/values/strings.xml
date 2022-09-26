@@ -56,6 +56,8 @@
         <item>RecyclerView横向查看更多</item>
         <item>ARouter使用</item>
         <item>全局弹窗优惠券的富文本展示</item>
+        <item>字体库使用</item>
+        <item>Activity进入动画</item>
     </string-array>
 
     <string name="member_bury_page_mine">>我的页</string>
