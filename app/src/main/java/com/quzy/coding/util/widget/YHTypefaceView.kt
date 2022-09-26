@@ -37,8 +37,7 @@ class YHTypefaceView : AppCompatTextView {
     private fun initFontStyle() {
         try {
             if (typefaceTransformer == null) {
-                var path = BaseApplication.getContext().cacheDir
-                var apk = File("$path/fzgz.ttf")
+                var apk = File(BaseApplication.getContext().cacheDir.absolutePath + Constants.DOWNLOAD_TYPEFACE_NAME)
                 LogUtils.tag(Constants.LOG_TAG).d("typeface is null")
                 LogUtils.tag(Constants.LOG_TAG).d("apk path" + apk.absolutePath)
                 typefaceTransformer = Typeface.createFromFile(apk)

@@ -42,5 +42,6 @@ public class Constants {
     public static final int REQ_PERM_EXTERNAL_STORAGE = 11004; // 读写文件
     public static final String INTENT_EXTRA_KEY_QR_SCAN = "qr_scan_result";
     public static final String LOG_TAG = "LOG_TAG";
-
+    public static final String DOWNLOAD_TYPEFACE_ZIP_NAME = "/fzgz.zip";
+    public static final String DOWNLOAD_TYPEFACE_NAME = "/typeface/fzgz.ttf";
 }

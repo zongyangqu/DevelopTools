@@ -14,6 +14,7 @@ import com.coding.qzy.baselibrary.utils.permission.PermissionChecker;
 import com.coding.qzy.baselibrary.utils.permission.PermissionRequester;
 import com.coding.qzy.baselibrary.utils.permission.annotation.PermissionDenied;
 import com.coding.qzy.baselibrary.utils.permission.annotation.PermissionGranted;
+import com.coding.qzy.baselibrary.widget.recorderlib.utils.FileUtils;
 import com.quzy.coding.base.BaseActivity;
 import com.quzy.coding.bean.event.DialogEvent;
 import com.quzy.coding.ui.activity.HotFixDemoActivity;
@@ -47,7 +48,8 @@ public class MainActivity extends BaseActivity {
     ListView swipe_target;
     ArrayAdapter mainAdapter;
     File apk;
-    private final String typefaceUrl = "/fzgz.ttf";
+    //https://xiaohe-online.oss-cn-beijing.aliyuncs.com/Emulation/audios/homework/fzgz.zip
+    private final String typefaceUrl = Constants.DOWNLOAD_TYPEFACE_ZIP_NAME;
 
     public static List<String> list = new ArrayList<String>();
 
@@ -148,6 +150,13 @@ public class MainActivity extends BaseActivity {
                             FileOutputStream fos = new FileOutputStream(apk);
                             fos.write(response.body().bytes());
                             fos.close();
+                            String finalPath =
+                                    getCacheDir() + "/typeface";
+                            File unZipFile = new File(finalPath);
+                            LogUtils.tag(Constants.LOG_TAG).d("finalPath--->"+unZipFile.getAbsolutePath());
+                           // if (unZipFile.exists()) deleteCacheFiles(unZipFile);
+                            FileUtils.UnZipFolder(apk.getAbsolutePath(), finalPath);
+                           // apk.delete();
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -159,6 +168,20 @@ public class MainActivity extends BaseActivity {
                         });
                     }
                 });
+    }
+
+    private void deleteCacheFiles(File file) {
+        try {
+            if (file.isDirectory()) {
+                File[] files = file.listFiles();
+                for (int i = 0 ; i <files.length ;i++) {
+                    deleteCacheFiles(files[i]);
+                }
+            }
+            file.delete();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
