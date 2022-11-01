@@ -3,6 +3,7 @@ package com.quzy.coding;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.provider.Settings;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,6 +22,7 @@ import com.quzy.coding.ui.activity.HotFixDemoActivity;
 import com.quzy.coding.ui.activity.SplashActivity;
 import com.quzy.coding.ui.manager.CouponNewCustomerDialogManager;
 import com.quzy.coding.util.Constants;
+import com.quzy.coding.util.TypefaceLoadUtil;
 import com.quzy.coding.util.op.Actions;
 
 import org.greenrobot.eventbus.EventBus;
@@ -35,6 +37,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
+import kotlinx.coroutines.GlobalScope;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -154,8 +157,11 @@ public class MainActivity extends BaseActivity {
                                     getCacheDir() + "/typeface";
                             File unZipFile = new File(finalPath);
                             LogUtils.tag(Constants.LOG_TAG).d("finalPath--->"+unZipFile.getAbsolutePath());
-                           // if (unZipFile.exists()) deleteCacheFiles(unZipFile);
-                            FileUtils.UnZipFolder(apk.getAbsolutePath(), finalPath);
+                            TypefaceLoadUtil.INSTANCE.unZip(apk.getAbsolutePath(), finalPath);
+                            Thread.sleep(2000);
+                            LogUtils.tag(Constants.LOG_TAG).d("continue.....");
+                            // if (unZipFile.exists()) deleteCacheFiles(unZipFile);
+                            //FileUtils.UnZipFolder(apk.getAbsolutePath(), finalPath);
                            // apk.delete();
                         } catch (Exception e) {
                             e.printStackTrace();

@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="18.9定位的无多"
-        android:textStyle="bold"
         android:textSize="18sp"
         android:textColor="@color/themeColor"/>
 
@@ -17,7 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="18.9定位的无多"
-        android:textStyle="bold"
         android:textSize="18sp"
         android:textColor="@color/themeColor"/>
 

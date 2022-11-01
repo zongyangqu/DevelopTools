@@ -35,6 +35,7 @@ class YHTypefaceView : AppCompatTextView {
     }
 
     private fun initFontStyle() {
+        // typeface = Typeface.createFromAsset(BaseApplication.getContext().assets, "font/fzzzhjt.TTF")
         try {
             if (typefaceTransformer == null) {
                 var apk = File(BaseApplication.getContext().cacheDir.absolutePath + Constants.DOWNLOAD_TYPEFACE_NAME)
