@@ -32,4 +32,19 @@
         <item name="bl_ripple_color">@android:color/holo_blue_light</item>
     </style>
 
+    <declare-styleable name="RoundedWebView">
+        <attr name="isAllRounded" format="boolean" />
+        <attr name="outBackground" format="color" />
+        <!-- Defines the radius of the four corners. -->
+        <attr name="radius" format="dimension" />
+        <!-- Radius of the top left corner. -->
+        <attr name="topLeftRadius" format="dimension" />
+        <!-- Radius of the top right corner. -->
+        <attr name="topRightRadius" format="dimension" />
+        <!-- Radius of the bottom left corner. -->
+        <attr name="bottomLeftRadius" format="dimension" />
+        <!-- Radius of the bottom right corner. -->
+        <attr name="bottomRightRadius" format="dimension" />
+    </declare-styleable>
+
 </resources>

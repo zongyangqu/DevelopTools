@@ -1,10 +1,12 @@
 package com.quzy.coding.ui.activity
 
+import android.os.Build
 import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
+import android.webkit.WebSettings
 import com.alibaba.android.arouter.utils.MapUtils.isNotEmpty
 import com.quzy.coding.base.BaseActivity
 import com.quzy.coding.base.BaseApplication
@@ -30,6 +32,21 @@ class DrawWithRichTextActivity : BaseActivity() {
         // EventBus.getDefault().post(DialogEvent())
         CouponNewCustomerDialogManager.setCurActivity(this)
         CouponNewCustomerDialogManager.doRequestCoupon(this)
+
+        val settings = viewBinding?.webview?.settings
+        viewBinding?.webview?.isHorizontalScrollBarEnabled = false
+        viewBinding?.webview?.isVerticalScrollBarEnabled = false
+        settings?.domStorageEnabled = true;
+        settings?.allowFileAccess = true;
+        settings?.setAppCacheEnabled(true);
+        settings?.domStorageEnabled = true
+        settings?.javaScriptEnabled = true
+        settings?.loadWithOverviewMode = true
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            settings?.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW;
+        }
+        viewBinding?.webview?.loadUrl("https://www.jianshu.com/")
+
 
         viewBinding?.contentTv?.text = "但是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导是得是的是的是的是的所多多打算等我打完任务人防的夫人夫人个人更广泛的辅导辅导而贷款放款单方块巅峰丰富的减肥的减肥粉粉粉的辅导辅导"
         viewBinding?.contentTv?.movementMethod = ScrollingMovementMethod.getInstance()
