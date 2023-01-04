@@ -11,7 +11,7 @@ import com.quzy.coding.bean.CouponMineDataBean
 import com.quzy.coding.bean.NewCustomerProductModel
 import com.quzy.coding.ui.holder.NewCustomerCouponHolder
 import com.quzy.coding.ui.holder.NewCustomerProductHolder
-import com.quzy.coding.util.singleClick
+import com.quzy.coding.util.extend.singleClick
 
 /**
  * CreateDate:2022/7/1 10:26

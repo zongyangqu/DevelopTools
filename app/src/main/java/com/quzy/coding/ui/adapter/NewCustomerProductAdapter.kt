@@ -7,8 +7,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.quzy.coding.R
 import com.quzy.coding.bean.NewCustomerProductModel
-import com.quzy.coding.util.gone
-import com.quzy.coding.util.show
+import com.quzy.coding.util.extend.gone
+import com.quzy.coding.util.extend.show
 import kotlinx.android.synthetic.main.common_coupon_product_item_layout.view.*
 
 /**

@@ -1,0 +1,36 @@
+{
+  "status": "1",
+  "commonPageStatus": "0",
+  "minViewCount": 3,
+  "customPages": [{
+    "pagename": "商品详情页",
+    "viewClass": "com.quzy.coding.ui.activity.ActivityAnimaActivity",
+    "targetViews": ["include_shoping_food_cart","ll_product_price"],
+    "placeHolderViews": ["container_off_shelf"]
+  }, {
+    "pagename": "首页",
+    "viewClass": "cn.yonghui.hyd.main.ui.fragment.HomeFragment",
+    "targetViews": ["group_member_code"],
+    "placeHolderViews": ["empty_layout"]
+  }, {
+    "pagename": "购物车页",
+    "viewClass": "cn.yonghui.hyd.cart.CartFragment",
+    "targetViews": ["ivProduct","tvTitle"],
+    "placeHolderViews": ["view_empty_layout_bg"]
+  }, {
+    "pagename": "搜索结果页",
+    "viewClass": "cn.yonghui.hyd.search.result.SearchResultActivity",
+    "targetViews": ["ll_filter_container"],
+    "placeHolderViews": ["search_empty_result_text"]
+  }, {
+    "pagename": "订单结算页",
+    "viewClass": "cn.yonghui.hyd.order.confirm.newly.OrderPlaceActivity",
+    "targetViews": ["packagesListViewContainer"],
+    "placeHolderViews": []
+  }, {
+    "pagename": "订单详情页",
+    "viewClass": "cn.yonghui.hyd.order.detail.OrderDetailActivity",
+    "targetViews": ["product_content"],
+    "placeHolderViews": []
+  }]
+}

@@ -1,4 +1,4 @@
-package com.quzy.coding.util
+package com.quzy.coding.util.extend
 
 import android.animation.Animator
 import android.animation.ObjectAnimator

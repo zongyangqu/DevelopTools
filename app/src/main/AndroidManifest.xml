@@ -151,6 +151,8 @@
                 android:resource="@xml/provider_paths"/>
         </provider>
 
+        <service android:name=".util.viewreport.ViewLayoutReportService"/>
+
     </application>
 
 </manifest>

@@ -1,1 +1,319 @@
-{     "activityCode": "NEWPERSON1655897164318IjAbLPR",    "buttonCopyWriting": "新人弹窗按钮文案",    "coupons": [{      "activityShops": ["9218"],      "amount": 100,      "catalog": 7,      "code": "000000002706745",      "conditiondesc": "商品兑换券",      "couponNotStartedDesc": "",      "couponlatitude": "coupon.general",      "date": "2022.06.27",      "deliveredDate": "2022-06-27 13:57:37",      "desc": "商品兑换券",      "descriptions": [],      "endDate": "2052-11-27",      "expirationDesc": "2022.06.27-2052.11.27",      "expirationDescColor": "#999999",      "expireddate": "2052.11.27",      "iscurrentavailable": 0,      "label": 20,      "loginType": "",      "minmemberlevel": 0,      "name": "商品兑换券",      "newcustomer": 0,      "orderLimits": [16, 32, 64],      "orderminamount": 0,      "promotioncode": "ck1655897035093qNWvZbK",      "realm": "指定商品可用",      "realmid": 4,      "saleChannel": 16911,      "scope": "限永辉生活APP、微信小程序、部分门店收银设备、支付宝小程序使用",      "shoprealm": "",      "startDate": "2022-06-27",      "status": 1,      "taglist": [{}, {        "text": "线上/门店通用",        "type": "shopScope"      }, {        "text": "线上仅配送可用",        "type": "deliveryLimit"      }],      "usescenario": 1    }, {      "activityShops": ["9218"],      "amount": 600,      "catalog": 2,      "code": "000000002707745",      "conditiondesc": "配送券",      "couponNotStartedDesc": "",      "couponlatitude": "coupon.general",      "date": "2022.06.27",      "deliveredDate": "2022-06-27 13:57:37",      "desc": "免邮券",      "descriptions": [],      "endDate": "2052-11-27",      "expirationDesc": "2022.06.27-2052.11.27",      "expirationDescColor": "#999999",      "expireddate": "2052.11.27",      "freightfreedesc": "满50元可用",      "iscurrentavailable": 0,      "label": 20,      "loginType": "",      "minmemberlevel": 0,      "name": "免邮券",      "newcustomer": 0,      "orderLimits": [16, 32, 64],      "orderminamount": 5000,      "promotioncode": "ck1655897065286PhwGzMH",      "realm": "全场可用",      "realmid": 1,      "saleChannel": 16911,      "scope": "限永辉生活APP、微信小程序、部分门店收银设备、支付宝小程序使用",      "shoprealm": "",      "startDate": "2022-06-27",      "status": 1,      "taglist": [{}, {        "text": "线上/门店通用",        "type": "shopScope"      }, {        "text": "配送/自提可用",        "type": "deliveryLimit"      }],      "usescenario": 1    }, {      "activityShops": ["9218"],      "amount": -100,      "catalog": 6,      "code": "000000002705745",      "conditiondesc": "9折券",      "couponNotStartedDesc": "",      "couponlatitude": "coupon.general",      "date": "2022.06.27",      "deliveredDate": "2022-06-27 13:57:37",      "desc": "打折券",      "descriptions": ["最高抵10元"],      "endDate": "2052-11-27",      "expirationDesc": "2022.06.27-2052.11.27",      "expirationDescColor": "#999999",      "expireddate": "2052.11.27",      "iscurrentavailable": 0,      "label": 20,      "loginType": "",      "minmemberlevel": 0,      "name": "打折券",      "newcustomer": 0,      "orderLimits": [16, 32, 64],      "orderminamount": 1000,      "promotioncode": "ck1655896966105qfNRpcO",      "realm": "全品类商品可用（特殊商品除外）",      "realmid": 1,      "saleChannel": 16911,      "scope": "限永辉生活APP、微信小程序、部分门店收银设备、支付宝小程序使用",      "shoprealm": "",      "startDate": "2022-06-27",      "status": 1,      "subtitle": "最高抵10元",      "taglist": [{}, {        "text": "线上/门店通用",        "type": "shopScope"      }, {        "text": "配送/自提可用",        "type": "deliveryLimit"      }],      "usescenario": 1    }, {      "activityShops": ["9218"],      "amount": -100,      "catalog": 4,      "code": "000000002708745",      "conditiondesc": "赠品券",      "couponNotStartedDesc": "",      "couponlatitude": "coupon.general",      "date": "2022.06.27",      "deliveredDate": "2022-06-27 13:57:37",      "desc": "赠品券",      "descriptions": ["兑换码:0000-0000-2708745"],      "endDate": "2052-11-27",      "expirationDesc": "2022.06.27-2052.11.27",      "expirationDescColor": "#999999",      "expireddate": "2052.11.27",      "iscurrentavailable": 0,      "label": 0,      "loginType": "",      "minmemberlevel": 0,      "name": "赠品券",      "newcustomer": 0,      "orderminamount": 0,      "promotioncode": "ck1655897085861JXOSeyQ",      "qrcode": "000000002708745",      "realm": "门店通用",      "realmdesc": "兑换码:0000-0000-2708745",      "realmid": 1,      "saleChannel": 16911,      "shoprealm": "",      "startDate": "2022-06-27",      "status": 1,      "usescenario": 1    }, {      "activityShops": ["9218"],      "amount": 200,      "catalog": 1,      "code": "000000002703745",      "conditiondesc": "现金券",      "couponNotStartedDesc": "",      "couponlatitude": "coupon.general",      "date": "2022.06.27",      "deliveredDate": "2022-06-27 13:57:37",      "desc": "现金券",      "descriptions": [],      "endDate": "2025-07-12",      "expirationDesc": "2022.06.27-2025.07.12",      "expirationDescColor": "#999999",      "expireddate": "2025.07.12",      "iscurrentavailable": 0,      "label": 20,      "loginType": "",      "minmemberlevel": 0,      "name": "现金券",      "newcustomer": 0,      "orderLimits": [16, 32, 64],      "orderminamount": 0,      "promotioncode": "ck1655896901751VAlPQaV",      "realm": "全品类商品可用（特殊商品除外）",      "realmid": 1,      "saleChannel": 16911,      "scope": "限永辉生活APP、微信小程序、部分门店收银设备、支付宝小程序使用",      "shoprealm": "",      "startDate": "2022-06-27",      "status": 1,      "taglist": [{}, {        "text": "线上/门店通用",        "type": "shopScope"      }, {}],      "usescenario": 1    }, {      "activityShops": ["9218"],      "amount": 500,      "catalog": 3,      "code": "000000002704745",      "conditiondesc": "满20元可用",      "couponNotStartedDesc": "",      "couponlatitude": "coupon.general",      "date": "2022.06.27",      "deliveredDate": "2022-06-27 13:57:37",      "desc": "满减券",      "descriptions": [],      "endDate": "2052-11-27",      "expirationDesc": "2022.06.27-2052.11.27",      "expirationDescColor": "#999999",      "expireddate": "2052.11.27",      "iscurrentavailable": 0,      "label": 20,      "loginType": "",      "minmemberlevel": 0,      "name": "满减券",      "newcustomer": 0,      "orderLimits": [16, 32, 64, 2, 4, 8],      "orderminamount": 2000,      "promotioncode": "ck1655896937422lHColgL",      "realm": "全品类商品可用（特殊商品除外）",      "realmid": 1,      "saleChannel": 16911,      "scope": "限永辉生活APP、微信小程序、部分门店收银设备、支付宝小程序使用",      "shoprealm": "",      "startDate": "2022-06-27",      "status": 1,      "taglist": [{}, {        "text": "线上/门店通用",        "type": "shopScope"      }, {}],      "usescenario": 1    }],    "title": "新人弹窗主标题",    "newPersonSkus": [{      "imgUrl": "http://image.yonghuivip.com/product/B-248/15172150469316f7b0ae3c8190081078c5303e0863c32b850788b",      "inStock": 1,      "priceText": "4元 低价购"    }, {      "imgUrl": "http://image.yonghuivip.com/product/X-853522/15039932401457b65536c82a48f882a1072a47ba1e9059c1c29a8",      "inStock": 0,      "priceText": "2元 低价购"    }],    "sendType": 1,    "sendstatus": 1,    "shuntValue": "Bedh73574",    "subTitle": "新人弹窗副标题",    "totalamount": 30000,    "url": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-newborn-zone%2Findex.html%3Fintercept%3D1%26pageid%3DNEWPERSON1655897164318IjAbLPR%26platform%3Dandroid%26version%3D8.7.0.3%26shopid%3D9218%26appid%3D%26abgroupid%3DB&needlogin=1"  }
+{
+  "activityCode": "NEWPERSON1655897164318IjAbLPR",
+  "buttonCopyWriting": "新人弹窗按钮文案",
+  "coupons": [
+    {
+      "activityShops": [
+        "9218"
+      ],
+      "amount": 100,
+      "catalog": 7,
+      "code": "000000002706745",
+      "conditiondesc": "商品兑换券",
+      "couponNotStartedDesc": "",
+      "couponlatitude": "coupon.general",
+      "date": "2022.06.27",
+      "deliveredDate": "2022-06-27 13:57:37",
+      "desc": "商品兑换券",
+      "descriptions": [],
+      "endDate": "2052-11-27",
+      "expirationDesc": "2022.06.27-2052.11.27",
+      "expirationDescColor": "#999999",
+      "expireddate": "2052.11.27",
+      "iscurrentavailable": 0,
+      "label": 20,
+      "loginType": "",
+      "minmemberlevel": 0,
+      "name": "商品兑换券",
+      "newcustomer": 0,
+      "orderLimits": [
+        16,
+        32,
+        64
+      ],
+      "orderminamount": 0,
+      "promotioncode": "ck1655897035093qNWvZbK",
+      "realm": "指定商品可用",
+      "realmid": 4,
+      "saleChannel": 16911,
+      "scope": "限永辉生活APP、微信小程序、部分门店收银设备、支付宝小程序使用",
+      "shoprealm": "",
+      "startDate": "2022-06-27",
+      "status": 1,
+      "taglist": [
+        {},
+        {
+          "text": "线上/门店通用",
+          "type": "shopScope"
+        },
+        {
+          "text": "线上仅配送可用",
+          "type": "deliveryLimit"
+        }
+      ],
+      "usescenario": 1
+    },
+    {
+      "activityShops": [
+        "9218"
+      ],
+      "amount": 600,
+      "catalog": 2,
+      "code": "000000002707745",
+      "conditiondesc": "配送券",
+      "couponNotStartedDesc": "",
+      "couponlatitude": "coupon.general",
+      "date": "2022.06.27",
+      "deliveredDate": "2022-06-27 13:57:37",
+      "desc": "免邮券",
+      "descriptions": [],
+      "endDate": "2052-11-27",
+      "expirationDesc": "2022.06.27-2052.11.27",
+      "expirationDescColor": "#999999",
+      "expireddate": "2052.11.27",
+      "freightfreedesc": "满50元可用",
+      "iscurrentavailable": 0,
+      "label": 20,
+      "loginType": "",
+      "minmemberlevel": 0,
+      "name": "免邮券",
+      "newcustomer": 0,
+      "orderLimits": [
+        16,
+        32,
+        64
+      ],
+      "orderminamount": 5000,
+      "promotioncode": "ck1655897065286PhwGzMH",
+      "realm": "全场可用",
+      "realmid": 1,
+      "saleChannel": 16911,
+      "scope": "限永辉生活APP、微信小程序、部分门店收银设备、支付宝小程序使用",
+      "shoprealm": "",
+      "startDate": "2022-06-27",
+      "status": 1,
+      "taglist": [
+        {},
+        {
+          "text": "线上/门店通用",
+          "type": "shopScope"
+        },
+        {
+          "text": "配送/自提可用",
+          "type": "deliveryLimit"
+        }
+      ],
+      "usescenario": 1
+    },
+    {
+      "activityShops": [
+        "9218"
+      ],
+      "amount": -100,
+      "catalog": 6,
+      "code": "000000002705745",
+      "conditiondesc": "9折券",
+      "couponNotStartedDesc": "",
+      "couponlatitude": "coupon.general",
+      "date": "2022.06.27",
+      "deliveredDate": "2022-06-27 13:57:37",
+      "desc": "打折券",
+      "descriptions": [
+        "最高抵10元"
+      ],
+      "endDate": "2052-11-27",
+      "expirationDesc": "2022.06.27-2052.11.27",
+      "expirationDescColor": "#999999",
+      "expireddate": "2052.11.27",
+      "iscurrentavailable": 0,
+      "label": 20,
+      "loginType": "",
+      "minmemberlevel": 0,
+      "name": "打折券",
+      "newcustomer": 0,
+      "orderLimits": [
+        16,
+        32,
+        64
+      ],
+      "orderminamount": 1000,
+      "promotioncode": "ck1655896966105qfNRpcO",
+      "realm": "全品类商品可用（特殊商品除外）",
+      "realmid": 1,
+      "saleChannel": 16911,
+      "scope": "限永辉生活APP、微信小程序、部分门店收银设备、支付宝小程序使用",
+      "shoprealm": "",
+      "startDate": "2022-06-27",
+      "status": 1,
+      "subtitle": "最高抵10元",
+      "taglist": [
+        {},
+        {
+          "text": "线上/门店通用",
+          "type": "shopScope"
+        },
+        {
+          "text": "配送/自提可用",
+          "type": "deliveryLimit"
+        }
+      ],
+      "usescenario": 1
+    },
+    {
+      "activityShops": [
+        "9218"
+      ],
+      "amount": -100,
+      "catalog": 4,
+      "code": "000000002708745",
+      "conditiondesc": "赠品券",
+      "couponNotStartedDesc": "",
+      "couponlatitude": "coupon.general",
+      "date": "2022.06.27",
+      "deliveredDate": "2022-06-27 13:57:37",
+      "desc": "赠品券",
+      "descriptions": [
+        "兑换码:0000-0000-2708745"
+      ],
+      "endDate": "2052-11-27",
+      "expirationDesc": "2022.06.27-2052.11.27",
+      "expirationDescColor": "#999999",
+      "expireddate": "2052.11.27",
+      "iscurrentavailable": 0,
+      "label": 0,
+      "loginType": "",
+      "minmemberlevel": 0,
+      "name": "赠品券",
+      "newcustomer": 0,
+      "orderminamount": 0,
+      "promotioncode": "ck1655897085861JXOSeyQ",
+      "qrcode": "000000002708745",
+      "realm": "门店通用",
+      "realmdesc": "兑换码:0000-0000-2708745",
+      "realmid": 1,
+      "saleChannel": 16911,
+      "shoprealm": "",
+      "startDate": "2022-06-27",
+      "status": 1,
+      "usescenario": 1
+    },
+    {
+      "activityShops": [
+        "9218"
+      ],
+      "amount": 200,
+      "catalog": 1,
+      "code": "000000002703745",
+      "conditiondesc": "现金券",
+      "couponNotStartedDesc": "",
+      "couponlatitude": "coupon.general",
+      "date": "2022.06.27",
+      "deliveredDate": "2022-06-27 13:57:37",
+      "desc": "现金券",
+      "descriptions": [],
+      "endDate": "2025-07-12",
+      "expirationDesc": "2022.06.27-2025.07.12",
+      "expirationDescColor": "#999999",
+      "expireddate": "2025.07.12",
+      "iscurrentavailable": 0,
+      "label": 20,
+      "loginType": "",
+      "minmemberlevel": 0,
+      "name": "现金券",
+      "newcustomer": 0,
+      "orderLimits": [
+        16,
+        32,
+        64
+      ],
+      "orderminamount": 0,
+      "promotioncode": "ck1655896901751VAlPQaV",
+      "realm": "全品类商品可用（特殊商品除外）",
+      "realmid": 1,
+      "saleChannel": 16911,
+      "scope": "限永辉生活APP、微信小程序、部分门店收银设备、支付宝小程序使用",
+      "shoprealm": "",
+      "startDate": "2022-06-27",
+      "status": 1,
+      "taglist": [
+        {},
+        {
+          "text": "线上/门店通用",
+          "type": "shopScope"
+        },
+        {}
+      ],
+      "usescenario": 1
+    },
+    {
+      "activityShops": [
+        "9218"
+      ],
+      "amount": 500,
+      "catalog": 3,
+      "code": "000000002704745",
+      "conditiondesc": "满20元可用",
+      "couponNotStartedDesc": "",
+      "couponlatitude": "coupon.general",
+      "date": "2022.06.27",
+      "deliveredDate": "2022-06-27 13:57:37",
+      "desc": "满减券",
+      "descriptions": [],
+      "endDate": "2052-11-27",
+      "expirationDesc": "2022.06.27-2052.11.27",
+      "expirationDescColor": "#999999",
+      "expireddate": "2052.11.27",
+      "iscurrentavailable": 0,
+      "label": 20,
+      "loginType": "",
+      "minmemberlevel": 0,
+      "name": "满减券",
+      "newcustomer": 0,
+      "orderLimits": [
+        16,
+        32,
+        64,
+        2,
+        4,
+        8
+      ],
+      "orderminamount": 2000,
+      "promotioncode": "ck1655896937422lHColgL",
+      "realm": "全品类商品可用（特殊商品除外）",
+      "realmid": 1,
+      "saleChannel": 16911,
+      "scope": "限永辉生活APP、微信小程序、部分门店收银设备、支付宝小程序使用",
+      "shoprealm": "",
+      "startDate": "2022-06-27",
+      "status": 1,
+      "taglist": [
+        {},
+        {
+          "text": "线上/门店通用",
+          "type": "shopScope"
+        },
+        {}
+      ],
+      "usescenario": 1
+    }
+  ],
+  "title": "新人弹窗主标题",
+  "newPersonSkus": [
+    {
+      "imgUrl": "http://image.yonghuivip.com/product/B-248/15172150469316f7b0ae3c8190081078c5303e0863c32b850788b",
+      "inStock": 1,
+      "priceText": "4元 低价购"
+    },
+    {
+      "imgUrl": "http://image.yonghuivip.com/product/X-853522/15039932401457b65536c82a48f882a1072a47ba1e9059c1c29a8",
+      "inStock": 0,
+      "priceText": "2元 低价购"
+    }
+  ],
+  "sendType": 1,
+  "sendstatus": 1,
+  "shuntValue": "Bedh73574",
+  "subTitle": "新人弹窗副标题",
+  "totalamount": 30000,
+  "url": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-newborn-zone%2Findex.html%3Fintercept%3D1%26pageid%3DNEWPERSON1655897164318IjAbLPR%26platform%3Dandroid%26version%3D8.7.0.3%26shopid%3D9218%26appid%3D%26abgroupid%3DB&needlogin=1"
+}

@@ -1,6 +1,7 @@
 package com.quzy.coding.base;
 
 import android.content.Context;
+import android.content.Intent;
 
 import androidx.multidex.MultiDexApplication;
 
@@ -12,6 +13,7 @@ import com.coding.qzy.baselibrary.utils.log.LogTools;
 import com.coding.qzy.baselibrary.widget.external_resource.SkinManager;
 import com.quzy.coding.BuildConfig;
 import com.quzy.coding.R;
+import com.quzy.coding.util.viewreport.ViewLayoutReportService;
 import com.squareup.leakcanary.LeakCanary;
 import com.tencent.bugly.Bugly;
 import com.tencent.mmkv.MMKV;
@@ -64,6 +66,9 @@ public class BaseApplication extends MultiDexApplication {
         registerActivityLifecycleCallbacks(libActivityLifecycleCallbacks);
         LeakCanary.install(this);
         LogTools.init(true, getString(R.string.app_name));
+
+        Intent serviceIntent = new Intent(this, ViewLayoutReportService.class);
+        startService(serviceIntent);
     }
 
     public static Context getContext() {

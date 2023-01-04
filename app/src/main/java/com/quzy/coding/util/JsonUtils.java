@@ -8,6 +8,7 @@ import com.quzy.coding.bean.AssetInfo;
 import com.quzy.coding.bean.CouponNewCustomerResultBean;
 import com.quzy.coding.bean.HotelEntity;
 import com.quzy.coding.bean.QuestionInfo;
+import com.quzy.coding.bean.ViewReportConfigBean;
 import com.quzy.coding.bean.WareEntity;
 
 /**
@@ -54,6 +55,4 @@ public class JsonUtils {
         CouponNewCustomerResultBean entity = gson.fromJson(content, CouponNewCustomerResultBean.class);
         return  entity;
     }
-
-
 }

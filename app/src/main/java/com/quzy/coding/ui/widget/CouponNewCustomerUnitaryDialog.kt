@@ -16,6 +16,10 @@ import com.quzy.coding.base.BaseDialogFragment
 import com.quzy.coding.bean.CouponNewCustomerResultBean
 import com.quzy.coding.ui.adapter.NewCustomerCouponUnitaryListAdapter
 import com.quzy.coding.util.*
+import com.quzy.coding.util.extend.click
+import com.quzy.coding.util.extend.gone
+import com.quzy.coding.util.extend.show
+import com.quzy.coding.util.extend.singleClick
 import kotlinx.android.synthetic.main.dialog_new_customer_unitary_coupon.view.*
 
 /**

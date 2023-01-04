@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import com.quzy.coding.base.BaseActivity
 import com.quzy.coding.databinding.ActivityTypeFaceBinding
-import com.quzy.coding.util.singleClick
+import com.quzy.coding.util.extend.singleClick
 import java.io.File
 
 /**
