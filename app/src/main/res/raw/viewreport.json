@@ -3,14 +3,14 @@
   "commonPageStatus": "0",
   "minViewCount": 3,
   "customPages": [{
-    "pagename": "商品详情页",
+    "pagename": "动画渐变页面",
     "viewClass": "com.quzy.coding.ui.activity.ActivityAnimaActivity",
     "targetViews": ["include_shoping_food_cart","ll_product_price"],
     "placeHolderViews": ["container_off_shelf"]
   }, {
-    "pagename": "首页",
-    "viewClass": "cn.yonghui.hyd.main.ui.fragment.HomeFragment",
-    "targetViews": ["group_member_code"],
+    "pagename": "Recycler页面",
+    "viewClass": "com.quzy.coding.ui.activity.NormalRecyclerViewKotActivity",
+    "targetViews": ["recyclerViewTop"],
     "placeHolderViews": ["empty_layout"]
   }, {
     "pagename": "购物车页",

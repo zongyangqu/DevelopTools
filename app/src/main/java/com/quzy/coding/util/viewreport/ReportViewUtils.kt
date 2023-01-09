@@ -4,6 +4,7 @@ import android.content.res.Resources
 import android.text.TextUtils
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.apkfuns.logutils.LogUtils
 import com.google.gson.Gson
 import com.quzy.coding.base.BaseApplication
@@ -104,7 +105,7 @@ object ReportViewUtils {
         try {
             var coreIds: List<String>? = getCoretViewIds(activity?.javaClass?.name)
             //val viewList = ArrayList<View>()
-            var viewMap = mutableMapOf<String,Boolean>()
+            var viewMap = mutableMapOf<String,View>()
             if (view is ViewGroup) {
                 val linkedList = LinkedList<ViewGroup>()
                 linkedList.add(view)
@@ -132,7 +133,7 @@ object ReportViewUtils {
                                 ) {
                                     return viewCount
                                 }
-                                viewMap.put(viewId,current.getChildAt(i).isShowing())
+                                viewMap.put(viewId,current.getChildAt(i))
 
                                 LogUtils.tag(Constants.LOG_TAG).d(
                                     activity?.javaClass?.name + "-->" + current.getChildAt(i).javaClass.simpleName
@@ -157,7 +158,7 @@ object ReportViewUtils {
                             activity?.javaClass?.name + "-->" + view.javaClass.simpleName
                                     + ">>>>>>>id=" + viewId + "=== is show==" + view.isShowing()
                         )
-                        viewMap.put(viewId,view.isShowing())
+                        viewMap.put(viewId,view)
                     }
                     //var viewId = YhStoreApplication.getContext().resources.getResourceEntryName(id)
 
@@ -169,10 +170,18 @@ object ReportViewUtils {
             // 核心view没有在viewTree中或者没有显示则进行异常上报  后续逻辑不在执行
             coreIds?.forEachIndexed { index, viewId ->
                 LogUtils.tag(Constants.LOG_TAG).d("核心ViewId=====================$viewId")
-                if (viewMap[viewId] == null || viewMap[viewId] == false) {
+                if (viewMap[viewId] == null || viewMap[viewId]?.isShowing() == false || viewGroupIsEmpty(viewMap[viewId])) {
                     LogUtils.tag(Constants.LOG_TAG).d(activity?.javaClass?.name+"我上报了=====================")
                     //做一些事情
                     return viewCount
+                }
+                if (viewMap[viewId] is RecyclerView) {
+                    if((viewMap[viewId] as? RecyclerView)?.childCount?:1 < 1) {
+                        (viewMap[viewId] as? RecyclerView)?.findViewHolderForAdapterPosition(1)
+                        LogUtils.tag(Constants.LOG_TAG).d(activity?.javaClass?.name+"RecyclerView 为空 我上报了=====================")
+                        //做一些事情
+                        return viewCount
+                    }
                 }
             }
 
@@ -186,5 +195,14 @@ object ReportViewUtils {
         return viewCount
     }
 
+    fun viewGroupIsEmpty(view :View?) :Boolean{
+        if (view is RecyclerView) {
+            if((view as? RecyclerView)?.childCount?:1 < 1) {
+                LogUtils.tag(Constants.LOG_TAG).d("RecyclerView 为空 我上报了=====================")
+                return true
+            }
+        }
+        return false
+    }
 
 }
