@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.quzy.coding">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -151,6 +152,8 @@
                 android:resource="@xml/provider_paths"/>
         </provider>
 
+        <!--<service android:name="com.quzy.coding.util.viewreport.ViewLayoutReportIntentService"
+            tools:ignore="Instantiatable" />-->
         <service android:name=".util.viewreport.ViewLayoutReportService"/>
 
     </application>

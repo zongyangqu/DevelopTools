@@ -13,6 +13,7 @@ import com.coding.qzy.baselibrary.utils.log.LogTools;
 import com.coding.qzy.baselibrary.widget.external_resource.SkinManager;
 import com.quzy.coding.BuildConfig;
 import com.quzy.coding.R;
+import com.quzy.coding.util.viewreport.ViewLayoutReportIntentService;
 import com.quzy.coding.util.viewreport.ViewLayoutReportService;
 import com.squareup.leakcanary.LeakCanary;
 import com.tencent.bugly.Bugly;
@@ -67,6 +68,7 @@ public class BaseApplication extends MultiDexApplication {
         LeakCanary.install(this);
         LogTools.init(true, getString(R.string.app_name));
 
+        //Intent serviceIntent = new Intent(this, ViewLayoutReportIntentService.class);
         Intent serviceIntent = new Intent(this, ViewLayoutReportService.class);
         startService(serviceIntent);
     }

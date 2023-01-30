@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
 import com.apkfuns.logutils.LogUtils
 import com.quzy.coding.util.Constants
+import kotlinx.coroutines.*
 import java.lang.ref.SoftReference
 
 /**
@@ -18,6 +19,15 @@ class ReportActivityLifecycleCallbacks : Application.ActivityLifecycleCallbacks 
 
     private val fragmentLifeCycle =
         ReportFragmentLifecycleCallbacks()
+
+    private val scope by lazy {
+        CoroutineScope(
+            SupervisorJob() + Dispatchers.IO + CoroutineExceptionHandler { _, throwable ->
+               // YHLog.e("TypefaceLoadError", throwable)
+                LogUtils.tag(Constants.LOG_TAG).d("------------------------------------加载错误")
+            }
+        )
+    }
 
 
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
@@ -42,23 +52,25 @@ class ReportActivityLifecycleCallbacks : Application.ActivityLifecycleCallbacks 
     override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
 
     override fun onActivityDestroyed(activity: Activity) {
-        val weakActivity: SoftReference<Activity> = SoftReference(activity)
-        if (ReportViewUtils.getRepostConfigIsOpen() && ReportViewUtils.reportPageIsMatch(
-                weakActivity.get()
-            )
-        ) {
-            val view = weakActivity.get()?.window?.decorView //.getRootView();
-            var count = ReportViewUtils.traverseViewGroup(weakActivity.get(), view)
-            LogUtils.tag(Constants.LOG_TAG).d(
-                "-----最终Activity count " + weakActivity.get()?.javaClass?.name + "======" + count
-            )
-            if (weakActivity.get() is FragmentActivity) {
+        scope.launch {
+            val weakActivity: SoftReference<Activity> = SoftReference(activity)
+            if (ReportViewUtils.getRepostConfigIsOpen() && ReportViewUtils.reportPageIsMatch(
+                    weakActivity.get()
+                )
+            ) {
+                val view = weakActivity.get()?.window?.decorView //.getRootView();
+                var count = ReportViewUtils.traverseViewGroup(weakActivity.get(), view)
                 LogUtils.tag(Constants.LOG_TAG).d(
-                    "-----Activity is match is " + weakActivity.get()?.javaClass?.name
+                    "-----最终Activity count " + weakActivity.get()?.javaClass?.name + "======" + count
                 )
-                (weakActivity.get() as? FragmentActivity)?.supportFragmentManager?.unregisterFragmentLifecycleCallbacks(
-                    fragmentLifeCycle
-                )
+                if (weakActivity.get() is FragmentActivity) {
+                    LogUtils.tag(Constants.LOG_TAG).d(
+                        "-----Activity is match is " + weakActivity.get()?.javaClass?.name
+                    )
+                    (weakActivity.get() as? FragmentActivity)?.supportFragmentManager?.unregisterFragmentLifecycleCallbacks(
+                        fragmentLifeCycle
+                    )
+                }
             }
         }
     }

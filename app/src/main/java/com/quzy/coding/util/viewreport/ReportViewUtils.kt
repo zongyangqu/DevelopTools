@@ -1,6 +1,7 @@
 package com.quzy.coding.util.viewreport
 
 import android.content.res.Resources
+import android.os.Looper
 import android.text.TextUtils
 import android.view.View
 import android.view.ViewGroup
@@ -11,9 +12,9 @@ import com.quzy.coding.base.BaseApplication
 import com.quzy.coding.bean.ViewReportConfigBean
 import com.quzy.coding.util.Constants
 import com.quzy.coding.util.FileUtils
-import com.quzy.coding.util.JsonUtils
 import com.quzy.coding.util.extend.isShowing
 import java.util.*
+
 
 /**
  * CreateDate:2023/1/4 16:53
@@ -101,6 +102,8 @@ object ReportViewUtils {
         if (null == view) {
             return 0
         }
+
+        LogUtils.tag(Constants.LOG_TAG).d("-----------------------当前线程是主线程："+ isMainThread())
 
         try {
             var coreIds: List<String>? = getCoretViewIds(activity?.javaClass?.name)
@@ -193,6 +196,10 @@ object ReportViewUtils {
             e.printStackTrace()
         }
         return viewCount
+    }
+
+    fun isMainThread(): Boolean {
+        return Looper.getMainLooper().thread === Thread.currentThread()
     }
 
     fun viewGroupIsEmpty(view :View?) :Boolean{
