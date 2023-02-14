@@ -141,6 +141,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.TypefaceActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ActivityLayoutOptimizationActivity"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -48,6 +48,7 @@ public class Actions {
         mActionMap.put(Constants.DrawWithRichText,RoleEnum.DrawWithRichText.name());
         mActionMap.put(Constants.ActivityTypeface,RoleEnum.TypefacceLib.name());
         mActionMap.put(Constants.ActivityAnima,RoleEnum.ActivityAnima.name());
+        mActionMap.put(Constants.ActivityOptimization,RoleEnum.ActivityOptimization.name());
     }
 
 

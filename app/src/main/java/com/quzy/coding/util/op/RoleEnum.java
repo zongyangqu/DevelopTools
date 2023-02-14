@@ -5,6 +5,7 @@ import android.content.Intent;
 
 import com.quzy.coding.ui.activity.ARouterSampleActivity;
 import com.quzy.coding.ui.activity.ActivityAnimaActivity;
+import com.quzy.coding.ui.activity.ActivityLayoutOptimizationActivity;
 import com.quzy.coding.ui.activity.AppUpdateActivity;
 import com.quzy.coding.ui.activity.BackGroundActivity;
 import com.quzy.coding.ui.activity.CustomControlActivity;
@@ -176,6 +177,10 @@ public enum RoleEnum implements RoleOperation {
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, ActivityAnimaActivity.class));
         };
+    },ActivityOptimization {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, ActivityLayoutOptimizationActivity.class));
+        };
     };
-
 }

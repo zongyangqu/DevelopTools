@@ -35,6 +35,7 @@ public class Constants {
     public final static int  DrawWithRichText = 21;
     public final static int  ActivityTypeface = 22;
     public final static int  ActivityAnima = 23;
+    public final static int  ActivityOptimization = 24;
 
     // request参数
     public static final int REQ_QR_CODE = 11002; // // 打开扫描界面请求码
