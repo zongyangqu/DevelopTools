@@ -36,7 +36,8 @@ public class Constants {
     public final static int  ActivityTypeface = 22;
     public final static int  ActivityAnima = 23;
     public final static int  ActivityOptimization = 24;
-
+    public final static int  ActivityFragment = 25;
+    public final static int  ActivityConstraintLayout = 26;
     // request参数
     public static final int REQ_QR_CODE = 11002; // // 打开扫描界面请求码
     public static final int REQ_PERM_CAMERA = 11003; // 打开摄像头

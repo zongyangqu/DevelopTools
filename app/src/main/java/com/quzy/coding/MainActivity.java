@@ -4,10 +4,12 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.provider.Settings;
+import android.text.Html;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.apkfuns.logutils.LogUtils;
@@ -17,6 +19,7 @@ import com.coding.qzy.baselibrary.utils.permission.annotation.PermissionDenied;
 import com.coding.qzy.baselibrary.utils.permission.annotation.PermissionGranted;
 import com.coding.qzy.baselibrary.widget.recorderlib.utils.FileUtils;
 import com.quzy.coding.base.BaseActivity;
+import com.quzy.coding.bean.Anim;
 import com.quzy.coding.bean.event.DialogEvent;
 import com.quzy.coding.ui.activity.HotFixDemoActivity;
 import com.quzy.coding.ui.activity.SplashActivity;
@@ -55,7 +58,8 @@ public class MainActivity extends BaseActivity {
     private final String typefaceUrl = Constants.DOWNLOAD_TYPEFACE_ZIP_NAME;
 
     public static List<String> list = new ArrayList<String>();
-
+    public static List<Anim> list1 = new ArrayList<Anim>();
+    public static List<Anim> list2 = new ArrayList<Anim>();
     @Override
     protected void onViewCreated() {
         EventBus.getDefault().register(this);
@@ -63,6 +67,17 @@ public class MainActivity extends BaseActivity {
         //CouponNewCustomerDialogManager.Companion.setCurActivity(this);
         initData();
         requestPermissions();
+        Anim a = new Anim("1",R.drawable.arrow);
+        Anim a1 = new Anim("2",R.drawable.arrow);
+        Anim a2 = new Anim("3",R.drawable.arrow);
+        Anim a3 = new Anim("4",R.drawable.arrow);
+        list1.add(a);
+        list1.add(a1);
+        list2.add(a2);
+        list2.add(a3);
+        list2.addAll(list1);
+        list1.clear();
+        LogUtils.tag(Constants.LOG_TAG).d("size====="+list2.size());
         swipe_target.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

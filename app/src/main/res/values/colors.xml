@@ -33,6 +33,7 @@
     <color name="transparent2">#80000000</color>
     <color name="transparent3">#cc000000</color>
     <color name="transparent4">#00000000</color>
+    <color name="subLightGreyColor">#F6F6F6</color>
     <color name="black">#000000</color>
     <color name="black2">#434343</color>
     <color name="orange">#FF5500</color>

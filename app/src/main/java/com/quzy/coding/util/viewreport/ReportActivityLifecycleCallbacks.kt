@@ -3,6 +3,8 @@ package com.quzy.coding.util.viewreport
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
+import android.view.View
+import android.widget.FrameLayout
 import androidx.fragment.app.FragmentActivity
 import com.apkfuns.logutils.LogUtils
 import com.quzy.coding.util.Constants
@@ -58,7 +60,8 @@ class ReportActivityLifecycleCallbacks : Application.ActivityLifecycleCallbacks 
                     weakActivity.get()
                 )
             ) {
-                val view = weakActivity.get()?.window?.decorView //.getRootView();
+                //val view = weakActivity.get()?.window?.decorView;
+                val view = weakActivity.get()?.window?.decorView?.findViewById<View>(android.R.id.content)
                 var count = ReportViewUtils.traverseViewGroup(weakActivity.get(), view)
                 LogUtils.tag(Constants.LOG_TAG).d(
                     "-----最终Activity count " + weakActivity.get()?.javaClass?.name + "======" + count

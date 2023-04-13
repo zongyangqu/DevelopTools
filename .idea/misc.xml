@@ -7,30 +7,57 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/quzongyang/AppData/Local/Android/Sdk/platforms/android-28/data/res/layout/simple_list_item_1.xml" value="0.221875" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/all_btn_bg.xml" value="0.1" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/bg_item_sec_kill_red_round.xml" value="0.192" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/bg_no_stock.xml" value="0.196" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/coupon_horizental_line_stroke.xml" value="0.196" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/coupon_vertiacl_line_stroke.xml" value="0.196" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/order_list_shape_tab_line.xml" value="0.283" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/prd_sec_kill_progress_bar.xml" value="0.192" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/sec_kill_tab_bg.xml" value="0.192" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/sec_kill_tab_bg_while.xml" value="0.192" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/swich_bg.xml" value="0.2755" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/thumb_bg.xml" value="0.2755" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/thumb_close.xml" value="0.2755" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/thumb_open.xml" value="0.2755" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/track_bg.xml" value="0.2755" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/track_close.xml" value="0.2755" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/drawable/track_open.xml" value="0.2755" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_anima_session.xml" value="0.1083223249669749" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_constraintlayout_view.xml" value="0.29322916666666665" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_constraintlayout_view2.xml" value="0.16875" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_custom_control.xml" value="0.22871376811594202" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_design_mode.xml" value="0.2765625" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_draw_with_richtext.xml" value="0.27708333333333335" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_fragment_action.xml" value="0.221875" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_guide_layer.xml" value="0.16576086956521738" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_layout_audio.xml" value="0.24375" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_layout_optimization.xml" value="0.24375" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_layout_progress.xml" value="0.5" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_log_util.xml" value="0.24375" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_main.xml" value="0.536" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_mp3.xml" value="0.16576086956521738" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_quick_position.xml" value="0.24375" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_recyclerview.xml" value="0.19882246376811594" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_sectioned_recyclerview.xml" value="0.16576086956521738" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_table_recyclerview.xml" value="0.2625" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_test_arouter.xml" value="0.264" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_test_arouter2.xml" value="0.1015625" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_text_sample.xml" value="0.15307971014492755" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activity_type_face.xml" value="0.175" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/activty_recycler_horizontal_more.xml" value="0.22" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/common_coupon_product_item_layout.xml" value="0.246875" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/common_coupon_product_layout.xml" value="0.246875" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/dialog_new_customer_unitary_coupon.xml" value="0.246875" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/fragment_base.xml" value="0.2625" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/fragment_seckill_activities_new.xml" value="0.2625" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/item_budget_list.xml" value="0.16304347826086957" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/item_pulltorefresh.xml" value="0.22" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/item_pulltorefresh_grid.xml" value="0.3333333333333333" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/item_sec_kill_product_common.xml" value="0.4" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/item_seckill_category_tab.xml" value="0.3336422613531047" />
+        <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/layout_tab_sec_kill_item.xml" value="0.2625" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/membercenter_servicehelp_item.xml" value="0.1" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/newcustomter_coupon_item_layout.xml" value="0.246875" />
         <entry key="..\:/myspace/workspace/zongyang/DevelopTools/app/src/main/res/layout/view_content_service_help.xml" value="0.1" />

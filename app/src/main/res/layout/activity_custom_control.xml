@@ -6,6 +6,13 @@
     android:orientation="vertical"
     android:padding="20dp">
 
+    <Switch
+        android:id="@+id/switch_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumb="@drawable/thumb_bg"
+        android:track="@drawable/track_bg" />
+
     <com.coding.qzy.baselibrary.widget.SwitchButton
         android:id="@+id/switch_button"
         android:layout_width="wrap_content"

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rclSeckillBg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:round_corner="18dp"
+    >
+
+    <androidx.legacy.widget.Space
+        android:id="@+id/startSpace"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivIcon"
+        />
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintStart_toEndOf="@id/startSpace"
+        app:layout_constraintEnd_toStartOf="@id/tab_item_textview"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tab_item_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        tools:text="水果蔬菜"
+        android:layout_marginStart="3dp"
+        app:layout_constraintStart_toEndOf="@id/ivIcon"
+        app:layout_constraintEnd_toStartOf="@id/endSpace"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <androidx.legacy.widget.Space
+        android:id="@+id/endSpace"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="9dp"
+        app:layout_constraintStart_toEndOf="@id/tab_item_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+</com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout>

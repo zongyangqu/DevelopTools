@@ -143,6 +143,10 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.ActivityLayoutOptimizationActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ActivityFragmentOptionActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ConstraintLayoutActivity"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -157,6 +161,9 @@
         <!--<service android:name="com.quzy.coding.util.viewreport.ViewLayoutReportIntentService"
             tools:ignore="Instantiatable" />-->
         <service android:name=".util.viewreport.ViewLayoutReportService"/>
+
+        <activity android:name=".ui.activity.TableLayoutRecyclerViewKotActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 

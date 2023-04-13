@@ -1,8 +1,11 @@
 package com.quzy.coding.ui.activity;
 
 import android.view.View;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.Toast;
 
+import com.coding.qzy.baselibrary.utils.AbToastUtil;
 import com.coding.qzy.baselibrary.widget.SwitchButton;
 import com.quzy.coding.R;
 import com.quzy.coding.base.BaseActivity;
@@ -27,6 +30,8 @@ public class CustomControlActivity extends BaseActivity {
     SwitchButton switchButton;
     @BindView(R.id.switch_button1)
     SwitchButton switchButton1;
+    @BindView(R.id.switch_bt)
+    Switch switch_bt;
 
     private static ReferenceQueue<Object> rq = new ReferenceQueue<Object>();
     @Override
@@ -52,6 +57,14 @@ public class CustomControlActivity extends BaseActivity {
             public void onCheckedChanged(SwitchButton view, boolean isChecked) {
                 //TODO do your job
                 Toast.makeText(CustomControlActivity.this,isChecked+"",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        switch_bt.setChecked(true);
+        switch_bt.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                AbToastUtil.showToast(CustomControlActivity.this , isChecked+"");
             }
         });
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/categoryTab"
+        style="@style/TablayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/subLightGreyColor"
+        android:paddingTop="3dp"
+        android:paddingBottom="0dp"
+        app:tabGravity="fill"
+        app:tabIndicator="@drawable/order_list_shape_tab_line"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabTextAppearance="@style/TabLayoutTextStyleAppearance" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:background="@color/subLightGreyColor" />
+
+    <com.quzy.coding.util.AutoHeightViewPager
+        android:id="@+id/categoryViewPager"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

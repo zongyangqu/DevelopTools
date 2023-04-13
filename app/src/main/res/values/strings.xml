@@ -59,6 +59,8 @@
         <item>字体库使用</item>
         <item>Activity进入动画</item>
         <item>布局优化</item>
+        <item>Fragment</item>
+        <item>ConstraintLayout修改约束</item>
     </string-array>
 
     <string name="member_bury_page_mine">>我的页</string>

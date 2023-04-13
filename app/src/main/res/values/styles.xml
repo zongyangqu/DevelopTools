@@ -54,4 +54,22 @@
         <item name="android:windowExitAnimation">@anim/dialog_slid_down</item>
     </style>
 
+    <style name="TablayoutStyle">
+        <item name="tabSelectedTextColor">@color/themeColor</item>
+        <item name="tabIndicatorColor">@color/themeColor</item>
+        <item name="tabGravity">center</item>
+        <item name="tabMode">scrollable</item>
+    </style>
+
+    <style name="TabLayoutTextStyleAppearance" parent="TabLayoutTextAppearance">
+        <item name="android:textColor">@color/subMediumBlackColor</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TabLayoutTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/subRegularBlackColor</item>
+        <item name="android:alpha">0.54</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+    </style>
+
 </resources>

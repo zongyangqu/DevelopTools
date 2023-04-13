@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.text.TextUtils;
 import android.widget.Toast;
 
+import com.apkfuns.logutils.LogUtils;
 import com.quzy.coding.base.BaseApplication;
 import com.quzy.coding.util.Constants;
 
@@ -49,6 +50,8 @@ public class Actions {
         mActionMap.put(Constants.ActivityTypeface,RoleEnum.TypefacceLib.name());
         mActionMap.put(Constants.ActivityAnima,RoleEnum.ActivityAnima.name());
         mActionMap.put(Constants.ActivityOptimization,RoleEnum.ActivityOptimization.name());
+        mActionMap.put(Constants.ActivityFragment,RoleEnum.ActivityFragmentAction.name());
+        mActionMap.put(Constants.ActivityConstraintLayout,RoleEnum.ActivityConstraintAction.name());
     }
 
 
@@ -56,6 +59,7 @@ public class Actions {
         if (null == mActionMap.get(module)) {
             Toast.makeText(BaseApplication.getContext(), "此功能暂未开放，敬请期待", Toast.LENGTH_SHORT).show();
         } else {
+            LogUtils.tag(Constants.LOG_TAG).d("module================="+module);
             RoleEnum.valueOf(mActionMap.get(module)).starAction(activity);
         }
     }
