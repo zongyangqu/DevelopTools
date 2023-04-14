@@ -10,4 +10,23 @@
 
     <dimen name="pop_action_sheet_text_size_title">16sp</dimen>
     <dimen name="pop_action_sheet_text_size_message">14sp</dimen>
+
+    <dimen name="def_dot_min_radius">4dp</dimen>
+    <dimen name="def_dot_max_radius">8dp</dimen>
+    <color name="def_dot_color">#ffffff</color>
+    <dimen name="def_dot_gap">8dp</dimen>正方形
+    <dimen name="def_color_size">6dp</dimen>
+    <dimen name="def_color_gap">4dp</dimen>
+    <dimen name="def_color_round">2dp</dimen>
+
+    <color name="def_color_normal">#7c7c7c</color>
+    <color name="def_color_select">#ffffff</color>
+
+    <dimen name="def_bar_height">4dp</dimen>
+    <dimen name="def_bar_min_width">6dp</dimen>
+    <dimen name="def_bar_max_width">12dp</dimen>
+    <dimen name="def_bar_gap">4dp</dimen>
+
+    <color name="def_bar_color">#ffffff</color>
+    <color name="def_bar_red_color">#FF1A34</color>
 </resources>

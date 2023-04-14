@@ -15,6 +15,7 @@ import com.quzy.coding.ui.activity.DrawWithRichTextActivity;
 import com.quzy.coding.ui.activity.ExternalResourceActivity;
 import com.quzy.coding.ui.activity.GaoSDemoActivity;
 import com.quzy.coding.ui.activity.GuideLayerActivity;
+import com.quzy.coding.ui.activity.HorizontalTipActivity;
 import com.quzy.coding.ui.activity.HotFixDemoActivity;
 import com.quzy.coding.ui.activity.LogUtilActivity;
 import com.quzy.coding.ui.activity.LottieActivity;
@@ -199,5 +200,12 @@ public enum RoleEnum implements RoleOperation {
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, ConstraintLayoutActivity.class));
         }
+    },HorizontalTipView {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, HorizontalTipActivity.class));
+        }
     }
+
+
 }

@@ -52,6 +52,7 @@ public class Actions {
         mActionMap.put(Constants.ActivityOptimization,RoleEnum.ActivityOptimization.name());
         mActionMap.put(Constants.ActivityFragment,RoleEnum.ActivityFragmentAction.name());
         mActionMap.put(Constants.ActivityConstraintLayout,RoleEnum.ActivityConstraintAction.name());
+        mActionMap.put(Constants.HorizontalTipView,RoleEnum.HorizontalTipView.name());
     }
 
 

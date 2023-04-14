@@ -147,6 +147,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.ConstraintLayoutActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.HorizontalTipActivity"
+            android:screenOrientation="portrait"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -164,7 +166,12 @@
 
         <activity android:name=".ui.activity.TableLayoutRecyclerViewKotActivity"
             android:screenOrientation="portrait"/>
-
+        <activity android:name=".ui.activity.HorizontalViewPagerRvActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.ViewPagerIndicatorActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.SmoothTransIndicatorActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

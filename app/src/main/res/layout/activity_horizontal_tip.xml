@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/transindicatorBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Viewpager指示器，此消彼长的动效"/>
+
+    <Button
+        android:id="@+id/indicatorBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="viewpager指示器"/>
+
+    <Button
+        android:id="@+id/recyclerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="RecyclerView实现非分页效果的左右滑动"/>
+
+
+    <Button
+        android:id="@+id/recyclerPagerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="ViewPager+RecyclerView实现分页效果的左右滑动"/>
+
+</LinearLayout>

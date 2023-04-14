@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/llTypeViewPager"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/topicViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.coding.qzy.baselibrary.widget.smoothtransindicator.SmoothTransIndicator
+            android:id="@+id/indicator_circle_line"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            app:default_color="#000000"
+            app:distance="10dp"
+            app:distanceType="BY_DISTANCE"
+            app:indicatorType="CIRCLE_LINE"
+            app:radius="3dp"
+            app:selected_color="@color/def_bar_red_color"
+            android:layout_marginBottom="10dp"/>
+
+     <!--   <com.coding.qzy.baselibrary.widget.vpindicator.ViewPagerIndicator
+            android:id="@+id/indicator"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:layout_marginBottom="10dp"/>-->
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

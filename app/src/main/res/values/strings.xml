@@ -61,6 +61,7 @@
         <item>布局优化</item>
         <item>Fragment</item>
         <item>ConstraintLayout修改约束</item>
+        <item>横向滚动图标+指示器</item>
     </string-array>
 
     <string name="member_bury_page_mine">>我的页</string>

@@ -1,6 +1,5 @@
 package com.coding.qzy.baselibrary.utils.extend
 
-import com.coding.qzy.baselibrary.utils.guidelayer.util.ScreenUtils
 import com.coding.qzy.baselibrary.utils.guidelayer.util.UIUtils
 import com.quzy.coding.base.BaseApplication
 
