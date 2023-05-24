@@ -40,9 +40,9 @@ class HorizontalViewPagerRvActivity : BaseActivity() {
         mTopicData.add(TopicBean(R.mipmap.icon_home_today_jingdong, "京东"))
         mTopicData.add(TopicBean(R.mipmap.icon_home_pdd, "拼多多"))
         mTopicData.add(TopicBean(R.mipmap.icon_home_elm, "饿了么"))
-        mTopicData.add(TopicBean(R.mipmap.icon_home_hfcz, "话费充值"))
-        mTopicData.add(TopicBean(R.mipmap.icon_home_tmall_chaoshi, "天猫超市"))
-        mTopicData.add(TopicBean(R.mipmap.icon_home_sams_club, "山姆会员店"))
+//        mTopicData.add(TopicBean(R.mipmap.icon_home_hfcz, "话费充值"))
+//        mTopicData.add(TopicBean(R.mipmap.icon_home_tmall_chaoshi, "天猫超市"))
+//        mTopicData.add(TopicBean(R.mipmap.icon_home_sams_club, "山姆会员店"))
 //        mTopicData.add(TopicBean(R.mipmap.icon_home_feizhu, "飞猪"))
 //        mTopicData.add(TopicBean(R.mipmap.icon_home_oil, "优惠加油"))
 //        mTopicData.add(TopicBean(R.mipmap.icon_home_kfc, "肯德基"))
@@ -55,8 +55,8 @@ class HorizontalViewPagerRvActivity : BaseActivity() {
         //1.根据数据的多少来分页，每页的数据为rw
         val singlePageDatasNum = rowNum * columnNum //每个单页包含的数据量：2*4=8；
         var pageNum = mTopicData.size / singlePageDatasNum //算出有几页菜单：20%8 = 3;
-        if (mTopicData.size % singlePageDatasNum > 0) pageNum++ //如果取模大于0，就还要多一页出来，放剩下的不满项
-        val mList = java.util.ArrayList<RecyclerView>()
+        if (mTopicData?.size % singlePageDatasNum > 0) pageNum++ //如果取模大于0，就还要多一页出来，放剩下的不满项
+        val mList = ArrayList<RecyclerView>()//java.util.ArrayList<RecyclerView>()
         for (i in 0 until pageNum) {
             val recyclerView = RecyclerView(applicationContext)
             val gridLayoutManager = GridLayoutManager(applicationContext, columnNum)
@@ -65,7 +65,7 @@ class HorizontalViewPagerRvActivity : BaseActivity() {
             var toIndex = (i + 1) * singlePageDatasNum
             if (toIndex > mTopicData.size) toIndex = mTopicData.size
             //a.截取每个页面包含数据
-            val menuItems = java.util.ArrayList(mTopicData.subList(fromIndex, toIndex))
+            val menuItems = ArrayList(mTopicData.subList(fromIndex, toIndex))
             //b.设置每个页面的适配器数据
             val menuAdapter = TopicAdapter(applicationContext, menuItems)
             //c.绑定适配器，并添加到list

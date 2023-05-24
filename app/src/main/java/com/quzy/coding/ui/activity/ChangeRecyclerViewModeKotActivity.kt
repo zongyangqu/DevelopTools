@@ -2,6 +2,7 @@ package com.quzy.coding.ui.activity
 
 import android.graphics.Rect
 import android.os.Build
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
@@ -56,6 +57,7 @@ class ChangeRecyclerViewModeKotActivity : BaseActivity(), ISearchResult {
         recyclerView?.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
+                Log.d("zongyang","newState=======================$newState")
                 // recyclerViewLayoutManager?.invalidateSpanAssignments() //防止第一行到顶部有空白区域
             }
 

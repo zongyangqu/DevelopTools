@@ -4,8 +4,17 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DevelopTools.iml" filepath="$PROJECT_DIR$/.idea/modules/DevelopTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DevelopTools.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DevelopTools.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DevelopTools.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DevelopTools.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DevelopTools.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DevelopTools.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DevelopTools.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DevelopTools.app.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/baselibrary/DevelopTools.baselibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/baselibrary/DevelopTools.baselibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/baselibrary/DevelopTools.baselibrary.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/baselibrary/DevelopTools.baselibrary.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/baselibrary/DevelopTools.baselibrary.main.iml" filepath="$PROJECT_DIR$/.idea/modules/baselibrary/DevelopTools.baselibrary.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/baselibrary/DevelopTools.baselibrary.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/baselibrary/DevelopTools.baselibrary.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/externalresource/DevelopTools.externalresource.iml" filepath="$PROJECT_DIR$/.idea/modules/externalresource/DevelopTools.externalresource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/externalresource/DevelopTools.externalresource.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/externalresource/DevelopTools.externalresource.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/externalresource/DevelopTools.externalresource.main.iml" filepath="$PROJECT_DIR$/.idea/modules/externalresource/DevelopTools.externalresource.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/externalresource/DevelopTools.externalresource.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/externalresource/DevelopTools.externalresource.unitTest.iml" />
     </modules>
   </component>
 </project>

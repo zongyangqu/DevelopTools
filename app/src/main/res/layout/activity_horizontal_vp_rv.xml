@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="@color/subMediumGreyColor">
 
 
     <LinearLayout
@@ -24,14 +25,13 @@
         <com.coding.qzy.baselibrary.widget.smoothtransindicator.SmoothTransIndicator
             android:id="@+id/indicator_circle_line"
             android:layout_width="wrap_content"
-            android:layout_height="15dp"
+            android:layout_height="5dp"
             app:default_color="#000000"
-            app:distance="10dp"
+            app:distance="8dp"
             app:distanceType="BY_DISTANCE"
             app:indicatorType="CIRCLE_LINE"
-            app:radius="3dp"
-            app:selected_color="@color/def_bar_red_color"
-            android:layout_marginBottom="10dp"/>
+            app:radius="2dp"
+            app:selected_color="@color/def_bar_red_color"/>
 
      <!--   <com.coding.qzy.baselibrary.widget.vpindicator.ViewPagerIndicator
             android:id="@+id/indicator"
