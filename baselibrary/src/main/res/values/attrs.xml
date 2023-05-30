@@ -437,5 +437,4 @@
             <enum name="BY_LAYOUT" value="2" />
         </attr>
     </declare-styleable>
-
 </resources>

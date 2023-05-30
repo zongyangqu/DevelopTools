@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <com.quzy.coding.util.widget.ScrollCountdownView
+        android:id="@+id/adCountdownView"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_height="20dp"
+        app:digit_show_day="true"
+        app:digit_color="#FF5D1D"
+        app:digit_size="@dimen/textsize_12"
+        app:digit_text_animation="false"
+        android:visibility="visible"
+        tools:visibility="visible"
+        app:digit_text_background="@drawable/shape_newmember_corner_orange"
+        app:digit_text_color="#FF5D1D"
+        app:digit_text_height="19dp"
+        app:digit_text_margin="10dp"
+        app:digit_day_text_format="true"
+        app:digit_text_size="@dimen/textsize_16" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import android.content.Context
 import android.text.TextUtils
 import java.io.ByteArrayOutputStream
 import java.io.IOException
+import java.util.regex.Pattern
 
 /**
  * CreateDate:2021/10/25 11:05
@@ -41,6 +42,23 @@ object UIUtils {
     fun sp2px(context: Context, spValue: Float): Int {
         val fontScale = context.resources.displayMetrics.scaledDensity
         return (spValue * fontScale + 0.5f).toInt()
+    }
+
+    fun px2dip(context: Context?, pxValue: Float): Int {
+        if (context == null) {
+            return pxValue.toInt()
+        }
+        val scale = context.resources.displayMetrics.density
+        return (pxValue / scale + 0.5f).toInt()
+    }
+
+    fun isNumber(value: String?): Boolean {
+        if (TextUtils.isEmpty(value)) {
+            return false
+        }
+        val pattern = Pattern.compile("^-?\\d+(\\.\\d+)?$")
+        val matcher = pattern.matcher(value)
+        return matcher.matches()
     }
 
     @Throws(IOException::class, IllegalArgumentException::class)

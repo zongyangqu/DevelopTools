@@ -17,4 +17,19 @@
 
     </declare-styleable>
 
+    <declare-styleable name="YHScrollCountdownView">
+        <attr name="digit_size" format="dimension" />
+        <attr name="digit_color" format="color" />
+        <attr name="digit_text_size" format="dimension" />
+        <attr name="digit_text_color" format="color" />
+        <attr name="digit_text_background" format="reference" />
+        <attr name="digit_text_height" format="dimension" />
+        <attr name="digit_text_width" format="dimension" />
+        <attr name="digit_text_matchParent" format="boolean" />
+        <attr name="digit_text_animation" format="boolean" />
+        <attr name="digit_text_margin" format="dimension" />
+        <attr name="digit_show_day" format="boolean" />
+        <attr name="digit_day_text_format" format="boolean" />
+    </declare-styleable>
+
 </resources>

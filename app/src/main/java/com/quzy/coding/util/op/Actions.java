@@ -53,6 +53,8 @@ public class Actions {
         mActionMap.put(Constants.ActivityFragment,RoleEnum.ActivityFragmentAction.name());
         mActionMap.put(Constants.ActivityConstraintLayout,RoleEnum.ActivityConstraintAction.name());
         mActionMap.put(Constants.HorizontalTipView,RoleEnum.HorizontalTipView.name());
+        mActionMap.put(Constants.CountDownTime,RoleEnum.CountDown.name());
+
     }
 
 

@@ -40,13 +40,13 @@ class HorizontalViewPagerRvActivity : BaseActivity() {
         mTopicData.add(TopicBean(R.mipmap.icon_home_today_jingdong, "京东"))
         mTopicData.add(TopicBean(R.mipmap.icon_home_pdd, "拼多多"))
         mTopicData.add(TopicBean(R.mipmap.icon_home_elm, "饿了么"))
-//        mTopicData.add(TopicBean(R.mipmap.icon_home_hfcz, "话费充值"))
-//        mTopicData.add(TopicBean(R.mipmap.icon_home_tmall_chaoshi, "天猫超市"))
-//        mTopicData.add(TopicBean(R.mipmap.icon_home_sams_club, "山姆会员店"))
-//        mTopicData.add(TopicBean(R.mipmap.icon_home_feizhu, "飞猪"))
-//        mTopicData.add(TopicBean(R.mipmap.icon_home_oil, "优惠加油"))
-//        mTopicData.add(TopicBean(R.mipmap.icon_home_kfc, "肯德基"))
-//        mTopicData.add(TopicBean(R.mipmap.icon_home_meituan, "美团"))
+        mTopicData.add(TopicBean(R.mipmap.icon_home_hfcz, "话费充值"))
+        mTopicData.add(TopicBean(R.mipmap.icon_home_tmall_chaoshi, "天猫超市"))
+        mTopicData.add(TopicBean(R.mipmap.icon_home_sams_club, "山姆会员店"))
+        mTopicData.add(TopicBean(R.mipmap.icon_home_feizhu, "飞猪"))
+        mTopicData.add(TopicBean(R.mipmap.icon_home_oil, "优惠加油"))
+        mTopicData.add(TopicBean(R.mipmap.icon_home_kfc, "肯德基"))
+        mTopicData.add(TopicBean(R.mipmap.icon_home_meituan, "美团"))
     }
 
 
@@ -99,7 +99,7 @@ class HorizontalViewPagerRvActivity : BaseActivity() {
             override fun onPageSelected(position: Int) {
                 LogUtils.tag(Constants.LOG_TAG).d("onPageSelected===========$position")
                 if(position == 1){
-                    val height: Int = 46f.dpOfInt//这里的80为MainMenuAdapter中布局文件高度
+                    val height: Int = 96f.dpOfInt//这里的80为MainMenuAdapter中布局文件高度
                     val layoutParams = LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         if (mTopicData.size <= columnNum) height else height * rowNum

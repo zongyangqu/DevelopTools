@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextSwitcher
+        android:id="@+id/ts_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inAnimation="@anim/anim_countdown_in"
+        android:outAnimation="@anim/anim_countdown_out" />
+
+    <TextView
+        android:id="@+id/tv_day_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:text="天"
+        android:textColor="@color/color_orange"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextSwitcher
+        android:id="@+id/ts_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inAnimation="@anim/anim_countdown_in"
+        android:outAnimation="@anim/anim_countdown_out" />
+
+    <TextView
+        android:id="@+id/tv_colon_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:text="@string/colon"
+        android:textColor="@color/color_orange"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextSwitcher
+        android:id="@+id/ts_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inAnimation="@anim/anim_countdown_in"
+        android:outAnimation="@anim/anim_countdown_out" />
+
+    <TextView
+        android:id="@+id/tv_colon_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:text="@string/colon"
+        android:textColor="@color/color_orange"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextSwitcher
+        android:id="@+id/ts_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inAnimation="@anim/anim_countdown_in"
+        android:outAnimation="@anim/anim_countdown_out" />
+
+</LinearLayout>

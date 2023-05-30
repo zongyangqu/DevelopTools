@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 group='com.github.zongyangqu'
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -21,6 +23,10 @@ android {
     sourceSets.main {
         jni.srcDirs = []//disable automatic ndk-build call
         jniLibs.srcDirs = ['libs']
+    }
+
+    viewBinding {
+        enabled = true
     }
 
 }
