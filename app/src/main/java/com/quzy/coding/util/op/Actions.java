@@ -54,6 +54,7 @@ public class Actions {
         mActionMap.put(Constants.ActivityConstraintLayout,RoleEnum.ActivityConstraintAction.name());
         mActionMap.put(Constants.HorizontalTipView,RoleEnum.HorizontalTipView.name());
         mActionMap.put(Constants.CountDownTime,RoleEnum.CountDown.name());
+        mActionMap.put(Constants.ShapeBackGround,RoleEnum.ShapeBackGround.name());
 
     }
 

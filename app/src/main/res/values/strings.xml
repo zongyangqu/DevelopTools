@@ -63,6 +63,7 @@
         <item>ConstraintLayout修改约束</item>
         <item>横向滚动图标+指示器</item>
         <item>时间倒计时</item>
+        <item>文字富文本+shape背景实现</item>
     </string-array>
 
     <string name="member_bury_page_mine">>我的页</string>

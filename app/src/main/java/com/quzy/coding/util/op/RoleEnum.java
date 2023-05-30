@@ -28,6 +28,7 @@ import com.quzy.coding.ui.activity.RecordAudioActivity;
 import com.quzy.coding.ui.activity.RecordMp3Activity;
 import com.quzy.coding.ui.activity.RecyclerHorizontalMoreActivity;
 import com.quzy.coding.ui.activity.RecyclerViewSampleActivity;
+import com.quzy.coding.ui.activity.ShapeBackGroundActivity;
 import com.quzy.coding.ui.activity.TextSampleActivity;
 import com.quzy.coding.ui.activity.ThreeDimensionalActivity;
 import com.quzy.coding.ui.activity.TypefaceActivity;
@@ -210,6 +211,11 @@ public enum RoleEnum implements RoleOperation {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, CountdownViewActivity.class));
+        }
+    },ShapeBackGround {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, ShapeBackGroundActivity.class));
         }
     }
 
