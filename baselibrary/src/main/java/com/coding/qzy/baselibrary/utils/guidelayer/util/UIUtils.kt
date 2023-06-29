@@ -2,6 +2,7 @@ package com.coding.qzy.baselibrary.utils.guidelayer.util
 
 import android.content.Context
 import android.text.TextUtils
+import com.google.android.material.animation.ArgbEvaluatorCompat
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.util.regex.Pattern
@@ -59,6 +60,11 @@ object UIUtils {
         val pattern = Pattern.compile("^-?\\d+(\\.\\d+)?$")
         val matcher = pattern.matcher(value)
         return matcher.matches()
+    }
+
+    fun getCurrentColor(progress: Float, startColor: Int, endColor: Int): Int {
+        return ArgbEvaluatorCompat.getInstance()
+            .evaluate(progress, startColor, endColor)
     }
 
     @Throws(IOException::class, IllegalArgumentException::class)

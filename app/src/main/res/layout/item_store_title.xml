@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/memberCodeShadowTitle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/item_store_icon_ll"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_width="44dp"
+        android:layout_centerVertical="true"
+        android:layout_height="44dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/item_store_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/anim" />
+
+        <com.quzy.coding.util.widget.IconFont
+            android:id="@+id/item_store_icon_none"
+            android:text="@string/icon_pickself"
+            android:textColor="#eeeeee"
+            android:textSize="26sp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_store_name"
+        app:layout_constraintTop_toTopOf="@id/item_store_icon_ll"
+        app:layout_constraintLeft_toRightOf="@+id/item_store_icon_ll"
+        app:layout_constraintRight_toLeftOf="@+id/item_store_line"
+        android:text="永辉生活-六里桥门店"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="9dp"
+        android:textColor="#333333"
+        android:textSize="@dimen/textsize_16"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <com.quzy.coding.util.widget.IconFont
+        android:id="@+id/item_store_location_icon"
+        app:layout_constraintTop_toBottomOf="@+id/item_store_name"
+        app:layout_constraintLeft_toLeftOf="@+id/item_store_name"
+        android:layout_marginTop="6dp"
+        android:text="@string/icon_city_location"
+        android:textSize="@dimen/textsize_12"
+        android:textColor="@color/subGreyColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/item_store_business_hours"
+        app:layout_constraintTop_toBottomOf="@+id/item_store_name"
+        app:layout_constraintLeft_toLeftOf="@+id/item_store_name"
+        app:layout_constraintRight_toLeftOf="@+id/item_store_line"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="3dp"
+        android:text="营业时间：08：00-21：00"
+        android:textSize="@dimen/textsize_12"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:visibility="gone"
+        android:textColor="@color/subRegularBlackColor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/item_store_location"
+        app:layout_constraintTop_toTopOf="@+id/item_store_location_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/item_store_location_icon"
+        app:layout_constraintLeft_toRightOf="@+id/item_store_location_icon"
+        app:layout_constraintRight_toLeftOf="@+id/item_store_line"
+        android:layout_marginEnd="9dp"
+        android:layout_marginStart="3dp"
+        android:text="2.26km 北京海淀区五道口文汇路店点点"
+        android:textSize="@dimen/textsize_12"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:textColor="@color/subLightBlackColor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        />
+
+    <View
+        android:id="@+id/item_store_line"
+        android:layout_width="1dp"
+        android:layout_height="44dp"
+        android:background="#eeeeee"
+        app:layout_constraintRight_toLeftOf="@+id/item_store_group"
+        android:layout_marginEnd="9dp"
+        android:paddingRight="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/item_store_icon_ll"
+        app:layout_constraintTop_toTopOf="@id/item_store_icon_ll"
+        />
+
+    <LinearLayout
+        android:id="@+id/item_store_group"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/item_store_icon_ll"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="15dp"
+        android:gravity="end"
+        >
+
+        <TextView
+            android:id="@+id/item_store_change"
+            app:layout_constraintBottom_toTopOf="@+id/item_store_near"
+            app:layout_constraintRight_toLeftOf="@+id/item_store_icon_right"
+            tools:text="共三家"
+            android:textColor="@color/subMediumBlackColor"
+            android:textSize="@dimen/textsize_12"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="12dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/item_store_near"
+            app:layout_constraintBottom_toBottomOf="@+id/item_store_icon_ll"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="附近10km门店"
+            android:textColor="@color/subLightBlackColor"
+            android:textSize="@dimen/textsize_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <com.quzy.coding.util.widget.IconFont
+        android:id="@+id/item_store_icon_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:text="@string/icon_arrow_right"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toTopOf="@+id/item_store_group"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/item_store_select_group"
+        app:constraint_referenced_ids="item_store_icon_right,item_store_group,item_store_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.coding.qzy.baselibrary.widget.roundview.RoundTextView
+        android:id="@+id/item_in_store"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        app:round_corner_top_right="6dp"
+        app:round_corner_bottom_left="6dp"
+        android:paddingHorizontal="6dp"
+        android:gravity="center_vertical"
+        android:text="100米 已到店"
+        android:textSize="10sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#34C320"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="#EDFEEA"
+        />
+
+    <LinearLayout
+        android:id="@+id/broadcastStub"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/item_store_icon_ll"/>
+
+    <View
+        android:id="@+id/item_pos_status_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        android:layout_marginTop="9dp"
+        app:layout_goneMarginTop="14dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/broadcastStub"
+        />
+
+    <TextView
+        android:id="@+id/store_title_pos"
+        app:layout_constraintTop_toBottomOf="@+id/item_pos_status_line"
+        app:layout_constraintLeft_toLeftOf="@+id/item_pos_status_line"
+        android:layout_marginTop="12dp"
+        tools:text="店内自助收银机店内自助收银机店内自助收银机"
+        android:textSize="@dimen/textsize_14"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:maxWidth="200dp"
+        android:textColor="@color/subMediumBlackColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <View
+        app:layout_constraintTop_toTopOf="@+id/store_title_pos"
+        app:layout_constraintBottom_toBottomOf="@+id/store_title_pos"
+        app:layout_constraintLeft_toRightOf="@+id/store_title_pos"
+        android:id="@+id/store_title_pos_icon_busy"
+        android:layout_marginStart="12dp"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/bg_pos_icon_busy"/>
+
+    <TextView
+        android:id="@+id/store_title_pos_icon_busy_text"
+        app:layout_constraintTop_toTopOf="@+id/store_title_pos"
+        app:layout_constraintBottom_toBottomOf="@+id/store_title_pos"
+        app:layout_constraintLeft_toRightOf="@+id/store_title_pos_icon_busy"
+        android:text="忙"
+        android:textSize="@dimen/textsize_12"
+        android:layout_marginStart="6dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/subLightBlackColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        app:layout_constraintTop_toTopOf="@+id/store_title_pos"
+        app:layout_constraintBottom_toBottomOf="@+id/store_title_pos"
+        app:layout_constraintLeft_toRightOf="@+id/store_title_pos_icon_busy_text"
+        android:id="@+id/store_title_pos_icon_idle"
+        android:layout_marginStart="15dp"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        app:round_as_circle="true"
+        android:background="@drawable/bg_pos_icon_idle"/>
+
+    <TextView
+        android:id="@+id/store_title_pos_icon_idle_text"
+        app:layout_constraintTop_toTopOf="@+id/store_title_pos"
+        app:layout_constraintBottom_toBottomOf="@+id/store_title_pos"
+        app:layout_constraintLeft_toRightOf="@+id/store_title_pos_icon_idle"
+        android:text="闲"
+        android:textSize="@dimen/textsize_12"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/subLightBlackColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/store_title_pos_empty_text"
+        app:layout_constraintTop_toBottomOf="@+id/store_title_pos"
+        app:layout_constraintLeft_toLeftOf="@+id/item_pos_status_line"
+        app:layout_constraintRight_toRightOf="@+id/item_pos_status_line"
+        tools:text="查看收银机空闲状态"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/subGreyColor"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="0dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/store_title_pos_status_list"
+        app:layout_constraintTop_toBottomOf="@+id/store_title_pos"
+        app:layout_constraintLeft_toLeftOf="@+id/item_pos_status_line"
+        app:layout_constraintRight_toRightOf="@+id/item_pos_status_line"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:layout_marginTop="15dp"
+        android:layout_width="0dp"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/store_title_pos_group"
+        app:constraint_referenced_ids="item_pos_status_line,store_title_pos,store_title_pos_icon_busy,store_title_pos_icon_busy_text,store_title_pos_icon_idle,store_title_pos_icon_idle_text,store_title_pos_status_list,store_title_pos_empty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</merge>

@@ -1,0 +1,29 @@
+{
+  "quickJumpTypeList": [
+    {
+      "payLogo": "https://image.yonghuivip.com//web/pay/barcode/alipay-220629.png",
+      "payLogoFor870": "https://image.yonghuivip.com//web/pay/barcode/alipay-220629.png",
+      "payValue": "pay.alipay.app",
+      "payName": "支付宝",
+      "jumpUrl": "alipayqr://platformapi/startapp?saId=20000056",
+      "openStatus": 0,
+      "bgColor": "#1677FF"
+    }, {
+      "payLogo": "https://image.yonghuivip.com//web/pay/barcode/xhpay-220629.png",
+      "payLogoFor870": "https://image.yonghuivip.com//web/pay/barcode/xhpay-220629.png",
+      "payValue": "pay.xhpay.app.pay",
+      "payName": "小辉付",
+      "jumpUrl": "",
+      "openStatus": 0,
+      "bgColor": "#ED4342"
+    }, {
+      "payLogo": "https://image.yonghuivip.com//web/pay/barcode/wechat-220629.png",
+      "payLogoFor870": "https://image.yonghuivip.com//web/pay/barcode/wechat-220629.png",
+      "payValue": "pay.weixin.app",
+      "payName": "微信",
+      "jumpUrl": "weixin://",
+      "openStatus": 0,
+      "bgColor": "#07C160"
+    }
+  ]
+}

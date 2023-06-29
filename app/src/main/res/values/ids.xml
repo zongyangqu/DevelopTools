@@ -2,6 +2,6 @@
 <resources>
     <item name="yhjr_member_arrow_id" type="id"/>
     <item name="fade_view_id" type="id"/>
-
+    <item name="member_code_pay_type_item" type="id" />
     <item name="nested_child_item_container" type="id"/>
 </resources>

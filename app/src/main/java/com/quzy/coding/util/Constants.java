@@ -42,6 +42,7 @@ public class Constants {
 
     public final static int  CountDownTime = 28;
     public final static int  ShapeBackGround = 29;
+    public final static int  MemberCode = 30;
     // request参数
     public static final int REQ_QR_CODE = 11002; // // 打开扫描界面请求码
     public static final int REQ_PERM_CAMERA = 11003; // 打开摄像头

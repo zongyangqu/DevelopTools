@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/member_code_new_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_bnb"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/member_code_title_bar" />
+
+    <View
+        android:id="@+id/fragment_bnb_track_click"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </View>
+
+    <com.quzy.coding.ui.widget.bottomnavigationbar.BottomNavigationBar
+        android:id="@+id/fragment_bnb"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+
+    <ImageView
+        android:id="@+id/iv_bottom_anchor"
+        android:layout_width="10dp"
+        android:layout_height="4dp"
+        android:src="@drawable/app_main_botttom_msg_achor"
+        android:visibility="gone"
+        android:elevation="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/anchor_horizontal_guideline"
+        app:layout_constraintLeft_toLeftOf="@+id/anchor_vertical_guideline"
+        app:layout_constraintRight_toRightOf="@+id/anchor_vertical_guideline" />
+
+    <TextView
+        android:id="@+id/tv_bottom_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minWidth="48dp"
+        android:orientation="vertical"
+        android:paddingStart="6dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="6dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_10"
+        android:visibility="gone"
+        android:elevation="50dp"
+        app:layout_constraintBottom_toTopOf="@id/iv_bottom_anchor"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_bottom_anchor"
+        app:layout_constraintRight_toRightOf="@+id/iv_bottom_anchor"
+        tools:text="1张" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/anchor_vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/anchor_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="46dp" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_tips_msg"
+        app:constraint_referenced_ids="tv_bottom_msg,iv_bottom_anchor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/tab_bar_cover"
+        app:layout_constraintTop_toTopOf="@+id/fragment_bnb"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_bnb"
+        app:layout_constraintLeft_toLeftOf="@+id/fragment_bnb"
+        app:layout_constraintRight_toRightOf="@+id/fragment_bnb"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="22dp"/>
+
+    <!--    <include layout="@layout/merge_main_activity_bottom_member_coupon_tips" />-->
+
+    <!--    <include-->
+    <!--        android:id="@+id/memberCodeQuickIcon"-->
+    <!--        layout="@layout/layout_member_code_quick"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        android:layout_marginBottom="100dp"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

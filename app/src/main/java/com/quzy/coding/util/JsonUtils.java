@@ -7,6 +7,7 @@ import com.quzy.coding.Question;
 import com.quzy.coding.bean.AssetInfo;
 import com.quzy.coding.bean.CouponNewCustomerResultBean;
 import com.quzy.coding.bean.HotelEntity;
+import com.quzy.coding.bean.PayQuickBean;
 import com.quzy.coding.bean.QuestionInfo;
 import com.quzy.coding.bean.ViewReportConfigBean;
 import com.quzy.coding.bean.WareEntity;
@@ -53,6 +54,13 @@ public class JsonUtils {
         String content = FileUtils.readJsonFile(context,fileName);
         Gson gson = new Gson();
         CouponNewCustomerResultBean entity = gson.fromJson(content, CouponNewCustomerResultBean.class);
+        return  entity;
+    }
+
+    public static PayQuickBean analysisPayQuickJsonFile(Context context, String fileName){
+        String content = FileUtils.readJsonFile(context,fileName);
+        Gson gson = new Gson();
+        PayQuickBean entity = gson.fromJson(content, PayQuickBean.class);
         return  entity;
     }
 }

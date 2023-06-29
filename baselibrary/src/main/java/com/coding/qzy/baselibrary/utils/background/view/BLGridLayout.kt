@@ -6,7 +6,7 @@ import android.widget.GridLayout
 import com.coding.qzy.baselibrary.utils.background.BackgroundFactory
 
 class BLGridLayout : GridLayout {
-    constructor(context: Context?) : super(context) {}
+    constructor(context: Context) : super(context) {}
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         init(context, attrs)
     }

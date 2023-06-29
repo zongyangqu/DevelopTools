@@ -6,7 +6,7 @@ import android.widget.LinearLayout
 import com.coding.qzy.baselibrary.utils.background.BackgroundFactory
 
 class BLLinearLayout : LinearLayout {
-    constructor(context: Context?) : super(context) {}
+    constructor(context: Context) : super(context) {}
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         init(context, attrs)
     }

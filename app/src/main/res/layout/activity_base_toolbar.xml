@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_layout">
+
+    <include
+        android:id="@+id/common_view"
+        layout="@layout/view_toolbar"/>
+
+
+    <FrameLayout
+        android:id="@+id/main_view"
+        android:layout_below="@+id/common_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <com.quzy.coding.base.LoadingView
+        android:id="@+id/loading_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/subLightGreyColor"
+        android:touchscreenBlocksFocus="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

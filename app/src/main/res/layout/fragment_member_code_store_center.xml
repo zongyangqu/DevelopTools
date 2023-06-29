@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/member_code_store_code_root"
+    xmlns:tools="http://schemas.android.com/tools">
+    <View
+        android:id="@+id/title_top_bg"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/color_2A292F"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"/>
+
+    <View
+        android:id="@+id/memberCodePayTypeBgTop"
+        android:layout_marginTop="52dp"
+        android:background="@color/color_2A292F"
+        android:layout_width="match_parent"
+        android:layout_height="104dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="144dp"
+        app:layout_behavior="com.quzy.coding.ui.behavior.MemberCodeMarketingBehavior"
+        android:id="@+id/memberCodeMarketingRecycleView"
+        android:layout_height="match_parent"/>
+
+    <View
+        android:id="@+id/welfare_shadow_top_bg"
+        android:layout_marginTop="77dp"
+        android:background="@color/color_2A292F"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="15dp"/>
+
+    <View
+        android:id="@+id/memberCodeShadowTitleBg"
+        android:layout_width="match_parent"
+        android:layout_marginTop="144dp"
+        android:background="@color/color_2A292F"
+        android:visibility="gone"
+        android:layout_height="30dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_title_shadow_layout"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="12dp"
+        android:layout_marginTop="144dp"
+        android:layout_height="wrap_content">
+
+        <com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout
+            android:id="@+id/memberCodeShadowTitleAddress"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:paddingBottom="15dp"
+            android:visibility="gone"
+            app:round_corner_top="12dp"
+            android:background="@drawable/bg_member_code_shop_icon_bg"
+            android:layout_height="wrap_content">
+
+            <include
+                layout="@layout/item_store_title"/>
+
+        </com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout
+        android:id="@+id/memberCodeFragmentPayType"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginHorizontal="12dp"
+        android:paddingHorizontal="9dp"
+        app:layout_behavior="com.quzy.coding.ui.behavior.MemberCodePayTypeBehavior"
+        app:round_corner_top="12dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <com.quzy.coding.ui.widget.MemberCodePayTypeView
+            android:id="@+id/pay_type_first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:visibility="visible"
+            android:layout_weight="1"/>
+
+        <com.quzy.coding.ui.widget.MemberCodePayTypeView
+            android:layout_width="0dp"
+            android:id="@+id/pay_type_second"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="3dp"
+            android:visibility="visible"
+            android:layout_weight="1"/>
+
+        <com.quzy.coding.ui.widget.MemberCodePayTypeView
+            android:layout_width="0dp"
+            android:id="@+id/pay_type_third"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:visibility="visible"
+            android:layout_weight="1"/>
+    </com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout>
+
+
+
+
+
+    <!-- 最外层loading-->
+    <com.quzy.coding.base.NewLoadingView
+        android:id="@+id/fragment_store_center_loadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

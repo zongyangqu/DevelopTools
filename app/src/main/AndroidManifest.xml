@@ -176,6 +176,9 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.ShapeBackGroundActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.MemberCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MemberAndPayCodeTheme"/>
     </application>
 
 </manifest>

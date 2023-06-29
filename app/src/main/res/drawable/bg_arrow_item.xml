@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:bottom="25dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/themeColor" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+
+    <item android:gravity="bottom" android:left="16dp" >
+        <bitmap
+            android:gravity="bottom|center_horizontal"
+            android:src="@drawable/arrow" />
+    </item>
+</layer-list>

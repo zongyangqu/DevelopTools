@@ -6,7 +6,7 @@ import androidx.appcompat.widget.AppCompatRadioButton
 import com.coding.qzy.baselibrary.utils.background.BackgroundFactory
 
 class BLRadioButton : AppCompatRadioButton {
-    constructor(context: Context?) : super(context) {}
+    constructor(context: Context) : super(context) {}
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         init(context, attrs)
     }

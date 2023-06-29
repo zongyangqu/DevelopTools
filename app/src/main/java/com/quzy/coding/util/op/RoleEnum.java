@@ -20,6 +20,7 @@ import com.quzy.coding.ui.activity.HorizontalTipActivity;
 import com.quzy.coding.ui.activity.HotFixDemoActivity;
 import com.quzy.coding.ui.activity.LogUtilActivity;
 import com.quzy.coding.ui.activity.LottieActivity;
+import com.quzy.coding.ui.activity.MemberCodeActivity;
 import com.quzy.coding.ui.activity.PopWindowActivity;
 import com.quzy.coding.ui.activity.ProgressActivity;
 import com.quzy.coding.ui.activity.QRCodeActivity;
@@ -216,6 +217,11 @@ public enum RoleEnum implements RoleOperation {
         @Override
         public void starAction(Activity activity) {
             activity.startActivity(new Intent(activity, ShapeBackGroundActivity.class));
+        }
+    },MemberCode {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, MemberCodeActivity.class));
         }
     }
 

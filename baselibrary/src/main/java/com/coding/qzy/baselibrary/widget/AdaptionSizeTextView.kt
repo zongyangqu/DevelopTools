@@ -13,7 +13,7 @@ import androidx.appcompat.widget.AppCompatTextView
  * @Package： com.coding.qzy.baselibrary.widget
  * @Description: 自适应字体大小在一行显示的TextView
  */
-class AdaptionSizeTextView @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : AppCompatTextView(context, attrs, defStyleAttr), ViewTreeObserver.OnGlobalLayoutListener {
+class AdaptionSizeTextView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : AppCompatTextView(context, attrs, defStyleAttr), ViewTreeObserver.OnGlobalLayoutListener {
 
     private var defaultSize = 30f
 

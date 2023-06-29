@@ -72,4 +72,56 @@
         <item name="android:textSize">@dimen/textsize_14</item>
     </style>
 
+    <style name="loading_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="BackBtnStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/textsize_16</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">30dp</item>
+        <item name="android:text">@string/icon_back_left</item>
+        <item name="android:textColor">@color/subMediumBlackColor</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ToolBarStyle" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="titleTextAppearance">@style/ToolbarTitleTextStyle</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="elevation">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+    </style>
+    <style name="ToolbarTitleTextStyle" parent="@style/TextAppearance.AppCompat"/>
+    <style name="BadgeText">
+        <item name="android:textSize">11sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="MemberAndPayCodeTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/themeColor</item>
+        <item name="colorControlActivated">@color/themeColor</item>
+    </style>
+
 </resources>

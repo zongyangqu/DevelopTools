@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr format="reference" name="statusBarTheme"/>
+    <item format="float" name="fixed_label_active_to_inactive_ratio" type="dimen">0.857</item>
+</resources>

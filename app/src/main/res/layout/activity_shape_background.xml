@@ -16,7 +16,7 @@
         android:gravity="center"
         android:lineSpacingExtra="0dp"
         android:lineSpacingMultiplier="0.8"
-        tools:text="满69可用\ndddddd" />
+        tools:text="满69可用\ndddddd"/>
 
 
     <TextView
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="便宜才是硬道理" />
+        android:text="便宜才是硬道理"/>
 
     <TextView
         android:id="@+id/str3"
@@ -35,7 +35,7 @@
         android:textColor="@color/white"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:text="买到就是赚到" />
+        android:text="买到就是赚到"/>
 
     <TextView
         android:id="@+id/str4"
@@ -45,6 +45,100 @@
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:textColor="@color/white"
-        android:text="新鲜早市" />
+        android:text="新鲜早市"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_timeout_reward_item"
+        android:paddingRight="4dp"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="4dp">
+
+        <TextView
+            android:id="@+id/rewardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FF1A34"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="8折"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="87dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="@dimen/round_radius_first_level">
+
+        <ImageView
+            android:id="@+id/iv_product"
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:round_corner="@dimen/round_radius_second_level" />
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_product"
+            android:layout_marginTop="@dimen/round_radius_first_level"
+            android:background="@drawable/pink_button_bg"
+            >
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:maxWidth="140dp"
+                android:minWidth="25dp"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:textSize="@dimen/textsize_12"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tv_original_price"
+                android:background="@drawable/bg_theme_gradient_btn"
+                android:text="￥31"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_original_price"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textsize_10"
+                android:layout_marginStart="1dp"
+                android:paddingRight="4dp"
+                app:layout_constraintTop_toTopOf="@+id/tv_price"
+                app:layout_constraintLeft_toRightOf="@+id/tv_price"
+                android:text="￥40.8" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/str5"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/bg_arrow_item"
+        android:textColor="@color/white"
+        android:text="新鲜早市"/>
 
 </LinearLayout>

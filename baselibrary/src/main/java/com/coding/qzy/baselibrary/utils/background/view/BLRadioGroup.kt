@@ -6,7 +6,7 @@ import android.widget.RadioGroup
 import com.coding.qzy.baselibrary.utils.background.BackgroundFactory
 
 class BLRadioGroup : RadioGroup {
-    constructor(context: Context?) : super(context) {}
+    constructor(context: Context) : super(context) {}
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         init(context, attrs)
     }

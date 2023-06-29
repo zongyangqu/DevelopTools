@@ -6,7 +6,7 @@ import android.widget.ScrollView
 import com.coding.qzy.baselibrary.utils.background.BackgroundFactory
 
 class BLScrollView : ScrollView {
-    constructor(context: Context?) : super(context) {}
+    constructor(context: Context) : super(context) {}
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         init(context, attrs)
     }

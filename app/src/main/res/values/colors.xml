@@ -57,6 +57,9 @@
     <color name="subGreenColor">#28BF13</color>
     <color name="weakThemeColor">#FFF2F4</color>
     <color name="subLightBlackColor">#999999</color>
+    <color name="coreui_black_20">#20000000</color>
+    <color name="leftArrow">@color/subMediumBlackColor</color>
+    <color name="subMediumBlackColor">#333333</color>
     <color name="subGreyColor">#CCCCCC</color>
     <color name="orangeColorGradientFrom">#FF644D</color>
     <color name="orangeColorGradientTo">#FF3819</color>
@@ -65,14 +68,20 @@
     <color name="blackGradientFrom">#403A41</color>
     <color name="blackGradientTo">#17161C</color>
     <color name="gold_svip_tag_text">#FFEDBF</color>
+    <color name="skeletonColor">#F8F8F8</color>
     <color name="wechat_coupon_tag_from">#11E299</color>
     <color name="wechat_coupon_tag_to">#07C160</color>
+    <color name="order_color_eb3223">#eb3223</color>
+    <color name="color_1677FF">#1677FF</color>
+    <color name="order_color_EFB655">#EFB655</color>
     <color name="subMediumGreyColor">#DDDDDD</color>
     <color name="alipay_coupon_tag_from">#168BFF</color>
     <color name="alipay_coupon_tag_to">#1664FF</color>
-    <color name="subMediumBlackColor">#333333</color>
     <color name="subRegularBlackColor">#666666</color>
     <color name="white_a80">#cdffffff</color>
+    <color name="gradientBtnFrom">@color/redGradientFrom</color>
+    <color name="gradientBtnTo">@color/redGradientTo</color>
+    <color name="primary_color">#FF1A34</color>
     <color name="color_FF3819">#FF3819</color>
     <color name="color_0D000000">#0D000000</color>
     <color name="color_F2FBFF">#F2FBFF</color>
@@ -82,4 +91,6 @@
     <color name="color_FFFAD9">#FFFAD9</color>
     <color name="color_FFFCF6">#FFFCF6</color>
     <color name="color_FFDA8E">#FFDA8E</color>
+    <color name="color_2A292F">#2A292F</color>
+    <color name="color_FF5F37">#FF5F37</color>
 </resources>

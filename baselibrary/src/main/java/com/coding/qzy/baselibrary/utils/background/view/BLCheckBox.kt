@@ -6,7 +6,7 @@ import androidx.appcompat.widget.AppCompatCheckBox
 import com.coding.qzy.baselibrary.utils.background.BackgroundFactory
 
 class BLCheckBox : AppCompatCheckBox {
-    constructor(context: Context?) : super(context) {}
+    constructor(context: Context) : super(context) {}
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         init(context, attrs)
     }

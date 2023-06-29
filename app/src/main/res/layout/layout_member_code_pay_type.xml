@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:round_corner="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.coding.qzy.baselibrary.widget.roundview.RoundRelativeLayout
+        android:id="@+id/payTypeLL"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="9dp"
+        android:layout_width="0dp"
+        app:round_corner="12dp"
+        android:layout_height="52dp"
+        android:background="#EFB655">
+
+        <ImageView
+            android:id="@+id/payTypeIcon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/ic_member_code_yh_card"/>
+
+        <TextView
+            android:id="@+id/payTypeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toEndOf="@+id/payTypeIcon"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:text="电子永辉卡"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_12" />
+
+        <CheckBox
+            android:id="@+id/payTypeCheck"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:layout_centerVertical="true"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.quzy.coding.util.widget.IconFont
+            android:id="@+id/payTypeArrow"
+            android:text="@string/icon_arrow_right"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:textSize="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.quzy.coding.util.widget.IconFont
+            android:id="@+id/payTypeCodeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:text="@string/icon_member_pay_type_right"
+            android:textSize="@dimen/textsize_10"
+            android:layout_toStartOf="@+id/payTypeArrow"
+            />
+
+        <TextView
+            android:id="@+id/payTypeTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="59dp"
+            android:layout_toEndOf="@+id/payTypeTitle"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_10"
+            tools:text="呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵"
+            tools:visibility="visible" />
+
+    </com.coding.qzy.baselibrary.widget.roundview.RoundRelativeLayout>
+
+    <TextView
+        android:id="@+id/payTypeIconPromo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/payTypeLL"
+        tools:text="返10元"
+        android:textSize="@dimen/textsize_10"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/white"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_buy_card_promot"
+        tools:visibility="visible"
+        />
+
+    <View
+        android:id="@+id/payTypeBg"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+</com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout>
+
