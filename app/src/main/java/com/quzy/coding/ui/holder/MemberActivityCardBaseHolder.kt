@@ -21,7 +21,7 @@ import com.quzy.coding.util.widget.spanOnText
 open class MemberActivityCardBaseHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     init {
         val params = itemView.layoutParams as StaggeredGridLayoutManager.LayoutParams
-        params.width = (ScreenUtils.getScreenWidth(itemView.context) / 2 - ScreenUtils.dp2px(itemView.context,10))
+        params.width = ScreenUtils.getScreenWidth(itemView.context) / 2
         params.height = ((ScreenUtils.getScreenWidth(itemView.context) -33f.dpOfInt) / 34f * 25).toInt()
         itemView.layoutParams = params
     }

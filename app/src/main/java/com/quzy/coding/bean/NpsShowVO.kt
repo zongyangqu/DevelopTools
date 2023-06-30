@@ -2,6 +2,7 @@ package com.quzy.coding.bean
 
 import android.os.Parcelable
 import android.text.SpannableStringBuilder
+import kotlinx.android.parcel.IgnoredOnParcel
 import kotlinx.android.parcel.Parcelize
 import java.io.Serializable
 import java.util.*
@@ -101,3 +102,39 @@ data class HintBean(
         val isEmpty: Boolean = false,
         var content: SpannableStringBuilder?
 )
+
+class ProductBlock(
+    var blockId: String?,
+    var blockType: Int?,
+    var position: Int?,
+    var skuBlock: CommonProductBean?,
+    var statistic: EventStatistic?,
+    val rankList: RankListDataBean?
+)
+
+class RankListDataBean {
+    var bgImgUrl: String? = null
+    var subTitle: String? = null
+    var title: String? = null
+    /**
+     * 榜单类型枚举值：
+     * 1：72小时热卖 2：蔬菜 3：水果 4：肉禽蛋品 5：海鲜水产 6：乳品烘焙热 7：速食冻品 8：休闲零食 9：酒饮 10：水饮饮料 11：粮油副食
+     * 12：回购榜 13：蔬菜回购榜 14：水果回购榜 15：肉禽蛋品回购榜 16：海鲜水产回购榜 17：牛奶回购榜 18：面包烘焙回购榜 19：速食冻品回购榜
+     * 20：休闲零食回购榜 21：酒水饮料回购榜 22：粮油副食回购榜 23：水饮回购榜 24：人气爆款排行榜
+     */
+    var rankType = -1
+    var skus: ArrayList<RankListProductBean>? = null
+    var imageUrlV: String? = null
+    var imageUrlH: String? = null
+}
+
+class RankListProductBean : CommonProductBean() {
+    // 热度值
+    var heatPrompt: String? = null
+    // 左上角排名图标
+    var leftTopImageUrl: String? = null
+    // 发起搜索的搜索词，目前在搜索输入页榜单里的 热门发现列表item点击埋点时用
+    var keyword: String? = null
+}
+
+

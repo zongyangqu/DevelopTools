@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/round_radius_second_level"
+    app:round_corner="@dimen/round_radius_third_level"
+    tools:background="@color/themeColor"
+    tools:layout_width="171dp">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.quzy.coding.util.widget.YHTypefaceView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/round_radius_second_level"
+        android:layout_marginTop="@dimen/round_radius_second_level"
+        android:maxWidth="145dp"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="时令水果热销榜" />
+
+    <com.quzy.coding.util.widget.IconFont
+        android:id="@+id/if_right_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin"
+        android:text="@string/icon_arrow_right"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_12"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintLeft_toRightOf="@+id/tv_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="145dp"
+        android:maxLines="1"
+        android:text="跟着大家买"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_14"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <com.coding.qzy.baselibrary.widget.roundview.RoundRelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/round_radius_first_level"
+        android:layout_marginTop="@dimen/round_radius_second_level"
+        android:layout_marginEnd="@dimen/round_radius_first_level"
+        android:layout_marginBottom="@dimen/round_radius_first_level"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/round_radius_second_level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sub_title"
+        app:round_corner="9dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            tools:layout_height="200dp" />
+    </com.coding.qzy.baselibrary.widget.roundview.RoundRelativeLayout>
+
+</com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout>

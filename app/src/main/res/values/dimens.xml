@@ -21,7 +21,7 @@
     <dimen name="textsize_24">24sp</dimen>
     <dimen name="textsize_25">25sp</dimen>
     <dimen name="textsize_8">8sp</dimen>
-
+    <dimen name="common_margin">3dp</dimen>
     <dimen name="margin_5">5dp</dimen>
     <dimen name="margin_10">10dp</dimen>
     <dimen name="margin_13">13dp</dimen>

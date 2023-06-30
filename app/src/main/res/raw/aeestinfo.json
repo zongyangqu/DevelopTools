@@ -763,5 +763,1040 @@
       "type": "discount"
     }]
   },
+  "results": [{
+    "blockId": "R-99456",
+    "statistic": {
+      "aid": "R-99456",
+      "cid": "c-R-99456",
+      "ds": "1",
+      "asId": "mock message !!!"
+    },
+    "blockType": 1,
+    "skuBlock": {
+      "categoryInfo": {
+        "categoryId": "12400201"
+      },
+      "type": 1,
+      "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-99456&merid=7",
+      "skuCode": "R-99456",
+      "skuType": 0,
+      "skuSaleType": 0,
+      "cover": {
+        "imageUrl": "http://image.yonghuivip.com/product/99456/0.jpg"
+      },
+      "price": {
+        "price": "5.7",
+        "marketPrice": "13.8"
+      },
+      "batch": {
+        "batchFlag": 0
+      },
+      "tag": {
+        "commonTags": [{
+          "text": "当日送达",
+          "type": 12
+        }, {
+          "text": "支持现杀",
+          "type": 11,
+          "tagType": 3
+        }]
+      },
+      "spu": {
+        "isSpu": 0
+      },
+      "title": "农心辣白菜杯面 70g",
+      "subTitle": "福建福州",
+      "recSlogan":"98%的人认为很赞",
+      "recSloganType":"batchTimeDesc",
+      "inStock": 1,
+      "tracking": {
+        "priceInCent": 570,
+        "marketPriceInCent": 570,
+        "point": 1
+      },
+      "preprocess": 1,
+      "skuRankInfo": {
+        "rankingIcon": "https://image.yonghuivip.com/sku/card/ranking@3x.png",
+        "title": "新品飙升榜第1名",
+        "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2Findex.html%23%2FnewProduct%3Fneedlogin%3D0%26nl%3D1%26rankType%3D46",
+        "rank": 1,
+        "name": "新品飙升榜"
+      },
+      "isOnSale": true,
+      "skuProperty": 0,
+      "brandId": "0006636",
+      "brandName": "农心"
+    }
+  }, {
+    "blockId": "bab_12",
+    "position": 5,
+    "statistic": {
+      "aid": "bab_12",
+      "cid": "c-bab_12"
+    },
+    "blockType": 13,
+    "rankList": {
+      "title": "回购榜",
+      "subTitle": "大众的选择，值得信赖",
+      "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2Findex.html%3Fneedlogin%3D0%26nl%3D1%26rankType%3D12",
+      "bgImgUrl": "https://image.yonghuivip.com/search/rank/v975/bgimg@3x.png",
+      "skus": [{
+        "categoryInfo": {
+          "categoryId": "11030504"
+        },
+        "type": 1,
+        "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-933853&merid=7",
+        "skuCode": "R-933853",
+        "skuType": 0,
+        "skuSaleType": 0,
+        "cover": {
+          "imageUrl": "http://image.yonghuivip.com/product/B-933853/15081220737644dd3b0e77c2a93399af3252965f1b3b4f2822f42"
+        },
+        "price": {
+          "price": "11.9"
+        },
+        "batch": {
+          "batchFlag": 0
+        },
+        "tag": {
+          "titleTag": {
+            "type": 44,
+            "imageUrl": "https://image.yonghuivip.com/sku/card/mindtag3x.png",
+            "extendInfo": {
+              "tagHeight": 48,
+              "tagWidth": 78
+            }
+          }
+        },
+        "spu": {
+          "isSpu": 0
+        },
+        "title": "优野红叶生菜 300g",
+        "inStock": 1,
+        "tracking": {
+          "priceInCent": 1190,
+          "marketPriceInCent": 1190,
+          "point": 1
+        },
+        "preprocess": 0,
+        "leftTopImageUrl": "https://image.yonghuivip.com/search/rank/v975/1@3x.png",
+        "heatPrompt": "9.9W",
+        "skuRankInfo": {
+          "rankingIcon": "https://image.yonghuivip.com/sku/card/ranking@3x.png",
+          "title": "回购榜第1名",
+          "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2Findex.html%3Fneedlogin%3D0%26nl%3D1%26rankType%3D12",
+          "rank": 1,
+          "name": "回购榜"
+        },
+        "isOnSale": true,
+        "skuProperty": 0,
+        "brandId": "0103009",
+        "brandName": "优野",
+        "statistic": {
+          "aid": "R-933853",
+          "cid": "c-R-933853"
+        },
+        "rankListTags": []
+      }, {
+        "categoryInfo": {
+          "categoryId": "13450202"
+        },
+        "type": 1,
+        "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-931881&merid=7",
+        "skuCode": "R-931881",
+        "skuType": 0,
+        "skuSaleType": 0,
+        "cover": {
+          "imageUrl": "http://image.yonghuivip.com/product/R-931881/1506413691329c46d2fd506c63413f8e8ae9721cc599efccf4409"
+        },
+        "price": {
+          "price": "125"
+        },
+        "batch": {
+          "batchFlag": 0
+        },
+        "spu": {
+          "isSpu": 0
+        },
+        "title": "帮宝适一级帮纸尿裤大包装 S76P",
+        "subTitle": "",
+        "inStock": 1,
+        "tracking": {
+          "priceInCent": 12500,
+          "marketPriceInCent": 12500,
+          "point": 2
+        },
+        "preprocess": 0,
+        "leftTopImageUrl": "https://image.yonghuivip.com/search/rank/v975/2@3x.png",
+        "heatPrompt": "9.8W",
+        "skuRankInfo": {
+          "rankingIcon": "https://image.yonghuivip.com/sku/card/ranking@3x.png",
+          "title": "糖巧热卖榜第1名",
+          "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2F%23%2Fsecond%3Fneedlogin%3D0%26nl%3D1%26rankType%3D48",
+          "rank": 1,
+          "name": "糖巧热卖榜"
+        },
+        "isOnSale": true,
+        "skuProperty": 0,
+        "brandId": "000707202",
+        "brandName": "帮宝适",
+        "statistic": {
+          "aid": "R-931881",
+          "cid": "c-R-931881"
+        },
+        "rankListTags": []
+      }, {
+        "categoryInfo": {
+          "categoryId": "13400502"
+        },
+        "type": 1,
+        "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-96960&merid=7",
+        "skuCode": "R-96960",
+        "skuType": 0,
+        "skuSaleType": 0,
+        "cover": {
+          "imageUrl": "http://image.yonghuivip.com/image/1481529153209dfaaeed694eae97c85b434d102c0fe199eb9c461"
+        },
+        "price": {
+          "price": "42.9"
+        },
+        "batch": {
+          "batchFlag": 0
+        },
+        "spu": {
+          "isSpu": 0
+        },
+        "title": "滴露消毒液 750ml",
+        "subTitle": "",
+        "inStock": 1,
+        "tracking": {
+          "priceInCent": 4290,
+          "marketPriceInCent": 4290,
+          "point": 3
+        },
+        "preprocess": 0,
+        "leftTopImageUrl": "https://image.yonghuivip.com/search/rank/v975/3@3x.png",
+        "heatPrompt": "9.7W",
+        "skuRankInfo": {
+          "rankingIcon": "https://image.yonghuivip.com/sku/card/ranking@3x.png",
+          "title": "大米热卖榜第2名",
+          "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2F%23%2Fsecond%3Fneedlogin%3D0%26nl%3D1%26rankType%3D30",
+          "rank": 2,
+          "name": "大米热卖榜"
+        },
+        "isOnSale": true,
+        "skuProperty": 0,
+        "brandId": "0006251",
+        "brandName": "滴露",
+        "statistic": {
+          "aid": "R-96960",
+          "cid": "c-R-96960"
+        },
+        "rankListTags": []
+      }, {
+        "categoryInfo": {
+          "categoryId": "12310201"
+        },
+        "type": 1,
+        "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-947029&merid=7",
+        "skuCode": "R-947029",
+        "skuType": 0,
+        "skuSaleType": 0,
+        "cover": {
+          "imageUrl": "http://image.yonghuivip.com/product/R-947029/1509972483690d9e05b85def730aa61dbfec871caff891e7b72f4"
+        },
+        "price": {
+          "price": "8.9"
+        },
+        "batch": {
+          "batchFlag": 0
+        },
+        "spu": {
+          "isSpu": 0
+        },
+        "title": "徜徉糖水黄桃罐头 485g",
+        "subTitle": "",
+        "inStock": 1,
+        "tracking": {
+          "priceInCent": 890,
+          "marketPriceInCent": 890,
+          "point": 4
+        },
+        "preprocess": 0,
+        "leftTopImageUrl": "https://image.yonghuivip.com/search/rank/v975/4@3x.png",
+        "heatPrompt": "9.6W",
+        "skuRankInfo": {
+          "rankingIcon": "https://image.yonghuivip.com/sku/card/ranking@3x.png",
+          "title": "酒饮回购榜第1名",
+          "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2Findex.html%3Fneedlogin%3D0%26nl%3D1%26rankType%3D21",
+          "rank": 1,
+          "name": "酒饮回购榜"
+        },
+        "isOnSale": true,
+        "skuProperty": 0,
+        "brandId": "1140449",
+        "brandName": "徜徉",
+        "statistic": {
+          "aid": "R-947029",
+          "cid": "c-R-947029"
+        },
+        "rankListTags": []
+      }, {
+        "categoryInfo": {
+          "categoryId": "12300305"
+        },
+        "type": 1,
+        "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-917106&merid=7",
+        "skuCode": "R-917106",
+        "skuType": 0,
+        "skuSaleType": 0,
+        "cover": {
+          "imageUrl": "http://image.yonghuivip.com/product/R-917106/150417159729030a419a946c8a5b00055416e0652e1ffded83e12"
+        },
+        "price": {
+          "price": "19.5"
+        },
+        "batch": {
+          "batchFlag": 0
+        },
+        "spu": {
+          "isSpu": 0
+        },
+        "title": "帕泊斯苏达气泡水原味四联包 330ml*4",
+        "subTitle": "",
+        "inStock": 1,
+        "tracking": {
+          "priceInCent": 1950,
+          "marketPriceInCent": 1950,
+          "point": 5
+        },
+        "preprocess": 0,
+        "leftTopImageUrl": "https://image.yonghuivip.com/search/rank/v975/5@3x.png",
+        "heatPrompt": "9.5W",
+        "skuRankInfo": {
+          "rankingIcon": "https://image.yonghuivip.com/sku/card/ranking@3x.png",
+          "title": "啤酒热卖榜第1名",
+          "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2F%23%2Fsecond%3Fneedlogin%3D0%26nl%3D1%26rankType%3D27",
+          "rank": 1,
+          "name": "啤酒热卖榜"
+        },
+        "isOnSale": true,
+        "skuProperty": 0,
+        "brandId": "010840701",
+        "brandName": "帕泊斯",
+        "statistic": {
+          "aid": "R-917106",
+          "cid": "c-R-917106"
+        },
+        "rankListTags": []
+      }, {
+        "categoryInfo": {
+          "categoryId": "12300201"
+        },
+        "type": 1,
+        "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-CB67708&merid=7",
+        "skuCode": "R-CB67708",
+        "skuType": 0,
+        "skuSaleType": 0,
+        "cover": {
+          "imageUrl": "http://image.yonghuivip.com/image/1462349732356dfaaeed694eae97c85b434d102c0fe199eb9c461"
+        },
+        "price": {
+          "price": "3"
+        },
+        "batch": {
+          "batchFlag": 0
+        },
+        "tag": {
+          "ribbonTags": [{
+            "type": 40,
+            "imageUrl": "https://image.yonghuivip.com/sku/card/ladu3.png"
+          }, {
+            "text": "M站-判断",
+            "type": 34,
+            "imageUrl": "http://image.yonghuivip.com/sku/card/icon/xuehua@3x.png"
+          }]
+        },
+        "spu": {
+          "isSpu": 0
+        },
+        "title": "红牛维生素功能饮料(牛磺酸强化型) 250ml",
+        "subTitle": "单子码线上",
+        "recAttribute": ["777777"],
+        "inStock": 1,
+        "tracking": {
+          "priceInCent": 300,
+          "marketPriceInCent": 300,
+          "point": 6
+        },
+        "preprocess": 0,
+        "leftTopImageUrl": "https://image.yonghuivip.com/search/rank/v975/6@3x.png",
+        "heatPrompt": "9.4W",
+        "skuRankInfo": {
+          "rankingIcon": "https://image.yonghuivip.com/sku/card/ranking@3x.png",
+          "title": "人气爆款榜第2名",
+          "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2Findex.html%3Fneedlogin%3D0%26nl%3D1%26rankType%3D24",
+          "rank": 2,
+          "name": "人气爆款榜"
+        },
+        "isOnSale": true,
+        "skuProperty": 0,
+        "brandId": "0004630",
+        "brandName": "红牛",
+        "statistic": {
+          "aid": "R-CB67708",
+          "cid": "c-R-CB67708"
+        },
+        "rankListTags": []
+      }, {
+        "categoryInfo": {
+          "categoryId": "12410801"
+        },
+        "type": 1,
+        "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-917642&merid=7",
+        "skuCode": "R-917642",
+        "skuType": 0,
+        "skuSaleType": 0,
+        "cover": {
+          "imageUrl": "http://image.yonghuivip.com/image/1503416327258dfaaeed694eae97c85b434d102c0fe199eb9c461"
+        },
+        "price": {
+          "price": "6"
+        },
+        "batch": {
+          "batchFlag": 0
+        },
+        "spu": {
+          "isSpu": 0
+        },
+        "title": "福盐福建贡盐（未加碘）300g",
+        "inStock": 1,
+        "tracking": {
+          "priceInCent": 600,
+          "marketPriceInCent": 600,
+          "point": 7
+        },
+        "preprocess": 0,
+        "leftTopImageUrl": "https://image.yonghuivip.com/search/rank/v975/7@3x.png",
+        "heatPrompt": "9.3W",
+        "skuRankInfo": {
+          "rankingIcon": "https://image.yonghuivip.com/sku/card/ranking@3x.png",
+          "title": "鸡蛋热卖榜第1名",
+          "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2F%23%2Fsecond%3Fneedlogin%3D0%26nl%3D1%26rankType%3D29",
+          "rank": 1,
+          "name": "鸡蛋热卖榜"
+        },
+        "isOnSale": true,
+        "skuProperty": 0,
+        "brandId": "0116329",
+        "brandName": "福盐",
+        "statistic": {
+          "aid": "R-917642",
+          "cid": "c-R-917642"
+        },
+        "rankListTags": []
+      }],
+      "rankType": 12
+    }
+  },{
+    "blockId": "R-911998",
+    "statistic": {
+      "aid": "R-911998",
+      "cid": "c-R-911998",
+      "ds": "1",
+      "asId": "mock message !!!"
+    },
+    "blockType": 1,
+    "skuBlock": {
+      "categoryInfo": {
+        "categoryId": "12300402"
+      },
+      "type": 1,
+      "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-911998&merid=7",
+      "skuCode": "R-911998",
+      "skuType": 0,
+      "skuSaleType": 0,
+      "cover": {
+        "imageUrl": "http://image.yonghuivip.com/product/B-911998/1494040780148fc586b8682077ee8f327b3baa3ae24d22d7a0148"
+      },
+      "price": {
+        "price": "5",
+        "marketPrice": "10.8"
+      },
+      "batch": {
+        "batchFlag": 0
+      },
+      "spu": {
+        "isSpu": 0
+      },
+      "title": "农夫山泉茶π玫瑰荔枝红茶 500ml",
+      "recSlogan":"100%的人认为很赞",
+      "recSloganType":"batchTimeDesc",
+      "subTitle": "",
+      "inStock": 1,
+      "tracking": {
+        "priceInCent": 500,
+        "marketPriceInCent": 500,
+        "point": 2
+      },
+      "preprocess": 0,
+      "isOnSale": true,
+      "skuProperty": 0,
+      "brandId": "000846206",
+      "brandName": "农夫"
+    }
+  }, {
+    "blockId": "R-99873",
+    "statistic": {
+      "aid": "R-99873",
+      "cid": "c-R-99873",
+      "ds": "1",
+      "asId": "mock message !!!"
+    },
+    "blockType": 1,
+    "skuBlock": {
+      "categoryInfo": {
+        "categoryId": "12320603"
+      },
+      "type": 1,
+      "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-99873&merid=7",
+      "skuCode": "R-99873",
+      "skuType": 0,
+      "skuSaleType": 0,
+      "cover": {
+        "imageUrl": "http://image.yonghuivip.com/image/1491496949800dfaaeed694eae97c85b434d102c0fe199eb9c461"
+      },
+      "price": {
+        "price": "249"
+      },
+      "batch": {
+        "batchFlag": 0
+      },
+      "spu": {
+        "isSpu": 0
+      },
+      "title": "尊尼获加黑牌威士忌 700ml",
+      "inStock": 1,
+      "tracking": {
+        "priceInCent": 24900,
+        "marketPriceInCent": 24900,
+        "point": 3
+      },
+      "preprocess": 0,
+      "skuRankInfo": {
+        "rankingIcon": "https://image.yonghuivip.com/sku/card/ranking@3x.png",
+        "title": "猪肉热卖榜第2名",
+        "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2F%23%2Fsecond%3Fneedlogin%3D0%26nl%3D1%26rankType%3D25",
+        "rank": 2,
+        "name": "猪肉热卖榜"
+      },
+      "isOnSale": true,
+      "skuProperty": 0,
+      "brandId": "0001289",
+      "brandName": "尊尼获加"
+    }
+  }, {
+    "blockId": "R-894604",
+    "statistic": {
+      "aid": "R-894604",
+      "cid": "c-R-894604",
+      "ds": "1",
+      "asId": "mock message !!!"
+    },
+    "blockType": 1,
+    "skuBlock": {
+      "categoryInfo": {
+        "categoryId": "12350801"
+      },
+      "type": 1,
+      "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-894604&merid=7",
+      "skuCode": "R-894604",
+      "skuType": 0,
+      "skuSaleType": 0,
+      "cover": {
+        "imageUrl": "http://image.yonghuivip.com/product/R-894604/1515992995684f59dbfdc76ca2f91586cd2cacd44297049791774"
+      },
+      "price": {
+        "price": "33.9"
+      },
+      "batch": {
+        "batchFlag": 0
+      },
+      "tag": {
+        "commonTags": [{
+          "text": "开团仅¥28",
+          "type": 32,
+          "imageUrl": "https://image.yonghuivip.com/sku/card/icon/group3x.png"
+        }]
+      },
+      "spu": {
+        "isSpu": 0
+      },
+      "title": "好丽友巧克力派24枚超值分享装816G 816g",
+      "subTitle": "",
+      "inStock": 1,
+      "tracking": {
+        "priceInCent": 3390,
+        "marketPriceInCent": 3390,
+        "point": 4
+      },
+      "preprocess": 0,
+      "isOnSale": true,
+      "skuProperty": 0,
+      "brandId": "000590301",
+      "brandName": "好丽友"
+    }
+  }, {
+    "blockId": "R-903860",
+    "statistic": {
+      "aid": "R-903860",
+      "cid": "c-R-903860",
+      "ds": "1",
+      "asId": "mock message !!!"
+    },
+    "blockType": 1,
+    "skuBlock": {
+      "categoryInfo": {
+        "categoryId": "11012904"
+      },
+      "type": 1,
+      "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-903860&merid=7",
+      "skuCode": "R-903860",
+      "skuType": 0,
+      "skuSaleType": 0,
+      "cover": {
+        "imageUrl": "http://image.yonghuivip.com/product/D-903860/14882692639820669a7d41f84eb9df8efebe2316c1169e9b24494"
+      },
+      "price": {
+        "price": "35"
+      },
+      "batch": {
+        "batchFlag": 0
+      },
+      "spu": {
+        "isSpu": 0
+      },
+      "title": "华盛丁香鱼100g（罐装） 罐",
+      "recSlogan": "100%的人认为很赞",
+      "recSloganType": "marketRanking",
+      "inStock": 1,
+      "tracking": {
+        "priceInCent": 3500,
+        "marketPriceInCent": 3500,
+        "point": 5
+      },
+      "preprocess": 0,
+      "isOnSale": true,
+      "skuProperty": 0,
+      "brandId": "0006975",
+      "brandName": "华盛"
+    }
+  }, {
+    "blockId": "R-908218",
+    "statistic": {
+      "aid": "R-908218",
+      "cid": "c-R-908218",
+      "ds": "1",
+      "asId": "mock message !!!"
+    },
+    "blockType": 1,
+    "skuBlock": {
+      "categoryInfo": {
+        "categoryId": "12350204"
+      },
+      "type": 1,
+      "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-908218&merid=7",
+      "skuCode": "R-908218",
+      "skuType": 0,
+      "skuSaleType": 0,
+      "cover": {
+        "imageUrl": "http://image.yonghuivip.com/image/1500050758359dfaaeed694eae97c85b434d102c0fe199eb9c461"
+      },
+      "price": {
+        "price": "6.7"
+      },
+      "batch": {
+        "batchFlag": 0
+      },
+      "spu": {
+        "isSpu": 0
+      },
+      "title": "格力高咸心百醇玉米浓汤味 45g",
+      "recSlogan": "188人认为\"味道好\"",
+      "recSloganType": "marketRanking",
+      "inStock": 1,
+      "tracking": {
+        "priceInCent": 670,
+        "marketPriceInCent": 670,
+        "point": 6
+      },
+      "preprocess": 0,
+      "isOnSale": true,
+      "skuProperty": 0,
+      "brandId": "000317501",
+      "brandName": "格力高"
+    }
+  }, {
+    "blockId": "R-892697",
+    "statistic": {
+      "aid": "R-892697",
+      "cid": "c-R-892697",
+      "ds": "1",
+      "asId": "mock message !!!"
+    },
+    "blockType": 1,
+    "skuBlock": {
+      "categoryInfo": {
+        "categoryId": "12320304"
+      },
+      "type": 1,
+      "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-892697&merid=7",
+      "skuCode": "R-892697",
+      "skuType": 0,
+      "skuSaleType": 0,
+      "cover": {
+        "imageUrl": "http://image.yonghuivip.com/product/B-13532/1483608232877dfaaeed694eae97c85b434d102c0fe199eb9c461"
+      },
+      "price": {
+        "price": "358",
+        "marketPrice": "388"
+      },
+      "batch": {
+        "batchFlag": 0
+      },
+      "spu": {
+        "isSpu": 0
+      },
+      "title": "泸州老窖52°紫砂大曲酒红陶 500ml",
+      "inStock": 1,
+      "tracking": {
+        "priceInCent": 35800,
+        "marketPriceInCent": 35800,
+        "point": 7
+      },
+      "preprocess": 0,
+      "isOnSale": true,
+      "skuProperty": 0,
+      "brandId": "0004423",
+      "brandName": "泸州老窖"
+    }
+  }, {
+    "blockId": "bab_1",
+    "position": 9,
+    "statistic": {
+      "aid": "bab_1",
+      "cid": "c-bab_1"
+    },
+    "blockType": 5,
+    "rankList": {
+      "title": "72小时热卖榜",
+      "subTitle": "跟着大家一起买",
+      "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2F%23%2Fall%3Fneedlogin%3D0%26nl%3D1%26rankType%3D1",
+      "bgImgUrl": "https://image.yonghuivip.com/hp/wf/rank/wImage.png",
+      "skus": [{
+        "categoryInfo": {
+          "categoryId": "12410510"
+        },
+        "type": 1,
+        "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-96420&merid=7",
+        "skuCode": "R-96420",
+        "skuType": 0,
+        "skuSaleType": 0,
+        "cover": {
+          "imageUrl": "http://image.yonghuivip.com/product/96420/0.png"
+        },
+        "price": {
+          "price": "18.84",
+          "marketPrice": "21.3",
+          "promotionMsg": "",
+          "priceType": "promotion",
+          "priceContent": "18.84",
+          "priceDesc": ""
+        },
+        "batch": {
+          "batchFlag": 0
+        },
+        "spu": {
+          "isSpu": 0
+        },
+        "title": "李锦记排骨酱 240g",
+        "inStock": 1,
+        "tracking": {
+          "priceInCent": 1884,
+          "marketPriceInCent": 2130,
+          "point": 1
+        },
+        "preprocess": 0,
+        "leftTopImageUrl": "https://image.yonghuivip.com/search/rank/v780/1@3x.png",
+        "heatPrompt": "9.9W",
+        "skuRankInfo": {
+          "rankingIcon": "https://image.yonghuivip.com/sku/card/ranking@3x.png",
+          "title": "72小时热卖榜第1名",
+          "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2F%23%2Fall%3Fneedlogin%3D0%26nl%3D1%26rankType%3D1",
+          "rank": 1,
+          "name": "72小时热卖榜"
+        },
+        "isOnSale": true,
+        "skuProperty": 0,
+        "brandId": "000456801",
+        "brandName": "李锦记",
+        "statistic": {
+          "aid": "R-96420",
+          "cid": "c-R-96420"
+        },
+        "rankListTags": []
+      }, {
+        "categoryInfo": {
+          "categoryId": "13400301"
+        },
+        "type": 1,
+        "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-9721&merid=7",
+        "skuCode": "R-9721",
+        "skuType": 0,
+        "skuSaleType": 0,
+        "cover": {
+          "imageUrl": "http://image.yonghuivip.com/image/1502891997083dfaaeed694eae97c85b434d102c0fe199eb9c461"
+        },
+        "price": {
+          "priceMap": {
+            "limit": "4.3"
+          },
+          "price": "4.3",
+          "marketPrice": "5.5"
+        },
+        "batch": {
+          "batchFlag": 0
+        },
+        "spu": {
+          "isSpu": 0
+        },
+        "title": "爱家简装固体清香剂(桂花) 88g",
+        "inStock": 1,
+        "tracking": {
+          "priceInCent": 430,
+          "marketPriceInCent": 550,
+          "point": 2
+        },
+        "preprocess": 0,
+        "leftTopImageUrl": "https://image.yonghuivip.com/search/rank/v780/2@3x.png",
+        "heatPrompt": "9.8W",
+        "skuRankInfo": {
+          "rankingIcon": "https://image.yonghuivip.com/sku/card/ranking@3x.png",
+          "title": "家用器皿热卖榜第1名",
+          "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2F%23%2Fsecond%3Fneedlogin%3D0%26nl%3D1%26rankType%3D57",
+          "rank": 1,
+          "name": "家用器皿热卖榜"
+        },
+        "isOnSale": true,
+        "skuProperty": 0,
+        "brandId": "000222303",
+        "brandName": "爱家",
+        "statistic": {
+          "aid": "R-9721",
+          "cid": "c-R-9721"
+        },
+        "rankListTags": []
+      }, {
+        "categoryInfo": {
+          "categoryId": "13420404"
+        },
+        "type": 1,
+        "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-918901&merid=7",
+        "skuCode": "R-918901",
+        "skuType": 0,
+        "skuSaleType": 0,
+        "cover": {
+          "imageUrl": "http://image.yonghuivip.com/image/1500649981244dfaaeed694eae97c85b434d102c0fe199eb9c461"
+        },
+        "price": {
+          "price": "49.9"
+        },
+        "batch": {
+          "batchFlag": 0
+        },
+        "spu": {
+          "isSpu": 0
+        },
+        "title": "飘柔丰盈飘逸微米精华润发乳530ml",
+        "inStock": 1,
+        "tracking": {
+          "priceInCent": 4990,
+          "marketPriceInCent": 4990,
+          "point": 3
+        },
+        "preprocess": 0,
+        "leftTopImageUrl": "https://image.yonghuivip.com/search/rank/v780/3@3x.png",
+        "heatPrompt": "9.7W",
+        "skuRankInfo": {
+          "rankingIcon": "https://image.yonghuivip.com/sku/card/ranking@3x.png",
+          "title": "乳品烘焙回购榜第2名",
+          "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2Findex.html%3Fneedlogin%3D0%26nl%3D1%26rankType%3D18",
+          "rank": 2,
+          "name": "乳品烘焙回购榜"
+        },
+        "isOnSale": true,
+        "skuProperty": 0,
+        "brandId": "000707203",
+        "brandName": "飘柔",
+        "statistic": {
+          "aid": "R-918901",
+          "cid": "c-R-918901"
+        },
+        "rankListTags": []
+      }],
+      "rankType": 1
+    }
+  }, {
+    "blockId": "R-886978",
+    "statistic": {
+      "aid": "R-886978",
+      "cid": "c-R-886978",
+      "ds": "1",
+      "asId": "mock message !!!"
+    },
+    "blockType": 1,
+    "skuBlock": {
+      "categoryInfo": {
+        "categoryId": "12320301"
+      },
+      "type": 1,
+      "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-886978&merid=7",
+      "skuCode": "R-886978",
+      "skuType": 0,
+      "skuSaleType": 0,
+      "cover": {
+        "imageUrl": "http://image.yonghuivip.com/image/1500040923728dfaaeed694eae97c85b434d102c0fe199eb9c461"
+      },
+      "price": {
+        "price": "198"
+      },
+      "batch": {
+        "batchFlag": 0
+      },
+      "spu": {
+        "isSpu": 0
+      },
+      "title": "五粮52度富贵天下御藏 500ml",
+      "subTitle": "",
+      "inStock": 1,
+      "tracking": {
+        "priceInCent": 19800,
+        "marketPriceInCent": 19800,
+        "point": 16
+      },
+      "preprocess": 0,
+      "isOnSale": true,
+      "skuProperty": 0,
+      "brandId": "000396001",
+      "brandName": "五粮液"
+    }
+  }, {
+    "blockId": "R-887245",
+    "statistic": {
+      "aid": "R-887245",
+      "cid": "c-R-887245",
+      "ds": "1",
+      "asId": "mock message !!!"
+    },
+    "blockType": 1,
+    "skuBlock": {
+      "categoryInfo": {
+        "categoryId": "12300103"
+      },
+      "type": 1,
+      "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-887245&merid=7",
+      "skuCode": "R-887245",
+      "skuType": 0,
+      "skuSaleType": 0,
+      "cover": {
+        "imageUrl": "http://image.yonghuivip.com/product/J-887245/15030416941031aab8e5c760b0f13633eb546c966b37dbf395aac"
+      },
+      "price": {
+        "price": "21.9"
+      },
+      "batch": {
+        "batchFlag": 0
+      },
+      "spu": {
+        "isSpu": 0
+      },
+      "title": "友枡芒果味汽水300ML",
+      "inStock": 1,
+      "tracking": {
+        "priceInCent": 2190,
+        "marketPriceInCent": 2190,
+        "point": 17
+      },
+      "preprocess": 0,
+      "isOnSale": true,
+      "skuProperty": 0,
+      "brandId": "1123604",
+      "brandName": "友枡"
+    }
+  }, {
+    "blockId": "R-93888",
+    "statistic": {
+      "aid": "R-93888",
+      "cid": "c-R-93888",
+      "ds": "1",
+      "asId": "mock message !!!"
+    },
+    "blockType": 1,
+    "skuBlock": {
+      "categoryInfo": {
+        "categoryId": "12400201"
+      },
+      "type": 1,
+      "action": "myyh://yhlife.com/show/native?name=prddetail&id=R-93888&merid=7",
+      "skuCode": "R-93888",
+      "skuType": 0,
+      "skuSaleType": 0,
+      "cover": {
+        "imageUrl": "http://image.yonghuivip.com/product/93888/0.jpg"
+      },
+      "price": {
+        "priceMap": {
+          "limit": "5.12"
+        },
+        "price": "5.12",
+        "marketPrice": "7.5",
+        "priceType": "limit",
+        "priceContent": "5.12",
+        "priceDesc": "首件特惠"
+      },
+      "batch": {
+        "batchFlag": 0
+      },
+      "tag": {
+        "commonTags": [{
+          "text": "首件减2.3元",
+          "type": 10
+        }]
+      },
+      "spu": {
+        "isSpu": 0
+      },
+      "title": "农心辣白菜碗面 117g",
+      "subTitle": "",
+      "inStock": 1,
+      "tracking": {
+        "priceInCent": 512,
+        "marketPriceInCent": 750,
+        "point": 18
+      },
+      "preprocess": 0,
+      "skuRankInfo": {
+        "rankingIcon": "https://image.yonghuivip.com/sku/card/ranking@3x.png",
+        "title": "饮用水热卖榜第2名",
+        "action": "myyh://yhlife.com/show/web?url=https%3A%2F%2Fm.yonghuivip.com%2Fsit%2Fyh-m-site%2Fyh-billboard%2F%23%2Fsecond%3Fneedlogin%3D0%26nl%3D1%26rankType%3D31",
+        "rank": 2,
+        "name": "饮用水热卖榜"
+      },
+      "isOnSale": true,
+      "skuProperty": 0,
+      "brandId": "0006636",
+      "brandName": "农心"
+    }
+  }],
   "yhCardBalance": 0
 }

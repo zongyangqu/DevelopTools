@@ -6,7 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.quzy.coding.R
 import com.quzy.coding.bean.AssetInfo
+import com.quzy.coding.bean.CartBaseBean
+import com.quzy.coding.bean.CartRankingBean
 import com.quzy.coding.bean.ItemActivityCardBean
+import com.quzy.coding.bean.NewCartRankingBean
+import com.quzy.coding.bean.RankListDataBean
+import com.quzy.coding.bean.WaterFullGuessYouLikeBean
 import com.quzy.coding.bean.WelfareRemind
 import com.quzy.coding.bean.model.MemberType
 import com.quzy.coding.bean.model.MemberTypeWithData
@@ -89,6 +94,21 @@ class WaterfallComplexKotAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>
                 view = LayoutInflater.from(parent.context).inflate(R.layout.view_content_inner_title, parent, false)
                 return MemberInnerTitleViewholder(fragment, view)
             }
+
+            MemberType.ITEM_VIEW_TYPE_WATER_FULL_GUESS_YOU_LIKE.ordinal -> {
+                view = LayoutInflater.from(parent.context).inflate(R.layout.common_water_fall_product_item_layout, parent, false)
+                return ViewHolderCartWaterFullGuessYouLike(fragment, view)
+            }
+
+            MemberType.ITEM_VIEW_TYPE_CART_RANKING_ENTRANCE.ordinal -> {
+                view = LayoutInflater.from(parent.context).inflate(R.layout.cart_item_rank_list_layout, parent, false)
+                return CartRankingEntranceViewHolder(fragment, view)
+            }
+
+            MemberType.ITEM_VIEW_TYPE_CART_RANKING_ENTRANCE_NEW.ordinal -> {
+                view = LayoutInflater.from(parent.context).inflate(R.layout.cart_item_new_rank_list_layout, parent, false)
+                return NewCartRankingEntranceViewHolder(fragment, view)
+            }
         }
         return MemberDefaultViewholder(view)
         //return MemberDefaultViewholder(view)
@@ -96,6 +116,7 @@ class WaterfallComplexKotAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         //super.onBindViewHolder(holder,position)
+
         when (holder) {
             is MemberUserHeaderViewholder -> {
                 holder.bindData(assetInfo, fragment, isFirst)
@@ -124,23 +145,35 @@ class WaterfallComplexKotAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>
                 holder.bindData(assetInfo,fragment)
             }
             is MemberGuessYouLikeTitleViewholder -> {
-                holder.bindData(datas?.get(position)?.data as String)
+                holder.bindData(datas?.get(position)?.data as? String)
             }
             is MemberActivityCardTypeOneHolder -> {
                 // 类型为一的天天逛 享优惠活动卡片
-                holder.bindData(datas?.get(position)?.data as ItemActivityCardBean,fragment)
+                holder.bindData(datas?.get(position)?.data as? ItemActivityCardBean,fragment)
             }
             is MemberActivityCardTypeTwoHolder -> {
                 // 类型为二的天天逛 享优惠活动卡片
-                holder.bindData(datas?.get(position)?.data as ItemActivityCardBean,fragment)
+                holder.bindData(datas?.get(position)?.data as? ItemActivityCardBean,fragment)
             }
             is MemberActivityCardTypeLiveHolder -> {
-                holder.bindData(datas?.get(position)?.data as ItemActivityCardBean,fragment)
+                holder.bindData(datas?.get(position)?.data as? ItemActivityCardBean,fragment)
             }
             is MemberInnerTitleViewholder -> {
-                //holder.bindData(assetInfo?.activityArea?.welfareRemind)
-                holder.bindData(datas?.get(position)?.data as WelfareRemind?,fragment)
+                holder.bindData(datas?.get(position)?.data as? WelfareRemind?,fragment)
             }
+            is ViewHolderCartWaterFullGuessYouLike -> {
+                holder.onBindData(datas?.get(position)?.data as? WaterFullGuessYouLikeBean,position)
+            }
+//            is CartRankingEntranceViewHolder -> {
+//                holder.onBindData(datas?.get(position)?.data as? CartRankingBean,position)
+//            }
+//            is NewCartRankingEntranceViewHolder -> {
+//                holder.onBindData(datas?.get(position)?.data as? NewCartRankingBean,position)
+//            }
+        }
+
+        if (holder is ICartViewHolder) {
+            holder.onBindData(datas?.get(position)?.data as CartBaseBean,position)
         }
     }
 

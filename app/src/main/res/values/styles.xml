@@ -15,6 +15,16 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <style name="tv_product_promotion">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_marginStart">3dp</item>
+        <item name="android:textColor">#FF1A34</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:paddingBottom">3dp</item>
+    </style>
  <!--   <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
         <item>
             <bitmap

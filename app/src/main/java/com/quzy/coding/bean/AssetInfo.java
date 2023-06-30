@@ -91,6 +91,7 @@ public class AssetInfo implements Parcelable {
     //个人中心banner数据
     public CommonBannerResponse userCenterBanner;
 
+    public ArrayList<ProductBlock> results; //商品数据
 
     @Override
     public String toString() {

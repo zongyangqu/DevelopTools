@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:round_corner="@dimen/round_radius_first_level"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:round_corner="@dimen/round_radius_first_level" />
+
+    <ImageView
+        android:id="@+id/ivLabel"
+        android:layout_width="17dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout>

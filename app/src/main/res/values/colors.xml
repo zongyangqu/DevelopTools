@@ -12,7 +12,8 @@
     <color name="font_second_color">#666666</color>
     <color name="font_red_color">#FF686C</color>
     <color name="font_orange_color">#FF8E00</color>
-
+    <color name="common_product_promotion">#F67103</color>
+    <color name="subRedColor">#FF3819</color>
     <color name="white">#ffffff</color>
     <color name="white1">#EEEEEE</color>
     <color name="color_eeeeee">#EEEEEE</color>

@@ -40,4 +40,17 @@ open class CommonProductBean : ProductBean(), Parcelable {
     fun isPreprocessProduct(): Boolean {
         return preprocess != 0
     }
+
+    companion object {
+        const val MARKET_RANKING = "marketRanking" // 营销推荐语
+        const val BATCH_TIME_DESC = "batchTimeDesc" // 上市日期
+    }
+
+    /**
+     * 是否上市日期，recSlogan默认是营销推荐语
+     * @return Boolean
+     */
+    fun isBatchTime(): Boolean {
+        return recSloganType == BATCH_TIME_DESC
+    }
 }

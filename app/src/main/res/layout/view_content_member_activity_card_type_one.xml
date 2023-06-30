@@ -8,7 +8,6 @@
     android:background="@color/white"
     app:round_corner="@dimen/round_radius_third_level"
     tools:background="@color/white"
-    android:layout_marginLeft="10dp"
     tools:layout_width="171dp"
     tools:layout_height="241dp">
 

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="9dp"
+    android:paddingStart="@dimen/round_radius_first_level"
+    tools:layout_width="159dp">
+
+
+    <ImageView
+        android:id="@+id/iv_product"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:round_corner="@dimen/round_radius_first_level" />
+
+    <ImageView
+        android:id="@+id/iv_label"
+        android:layout_width="17dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_product"
+        app:layout_constraintTop_toTopOf="@+id/iv_product" />
+
+    <com.quzy.coding.util.widget.PriceFontView
+        android:id="@+id/tv_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/round_radius_first_level"
+        android:layout_marginTop="@dimen/common_margin"
+        android:includeFontPadding="false"
+        android:textColor="@color/themeColor"
+        android:textSize="@dimen/textsize_18"
+        app:layout_constraintLeft_toRightOf="@+id/iv_product"
+        app:layout_constraintTop_toTopOf="@+id/iv_product"
+        tools:text="￥16.9" />
+
+    <LinearLayout
+        android:id="@+id/llInformation"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="@dimen/common_margin"
+        android:layout_marginEnd="@dimen/round_radius_first_level"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_pre_sale_product_num"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_product"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_price"
+        app:layout_constraintRight_toLeftOf="@+id/if_add_to_cart"
+        app:layout_constraintWidth_default="wrap"
+        tools:visibility="visible">
+
+        <com.quzy.coding.util.widget.IconFont
+            android:id="@+id/ifHot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:text="@string/icon_xiao_hui_wallet"
+            android:textColor="@color/themeColor"
+            android:textSize="@dimen/textsize_10" />
+
+        <TextView
+            android:id="@+id/tv_hot_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/common_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/presalesku_presale_num"
+            android:textColor="@color/themeColor"
+            android:textSize="@dimen/textsize_10"
+            tools:text="7xx人已预订" />
+
+    </LinearLayout>
+
+    <com.quzy.coding.util.widget.IconFont
+        android:id="@+id/if_add_to_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="@dimen/common_margin"
+        android:text="@string/icon_plus"
+        android:textColor="@color/themeColor"
+        android:textSize="@dimen/textsize_20"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_product"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </com.quzy.coding.util.widget.IconFont>
+
+    <TextView
+        android:id="@+id/cart_number"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_badge_circle_white_border"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_10"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="2"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

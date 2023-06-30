@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/round_radius_second_level"
+    android:background="@color/white"
+    app:round_corner="@dimen/round_radius_third_level">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_product_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--        cn.yonghui.hyd.common.productcard.mvvm.ui.view.ProductImageLoaderView-->
+        <ImageView
+            android:id="@+id/ivProduct"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:transitionName="image"
+            android:src="@mipmap/cat"
+            app:layout_constraintDimensionRatio="w, 1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/round_radius_second_level"
+            android:layout_marginTop="@dimen/common_margin"
+            android:layout_marginEnd="@dimen/round_radius_second_level"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/subMediumBlackColor"
+            android:textSize="@dimen/textsize_14"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/ivProduct"
+            app:layout_constraintRight_toRightOf="@+id/ivProduct"
+            app:layout_constraintTop_toBottomOf="@+id/ivProduct"
+            tools:text="四川攀枝花凯特芒果250装新鲜水果超过…" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/subLightBlackColor"
+            android:textSize="@dimen/textsize_12"
+            app:layout_constraintLeft_toLeftOf="@+id/tvTitle"
+            app:layout_constraintRight_toRightOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            tools:text="果汁丰富 酸甜适中" />
+
+<!--        <com.quzy.coding.util.widget.FadeOutView-->
+<!--            android:id="@+id/fov_tag"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="16dp"-->
+<!--            android:layout_marginTop="@dimen/common_margin"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintLeft_toLeftOf="@+id/tvTitle"-->
+<!--            app:layout_constraintRight_toRightOf="@+id/tvTitle"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"-->
+<!--            tools:visibility="visible" />-->
+
+        <LinearLayout
+            android:id="@+id/subLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="2dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+            tools:visibility="visible">
+
+
+            <RelativeLayout
+                android:id="@+id/llTipsSubTitle"
+                android:layout_width="90dp"
+                android:layout_height="14dp"
+                android:layout_marginEnd="6dp">
+
+                <ProgressBar
+                    android:id="@+id/itemSecKillTipsProgressBar"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:max="100"
+                    android:progressDrawable="@drawable/common_sec_kill_progress_bar"
+                    tools:progress="20" />
+
+                <TextView
+                    android:id="@+id/itemSekKillTipsSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#FF1A34"
+                    android:textSize="@dimen/textsize_10"
+                    tools:text="剩余45%" />
+            </RelativeLayout>
+
+            <com.coding.qzy.baselibrary.widget.roundview.RoundTextView
+                android:id="@+id/tvLimitSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:background="#EEEEEE"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="@color/subLightBlackColor"
+                android:textSize="@dimen/textsize_10"
+                app:round_corner="7dp"
+                tools:text="限购99件" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_marketing_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/common_product_promotion"
+            android:textSize="@dimen/textsize_10"
+            app:layout_constraintLeft_toLeftOf="@+id/tvTitle"
+            app:layout_constraintRight_toRightOf="@+id/ivProduct"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+            tools:text="附近145人购买"
+            tools:visibility="visible" />
+
+        <com.quzy.coding.util.widget.PriceFontView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/subRedColor"
+            android:textSize="@dimen/textsize_18"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tv_marketing_desc"
+            tools:text="￥39.9" />
+
+        <TextView
+            android:id="@+id/tv_rise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="@string/text_rise"
+            android:textColor="@color/subLightBlackColor"
+            android:textSize="@dimen/textsize_12"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvPrice"
+            app:layout_constraintLeft_toRightOf="@+id/tvPrice"
+            tools:visibility="visible" />
+        <!--        cn.yonghui.hyd.lib.style.widget.draweetext.DraweeTextView-->
+        <TextView
+            android:id="@+id/tvSuperPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginStart="@dimen/common_margin"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/textsize_16"
+            android:visibility="gone"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvPrice"
+            app:layout_constraintLeft_toRightOf="@+id/tv_rise"
+            tools:text="超级会员"
+            tools:visibility="visible" />
+        <!--        cn.yonghui.hyd.coreui.widget.imageloader.RoundImageLoaderView-->
+        <ImageView
+            android:id="@+id/ivAppSpecialPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginStart="@dimen/common_margin"
+            android:background="@drawable/ic_app_special_price"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPrice"
+            app:layout_constraintDimensionRatio="h, 171:48"
+            app:layout_constraintLeft_toRightOf="@+id/tv_rise"
+            app:layout_constraintTop_toTopOf="@+id/tvPrice"
+            tools:visibility="visible" />
+
+        <com.quzy.coding.util.widget.PriceFontView
+            android:id="@+id/tvOriginalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_margin"
+            android:includeFontPadding="false"
+            android:textColor="@color/subGreyColor"
+            android:textSize="@dimen/textsize_12"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvPrice"
+            app:layout_constraintLeft_toRightOf="@+id/tvSuperPrice"
+            tools:text="￥60" />
+
+        <ImageView
+            android:id="@+id/purchaseSpecialPriceIv"
+            android:layout_width="51dp"
+            android:layout_height="16dp"
+            android:src="@drawable/common_purchase_special_price"
+            app:layout_constraintTop_toTopOf="@+id/tvPrice"
+            android:layout_marginTop="2dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintLeft_toRightOf="@+id/tvSuperPrice"/>
+
+
+
+        <com.quzy.coding.util.widget.PriceFontView
+            android:id="@+id/tvOriginalPriceBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textColor="@color/subMediumBlackColor"
+            android:textSize="@dimen/textsize_12"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/tvPrice"
+            app:layout_constraintTop_toBottomOf="@+id/tvPrice"
+            android:layout_marginTop="3dp"
+            tools:text="￥60" />
+
+        <TextView
+            android:id="@+id/promotion_tv"
+            style="@style/tv_product_promotion"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPrice"
+            app:layout_constraintLeft_toRightOf="@+id/tv_rise"
+            tools:text="已降15元已降15元已降15元已降15元已降15已降15"
+            tools:visibility="visible" />
+
+
+        <View
+            android:id="@+id/view_price_white_bg"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/cl_add_cart"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_add_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/round_radius_third_level"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+            <!--            cn.yonghui.hyd.lib.style.widget.SubmitButton-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_add_cart_inner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="7dp"
+                android:background="@drawable/bg_presales_mask"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+
+                <com.quzy.coding.util.widget.IconFont
+                    android:id="@+id/btn_add_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/icon_plus"
+                    android:textColor="@color/themeColor"
+                    android:textSize="@dimen/textsize_22"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+                </com.quzy.coding.util.widget.IconFont>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cart_number"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_badge_circle_white_border"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_10"
+                android:visibility="gone"
+                android:includeFontPadding="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="2"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout
+        android:id="@+id/cl_rank_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="9dp"
+        android:background="@drawable/bg_product_rank"
+        app:layout_constraintTop_toBottomOf="@id/cl_product_layout"
+        app:round_corner="@dimen/round_radius_first_level"
+        tools:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_rank_icon"
+            android:layout_width="36dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_rank_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="榜单标题入口"
+            android:textColor="@color/subRedColor"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/iv_rank_icon"
+            app:layout_constraintRight_toLeftOf="@+id/if_rank_arrow"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.quzy.coding.util.widget.IconFont
+            android:id="@+id/if_rank_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="6dp"
+            android:text="@string/icon_arrow_right"
+            android:textColor="@color/subRedColor"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tv_rank_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout>
+
+
+    <com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout
+        android:id="@+id/cl_brand_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="9dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/cl_product_layout"
+        app:round_corner="@dimen/round_radius_first_level"
+        tools:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/iv_brand_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:round_corner="@dimen/round_radius_first_level" />
+
+        <LinearLayout
+            android:id="@+id/brand_title_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/if_brand_arrow"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="品牌"
+                android:textColor="@color/themeColor"
+                android:textSize="12dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginEnd="3dp"
+                android:background="@color/themeColor" />
+
+            <TextView
+                android:id="@+id/tv_brand_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/subMediumBlackColor"
+                android:textSize="12dp"
+                tools:text="品牌馆标题蓝思科技颠覆了健康了深刻的积分蓝思科技水电费水电费似懂非懂" />
+        </LinearLayout>
+
+        <com.quzy.coding.util.widget.IconFont
+            android:id="@+id/if_brand_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="6dp"
+            android:text="@string/icon_arrow_right"
+            android:textColor="@color/themeColor"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/cl_brand_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/cl_rank_layout" />
+
+</com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout>

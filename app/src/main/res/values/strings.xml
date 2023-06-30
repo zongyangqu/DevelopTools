@@ -13,8 +13,14 @@
     <string name="bottom_navigation_item_cart">购物车</string>
     <string name="bottom_navigation_item_personal">我的淘宝</string>
     <string name="in_shop_shopping">到店购物</string>
+    <string name="presalesku_presale_num">已售%s份</string>
     <string name="home_first">头条</string>
+    <string name="text_rise">起</string>
     <string name="icon_pickself">"\ue9a6"</string>
+    <string name="icon_plus">"\ue979"</string>
+    <string name="icon_xiao_hui_wallet">"\ue9a7"</string>
+    <string name="format_yuan_string_common">¥%s</string>
+    <string name="str_price_exception">未获取到价格</string>
     <string name="icon_city_location">"\ue908"</string>
     <string name="home_tmall">天猫</string>
     <string name="home_suan">聚划算</string>

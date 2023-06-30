@@ -14,11 +14,17 @@ open class ProductBean() : Parcelable {
 
     var batch: Batch? = null // 商品批次信息
 
+    var brandInfo: BrandInfo? = null // 品牌馆信息字段 8110
+
+    var recAttribute: List<String>? = null // 推荐语  8120
+
     var cartAction: CartAction? = null // 当加购按钮不出现(instock=0)时，同位置的跳转按钮
 
     var cornerImageUrl: String? = null // 角标图片地址
 
     var cornerStyle = 0 // 角标样式 1：氛围 0：普通
+
+    var skuRankInfo: RankInfo? = null // 榜单组件
 
     var cover: Cover? = null // 卡片封面
 
@@ -33,6 +39,11 @@ open class ProductBean() : Parcelable {
     var recSlogan: String? = null // 营销推荐语
 
     var scene = 0
+
+
+    var tag: Tag? = null // 这里集合了所有tag类型，包括但不限于腰带标签列表，标签列表，标题前的标签，仅有一个
+
+    var recSloganType: String? = null // 来识别是营销推荐语（marketRanking）还是上市日期（batchTimeDesc）
 
     var seckillInfo: SecKillInfo? = null // 当此商品是秒杀商品时，秒杀相关信息
 
