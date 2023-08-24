@@ -4,10 +4,12 @@ import android.content.Context
 import android.graphics.RectF
 import android.graphics.Canvas
 import android.graphics.Paint
+import android.provider.SyncStateContract
 import android.util.AttributeSet
 import android.view.View
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
+import com.apkfuns.logutils.LogUtils
 import com.coding.qzy.baselibrary.R
 
 /**
@@ -44,6 +46,8 @@ class SmoothTransIndicator(context: Context, attrs: AttributeSet) : View(context
             = 0
     private var mPercent = 0f
     private var mIsLeft = false
+
+    private var circleNum = 0
 
     /**
      * 初始化画笔
@@ -205,6 +209,12 @@ class SmoothTransIndicator(context: Context, attrs: AttributeSet) : View(context
         return this
     }
 
+    fun setCircleNum(num: Int) {
+        circleNum = num
+    }
+
+
+
     /**
      * 类型
      *
@@ -286,6 +296,11 @@ class SmoothTransIndicator(context: Context, attrs: AttributeSet) : View(context
                 positionOffset: Float,
                 positionOffsetPixels: Int
             ) {
+                var tempPosition = position
+                if (circleNum > 0) {
+                    tempPosition %= circleNum
+                    LogUtils.tag("LOG_TAG").d("onPageScrolled======${tempPosition}")
+                }
                 var isLeft = mIsLeft
                 if (lastValue / 10 > positionOffsetPixels / 10) {
                     //右滑
@@ -295,7 +310,7 @@ class SmoothTransIndicator(context: Context, attrs: AttributeSet) : View(context
                     isLeft = true
                 }
                 if (mNum > 0) {
-                    move(positionOffset, position % mNum, isLeft)
+                    move(positionOffset, tempPosition % mNum, isLeft)
                 }
                 lastValue = positionOffsetPixels
             }

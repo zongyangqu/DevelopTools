@@ -8,7 +8,9 @@ import com.quzy.coding.ui.activity.ActivityAnimaActivity;
 import com.quzy.coding.ui.activity.ActivityFragmentOptionActivity;
 import com.quzy.coding.ui.activity.ActivityLayoutOptimizationActivity;
 import com.quzy.coding.ui.activity.AppUpdateActivity;
+import com.quzy.coding.ui.activity.AutoLoopBannerActivity;
 import com.quzy.coding.ui.activity.BackGroundActivity;
+import com.quzy.coding.ui.activity.BottomDialogActivity;
 import com.quzy.coding.ui.activity.ConstraintLayoutActivity;
 import com.quzy.coding.ui.activity.CountdownViewActivity;
 import com.quzy.coding.ui.activity.CustomControlActivity;
@@ -221,7 +223,13 @@ public enum RoleEnum implements RoleOperation {
     },MemberCode {
         @Override
         public void starAction(Activity activity) {
-            activity.startActivity(new Intent(activity, MemberCodeActivity.class));
+            activity.startActivity(new Intent(activity, BottomDialogActivity.class));
+//            activity.startActivity(new Intent(activity, MemberCodeActivity.class));
+        }
+    },AutoLoopBanner {
+        @Override
+        public void starAction(Activity activity) {
+            activity.startActivity(new Intent(activity, AutoLoopBannerActivity.class));
         }
     }
 

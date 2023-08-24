@@ -73,6 +73,7 @@
         <item>时间倒计时</item>
         <item>文字富文本+shape背景实现</item>
         <item>Fragment中layout_behavior实现滑动</item>
+        <item>自动轮播</item>
     </string-array>
     <string name="icon_back_left">"\ue942"</string>
     <string name="icon_more">"\ue9d0"</string>

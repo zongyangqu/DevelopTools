@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bumptech.glide.Glide
 import com.coding.qzy.baselibrary.base.recyclerview.holder.RecyclerViewHolder
+import com.coding.qzy.baselibrary.utils.AbToastUtil
 import com.coding.qzy.baselibrary.utils.extend.dpOfInt
 import com.coding.qzy.baselibrary.utils.guidelayer.util.ScreenUtils
 import com.coding.qzy.baselibrary.utils.guidelayer.util.UIUtils
@@ -45,7 +46,7 @@ class NewCartRankingEntranceViewHolder (val mICartView: ICartView?,itemView: Vie
         itemView.layoutParams = params
 
         itemView.singleClick {
-            //Navigation.startSchema(itemView.context, dataBean?.action)
+            AbToastUtil.showToast(itemView.context,"条目点击了")
         }
 
         viewBinding.productSwitcher.onAnimationListener = object :

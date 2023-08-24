@@ -9,6 +9,6 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:nestedScrollingEnabled="false" />
+        android:nestedScrollingEnabled="false"/>
 
 </com.coding.qzy.baselibrary.widget.roundview.RoundConstraintLayout>

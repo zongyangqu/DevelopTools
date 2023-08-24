@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_carousel"
+        android:layout_width="match_parent"
+        android:layout_height="140dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vp_carousel"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.coding.qzy.baselibrary.widget.smoothtransindicator.SmoothTransIndicator
+            android:id="@+id/indicatorCircleLine"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            app:default_color="#000000"
+            app:distance="10dp"
+            app:distanceType="BY_DISTANCE"
+            app:indicatorType="CIRCLE_LINE"
+            app:radius="3dp"
+            app:selected_color="@color/def_bar_red_color" />
+    </LinearLayout>
+
+</RelativeLayout>

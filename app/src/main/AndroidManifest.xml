@@ -96,6 +96,8 @@
 
         <activity android:name=".ui.activity.HotFixDemoActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.BottomDialogActivity"
+            android:screenOrientation="portrait"/>
 
         <activity android:name=".ui.activity.HotFixDemo2Activity"
             android:screenOrientation="portrait"/>
@@ -149,7 +151,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".ui.activity.HorizontalTipActivity"
             android:screenOrientation="portrait"/>
-
+        <activity android:name=".ui.activity.AutoLoopBannerActivity"
+            android:screenOrientation="portrait"/>
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileProvider"

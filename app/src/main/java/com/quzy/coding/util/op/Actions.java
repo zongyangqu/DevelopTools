@@ -55,9 +55,8 @@ public class Actions {
         mActionMap.put(Constants.HorizontalTipView,RoleEnum.HorizontalTipView.name());
         mActionMap.put(Constants.CountDownTime,RoleEnum.CountDown.name());
         mActionMap.put(Constants.ShapeBackGround,RoleEnum.ShapeBackGround.name());
-        mActionMap.put(Constants.ShapeBackGround,RoleEnum.ShapeBackGround.name());
         mActionMap.put(Constants.MemberCode,RoleEnum.MemberCode.name());
-
+        mActionMap.put(Constants.AutoLoopBanner,RoleEnum.AutoLoopBanner.name());
     }
 
 

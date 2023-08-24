@@ -48,7 +48,7 @@ class SmoothTransIndicatorActivity : BaseActivity() {
 
         mIndicatorCircleLine = findViewById(R.id.indicator_circle_line) as SmoothTransIndicator
 
-        mIndicatorCircleLine?.setViewPager(mViewpager)
+        mIndicatorCircleLine?.setViewPager(mViewpager,3)
     }
 
     override fun getLayoutId(): Int {

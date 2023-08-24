@@ -25,6 +25,11 @@
         <item name="android:visibility">gone</item>
         <item name="android:paddingBottom">3dp</item>
     </style>
+
+    <style name="BottomToTopDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_slid_up</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slid_down</item>
+    </style>
  <!--   <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
         <item>
             <bitmap
